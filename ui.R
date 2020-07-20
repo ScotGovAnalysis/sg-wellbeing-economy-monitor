@@ -1,0 +1,1951 @@
+source("data.R")
+
+# UI
+shinyUI(fluidPage(
+  theme = shinytheme("cosmo"),
+  # HEADING ##########################################################################################################################################
+  navbarPage(id = "MainNav",
+             windowTitle = "Wellbeing Economy Monitor",
+             title = div(
+               span(a(img(src = "Govscot_logo_white.png", height=20), href = "https://www.gov.scot/"), style = "padding-right:40px;"),
+               span("Wellbeing Economy Monitor")
+             ),
+             # HOME PAGE #############################################################################################################################
+             tabPanel("Home",
+                      tags$head(tags$link(rel="shortcut icon", src="./www/favicon.ico")),
+                      h1("Scotland's Wellbeing Economy Monitor", style="text-align: center"),
+                      p("Comparison of Scotland's rank among a comparable group of countries (Finland, Denmark, New Zealand, Iceland, Sweden, Norway, UK) across a range of indicators.", style="text-align: center"),
+                      fluidRow(
+                        column(width = 3,
+                               strong("Greenhouse Gas Emissions (2017)"),
+                               p("Value: 7.47 [t CO2 per capita]"),
+                               p("Average: 6.73 [t CO2 per capita]"),
+                               p("Min: 1.96 [t CO2 per capita]"),
+                               p("Max: 9.57 [t CO2 per capita]"),
+                               p("*excluding: Norway, New Zeleand, Iceland"),
+                               strong("Research and Development (2017)"),
+                               p("Value: 0.8%"),
+                               p("Average: 1.51%"),
+                               p("Min: 0.8"),
+                               p("Max: 2.35"),
+                               p("*excluding: New Zeleand"),
+                               strong("Productivity (2018)"),
+                               p("Value: 82.04%"),
+                               p("Average: 91.07%"),
+                               p("Min: 59.96%"),
+                               p("Max: 115.4%"),
+                               strong("Growth (2018)"),
+                               p("Value: 1.43%"),
+                               p("Average: 2.25%"),
+                               p("Min: 1.29%"),
+                               p("Max: 4.82%"),
+                               strong("Exporting (International) (2018)"),
+                               p("Value: 20.03%"),
+                               p("Average: 37.99%"),
+                               p("Min: 20.13%"),
+                               p("Max: 55.64%"),
+                               strong("Exporting (Int & RUK) (2018)"),
+                               p("Value: 52.88%"),
+                               p("Average: 42.08%"),
+                               p("Min: 28.13%"),
+                               p("Max: 55.64%"),
+                               strong("Economic Activity (2018)"),
+                               p("Value: 77.4%"),
+                               p("Average: 80.3%"),
+                               p("Min: 77.4%"),
+                               p("Max: 87.28%")
+                        ),
+                        column(width = 6,
+                               plotOutput("circular_barplot_home_ggplot", width = "100%", height = "800px")
+                        ),
+                        column(width = 3,
+                               strong("Employment (2018)"),
+                               p("Value: 74.1%"),
+                               p("Average: 76.44%"),
+                               p("Min: 72.21%"),
+                               p("Max: 84.84%"),
+                               strong("Skills (higher) (2018)"),
+                               p("Value: 47.4%"),
+                               p("Average: 43.6%"),
+                               p("Min: 39.7%"),
+                               p("Max: 47.4%"),
+                               p("*excluding: Norway, New Zeleand, Iceland"),
+                               strong("Skills (lower) (2018)"),
+                               p("Value: 20.5%"),
+                               p("Average: 16.74%"),
+                               p("Min: 10.8%"),
+                               p("Max: 20.5%"),
+                               p("*excluding: Norway, New Zeleand, Iceland"),
+                               strong("Gender Pay Gap (2015)"),
+                               p("Value: 17.1%"),
+                               p("Average: 11.41%"),
+                               p("Min: 5.8%"),
+                               p("Max: 18.1%"),
+                               strong("Unemployment (2018)"),
+                               p("Value: 4.3%"),
+                               p("Average: 4.84%"),
+                               p("Min: 2.8%"),
+                               p("Max: 7.47%"),
+                               strong("Life Expectancy (2017)"),
+                               p("Value: 79.1 years"),
+                               p("Average: 81.64 years"),
+                               p("Min: 79.1 years"),
+                               p("Max: 82.7 years"),
+                               strong("Dependancy Ratio (2018)"),
+                               p("Value: 53.35%"),
+                               p("Average: 56.07%"),
+                               p("Min: 52.9%"),
+                               p("Max: 60.94%")
+                        ),
+                        
+                      )
+             ), 
+             # PRODUCTIVITY ##########################################################################################################################
+             tabPanel(
+               value = "ProductivityTab",
+               title = tags$div(icon("tachometer-alt", lib = "font-awesome"), "Productivity"),
+               # OVERVIEW ####
+               fluidRow(width = 12,
+                        column(width = 2,
+                               tags$b("Scotland's rank among 37 OECD countries:")
+                        ),
+                        uiOutput("growth_bar"),
+                        uiOutput("productivity_bar"),
+                        uiOutput("exporting_bar"),
+                        uiOutput("rd_bar"),
+                        uiOutput("entrepreneurialism_bar"),
+                        style="background-color: grey; color: white"
+               ),
+               fluidRow(width = 12,
+                        column(width = 4,
+                               h2("Growth"),
+                               plotOutput("growth_overview_int_barplot", height = "200px"),
+                               p("Scotland's growth rate was ", text_scotland_thisyear_growth_int,"% in 2018, compared to ", text_oecd_thisyear_growth_int,"% in the OECD. Over the past 5 years, the average GDP growth rate was ", text_scotland_last5_growth_int ,"% in Scotland, compared to ", text_oecd_last5_growth_int, "% in the OECD overall.")
+                        ),
+                        column(width = 4,
+                               h2("Productivity"),
+                               plotOutput("productivity_overview_int_barplot", height = "200px"),
+                               p("Scotland's productivity was ", text_scotland_thisyear_productivity_int,"% in 2018, compared to ", text_oecd_thisyear_productivity_int,"% in the OECD. Over the past 5 years, the average productivity was ", text_scotland_last5_productivity_int ,"% in Scotland, compared to ", text_oecd_last5_productivity_int, "% in the OECD overall.")
+                        ),
+                        column(width = 4,
+                               h2("Reputation"),
+                               plotOutput("reputation_overview_sco_lineplot", height = "200px")
+                        )
+                        
+               ),
+               fluidRow(width = 12,
+                        column(width = 4,
+                               h2("Exporting"),
+                               plotOutput("exporting_overview_int_barplot", height = "200px"),
+                               p("Scotland's exporting as % of GDP was ", text_scotland_thisyear_exporting_int,"% in 2018, compared to ", text_oecd_thisyear_exporting_int,"% in the OECD. Over the past 5 years, the average exporting as % of GDP was ", text_scotland_last5_exporting_int ,"% in Scotland, compared to ", text_oecd_last5_exporting_int, "% in the OECD overall."),
+                               p("*(International & RUK)")
+                        ),
+                        column(width = 4,
+                               h2("R&D"),
+                               plotOutput("rd_overview_int_barplot", height = "200px"),
+                               p("Scotland's expenditure on R&D as % of GDP was ", text_scotland_thisyear_rd_int,"% in 2017, compared to ", text_oecd_thisyear_rd_int,"% in the OECD. Over the past 5 years, the average expenditure on R&D as % of GDP was ", text_scotland_last5_rd_int ,"% in Scotland, compared to ", text_oecd_last5_rd_int, "% in the OECD overall.")
+                               # Pie chart
+                               # plotOutput("rd_overview_sco_pieplot", height = "170px")
+                        ),
+                        column(width = 4,
+                               h2("Business"),
+                               p("In", text_year_entrepreneurialism_sco, ", in Scotland, ", text_value_entrepreneurialism_sco, "% of people were actively trying to start a business, or owned/managed a business which is less than 3.5 years old."),
+                               p("In", text_year_nbusiness_sector_sco, ", there were ", format(text_all_nbusiness_sector_sco, big.mark=","), " businesses in Scotland.", "Of them: "),
+                               p("◼", format(text_foreign_nbusiness_region_sco, big.mark=","), " were foreign-owned"),
+                               p("◼", text_hbusiness_percent_sco, "% represented high-growth businesses")
+                        )
+               ),
+               # DETAILS ####
+               h1("Details"),
+                 tabsetPanel(
+                 # INTERNATIONAL ####
+                   tabPanel("International",
+                            navlistPanel(widths=c(3,9),
+                              tabPanel("Growth",
+                                       fluidRow(width = 12,
+                                                column(width=3, 
+                                                       wellPanel(
+                                                         checkboxGroupInput(
+                                                           inputId = "growth_int_input",
+                                                           label = "",
+                                                           choiceNames = names(growth_int_wide),
+                                                           choiceValues = c(seq(1:length(names(growth_int_wide)))),
+                                                           selected = positions_selected_countries_growth_int
+                                                         )
+                                                       )
+                                                ),      
+                                                column(width=9, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 1. Gross Domestic Product (GDP) Growth Rate ", "(", as.character(start_year_growth_int), " - ", as.character(end_year_growth_int), ") ", "(expenditure approach)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("growth_int_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_growth_int"),
+                                                         p("Source: "), 
+                                                         a("OECD", href = "https://data.oecd.org/gdp/gross-domestic-product-gdp.htm"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       )
+                              ),   
+                              tabPanel("Productivity",
+                                       fluidRow(width = 12,
+                                                column(width=3, 
+                                                       wellPanel(
+                                                         checkboxGroupInput(
+                                                           inputId = "productivity_int_input",
+                                                           label = "",
+                                                           choiceNames = names(productivity_int_wide),
+                                                           choiceValues = c(seq(1:length(names(productivity_int_wide)))),
+                                                           selected = positions_selected_countries_productivity_int
+                                                         )
+                                                       )
+                                                ),      
+                                                column(width=9, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 2. Estimated Productivity Levels across OECD Countries: ", "(", as.character(start_year_productivity_int), " - ", as.character(end_year_productivity_int), ") ", "(Current prices, and current PPPs, USA=100)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("productivity_int_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_productivity"),
+                                                         p("Source: "), 
+                                                         a("2017 Productivity levels from OECD Statistics Portal - data extracted on 4 February 2019", href = "https://stats.oecd.org/"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       )
+                              ),
+                              tabPanel("Exporting",
+                                       fluidRow(width = 12,
+                                                column(width=3, 
+                                                       wellPanel(
+                                                         checkboxGroupInput(
+                                                           inputId = "exporting_int_input",
+                                                           label = "",
+                                                           choiceNames = names(exporting_int_wide),
+                                                           choiceValues = c(seq(1:length(names(exporting_int_wide)))),
+                                                           selected = positions_selected_countries_exporting_int
+                                                         )
+                                                       )
+                                                ),      
+                                                column(width=9, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 3. Exports of goods and services (% of GDP) across OECD Countries: ", "(", as.character(start_year_exporting_int), " - ", as.character(end_year_exporting_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("exporting_int_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_exporting"),
+                                                         p("Source: "), 
+                                                         a("World Bank, Scottish Government Quarterly National Accounts Scotland", href = "https://webarchive.nrscotland.gov.uk/20170916204357/http://www.gov.scot/Topics/Statistics/Browse/Economy/QNAS"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       )
+                              ),
+                              tabPanel("R&D",
+                                       fluidRow(width = 12,
+                                                column(width=3, 
+                                                       wellPanel(
+                                                         checkboxGroupInput(
+                                                           inputId = "rd_int_input",
+                                                           label = "",
+                                                           choiceNames = names(rd_int_wide),
+                                                           choiceValues = c(seq(1:length(names(rd_int_wide)))),
+                                                           selected = positions_selected_countries_rd_int
+                                                         )
+                                                       )
+                                                ),      
+                                                column(width=9, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 4. Business Enterprise on R&D Expenditure performed in OECD countries: ", "(", as.character(start_year_rd_int), " - ", as.character(end_year_rd_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("rd_int_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_rd"),
+                                                         p("Source: "), 
+                                                         a("MSTI 2018/2, ONS & Scottish Government", href = "https://www.gov.scot/collections/economy-statistics/"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       )
+                              ),
+                              tabPanel("Entrepreneurialism",
+                                       fluidRow(width = 12,
+                                                p(tags$b(paste("Figure 5. Percent of 18-64 population who are either a nascent entrepreneur or owner-manager of a new business (2018)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                plotOutput("entrepreneurialism2_overview_int_barplot")
+                                                # column(width=3, 
+                                                #        wellPanel(
+                                                #          checkboxGroupInput(
+                                                #            inputId = "entrepreneurialism_int_input",
+                                                #            label = "",
+                                                #            choiceNames = names(entrepreneurialism_int_wide),
+                                                #            choiceValues = c(seq(1:length(names(entrepreneurialism_int_wide)))),
+                                                #            selected = positions_selected_countries_entrepreneurialism_int
+                                                #          )
+                                                #        )
+                                                # ),      
+                                                # column(width=9, 
+                                                #        fluidRow(
+                                                #          p(tags$b(paste("Figure 5. % of 18-64 population who are either a nascent entrepreneur or owner-manager of a new business: ", "(", as.character(start_year_entrepreneurialism_int), " - ", as.character(end_year_entrepreneurialism_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                #          withSpinner(dygraphOutput("entrepreneurialism_int_graph"), type = 5),
+                                                #          align = "center"
+                                                #        ),
+                                                #        fluidRow(
+                                                #          textOutput("legendDivID_entrepreneurialism"),
+                                                #          p("Source: "), 
+                                                #          a("Total early-stage Entrepreneurial Activity (TEA)", href = "d"),
+                                                #          collapsible = FALSE,
+                                                #          width = 12,
+                                                #          style="margin-bottom: 100px;"
+                                                #        )
+                                                # )
+                                       )
+                              )
+                            )
+                   ),
+                 # SCOTLAND ####
+                   tabPanel("Scotland",
+                            navlistPanel(widths=c(3,9),
+                              tabPanel("Growth",
+                                       fluidRow(width = 12,
+                                                column(width=3, 
+                                                       wellPanel(
+                                                         checkboxGroupInput(
+                                                           inputId = "growth_sco_input",
+                                                           label = "",
+                                                           choiceNames = names(growth_sco_wide),
+                                                           choiceValues = c(seq(1:length(names(growth_sco_wide)))),
+                                                           selected = positions_selected_sectors_growth_sco
+                                                         )
+                                                       )
+                                                ),      
+                                                column(width=9, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 1. Scotland's GDP Growth Rate by Sector", "(", as.character(start_year_growth_sco), " - ", as.character(end_year_growth_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("growth_sco_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_growth_sco"),
+                                                         p("Source: "), 
+                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       )
+                              ),
+                              tabPanel("Productivity",
+                                       fluidRow(width = 12,
+                                                column(width=12, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 2. Scotland's productivity: ", "(", as.character(start_year_productivity_sco), " - ", as.character(end_year_productivity_sco), ") ", " (output per hour)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("productivity_sco_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_productivity_sco"),
+                                                         p("Source: "), 
+                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       )
+                              ),
+                              tabPanel("Exporting",
+                                       fluidRow(width = 12,
+                                                column(width=3, 
+                                                       wellPanel(
+                                                         checkboxGroupInput(
+                                                           inputId = "exporting_destination_sco_input",
+                                                           label = "",
+                                                           choiceNames = names(exporting_destination_sco),
+                                                           choiceValues = c(seq(1:length(names(exporting_destination_sco)))),
+                                                           selected = positions_selected_exporting_destination_sco
+                                                         )
+                                                       )
+                                                ),      
+                                                column(width=9, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 3. Scotland's Exports by Destination ", "(", as.character(start_year_exporting_destination_sco), " - ", as.character(end_year_exporting_destination_sco), ") ", "(£ million)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("exporting_destination_sco_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_exporting_destination_sco"),
+                                                         p("Source: "), 
+                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       ),
+                                       fluidRow(width = 12,
+                                                column(width=3, 
+                                                       wellPanel(
+                                                         checkboxGroupInput(
+                                                           inputId = "exporting_sector_sco_input",
+                                                           label = "",
+                                                           choiceNames = names(exporting_sector_sco),
+                                                           choiceValues = c(seq(1:length(names(exporting_sector_sco)))),
+                                                           selected = positions_selected_exporting_sector_sco
+                                                         )
+                                                       )
+                                                ),      
+                                                column(width=9, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 4. Scotland's Exports by Sector ", "(", as.character(start_year_exporting_sector_sco), " - ", as.character(end_year_exporting_sector_sco), ") ", "(£ million)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("exporting_sector_sco_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_exporting_sector_sco"),
+                                                         p("Source: "), 
+                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       )
+                              ),
+                              tabPanel("R&D",
+                                       fluidRow(width = 12,
+                                                column(width=3, 
+                                                       wellPanel(
+                                                         checkboxGroupInput(
+                                                           inputId = "rd_sco_input",
+                                                           label = "",
+                                                           choiceNames = names(rd_sco),
+                                                           choiceValues = c(seq(1:length(names(rd_sco)))),
+                                                           selected = positions_selected_performers_rd_sco
+                                                         )
+                                                       )
+                                                ),      
+                                                column(width=9, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 5. Expenditure on Research and Development in Scotland as a percentage of GDP ", "(", as.character(start_year_rd_sco), " - ", as.character(end_year_rd_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("rd_sco_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_rd_sco"),
+                                                         p("Source: "), 
+                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       )
+                              ),
+                              tabPanel("Entrepreneurialism",
+                                       fluidRow(width = 12,
+                                                column(width=12, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 6. Total Early-stage Entrepreneurial Activity (TEA) rate: ", "(", as.character(start_year_entrepreneurialism_sco), " - ", as.character(end_year_entrepreneurialism_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("entrepreneurialism_sco_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_entrepreneurialism_sco"),
+                                                         p("Source: "), 
+                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       ),
+                                                       fluidRow(
+                                                         width = 12,
+                                                         p("Total Early-stage Entrepreneurial Activity (TEA) rate: proportion of the adult working age population that is actively trying to start a business, or that own/manage a business which is less than 3.5 years old.")
+                                                       ),
+                                                )
+                                       )
+                              ),
+                              tabPanel("Scotland's reputation",
+                                       fluidRow(width = 12,
+                                                column(width=12, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 7. Anholt GfK-Roper Nation Brands Index (NBI): ", "(", as.character(start_year_reputation_sco), " - ", as.character(end_year_reputation_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("reputation_sco_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_reputation_sco"),
+                                                         p("Source: "), 
+                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       ),
+                                                       fluidRow(
+                                                         width = 12,
+                                                         p("Anholt GfK-Roper Nation Brands Index (NBI): Average scores of the six dimensions of national competence, given as a value (not percentage) out of 100.")
+                                                       ),
+                                                )
+                                       )
+                              ),
+                              tabPanel("The number of businesses",
+                                       fluidRow(width = 12,
+                                                column(width=3, 
+                                                       wellPanel(
+                                                         checkboxGroupInput(
+                                                           inputId = "nbusiness_sector_sco_input",
+                                                           label = "",
+                                                           choiceNames = names(nbusiness_sector_sco),
+                                                           choiceValues = c(seq(1:length(names(nbusiness_sector_sco)))),
+                                                           selected = positions_selected_sectors_nbusiness_sector_sco
+                                                         )
+                                                       )
+                                                ),      
+                                                column(width=9, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 8. Number of businesses in Scotland by Sector ", "(", as.character(start_year_nbusiness_sector_sco), " - ", as.character(end_year_nbusiness_sector_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("nbusiness_sector_sco_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_nbusiness_sector_sco"),
+                                                         p("Source: "), 
+                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       ),
+                                       fluidRow(width = 12,
+                                                column(width=3, 
+                                                       wellPanel(
+                                                         checkboxGroupInput(
+                                                           inputId = "nbusiness_region_sco_input",
+                                                           label = "",
+                                                           choiceNames = names(nbusiness_region_sco),
+                                                           choiceValues = c(seq(1:length(names(nbusiness_region_sco)))),
+                                                           selected = positions_selected_regions_nbusiness_region_sco
+                                                         )
+                                                       )
+                                                ),      
+                                                column(width=9, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 9. Number of businesses in Scotland by Region of Ownership ", "(", as.character(start_year_nbusiness_region_sco), " - ", as.character(end_year_nbusiness_region_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("nbusiness_region_sco_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_nbusiness_region_sco"),
+                                                         p("Source: "), 
+                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       ),
+                                       fluidRow(width = 12,
+                                                column(width=3, 
+                                                       wellPanel(
+                                                         checkboxGroupInput(
+                                                           inputId = "nbusiness_employees_sco_input",
+                                                           label = "",
+                                                           choiceNames = names(nbusiness_employees_sco),
+                                                           choiceValues = c(seq(1:length(names(nbusiness_employees_sco)))),
+                                                           selected = positions_selected_employees_nbusiness_employees_sco
+                                                         )
+                                                       )
+                                                ),      
+                                                column(width=9, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 10. Number of businesses in Scotland by Number of Employees ", "(", as.character(start_year_nbusiness_employees_sco), " - ", as.character(end_year_nbusiness_employees_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("nbusiness_employees_sco_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_nbusiness_employees_sco"),
+                                                         p("Source: "), 
+                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       )
+
+                              ),
+                              tabPanel("High growth businesses",
+                                       fluidRow(width = 12,
+                                                column(width=12, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 11. Percentage share of High Growth stocks ", "(", as.character(start_year_hbusiness_percent_sco), " - ", as.character(end_year_hbusiness_percent_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("hbusiness_percent_sco_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_hbusiness_percent_sco"),
+                                                         p("Source: "), 
+                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       )
+                              ),
+                              tabPanel("Innovative businesses",
+                                       fluidRow(width = 12,
+                                                column(width=3, 
+                                                       wellPanel(
+                                                         checkboxGroupInput(
+                                                           inputId = "ibusiness_sco_input",
+                                                           label = "",
+                                                           choiceNames = names(ibusiness_sco),
+                                                           choiceValues = c(seq(1:length(names(ibusiness_sco)))),
+                                                           selected = positions_selected_activities_ibusiness_sco
+                                                         )
+                                                       )
+                                                ),      
+                                                column(width=9, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 12. Share of businesses involved in innovation activities ", "(", as.character(start_year_ibusiness_sco), " - ", as.character(end_year_ibusiness_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("ibusiness_sco_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_ibusiness_sco"),
+                                                         p("Source: "), 
+                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       )
+                              )
+                            )
+                   ),
+                 # REGIONAL ####
+                   tabPanel("Regional",
+                            navlistPanel(widths=c(3,9),
+                                         tabPanel("Growth",
+                                                  fluidRow(width = 12,
+                                                    column(width=12,
+                                                           tags$b(textOutput("growth_reg_map_caption")),
+                                                           sliderInput("growth_reg_input", label = "", min = start_year_growth_reg , max = end_year_growth_reg, value = end_year_growth_reg, width = "50%", sep = "", step = 1),
+                                                      withSpinner(leafletOutput("growth_reg_map"), type = 5),
+                                                      p("Source: "), 
+                                                      a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                    )
+                                                  )
+                                         ),
+                                         tabPanel("Exporting",
+                                                  fluidRow(width = 12,
+                                                           column(width=12,
+                                                                  tags$b(textOutput("exporting_reg_map_caption")),
+                                                                  sliderInput("exporting_reg_input", label = "", min = start_year_exporting_reg , max = end_year_exporting_reg, value = end_year_exporting_reg, width = "50%", sep = "", step = 1),
+                                                                  withSpinner(leafletOutput("exporting_reg_map"), type = 5),
+                                                                  p("Source: "), 
+                                                                  a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                           )
+                                                  )
+                                         ),
+                                         tabPanel("R&D",
+                                                  fluidRow(width = 12,
+                                                           column(width=12,
+                                                                  tags$b(textOutput("rd_reg_map_caption")),
+                                                                  sliderInput("rd_reg_input", label = "", min = start_year_rd_reg , max = end_year_rd_reg, value = end_year_rd_reg, width = "50%", sep = "", step = 1),
+                                                                  withSpinner(leafletOutput("rd_reg_map"), type = 5),
+                                                                  p("Source: "), 
+                                                                  a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                           )
+                                                  )
+                                         ),
+                                         tabPanel("Number of businesses",
+                                                  fluidRow(width = 12,
+                                                           column(width=12,
+                                                                  # p(tags$b(paste("Map 4. The Number of Businesses across Scottish council areas in ", "YEAR", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                                  tags$b(textOutput("nbusiness_reg_map_caption")),
+                                                                  sliderInput("nbusiness_reg_input", label = "", min = start_year_nbusiness_reg , max = end_year_nbusiness_reg, value = end_year_nbusiness_reg, width = "50%", sep = "", step = 1),
+                                                                  withSpinner(leafletOutput("nbusiness_reg_map"), type = 5),
+                                                                  p("Source: "), 
+                                                                  a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                           )
+                                                  )
+                                         )
+                            )
+                   )
+                 )
+             ),
+             # POPULATION ############################################################################################################################
+             tabPanel(
+               value = "PopulationTab",
+               title = tags$div(icon("user-friends", lib = "font-awesome"), "Population"),
+               # OVERVIEW ####
+               fluidRow(width = 12,
+                        column(width = 2,
+                               tags$b("Scotland's rank among 37 OECD countries:")
+                        ),
+                        uiOutput("depratio_bar"),
+                        style="background-color: grey; color: white"
+               ),
+               fluidRow(width = 12,
+                        column(width = 4,
+                               h2("Dependency ratio"),
+                               plotOutput("depratio_overview_int_barplot", height = "200px"),
+                               p("Scotland's dependency ratio was ", text_scotland_thisyear_depratio_int,"% in 2018, compared to ", text_oecd_thisyear_depratio_int,"% in the OECD. Over the past 5 years, the average dependency ratio was ", text_scotland_last5_depratio_int ,"% in Scotland, compared to ", text_oecd_last5_depratio_int, "% in the OECD overall.")
+                               
+                        ),
+                        column(width = 4,
+                        ),
+                        column(width = 4,
+                        )
+                        
+               ),
+               # DETAILS ####
+               h1("Details"),
+               tabsetPanel(
+                 # INTERNATIONAL ####
+                 tabPanel("International",
+                          navlistPanel(widths=c(3,9),
+                            tabPanel("Dependency ratio", 
+                                     fluidRow(width = 12,
+                                              column(width=3, 
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "depratio_int_input",
+                                                         label = "",
+                                                         choiceNames = names(depratio_int_wide),
+                                                         choiceValues = c(seq(1:length(names(depratio_int_wide)))),
+                                                         selected = positions_selected_countries_depratio_int
+                                                       )
+                                                     )
+                                              ),      
+                                              column(width=9, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 1. Age dependency ratio ", "(", as.character(start_year_depratio_int), " - ", as.character(end_year_depratio_int), ") ", "(% of working-age population)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("depratio_int_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_depratio_int"),
+                                                       p("Source: "), 
+                                                       a("World Bank, National Registers of Scotland ", href = "https://www.nrscotland.gov.uk/statistics-and-data"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Migration",
+                                     fluidRow(width = 12,
+                                              column(width=3, 
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "migration_int_input",
+                                                         label = "",
+                                                         choiceNames = names(migration_int_wide),
+                                                         choiceValues = c(seq(1:length(names(migration_int_wide)))),
+                                                         selected = positions_selected_countries_migration_int
+                                                       )
+                                                     )
+                                              ),      
+                                              column(width=9, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 2. Population change ", "(", as.character(start_year_migration_int), " - ", as.character(end_year_migration_int), ") ", "(crude rate of net migration plus statistical adjustment)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("migration_int_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_migration_int"),
+                                                       p("Source: "), 
+                                                       a("Eurostat", href = "https://ec.europa.eu/eurostat/home?"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            )
+                          )
+                 ),
+                 # SCOTLAND ####
+                 tabPanel("Scotland",
+                          navlistPanel(widths=c(3,9),
+                            tabPanel("Dependency ratio", 
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 1. The population of children (aged 0 to 15) and older people (aged 65 and over) expressed as a percentage of people aged 16 to 64 ", "(", as.character(start_year_depratio_sco), " - ", as.character(end_year_depratio_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("depratio_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_depratio_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Migration",
+                                     fluidRow(width = 12,
+                                              column(width=3,
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "migration_type_overseas_sco_input",
+                                                         label = "",
+                                                         choiceNames = names(migration_type_overseas_sco_wide),
+                                                         choiceValues = c(seq(1:length(names(migration_type_overseas_sco_wide)))),
+                                                         selected = positions_selected_types_migration_type_overseas_sco
+                                                       )
+                                                     )
+                                              ),
+                                              column(width=9,
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 1. Overseas migration to and from Scotland ", "(", as.character(start_year_migration_type_overseas_sco), " - ", as.character(end_year_migration_type_overseas_sco), ") ", "(absolute values)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("migration_type_overseas_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_migration_type_overseas_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     ),
+                                     fluidRow(width = 12,
+                                              column(width=3,
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "migration_in_source_sco_input",
+                                                         label = "",
+                                                         choiceNames = names(migration_in_source_sco_wide),
+                                                         choiceValues = c(seq(1:length(names(migration_in_source_sco_wide)))),
+                                                         selected = positions_selected_sources_migration_in_source_sco
+                                                       )
+                                                     )
+                                              ),
+                                              column(width=9,
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 2. Migration to Scotland - Overseas vs from Rest of the UK ", "(", as.character(start_year_migration_in_source_sco), " - ", as.character(end_year_migration_in_source_sco), ") ", "(absolute values)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("migration_in_source_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_migration_in_source_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     ),
+                                     fluidRow(width = 12,
+                                              column(width=3,
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "migration_in_overseas_age_sco_input",
+                                                         label = "",
+                                                         choiceNames = names(migration_in_overseas_age_sco_wide),
+                                                         choiceValues = c(seq(1:length(names(migration_in_overseas_age_sco_wide)))),
+                                                         selected = positions_selected_ages_migration_in_overseas_age_sco
+                                                       )
+                                                     )
+                                              ),
+                                              column(width=9,
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 3. Age distribution of migration to Scotland from Overseas ", "(", as.character(start_year_migration_in_overseas_age_sco), " - ", as.character(end_year_migration_in_overseas_age_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("migration_in_overseas_age_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_migration_in_overseas_age_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     ),
+                                     fluidRow(width = 12,
+                                              column(width=3,
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "migration_in_overseas_sex_sco_input",
+                                                         label = "",
+                                                         choiceNames = names(migration_in_overseas_sex_sco_wide),
+                                                         choiceValues = c(seq(1:length(names(migration_in_overseas_sex_sco_wide)))),
+                                                         selected = positions_selected_sexes_migration_in_overseas_sex_sco
+                                                       )
+                                                     )
+                                              ),
+                                              column(width=9,
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 4. Migration to Scotland from Overseas by Age ", "(", as.character(start_year_migration_in_overseas_sex_sco), " - ", as.character(end_year_migration_in_overseas_sex_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("migration_in_overseas_sex_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_migration_in_overseas_sex_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            )
+                          )
+                 ),
+                 # REGIONAL ####
+                 tabPanel("Regional",
+                          navlistPanel(widths=c(3,9),
+                                       tabPanel("Dependency ratio", 
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("depratio_reg_map_caption")),
+                                                                sliderInput("depratio_reg_input", label = "", min = start_year_depratio_reg , max = end_year_depratio_reg, value = end_year_depratio_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("depratio_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                         )
+                                                )
+                                       ),
+                                       tabPanel("Migration",
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("migration_reg_map_caption")),
+                                                                sliderInput("migration_reg_input", label = "", min = start_year_migration_reg , max = end_year_migration_reg, value = end_year_migration_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("migration_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                         )
+                                                )
+                                       ),
+                                       tabPanel("Working-age population forecasts",
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("working_age_reg_map_caption")),
+                                                                sliderInput("working_age_reg_input", label = "", min = start_year_working_age_reg , max = end_year_working_age_reg, value = end_year_working_age_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("working_age_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                         )
+                                                )
+                                       )
+                          )
+                 )
+               )
+             ),
+             # PARTICIPATION ########################################################################################################################
+             tabPanel(
+               value = "ParticipationTab",
+               title = tags$div(icon("chart-pie", lib = "font-awesome"), "Participation"),
+               # OVERVIEW ####
+               fluidRow(width = 12,
+                        column(width = 2,
+                               tags$b("Scotland's rank among 37 OECD countries:")
+                        ),
+                        uiOutput("eactivity_bar"),
+                        uiOutput("employment_bar"),
+                        uiOutput("unemployment_bar"),
+               #         uiOutput("genderpaygap_bar"),
+               #          uiOutput("skills_bar"),
+               #          uiOutput("neet_bar"),
+               #          uiOutput("evoice_bar"),
+                        style="background-color: grey; color: white"
+               ),
+               fluidRow(width = 12,
+                        column(width = 4,
+                               h2("Economic activity"),
+                               plotOutput("eactivity_overview_int_barplot", height = "200px"),
+                               p("Scotland's economic activity rate was ", text_scotland_thisyear_eactivity_int,"% in 2018, compared to ", text_oecd_thisyear_eactivity_int,"% in the OECD. Over the past 5 years, the average economic activity rate was ", text_scotland_last5_eactivity_int ,"% in Scotland, compared to ", text_oecd_last5_eactivity_int, "% in the OECD overall.")
+                        ),
+                        column(width = 4,
+                               h2("Employment"),
+                               plotOutput("employment_overview_int_barplot", height = "200px"),
+                               p("Scotland's employment rate was ", text_scotland_thisyear_employment_int,"% in 2018, compared to ", text_oecd_thisyear_employment_int,"% in the OECD. Over the past 5 years, the average employment rate was ", text_scotland_last5_employment_int ,"% in Scotland, compared to ", text_oecd_last5_employment_int, "% in the OECD overall.")
+                        ),
+                        column(width = 4,
+                               h2("Unemployment"),
+                               plotOutput("unemployment_overview_int_barplot", height = "200px"),
+                               p("Scotland's unemployment rate was ", text_scotland_thisyear_unemployment_int,"% in 2018, compared to ", text_oecd_thisyear_unemployment_int,"% in the OECD. Over the past 5 years, the average unemployment rate was ", text_scotland_last5_unemployment_int ,"% in Scotland, compared to ", text_oecd_last5_unemployment_int, "% in the OECD overall.")
+                        )
+               ),
+               fluidRow(width = 12,
+                        column(width = 4,
+                               h2("Gender Pay Gap"),
+                               plotOutput("genderpaygap_overview_int_barplot", height = "200px"),
+                               p("Scotland's gender pay gap was 16% in 2017, compared to 13.5% in the OECD. Over the past 5 years, the average gender pay gap was 16.8% in Scotland, compared to 14% in the OECD overall.")
+                        ),
+                        column(width = 4,
+                               h2("Skills"),
+                               plotOutput("skillsunderprimary_overview_int_barplot", height = "200px"),
+                               p("Scotland's attainment level of skills under primary was ", text_scotland_thisyear_skillsunderprimary_int,"% in 2018, compared to ", text_eu_thisyear_skillsunderprimary_int, "% in the EU.")
+                        ),
+                        column(width = 4,
+                               h2("Youth Unemployment"),
+                               plotOutput("yunemployment_overview_int_barplot", height = "200px"),
+                               p("Scotland's youth unemployment rate was ", text_scotland_thisyear_yunemployment_int,"% in 2018, compared to ", text_eu_thisyear_yunemployment_int,"% in the EU.")
+                        )
+               ),
+               # DETAILS ####
+               h1("Details"),
+               tabsetPanel(
+                 # INTERNATIONAL ####
+                 tabPanel("International",
+                          navlistPanel(widths=c(3,9),
+                            tabPanel("Economic activity", 
+                                     fluidRow(width = 12,
+                                              column(width=3, 
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "eactivity_int_input",
+                                                         label = "",
+                                                         choiceNames = names(eactivity_int_wide),
+                                                         choiceValues = c(seq(1:length(names(eactivity_int_wide)))),
+                                                         selected = positions_selected_countries_eactivity_int
+                                                       )
+                                                     )
+                                              ),      
+                                              column(width=9, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 1. Economic activity rate (aged 16-64 for Scotland, aged 15-64 for others) ", "(", as.character(start_year_eactivity_int), " - ", as.character(end_year_eactivity_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("eactivity_int_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_eactivity_int"),
+                                                       p("Source: "), 
+                                                       a("OECD", href = "https://data.oecd.org/"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Employment",
+                                     fluidRow(width = 12,
+                                              column(width=3, 
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "employment_int_input",
+                                                         label = "",
+                                                         choiceNames = names(employment_int_wide),
+                                                         choiceValues = c(seq(1:length(names(employment_int_wide)))),
+                                                         selected = positions_selected_countries_employment_int
+                                                       )
+                                                     )
+                                              ),      
+                                              column(width=9, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 2. Employment rate (aged 16-64 for Scotland, aged 15-64 for others) ", "(", as.character(start_year_employment_int), " - ", as.character(end_year_employment_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("employment_int_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_employment_int"),
+                                                       p("Source: "), 
+                                                       a("OECD", href = "https://data.oecd.org/"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Unemployment",
+                                     fluidRow(width = 12,
+                                              column(width=3, 
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "unemployment_int_input",
+                                                         label = "",
+                                                         choiceNames = names(unemployment_int_wide),
+                                                         choiceValues = c(seq(1:length(names(unemployment_int_wide)))),
+                                                         selected = positions_selected_countries_unemployment_int
+                                                       )
+                                                     )
+                                              ),      
+                                              column(width=9, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 3. Unemployment rate (aged 16-64 for Scotland, aged 15-64 for others) ", "(", as.character(start_year_unemployment_int), " - ", as.character(end_year_unemployment_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("unemployment_int_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_unemployment_int"),
+                                                       p("Source: "), 
+                                                       a("OECD", href = "https://data.oecd.org/"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Gender pay gap",
+                                     fluidRow(width = 12,
+                                              p(tags$b(paste("Figure 4. The difference between median earnings for men and women relative to median earnings for men (2014)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                              plotOutput("genderpaygap2_overview_int_barplot")
+                                              # column(width=3, 
+                                              #        wellPanel(
+                                              #          checkboxGroupInput(
+                                              #            inputId = "genderpaygap_int_input",
+                                              #            label = "",
+                                              #            choiceNames = names(genderpaygap_int_wide),
+                                              #            choiceValues = c(seq(1:length(names(genderpaygap_int_wide)))),
+                                              #            selected = positions_selected_countries_genderpaygap_int
+                                              #          )
+                                              #        )
+                                              # ),      
+                                              # column(width=9, 
+                                              #        fluidRow(
+                                              #          p(tags$b(paste("Figure 4. The difference between median earnings for men and women relative to median earnings for men ", "(", as.character(start_year_genderpaygap_int), " - ", as.character(end_year_genderpaygap_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                              #          withSpinner(dygraphOutput("genderpaygap_int_graph"), type = 5),
+                                              #          align = "center"
+                                              #        ),
+                                              #        fluidRow(
+                                              #          textOutput("legendDivID_genderpaygap_int"),
+                                              #          p("Source: "), 
+                                              #          a("OECD", href = "https://stats.oecd.org/Index.aspx?QueryId=54751#"),
+                                              #          collapsible = FALSE,
+                                              #          width = 12,
+                                              #          style="margin-bottom: 100px;"
+                                              #        )
+                                              # )
+                                     )
+                            ),
+                            tabPanel("Skills",
+                                     fluidRow(width = 12,
+                                              column(width=3, 
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "skillsunderprimary_int_input",
+                                                         label = "",
+                                                         choiceNames = names(skillsunderprimary_int_wide),
+                                                         choiceValues = c(seq(1:length(names(skillsunderprimary_int_wide)))),
+                                                         selected = positions_selected_countries_skillsunderprimary_int
+                                                       )
+                                                     )
+                                              ),      
+                                              column(width=9, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 5. Population aged 25-64 by educational attainment level: Less than primary, primary and lower secondary education (levels 0-2) ", "(", as.character(start_year_skillsunderprimary_int), " - ", as.character(end_year_skillsunderprimary_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("skillsunderprimary_int_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_skillsunderprimary_int"),
+                                                       p("Source: "), 
+                                                       a("Eurostat", href = "https://ec.europa.eu/eurostat/home?"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     ),
+                                     fluidRow(width = 12,
+                                              column(width=3, 
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "skillstertiary_int_input",
+                                                         label = "",
+                                                         choiceNames = names(skillstertiary_int_wide),
+                                                         choiceValues = c(seq(1:length(names(skillstertiary_int_wide)))),
+                                                         selected = positions_selected_countries_skillstertiary_int
+                                                       )
+                                                     )
+                                              ),      
+                                              column(width=9, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 6. Population aged 25-64 by educational attainment level: Tertiary education (levels 5-8) ", "(", as.character(start_year_skillstertiary_int), " - ", as.character(end_year_skillstertiary_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("skillstertiary_int_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_skillstertiary_int"),
+                                                       p("Source: "), 
+                                                       a("Eurostat", href = "https://ec.europa.eu/eurostat/home?"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Youth unemployment",
+                                     fluidRow(width = 12,
+                                              column(width=3, 
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "yunemployment_int_input",
+                                                         label = "",
+                                                         choiceNames = names(yunemployment_int_wide),
+                                                         choiceValues = c(seq(1:length(names(yunemployment_int_wide)))),
+                                                         selected = positions_selected_countries_yunemployment_int
+                                                       )
+                                                     )
+                                              ),      
+                                              column(width=9, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 7. Youth unemployment rate ", "(", as.character(start_year_yunemployment_int), " - ", as.character(end_year_yunemployment_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("yunemployment_int_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_yunemployment_int"),
+                                                       p("Source: "), 
+                                                       a("Eurostat", href = "https://ec.europa.eu/eurostat/home?"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Employee voice",
+                                     fluidRow(width = 12,
+                                              p(tags$b(paste("Figure 8. Percentage of employees with the right to bargain (2017)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                              plotOutput("evoice2_overview_int_barplot")
+                                              # column(width=3, 
+                                              #        wellPanel(
+                                              #          checkboxGroupInput(
+                                              #            inputId = "evoice_int_input",
+                                              #            label = "",
+                                              #            choiceNames = names(evoice_int_wide),
+                                              #            choiceValues = c(seq(1:length(names(evoice_int_wide)))),
+                                              #            selected = positions_selected_countries_evoice_int
+                                              #          )
+                                              #        )
+                                              # ),      
+                                              # column(width=9, 
+                                              #        fluidRow(
+                                              #          p(tags$b(paste("Figure 8. Percentage of employees with the right to bargain ", "(", as.character(start_year_evoice_int), " - ", as.character(end_year_evoice_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                              #          withSpinner(dygraphOutput("evoice_int_graph"), type = 5),
+                                              #          align = "center"
+                                              #        ),
+                                              #        fluidRow(
+                                              #          textOutput("legendDivID_evoice_int"),
+                                              #          p("Source: "), 
+                                              #          a("OECD", href = "https://data.oecd.org/"),
+                                              #          collapsible = FALSE,
+                                              #          width = 12,
+                                              #          style="margin-bottom: 100px;"
+                                              #        )
+                                              # )
+                                     )
+                            )
+                          )
+                 ),
+                 # SCOTLAND ####
+                 tabPanel("Scotland",
+                          navlistPanel(widths=c(3,9),
+                            tabPanel("Economic participation", 
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 1. Scotland's economic activity: ", "(", as.character(start_year_eactivity_sco), " - ", as.character(end_year_eactivity_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("eactivity_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_eactivity_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Employees on the living wage",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 2. Percentage of employees earning less than the living wage: ", "(", as.character(start_year_livingwage_sco), " - ", as.character(end_year_livingwage_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("livingwage_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_livingwage_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Gender pay gap",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 3. The difference between male and female median earnings (gross hourly earnings excluding overtime) as a percentage of male earnings.: ", "(", as.character(start_year_genderpaygap_sco), " - ", as.character(end_year_genderpaygap_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("genderpaygap_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_genderpaygap_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Employee voice",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 4. The percentage of employees who agree that they are affected by collective agreement: ", "(", as.character(start_year_productivity_sco), " - ", as.character(end_year_productivity_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("evoice_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_evoice_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Work place learning",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 5. Percent of people receiving job related training in the last 3 months: ", "(", as.character(start_year_wplearning_sco), " - ", as.character(end_year_wplearning_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("wplearning_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_wplearning_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Young people's participation",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 6. Percentage of young adults (16-19 year olds) participating in education, training or employment.: ", "(", as.character(start_year_youngpplpart_sco), " - ", as.character(end_year_youngpplpart_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("youngpplpart_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_youngpplpart_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Skill shortage vacancies",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 7. The proportion of employers in Scotland with at least one skills shortage vacancy: ", "(", as.character(start_year_skillshortage_sco), " - ", as.character(end_year_skillshortage_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("skillshortage_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_skillshortage_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            )
+                          )
+                 ),
+                 # REGIONAL ####
+                 tabPanel("Regional",
+                          navlistPanel(widths=c(3,9),
+                                       tabPanel("Economic Activity", 
+                                               fluidRow(width = 12,
+                                                        column(width=12,
+                                                               tags$b(textOutput("eactivity_reg_map_caption")),
+                                                               sliderInput("eactivity_reg_input", label = "", min = start_year_eactivity_reg , max = end_year_eactivity_reg, value = end_year_eactivity_reg, width = "50%", sep = "", step = 1),
+                                                               withSpinner(leafletOutput("eactivity_reg_map"), type = 5),
+                                                               p("Source: "), 
+                                                               a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                        )
+                                               )
+                                       ),
+                                       tabPanel("Employees on the living wage",
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("lwage_reg_map_caption")),
+                                                                sliderInput("lwage_reg_input", label = "", min = start_year_lwage_reg , max = end_year_lwage_reg, value = end_year_lwage_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("lwage_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                         )
+                                                )
+                                       ),
+                                       tabPanel("Gender pay gap",
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("gpaygap_reg_map_caption")),
+                                                                sliderInput("gpaygap_reg_input", label = "", min = start_year_gpaygap_reg , max = end_year_gpaygap_reg, value = end_year_gpaygap_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("gpaygap_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                         )
+                                                )
+                                       ),
+                                       tabPanel("Work place learning",
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("wplearning_reg_map_caption")),
+                                                                sliderInput("wplearning_reg_input", label = "", min = start_year_wplearning_reg , max = end_year_wplearning_reg, value = end_year_wplearning_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("wplearning_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                         )
+                                                )
+                                       )
+                          )
+                 )
+               )
+             ),
+             # PEOPLE ################################################################################################################################
+             tabPanel(
+               title = tags$div(icon("male", lib = "font-awesome"), "People"),
+               value = "PeopleTab",
+               # OVERVIEW ####
+               fluidRow(width = 12,
+                        column(width = 2,
+                               tags$b("Scotland's rank among 37 OECD countries:")
+                        ),
+                        uiOutput("lifeexpall_bar"),
+                        style="background-color: grey; color: white"
+               ),
+               fluidRow(width = 12,
+                        column(width = 4,
+                               h2("Life expectancy"),
+                               plotOutput("lifeexpall_overview_int_barplot", height = "200px"),
+                               p("Scotland's life expectancy was ", text_scotland_thisyear_lifeexpall_int," in 2017, compared to ", text_oecd_thisyear_lifeexpall_int," in the OECD. Over the past 5 years, the average life expectancy was ", text_scotland_last5_lifeexpall_int ," in Scotland, compared to ", text_oecd_last5_lifeexpall_int, " in the OECD overall.")
+                        ),
+                        column(width = 4,
+                        ),
+                        column(width = 4,
+                        )
+               ),
+               # DETAILS ####
+               h1("Details"),
+               tabsetPanel(
+                 # INTERNATIONAL ####
+                 tabPanel("International",
+                          navlistPanel(widths=c(3,9),
+                            tabPanel("Life expectancy",
+                                     fluidRow(width = 12,
+                                              column(width=3, 
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "lifeexpall_int_input",
+                                                         label = "",
+                                                         choiceNames = names(lifeexpall_int_wide),
+                                                         choiceValues = c(seq(1:length(names(lifeexpall_int_wide)))),
+                                                         selected = positions_selected_countries_lifeexpall_int
+                                                       )
+                                                     )
+                                              ),      
+                                              column(width=9, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 1. Life expectancy of the total population at birth ", "(", as.character(start_year_lifeexpall_int), " - ", as.character(end_year_lifeexpall_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("lifeexpall_int_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_lifeexpall_int"),
+                                                       p("Source: "), 
+                                                       a("OECD", href = "https://data.oecd.org/"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            )
+                          )
+                 ),
+                 # SCOTLAND ####
+                 tabPanel("Scotland",
+                          navlistPanel(widths=c(3,9),
+                            tabPanel("Relative poverty after housing costs",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 3. The proportions of people living in private households with an equivalised income of less than 60% of the UK median after housing costs: ", "(", as.character(start_year_rphousingc_sco), " - ", as.character(end_year_rphousingc_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("rphousingc_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_rphousingc_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Healthy life expectancy",
+                                     p(tags$b(paste("Figure 1. Healthy life expectancy for males (2018)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                     plotOutput("hlifeexp_male_overview_sco_barplot"),
+                                     p(tags$b(paste("Figure 2. Healthy life expectancy for females (2018)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                     plotOutput("hlifeexp_female_overview_sco_barplot")
+                            ),
+                            tabPanel("Mental wellbeing",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 5. Mental wellbeing - The Scottish Survey Core Questions is an innovative project drawing together multiple household surveys to provide a large sample for subnational analysis.: ", "(", as.character(start_year_mwellbeing_sco), " - ", as.character(end_year_mwellbeing_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("mwellbeing_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_mwellbeing_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            )
+                          )
+                 ),
+                 # REGIONAL ####
+                 tabPanel("Regional",
+                          navlistPanel(widths=c(3,9),
+                                       tabPanel("Healthy life expectancy",
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("hlifeexp_male_reg_map_caption")),
+                                                                sliderInput("hlifeexp_male_reg_input", label = "", min = start_year_hlifeexp_male_reg , max = end_year_hlifeexp_male_reg, value = end_year_hlifeexp_male_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("hlifeexp_male_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                         )
+                                                ),
+                                                fluidRow(width = 12, style="padding-top: 20px;"),
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("hlifeexp_female_reg_map_caption")),
+                                                                sliderInput("hlifeexp_female_reg_input", label = "", min = start_year_hlifeexp_female_reg , max = end_year_hlifeexp_female_reg, value = end_year_hlifeexp_female_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("hlifeexp_female_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                         )
+                                                )
+                                       )
+                          )
+                 )
+               )
+             ),    
+             # PLACE ################################################################################################################################
+             tabPanel(
+               title = tags$div(icon("map-marked", lib = "font-awesome"), "Place"),
+               value = "PlaceTab",
+               # OVERVIEW ####
+               fluidRow(width = 12,
+                        column(width = 2,
+                               tags$b("Scotland's rank among 28 EU countries:")
+                        ),
+                        uiOutput("broadband_bar"),
+                        style="background-color: grey; color: white"
+               ),
+               fluidRow(width = 12,
+                        column(width = 4,
+                               h2("Broadband"),
+                               plotOutput("broadband_overview_int_barplot", height = "200px"),
+                               p("Scotland's broadband access was ", text_scotland_thisyear_broadband_int," (% of total households) in 2019, compared to ", text_eu_thisyear_broadband_int," (% of total households) in the 28 EU countries.")
+                        ),
+                        column(width = 4,
+                        ),
+                        column(width = 4,
+                        )
+               ),
+               # DETAILS ####
+               h1("Details"),
+               tabsetPanel(
+                 # INTERNATIONAL ####
+                 tabPanel("International",
+                          navlistPanel(widths=c(3,9),
+                            tabPanel("Broadband", 
+                                     fluidRow(width = 12,
+                                              column(width=3, 
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "broadband_int_input",
+                                                         label = "",
+                                                         choiceNames = names(broadband_int_wide),
+                                                         choiceValues = c(seq(1:length(names(broadband_int_wide)))),
+                                                         selected = positions_selected_countries_broadband_int
+                                                       )
+                                                     )
+                                              ),      
+                                              column(width=9, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 1. Share of households with internet broadband access (in % of total households) ", "(", as.character(start_year_broadband_int), " - ", as.character(end_year_broadband_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("broadband_int_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_broadband_int"),
+                                                       p("Source: "), 
+                                                       a("OECD", href = "https://data.oecd.org/"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            )
+                          )
+                 ),
+                 # SCOTLAND ####
+                 tabPanel("Scotland",
+                          navlistPanel(widths=c(3,9),
+                            tabPanel("Access to green and blue space", 
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 1. Percentage of adults living within 5 minutes walking distance of their nearest green or blue space: ", "(", as.character(start_year_greenandbluespace_sco), " - ", as.character(end_year_greenandbluespace_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("greenandbluespace_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_greenandbluespace_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            )
+                          )
+                 ),
+                 # REGIONAL ####
+                 tabPanel("Regional",
+                          navlistPanel(widths=c(3,9),
+                                       tabPanel("Access to green and blue space", 
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("blueorgreen_reg_map_caption")),
+                                                                sliderInput("blueorgreen_reg_input", label = "", min = start_year_blueorgreen_reg , max = end_year_blueorgreen_reg, value = end_year_blueorgreen_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("blueorgreen_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                         )
+                                                )
+                                       ),
+                                       tabPanel("Quality of public services",
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("pubservsat_reg_map_caption")),
+                                                                sliderInput("pubservsat_reg_input", label = "", min = start_year_pubservsat_reg , max = end_year_pubservsat_reg, value = end_year_pubservsat_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("pubservsat_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                         )
+                                                )
+                                       ),
+                                       tabPanel("Access to superfast broadband",
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("broadband_reg_map_caption")),
+                                                                sliderInput("broadband_reg_input", label = "", min = start_year_broadband_reg , max = end_year_broadband_reg, value = end_year_broadband_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("broadband_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                         )
+                                                )
+                                       )
+                          )
+                 )
+               )
+             ),        
+             # SUSTAINABILITY #######################################################################################################################
+             tabPanel(
+               title = tags$div(icon("tree", lib = "font-awesome"), "Sustainability"),
+               value = "SustainabilityTab",
+               # OVERVIEW ####
+               fluidRow(width = 12,
+                        column(width = 2,
+                               tags$b("Scotland's rank among 28 EU countries:")
+                        ),
+                        uiOutput("ggemissions2_bar"),
+                        style="background-color: grey; color: white"
+               ),
+               fluidRow(width = 12,
+                        column(width = 4,
+                               h2("Greenhouse Gas Emissions"),
+                               plotOutput("ggemissions2_overview_int_barplot", height = "200px"),
+                               p("Scotland's greenhouse gas emissions were ", text_scotland_thisyear_ggemissions2_int," (Tonnes CO2 per capita) in 2017, compared to ", text_eu_thisyear_ggemissions2_int," (Tonnes CO2 per capita) in the 28 EU countries.")
+                        ),
+                        column(width = 4,
+                        ),
+                        column(width = 4,
+                        )
+               ),
+               # DETAILS ####
+               h1("Details"),
+               tabsetPanel(
+                 # INTERNATIONAL ####
+                 tabPanel("International",
+                          navlistPanel(widths=c(3,9),
+                            tabPanel("Greenhouse Gas Emissions ", 
+                                     fluidRow(width = 12,
+                                              column(width=3, 
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "ggemissions_int_input",
+                                                         label = "",
+                                                         choiceNames = names(ggemissions_int_wide),
+                                                         choiceValues = c(seq(1:length(names(ggemissions_int_wide)))),
+                                                         selected = positions_selected_countries_ggemissions_int
+                                                       )
+                                                     )
+                                              ),      
+                                              column(width=9, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 1. Greenhouse gas emissions (Kilograms per capita, Thousands) ", "(", as.character(start_year_ggemissions_int), " - ", as.character(end_year_ggemissions_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("ggemissions_int_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_ggemissions_int"),
+                                                       p("Source: "), 
+                                                       a("OECD", href = "https://data.oecd.org/"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            )
+                          )
+                 ),
+                 # SCOTLAND ####
+                 tabPanel("Scotland",
+                          navlistPanel(widths=c(3,9),
+                            tabPanel("Carbon footprint", 
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 1. Greenhouse gas emissions associated with the consumption by Scottish residents on goods and services and by private heating and motoring: ", "(", as.character(start_year_cfootprint_sco), " - ", as.character(end_year_cfootprint_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("cfootprint_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_cfootprint_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Natural Capital",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 2. Percent of natural features, on protected nature sites, in favourable condition: ", "(", as.character(start_year_naturalf_sco), " - ", as.character(end_year_naturalf_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("naturalf_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_naturalf_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            tabPanel("Greenhouse gas emissions",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 3. Scotland's greenhouse gas emissions: ", "(", as.character(start_year_gasemissions_sco), " - ", as.character(end_year_gasemissions_sco), ") ", " (Mt Co2Equiv)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("gasemissions_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_gasemissions_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            )
+                          )
+                 ),
+                 # REGIONAL ####
+                 tabPanel("Regional",
+                  p("No regional data available at this time")
+                 )
+               )
+             ),        
+             # EQUALITIES DASHBOARD #################################################################################################################
+             tabPanel(
+               title = tags$div(icon("balance-scale", lib = "font-awesome"), "Equalities Dashboard"),
+               value = "EqualitiesTab",
+               # OVERVIEW ####
+               fluidRow(width = 12,
+                        column(width = 4,
+                               h2('Gender'),
+                               plotOutput("gpaygap_eq_overview_int_lineplot", height = "200px"),
+                               p("Source: Annual Survey of Hours and Earnings"),
+                               p("Scotland's gender pay gap was ", gender_last_figure, "% in ", gender_year, ". In the past 5 years, the average gender pay gap was ", gender_5years_figure, "% .")
+                        ),
+                        column(width = 4,
+                               h2('Disability'),
+                               plotOutput("dempgap_eq_overview_int_lineplot", height = "200px"),
+                               p("Source: Annual Population Survey"),
+                               p("Scotland's disabled employment pay gap was ", disability_last_figure, "% in ", disability_year, ". In the past 5 years, the average disabled employment pay gap was ", disability_5years_figure, "% .")
+                        ),
+                        column(width = 4,
+                               h2('Age'),
+                               plotOutput("youthunemp_eq_overview_int_lineplot", height = "200px"),
+                               p("Source: Annual Population Survey"),
+                               p("Scotland's youth unemployment rate was ", age_last_figure, "% in ", age_year, ". In the past 5 years, the average youth unemployment rate was ", age_5years_figure, "% .")
+                        )
+               ),
+               fluidRow(width = 12,
+                        column(width = 4,
+                               h2('Ethnicity'),
+                               plotOutput("ethnicmgap_eq_overview_int_lineplot", height = "200px"),
+                               p("Source: Annual Population Survey"),
+                               p("Scotland's ethnic minority employment gap was ", ethnicity_last_figure, "% in ", ethnicity_year, ". In the past 5 years, the average ethnic minority employment gap was ", ethnicity_5years_figure, "% .")
+                        ),
+                        column(width = 4,
+                               h2("Socio-economic status"),
+                               plotOutput("socioecon_eq_overview_int_barplot", height = "200px"),
+                               p("Source: Regional employment patterns in Scotland"),
+                               p("In 2018, employment gap for the most deprived (Q1) was 62.5%, compared to 79.2% for the least deprived (Q5).")
+                        ),
+                        column(width = 4,
+                               h2("Religion"),
+                               plotOutput("religion_eq_overview_int_barplot", height = "200px"),
+                               p("Source: Poverty and Income Inequality in Scotland 2015-18"),
+                               p("In 2018, 41% of Muslims were in poverty.")
+                        )
+               ),
+               fluidRow(width = 12,
+                        column(width = 4,
+                               h2("Sexual orientation"),
+                               plotOutput("orientation_eq_overview_int_barplot", height = "200px"),
+                               p("Source: Scottish Household Survey 2018"),
+                               p("In 2018, 25% of Gay/Lesbian/Bisexual individuals experienced discrimination as compared with 8% for Straight individuals."),
+                        ),
+                        column(width = 4,
+                        ),
+                        column(width = 4,
+                        )
+               )
+            )
+    ),
+  # FOOTER ##########################################################################################################################################
+  fluidRow(
+    br(),
+    wellPanel(
+      fluidRow(
+        # FOOTER - ABOUT
+        column(width = 3,
+               icon("info", lib = "font-awesome"),
+               strong("ABOUT"),
+               p("The Economy Board requested that OCEA lead on developing a performance framework for the Economy Board, taking into account the framework developed for the Enterprise and Skills Strategic Board."),
+        ),
+        # FOOTER - COPYRIGHT NOTICE
+        column(width = 3,
+               icon("copyright", lib = "font-awesome"),
+               strong("COPYRIGHT NOTICE"),
+               p("You may use or re-use this information (not including logos) free of charge in any format or medium, under the terms of the ",
+                 a("Open Government Licence", href = "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"), ".")
+        ),
+        # FOOTER - CONTACT DETAILS
+        column(width = 3,
+               icon("at", lib = "font-awesome"),
+               strong("CONTACT DETAILS"),
+               p("We welcome your feedback:"),
+               p("SCRIG@gov.scot", style = "line-height: 0%;")
+        ),
+        # FOOTER - EXTERNAL LINKS
+        column(width = 3,
+               icon("external-link", lib = "font-awesome"),
+               strong("EXTERNAL LINKS"),
+               p(a("OECD data", href = "https://data.oecd.org/")),
+               p(a("Open Data Platfrom", href = "https://statistics.gov.scot/data/search")),
+               p(a("National Performance Framework", href = "https://nationalperformance.gov.scot/")),
+               p(a("SCRIG ", href = "https://www.inclusivegrowth.scot/")),
+               p(a("SCRIG dashboard ", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/"))
+        )
+      ),
+      fluidRow(
+        p("Reload the page should you experience any issues."),
+        style = "text-align: center; outline: 0px;"
+      )
+    )
+  ) # Navbar page ends here
+)
+) # UI ends here
+
