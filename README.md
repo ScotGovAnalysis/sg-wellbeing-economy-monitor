@@ -2,8 +2,6 @@
 The Economy Board requested that OCEA lead on developing a performance framework for the Economy Board, taking into account the framework developed for the Enterprise and Skills Strategic Board.
 
 ![Image of the home page](https://github.com/DataScienceScotland/sg-wellbeing-economy-monitor/blob/master/sshot-2020-12-19-20-23-22.png?raw=true)
-![Image of the home page](https://github.com/DataScienceScotland/sg-wellbeing-economy-monitor/blob/master/sshot-2020-12-19-20-23-30.png?raw=true)
-![Image of the home page](https://github.com/DataScienceScotland/sg-wellbeing-economy-monitor/blob/master/sshot-2020-12-19-20-23-44.png?raw=true)
 
 ## 📦 Packages
 - library(shiny)                # For the app iteslf.
