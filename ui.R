@@ -798,7 +798,7 @@ shinyUI(fluidPage(
                                                      fluidRow(
                                                        textOutput("legendDivID_depratio_sco"),
                                                        p("Source: "), 
-                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       a("Scottish Government", href = "https://statistics.gov.scot/data/search"),
                                                        collapsible = FALSE,
                                                        width = 12,
                                                        style="margin-bottom: 100px;"
