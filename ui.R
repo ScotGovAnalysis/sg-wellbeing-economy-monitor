@@ -932,7 +932,7 @@ shinyUI(fluidPage(
                                                                 sliderInput("depratio_reg_input", label = "", min = start_year_depratio_reg , max = end_year_depratio_reg, value = end_year_depratio_reg, width = "50%", sep = "", step = 1),
                                                                 withSpinner(leafletOutput("depratio_reg_map"), type = 5),
                                                                 p("Source: "), 
-                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                                a("Scottish Government", href = "http://statistics.gov.scot/data/population-estimates-dependency")
                                                          )
                                                 )
                                        ),
