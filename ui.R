@@ -798,7 +798,7 @@ shinyUI(fluidPage(
                                                      fluidRow(
                                                        textOutput("legendDivID_depratio_sco"),
                                                        p("Source: "), 
-                                                       a("Scottish Government", href = "https://statistics.gov.scot/data/search"),
+                                                       a("Scottish Government", href = "https://statistics.gov.scot/data/population-estimates-dependency"),
                                                        collapsible = FALSE,
                                                        width = 12,
                                                        style="margin-bottom: 100px;"
@@ -849,14 +849,14 @@ shinyUI(fluidPage(
                                               ),
                                               column(width=9,
                                                      fluidRow(
-                                                       p(tags$b(paste("Figure 2. Migration to Scotland - Overseas vs from Rest of the UK ", "(", as.character(start_year_migration_in_source_sco), " - ", as.character(end_year_migration_in_source_sco), ") ", "(absolute values)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       p(tags$b(paste("Figure 2. Migration to and from Scotland - Overseas vs Rest of the UK ", "(", as.character(start_year_migration_in_source_sco), " - ", as.character(end_year_migration_in_source_sco), ") ", "(absolute values)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                        withSpinner(dygraphOutput("migration_in_source_sco_graph"), type = 5),
                                                        align = "center"
                                                      ),
                                                      fluidRow(
                                                        textOutput("legendDivID_migration_in_source_sco"),
                                                        p("Source: "), 
-                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       a("Scottish Government", href = "https://statistics.gov.scot/slice?dataset=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fmigration-to-and-from-scotland&http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fdimension%2Fage=http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fconcept%2Fage%2Fall&http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fdimension%2FmigrationType=http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fconcept%2Fmigration-type%2Fnet&http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fdimension%2Fsex=http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fconcept%2Fsex%2Fall"),
                                                        collapsible = FALSE,
                                                        width = 12,
                                                        style="margin-bottom: 100px;"
