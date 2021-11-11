@@ -1286,7 +1286,7 @@ shinyUI(fluidPage(
                                               )
                                      )
                             ),
-                            tabPanel("Employees on the living wage",
+                            tabPanel("Living wage",
                                      fluidRow(width = 12,
                                               column(width=12, 
                                                      fluidRow(
@@ -1416,7 +1416,7 @@ shinyUI(fluidPage(
                                                         )
                                                )
                                        ),
-                                       tabPanel("Employees on the living wage",
+                                       tabPanel("Living wage",
                                                 fluidRow(width = 12,
                                                          column(width=12,
                                                                 tags$b(textOutput("lwage_reg_map_caption")),
