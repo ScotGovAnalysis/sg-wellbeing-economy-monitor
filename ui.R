@@ -744,7 +744,7 @@ shinyUI(fluidPage(
                                                      fluidRow(
                                                        textOutput("legendDivID_depratio_int"),
                                                        p("Source: "), 
-                                                       a("World Bank, National Registers of Scotland ", href = "https://www.nrscotland.gov.uk/statistics-and-data"),
+                                                       a("World Bank, National Records of Scotland ", href = "https://www.nrscotland.gov.uk/statistics-and-data"),
                                                        collapsible = FALSE,
                                                        width = 12,
                                                        style="margin-bottom: 100px;"
