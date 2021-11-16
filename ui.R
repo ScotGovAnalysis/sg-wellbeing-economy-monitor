@@ -1546,14 +1546,14 @@ shinyUI(fluidPage(
                                      fluidRow(width = 12,
                                               column(width=12, 
                                                      fluidRow(
-                                                       p(tags$b(paste("Figure 5. Mental wellbeing - The Scottish Survey Core Questions is an innovative project drawing together multiple household surveys to provide a large sample for subnational analysis.: ", "(", as.character(start_year_mwellbeing_sco), " - ", as.character(end_year_mwellbeing_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       p(tags$b(paste("Figure 5. Mental wellbeing - Average score on Warwick-Edinburgh Mental Wellbeing Scale: ", "(", as.character(start_year_mwellbeing_sco), " - ", as.character(end_year_mwellbeing_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                        withSpinner(dygraphOutput("mwellbeing_sco_graph"), type = 5),
                                                        align = "center"
                                                      ),
                                                      fluidRow(
                                                        textOutput("legendDivID_mwellbeing_sco"),
                                                        p("Source: "), 
-                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       a("National Performance Framework", href = "https://statistics.gov.scot/data/national-performance-framework"),
                                                        collapsible = FALSE,
                                                        width = 12,
                                                        style="margin-bottom: 100px;"
