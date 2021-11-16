@@ -91,7 +91,7 @@ shinyUI(fluidPage(
                                p("Average: 81.64 years"),
                                p("Min: 79.1 years"),
                                p("Max: 82.7 years"),
-                               strong("Dependancy Ratio (2018)"),
+                               strong("Dependency Ratio (2018)"),
                                p("Value: 53.35%"),
                                p("Average: 56.07%"),
                                p("Min: 52.9%"),
