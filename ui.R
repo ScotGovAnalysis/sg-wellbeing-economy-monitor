@@ -683,7 +683,7 @@ shinyUI(fluidPage(
                                                                   sliderInput("nbusiness_reg_input", label = "", min = start_year_nbusiness_reg , max = end_year_nbusiness_reg, value = end_year_nbusiness_reg, width = "50%", sep = "", step = 1),
                                                                   withSpinner(leafletOutput("nbusiness_reg_map"), type = 5),
                                                                   p("Source: "), 
-                                                                  a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                                  a("Businesses in Scotland", href = "https://www.gov.scot/publications/businesses-in-scotland-2020/")
                                                            )
                                                   )
                                          )
