@@ -1,0 +1,353 @@
+NAME,Year,Businesses
+Aberdeen City,2010,447
+Aberdeen City,2011,453
+Aberdeen City,2012,476
+Aberdeen City,2013,490
+Aberdeen City,2014,511
+Aberdeen City,2015,519
+Aberdeen City,2016,513
+Aberdeen City,2017,500
+Aberdeen City,2018,493
+Aberdeen City,2019,498
+Aberdeen City,2020,494
+Aberdeenshire,2010,627
+Aberdeenshire,2011,632
+Aberdeenshire,2012,650
+Aberdeenshire,2013,657
+Aberdeenshire,2014,672
+Aberdeenshire,2015,679
+Aberdeenshire,2016,679
+Aberdeenshire,2017,673
+Aberdeenshire,2018,668
+Aberdeenshire,2019,672
+Aberdeenshire,2020,669
+Angus,2010,400
+Angus,2011,395
+Angus,2012,406
+Angus,2013,404
+Angus,2014,415
+Angus,2015,423
+Angus,2016,428
+Angus,2017,428
+Angus,2018,428
+Angus,2019,430
+Angus,2020,428
+Argyll and Bute,2010,551
+Argyll and Bute,2011,542
+Argyll and Bute,2012,566
+Argyll and Bute,2013,546
+Argyll and Bute,2014,554
+Argyll and Bute,2015,554
+Argyll and Bute,2016,551
+Argyll and Bute,2017,559
+Argyll and Bute,2018,552
+Argyll and Bute,2019,552
+Argyll and Bute,2020,554
+City of Edinburgh,2010,399
+City of Edinburgh,2011,394
+City of Edinburgh,2012,407
+City of Edinburgh,2013,410
+City of Edinburgh,2014,428
+City of Edinburgh,2015,436
+City of Edinburgh,2016,449
+City of Edinburgh,2017,453
+City of Edinburgh,2018,451
+City of Edinburgh,2019,460
+City of Edinburgh,2020,465
+Clackmannanshire,2010,282
+Clackmannanshire,2011,276
+Clackmannanshire,2012,280
+Clackmannanshire,2013,274
+Clackmannanshire,2014,290
+Clackmannanshire,2015,298
+Clackmannanshire,2016,304
+Clackmannanshire,2017,302
+Clackmannanshire,2018,299
+Clackmannanshire,2019,297
+Clackmannanshire,2020,293
+Dumfries and Galloway,2010,540
+Dumfries and Galloway,2011,529
+Dumfries and Galloway,2012,535
+Dumfries and Galloway,2013,527
+Dumfries and Galloway,2014,537
+Dumfries and Galloway,2015,537
+Dumfries and Galloway,2016,533
+Dumfries and Galloway,2017,531
+Dumfries and Galloway,2018,534
+Dumfries and Galloway,2019,535
+Dumfries and Galloway,2020,532
+Dundee City,2010,280
+Dundee City,2011,271
+Dundee City,2012,276
+Dundee City,2013,278
+Dundee City,2014,290
+Dundee City,2015,300
+Dundee City,2016,302
+Dundee City,2017,308
+Dundee City,2018,303
+Dundee City,2019,308
+Dundee City,2020,313
+East Ayrshire,2010,311
+East Ayrshire,2011,307
+East Ayrshire,2012,315
+East Ayrshire,2013,313
+East Ayrshire,2014,322
+East Ayrshire,2015,333
+East Ayrshire,2016,338
+East Ayrshire,2017,347
+East Ayrshire,2018,344
+East Ayrshire,2019,345
+East Ayrshire,2020,352
+East Dunbartonshire,2010,316
+East Dunbartonshire,2011,314
+East Dunbartonshire,2012,322
+East Dunbartonshire,2013,318
+East Dunbartonshire,2014,333
+East Dunbartonshire,2015,342
+East Dunbartonshire,2016,357
+East Dunbartonshire,2017,359
+East Dunbartonshire,2018,357
+East Dunbartonshire,2019,359
+East Dunbartonshire,2020,352
+East Lothian,2010,351
+East Lothian,2011,346
+East Lothian,2012,357
+East Lothian,2013,365
+East Lothian,2014,372
+East Lothian,2015,371
+East Lothian,2016,383
+East Lothian,2017,387
+East Lothian,2018,389
+East Lothian,2019,391
+East Lothian,2020,390
+East Renfrewshire,2010,319
+East Renfrewshire,2011,316
+East Renfrewshire,2012,331
+East Renfrewshire,2013,331
+East Renfrewshire,2014,347
+East Renfrewshire,2015,354
+East Renfrewshire,2016,363
+East Renfrewshire,2017,371
+East Renfrewshire,2018,368
+East Renfrewshire,2019,370
+East Renfrewshire,2020,367
+Falkirk,2010,290
+Falkirk,2011,287
+Falkirk,2012,294
+Falkirk,2013,298
+Falkirk,2014,309
+Falkirk,2015,314
+Falkirk,2016,321
+Falkirk,2017,322
+Falkirk,2018,318
+Falkirk,2019,316
+Falkirk,2020,317
+Fife,2010,297
+Fife,2011,290
+Fife,2012,298
+Fife,2013,295
+Fife,2014,306
+Fife,2015,314
+Fife,2016,319
+Fife,2017,329
+Fife,2018,335
+Fife,2019,335
+Fife,2020,339
+Glasgow City,2010,336
+Glasgow City,2011,329
+Glasgow City,2012,339
+Glasgow City,2013,338
+Glasgow City,2014,351
+Glasgow City,2015,357
+Glasgow City,2016,366
+Glasgow City,2017,376
+Glasgow City,2018,379
+Glasgow City,2019,385
+Glasgow City,2020,394
+Highland,2010,569
+Highland,2011,559
+Highland,2012,572
+Highland,2013,570
+Highland,2014,582
+Highland,2015,584
+Highland,2016,590
+Highland,2017,582
+Highland,2018,583
+Highland,2019,590
+Highland,2020,583
+Inverclyde,2010,249
+Inverclyde,2011,245
+Inverclyde,2012,257
+Inverclyde,2013,255
+Inverclyde,2014,264
+Inverclyde,2015,270
+Inverclyde,2016,281
+Inverclyde,2017,286
+Inverclyde,2018,282
+Inverclyde,2019,278
+Inverclyde,2020,277
+Midlothian,2010,326
+Midlothian,2011,321
+Midlothian,2012,324
+Midlothian,2013,326
+Midlothian,2014,334
+Midlothian,2015,343
+Midlothian,2016,348
+Midlothian,2017,355
+Midlothian,2018,353
+Midlothian,2019,356
+Midlothian,2020,365
+Moray,2010,429
+Moray,2011,426
+Moray,2012,435
+Moray,2013,427
+Moray,2014,431
+Moray,2015,434
+Moray,2016,438
+Moray,2017,442
+Moray,2018,442
+Moray,2019,447
+Moray,2020,447
+Na h-Eileanan Siar,2010,495
+Na h-Eileanan Siar,2011,478
+Na h-Eileanan Siar,2012,502
+Na h-Eileanan Siar,2013,503
+Na h-Eileanan Siar,2014,521
+Na h-Eileanan Siar,2015,546
+Na h-Eileanan Siar,2016,544
+Na h-Eileanan Siar,2017,542
+Na h-Eileanan Siar,2018,558
+Na h-Eileanan Siar,2019,554
+Na h-Eileanan Siar,2020,556
+North Ayrshire,2010,286
+North Ayrshire,2011,276
+North Ayrshire,2012,287
+North Ayrshire,2013,283
+North Ayrshire,2014,297
+North Ayrshire,2015,305
+North Ayrshire,2016,309
+North Ayrshire,2017,318
+North Ayrshire,2018,315
+North Ayrshire,2019,315
+North Ayrshire,2020,318
+North Lanarkshire,2010,249
+North Lanarkshire,2011,247
+North Lanarkshire,2012,257
+North Lanarkshire,2013,257
+North Lanarkshire,2014,268
+North Lanarkshire,2015,277
+North Lanarkshire,2016,286
+North Lanarkshire,2017,296
+North Lanarkshire,2018,293
+North Lanarkshire,2019,298
+North Lanarkshire,2020,301
+Orkney Islands,2010,870
+Orkney Islands,2011,844
+Orkney Islands,2012,852
+Orkney Islands,2013,835
+Orkney Islands,2014,858
+Orkney Islands,2015,855
+Orkney Islands,2016,835
+Orkney Islands,2017,829
+Orkney Islands,2018,839
+Orkney Islands,2019,843
+Orkney Islands,2020,821
+Perth and Kinross,2010,517
+Perth and Kinross,2011,504
+Perth and Kinross,2012,509
+Perth and Kinross,2013,505
+Perth and Kinross,2014,512
+Perth and Kinross,2015,516
+Perth and Kinross,2016,514
+Perth and Kinross,2017,520
+Perth and Kinross,2018,522
+Perth and Kinross,2019,519
+Perth and Kinross,2020,516
+Renfrewshire,2010,320
+Renfrewshire,2011,313
+Renfrewshire,2012,320
+Renfrewshire,2013,320
+Renfrewshire,2014,331
+Renfrewshire,2015,335
+Renfrewshire,2016,344
+Renfrewshire,2017,348
+Renfrewshire,2018,348
+Renfrewshire,2019,350
+Renfrewshire,2020,353
+Scottish Borders,2010,552
+Scottish Borders,2011,549
+Scottish Borders,2012,557
+Scottish Borders,2013,547
+Scottish Borders,2014,560
+Scottish Borders,2015,559
+Scottish Borders,2016,558
+Scottish Borders,2017,554
+Scottish Borders,2018,551
+Scottish Borders,2019,549
+Scottish Borders,2020,547
+Shetland Islands,2010,727
+Shetland Islands,2011,727
+Shetland Islands,2012,744
+Shetland Islands,2013,756
+Shetland Islands,2014,767
+Shetland Islands,2015,786
+Shetland Islands,2016,807
+Shetland Islands,2017,830
+Shetland Islands,2018,844
+Shetland Islands,2019,839
+Shetland Islands,2020,844
+South Ayrshire,2010,394
+South Ayrshire,2011,389
+South Ayrshire,2012,394
+South Ayrshire,2013,387
+South Ayrshire,2014,394
+South Ayrshire,2015,400
+South Ayrshire,2016,410
+South Ayrshire,2017,416
+South Ayrshire,2018,409
+South Ayrshire,2019,414
+South Ayrshire,2020,404
+South Lanarkshire,2010,325
+South Lanarkshire,2011,318
+South Lanarkshire,2012,326
+South Lanarkshire,2013,323
+South Lanarkshire,2014,338
+South Lanarkshire,2015,346
+South Lanarkshire,2016,354
+South Lanarkshire,2017,361
+South Lanarkshire,2018,360
+South Lanarkshire,2019,365
+South Lanarkshire,2020,364
+Stirling,2010,536
+Stirling,2011,530
+Stirling,2012,536
+Stirling,2013,529
+Stirling,2014,542
+Stirling,2015,544
+Stirling,2016,546
+Stirling,2017,541
+Stirling,2018,537
+Stirling,2019,542
+Stirling,2020,546
+West Dunbartonshire,2010,240
+West Dunbartonshire,2011,239
+West Dunbartonshire,2012,249
+West Dunbartonshire,2013,249
+West Dunbartonshire,2014,259
+West Dunbartonshire,2015,264
+West Dunbartonshire,2016,275
+West Dunbartonshire,2017,281
+West Dunbartonshire,2018,279
+West Dunbartonshire,2019,279
+West Dunbartonshire,2020,298
+West Lothian,2010,319
+West Lothian,2011,312
+West Lothian,2012,318
+West Lothian,2013,319
+West Lothian,2014,334
+West Lothian,2015,339
+West Lothian,2016,350
+West Lothian,2017,353
+West Lothian,2018,356
+West Lothian,2019,362
+West Lothian,2020,359
