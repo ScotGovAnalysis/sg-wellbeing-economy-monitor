@@ -516,14 +516,14 @@ shinyUI(fluidPage(
                                                 ),      
                                                 column(width=9, 
                                                        fluidRow(
-                                                         p(tags$b(paste("Figure 8. Number of businesses in Scotland by Sector ", "(", as.character(start_year_nbusiness_sector_sco), " - ", as.character(end_year_nbusiness_sector_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         p(tags$b(paste("Figure 8. Total number of private sector enterprises (registered for VAT and/orPAYE) in Scotland per 10,000 adults by Sector ", "(", as.character(start_year_nbusiness_sector_sco), " - ", as.character(end_year_nbusiness_sector_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                          withSpinner(dygraphOutput("nbusiness_sector_sco_graph"), type = 5),
                                                          align = "center"
                                                        ),
                                                        fluidRow(
                                                          textOutput("legendDivID_nbusiness_sector_sco"),
                                                          p("Source: "), 
-                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         a("Businesses in Scotland:2020", href = "https://www.gov.scot/publications/businesses-in-scotland-2020/"),
                                                          collapsible = FALSE,
                                                          width = 12,
                                                          style="margin-bottom: 100px;"
@@ -572,14 +572,14 @@ shinyUI(fluidPage(
                                                 ),      
                                                 column(width=9, 
                                                        fluidRow(
-                                                         p(tags$b(paste("Figure 10. Number of businesses in Scotland by Number of Employees ", "(", as.character(start_year_nbusiness_employees_sco), " - ", as.character(end_year_nbusiness_employees_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         p(tags$b(paste("Figure 10. Total number of private sector enterprises (registered for VAT and/or PAYE) in Scotland per 10,000 adults by Number of Employees ", "(", as.character(start_year_nbusiness_employees_sco), " - ", as.character(end_year_nbusiness_employees_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                          withSpinner(dygraphOutput("nbusiness_employees_sco_graph"), type = 5),
                                                          align = "center"
                                                        ),
                                                        fluidRow(
                                                          textOutput("legendDivID_nbusiness_employees_sco"),
                                                          p("Source: "), 
-                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         a("Businesses in Scotland:2020", href = "https://www.gov.scot/publications/businesses-in-scotland-2020/"),
                                                          collapsible = FALSE,
                                                          width = 12,
                                                          style="margin-bottom: 100px;"
