@@ -678,7 +678,7 @@ shinyUI(fluidPage(
                                          tabPanel("Number of businesses",
                                                   fluidRow(width = 12,
                                                            column(width=12,
-                                                                  # p(tags$b(paste("Map 4. The Number of Businesses across Scottish council areas in ", "YEAR", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                                  # p(tags$b(paste("Map 4. Number of businesses per 10,000 adults across Scottish council areas in ", "YEAR", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                                   tags$b(textOutput("nbusiness_reg_map_caption")),
                                                                   sliderInput("nbusiness_reg_input", label = "", min = start_year_nbusiness_reg , max = end_year_nbusiness_reg, value = end_year_nbusiness_reg, width = "50%", sep = "", step = 1),
                                                                   withSpinner(leafletOutput("nbusiness_reg_map"), type = 5),
