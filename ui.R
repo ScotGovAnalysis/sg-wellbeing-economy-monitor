@@ -1818,11 +1818,41 @@ shinyUI(fluidPage(
                                               )
                                      )
                             ),
+                            tabPanel("Air pollutant emissions",
+                                       fluidRow(width = 12,
+                                                column(width=3, 
+                                                       wellPanel(
+                                                         checkboxGroupInput(
+                                                           inputId = "airpollutant_sco_input",
+                                                           label = "",
+                                                           choiceNames = names(airpollutant_sco),
+                                                           choiceValues = c(seq(1:length(names(airpollutant_sco)))),
+                                                           selected = positions_selected_airpollutant_sco
+                                                         )
+                                                       )
+                                                ),      
+                                                column(width=9, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 3. Scotland's air pollutant emissions by type ", "(", as.character(start_year_airpollutant_sco), " - ", as.character(end_year_airpollutant_sco), ") ", "(Kt)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("airpollutant_sco_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_airpollutant_sco"),
+                                                         p("Source: "), 
+                                                         a("Air Pollutant Inventories for England, Scotland, Wales, and Northern Ireland", href = "https://naei.beis.gov.uk/reports/reports?report_id=1010"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       ),
+                                       
                             tabPanel("Greenhouse gas emissions",
                                      fluidRow(width = 12,
                                               column(width=12, 
                                                      fluidRow(
-                                                       p(tags$b(paste("Figure 3. Scotland's greenhouse gas emissions: ", "(", as.character(start_year_gasemissions_sco), " - ", as.character(end_year_gasemissions_sco), ") ", " (Mt Co2Equiv)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       p(tags$b(paste("Figure 4. Scotland's greenhouse gas emissions: ", "(", as.character(start_year_gasemissions_sco), " - ", as.character(end_year_gasemissions_sco), ") ", " (Mt Co2Equiv)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                        withSpinner(dygraphOutput("gasemissions_sco_graph"), type = 5),
                                                        align = "center"
                                                      ),
@@ -1841,7 +1871,9 @@ shinyUI(fluidPage(
                  ),
                  # REGIONAL ####
                  tabPanel("Regional",
-                  p("No regional data available at this time")
+                           navlistPanel(widths=c(3,9),
+                            tabPanel("Habitat connectivity - data not yet available", 
+                                    
                  )
                )
              ),        

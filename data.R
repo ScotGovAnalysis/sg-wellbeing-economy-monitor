@@ -185,7 +185,7 @@ greenandbluespace_sco <- read.csv("./www/scotland/greenandbluespace_sco.csv", ch
 cfootprint_sco <- read.csv("./www/scotland/cfootprint_sco.csv", check.names=FALSE)
 naturalf_sco <- read.csv("./www/scotland/naturalf_sco.csv", check.names=FALSE)
 gasemissions_sco <- read.csv("./www/scotland/gasemissions_sco.csv", check.names=FALSE)
-
+airpollutant_sco <- read.csv("./www/scotland/airpollutant_sco.csv", check.names=FALSE)
 
 # LOADING DATA - REGIONAL ####
 nbusiness_reg <- read.csv("./www/regional/nbusiness_reg.csv", check.names=FALSE)
@@ -1161,6 +1161,10 @@ end_year_cfootprint_sco <- max(cfootprint_sco$Year)
 # naturalf_sco
 start_year_naturalf_sco <- min(naturalf_sco$Year)
 end_year_naturalf_sco <- max(naturalf_sco$Year)
+
+# airpollutant_sco
+start_year_airpollutant_sco <- min(airpollutant_sco$Year)
+end_year_airpollutant_sco <- max(airpollutant_sco$Year)
 
 # gasemissions_sco
 start_year_gasemissions_sco <- min(gasemissions_sco$Year)
