@@ -185,7 +185,7 @@ greenandbluespace_sco <- read.csv("./www/scotland/greenandbluespace_sco.csv", ch
 cfootprint_sco <- read.csv("./www/scotland/cfootprint_sco.csv", check.names=FALSE)
 naturalf_sco <- read.csv("./www/scotland/naturalf_sco.csv", check.names=FALSE)
 gasemissions_sco <- read.csv("./www/scotland/gasemissions_sco.csv", check.names=FALSE)
-
+airpollutant_sco <- read.csv("./www/scotland/airpollutant_sco.csv", check.names=FALSE)
 
 # LOADING DATA - REGIONAL ####
 nbusiness_reg <- read.csv("./www/regional/nbusiness_reg.csv", check.names=FALSE)
