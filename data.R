@@ -1162,6 +1162,10 @@ end_year_cfootprint_sco <- max(cfootprint_sco$Year)
 start_year_naturalf_sco <- min(naturalf_sco$Year)
 end_year_naturalf_sco <- max(naturalf_sco$Year)
 
+# airpollutant_sco
+start_year_airpollutant_sco <- min(airpollutant_sco$Year)
+end_year_airpollutant_sco <- max(airpollutant_sco$Year)
+
 # gasemissions_sco
 start_year_gasemissions_sco <- min(gasemissions_sco$Year)
 end_year_gasemissions_sco <- max(gasemissions_sco$Year)
