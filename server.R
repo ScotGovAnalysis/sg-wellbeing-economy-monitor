@@ -2091,7 +2091,7 @@ shinyServer(
       ) %>%
         dyRangeSelector() %>%
         dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "Mt Co2Equiv") %>%
+        dyAxis("y", label = "Kt Co2Equiv") %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,
