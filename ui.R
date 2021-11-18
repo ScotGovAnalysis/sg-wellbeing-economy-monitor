@@ -96,7 +96,7 @@ shinyUI(fluidPage(
                                p("Average: 56.07%"),
                                p("Min: 52.9%"),
                                p("Max: 60.94%")
-                        ),
+                        )
                         
                       )
              ), 
@@ -474,7 +474,7 @@ shinyUI(fluidPage(
                                                        fluidRow(
                                                          width = 12,
                                                          p("Total Early-stage Entrepreneurial Activity (TEA) rate: proportion of the adult working age population that is actively trying to start a business, or that own/manage a business which is less than 3.5 years old.")
-                                                       ),
+                                                       )
                                                 )
                                        )
                               ),
@@ -497,7 +497,7 @@ shinyUI(fluidPage(
                                                        fluidRow(
                                                          width = 12,
                                                          p("Anholt GfK-Roper Nation Brands Index (NBI): Average scores of the six dimensions of national competence, given as a value (not percentage) out of 100.")
-                                                       ),
+                                                       )
                                                 )
                                        )
                               ),
@@ -710,9 +710,9 @@ shinyUI(fluidPage(
                                p("Scotland's dependency ratio was ", text_scotland_thisyear_depratio_int,"% in 2018, compared to ", text_oecd_thisyear_depratio_int,"% in the OECD. Over the past 5 years, the average dependency ratio was ", text_scotland_last5_depratio_int ,"% in Scotland, compared to ", text_oecd_last5_depratio_int, "% in the OECD overall.")
                                
                         ),
-                        column(width = 4,
+                        column(width = 4
                         ),
-                        column(width = 4,
+                        column(width = 4
                         )
                         
                ),
@@ -1471,9 +1471,9 @@ shinyUI(fluidPage(
                                plotOutput("lifeexpall_overview_int_barplot", height = "200px"),
                                p("Scotland's life expectancy was ", text_scotland_thisyear_lifeexpall_int," in 2017, compared to ", text_oecd_thisyear_lifeexpall_int," in the OECD. Over the past 5 years, the average life expectancy was ", text_scotland_last5_lifeexpall_int ," in Scotland, compared to ", text_oecd_last5_lifeexpall_int, " in the OECD overall.")
                         ),
-                        column(width = 4,
+                        column(width = 4
                         ),
-                        column(width = 4,
+                        column(width = 4
                         )
                ),
                # DETAILS ####
@@ -1734,9 +1734,9 @@ shinyUI(fluidPage(
                                plotOutput("ggemissions2_overview_int_barplot", height = "200px"),
                                p("Scotland's greenhouse gas emissions were ", text_scotland_thisyear_ggemissions2_int," (Tonnes CO2 per capita) in 2017, compared to ", text_eu_thisyear_ggemissions2_int," (Tonnes CO2 per capita) in the 28 EU countries.")
                         ),
-                        column(width = 4,
+                        column(width = 4
                         ),
-                        column(width = 4,
+                        column(width = 4
                         )
                ),
                # DETAILS ####
@@ -1872,7 +1872,7 @@ shinyUI(fluidPage(
                  # REGIONAL ####
                  tabPanel("Regional",
                            navlistPanel(widths=c(3,9),
-                            tabPanel("Habitat connectivity - data not yet available", 
+                            tabPanel("Habitat connectivity - data not yet available" 
                                     
                  )
                )
@@ -1927,11 +1927,11 @@ shinyUI(fluidPage(
                                h2("Sexual orientation"),
                                plotOutput("orientation_eq_overview_int_barplot", height = "200px"),
                                p("Source: Scottish Household Survey 2018"),
-                               p("In 2018, 25% of Gay/Lesbian/Bisexual individuals experienced discrimination as compared with 8% for Straight individuals."),
+                               p("In 2018, 25% of Gay/Lesbian/Bisexual individuals experienced discrimination as compared with 8% for Straight individuals.")
                         ),
-                        column(width = 4,
+                        column(width = 4
                         ),
-                        column(width = 4,
+                        column(width = 4
                         )
                )
             )
@@ -1945,7 +1945,7 @@ shinyUI(fluidPage(
         column(width = 3,
                icon("info", lib = "font-awesome"),
                strong("ABOUT"),
-               p("The Economy Board requested that OCEA lead on developing a performance framework for the Economy Board, taking into account the framework developed for the Enterprise and Skills Strategic Board."),
+               p("The Economy Board requested that OCEA lead on developing a performance framework for the Economy Board, taking into account the framework developed for the Enterprise and Skills Strategic Board.")
         ),
         # FOOTER - COPYRIGHT NOTICE
         column(width = 3,
@@ -1979,5 +1979,4 @@ shinyUI(fluidPage(
     )
   ) # Navbar page ends here
 )
-) # UI ends here
-
+)))) # UI ends here
