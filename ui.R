@@ -1347,14 +1347,14 @@ shinyUI(fluidPage(
                                      fluidRow(width = 12,
                                               column(width=12, 
                                                      fluidRow(
-                                                       p(tags$b(paste("Figure 5. Percent of people receiving job related training in the last 3 months: ", "(", as.character(start_year_wplearning_sco), " - ", as.character(end_year_wplearning_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       p(tags$b(paste("Figure 5. Percent of employees who received on the job training in the last 3 months: ", "(", as.character(start_year_wplearning_sco), " - ", as.character(end_year_wplearning_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                        withSpinner(dygraphOutput("wplearning_sco_graph"), type = 5),
                                                        align = "center"
                                                      ),
                                                      fluidRow(
                                                        textOutput("legendDivID_wplearning_sco"),
                                                        p("Source: "), 
-                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       a("Scottish Government", href = "https://statistics.gov.scot/data/national-performance-framework"),
                                                        collapsible = FALSE,
                                                        width = 12,
                                                        style="margin-bottom: 100px;"
