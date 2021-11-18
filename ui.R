@@ -1309,14 +1309,14 @@ shinyUI(fluidPage(
                                      fluidRow(width = 12,
                                               column(width=12, 
                                                      fluidRow(
-                                                       p(tags$b(paste("Figure 3. The difference between male and female median earnings (gross hourly earnings excluding overtime) as a percentage of male earnings.: ", "(", as.character(start_year_genderpaygap_sco), " - ", as.character(end_year_genderpaygap_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       p(tags$b(paste("Figure 3. The difference between male and female full-time hourly earnings, expressed as a percentage of male full-time hourly earnings: ", "(", as.character(start_year_genderpaygap_sco), " - ", as.character(end_year_genderpaygap_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                        withSpinner(dygraphOutput("genderpaygap_sco_graph"), type = 5),
                                                        align = "center"
                                                      ),
                                                      fluidRow(
                                                        textOutput("legendDivID_genderpaygap_sco"),
                                                        p("Source: "), 
-                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       a("Annual Survey of Hours and Earnings", href = "https://statistics.gov.scot/resource?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fearnings-paygap"),
                                                        collapsible = FALSE,
                                                        width = 12,
                                                        style="margin-bottom: 100px;"
