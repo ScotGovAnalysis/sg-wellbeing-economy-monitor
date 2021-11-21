@@ -1841,9 +1841,7 @@ shinyUI(fluidPage(
                  ),
                  # REGIONAL ####
                  tabPanel("Regional",
-                           navlistPanel(widths=c(3,9),
-                            tabPanel("Habitat connectivity - data not yet available", 
-                                    
+                  p("No regional data available at this time")
                  )
                )
              ),        
