@@ -1,39 +1,39 @@
-"","Year","Value","Source"
-"1",2011,27300,"To-from Overseas"
-"2",2018,10919,"To-from Overseas"
-"3",2020,7900,"To-from Overseas"
-"4",2016,22900,"To-from Overseas"
-"5",2014,8000,"To-from Overseas"
-"6",2015,19600,"To-from Overseas"
-"7",2007,24200,"To-from Overseas"
-"8",2012,9700,"To-from Overseas"
-"9",2005,12800,"To-from Overseas"
-"10",2017,13400,"To-from Overseas"
-"11",2004,3100,"To-from Overseas"
-"12",2003,-1400,"To-from Overseas"
-"13",2019,20200,"To-from Overseas"
-"14",2006,9900,"To-from Overseas"
-"15",2010,22800,"To-from Overseas"
-"16",2008,14900,"To-from Overseas"
-"17",2009,20300,"To-from Overseas"
-"18",2002,1600,"To-from Overseas"
-"19",2013,2100,"To-from Overseas"
-"20",2017,10455,"To-from Rest of UK"
-"21",2016,8793,"To-from Rest of UK"
-"22",2018,9981,"To-from Rest of UK"
-"23",2005,12507,"To-from Rest of UK"
-"24",2007,8849,"To-from Rest of UK"
-"25",2013,7862,"To-from Rest of UK"
-"26",2014,9585,"To-from Rest of UK"
-"27",2006,8922,"To-from Rest of UK"
-"28",2015,8368,"To-from Rest of UK"
-"29",2020,8982,"To-from Rest of UK"
-"30",2012,3038,"To-from Rest of UK"
-"31",2008,11509,"To-from Rest of UK"
-"32",2009,4122,"To-from Rest of UK"
-"33",2003,7043,"To-from Rest of UK"
-"34",2010,3275,"To-from Rest of UK"
-"35",2004,15522,"To-from Rest of UK"
-"36",2002,4696,"To-from Rest of UK"
-"37",2011,2909,"To-from Rest of UK"
-"38",2019,10046,"To-from Rest of UK"
+"Source","Year","Value"
+"To-from Overseas",2011,27300
+"To-from Overseas",2018,10919
+"To-from Overseas",2020,7900
+"To-from Overseas",2016,22900
+"To-from Overseas",2014,8000
+"To-from Overseas",2015,19600
+"To-from Overseas",2007,24200
+"To-from Overseas",2012,9700
+"To-from Overseas",2005,12800
+"To-from Overseas",2017,13400
+"To-from Overseas",2004,3100
+"To-from Overseas",2003,-1400
+"To-from Overseas",2019,20200
+"To-from Overseas",2006,9900
+"To-from Overseas",2010,22800
+"To-from Overseas",2008,14900
+"To-from Overseas",2009,20300
+"To-from Overseas",2002,1600
+"To-from Overseas",2013,2100
+"To-from Rest of UK",2017,10455
+"To-from Rest of UK",2016,8793
+"To-from Rest of UK",2018,9981
+"To-from Rest of UK",2005,12507
+"To-from Rest of UK",2007,8849
+"To-from Rest of UK",2013,7862
+"To-from Rest of UK",2014,9585
+"To-from Rest of UK",2006,8922
+"To-from Rest of UK",2015,8368
+"To-from Rest of UK",2020,8982
+"To-from Rest of UK",2012,3038
+"To-from Rest of UK",2008,11509
+"To-from Rest of UK",2009,4122
+"To-from Rest of UK",2003,7043
+"To-from Rest of UK",2010,3275
+"To-from Rest of UK",2004,15522
+"To-from Rest of UK",2002,4696
+"To-from Rest of UK",2011,2909
+"To-from Rest of UK",2019,10046
