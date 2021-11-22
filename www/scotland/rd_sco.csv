@@ -1,86 +1,86 @@
-"","Performer","Year","Value"
-"1","Business Enterprise (BERD)",2001,0.6
-"2","Government incl. Research Councils (GovERD)",2001,0.16
-"3","Gross Expenditure on Research and Development (GERD)",2001,1.33
-"4","Higher Education (HERD)",2001,0.58
-"5","Business Enterprise (BERD)",2002,0.56
-"6","Government incl. Research Councils (GovERD)",2002,0.16
-"7","Gross Expenditure on Research and Development (GERD)",2002,1.36
-"8","Higher Education (HERD)",2002,0.64
-"9","Business Enterprise (BERD)",2003,0.46
-"10","Government incl. Research Councils (GovERD)",2003,0.17
-"11","Gross Expenditure on Research and Development (GERD)",2003,1.25
-"12","Higher Education (HERD)",2003,0.62
-"13","Business Enterprise (BERD)",2004,0.42
-"14","Government incl. Research Councils (GovERD)",2004,0.17
-"15","Gross Expenditure on Research and Development (GERD)",2004,1.2
-"16","Higher Education (HERD)",2004,0.6
-"17","Business Enterprise (BERD)",2005,0.47
-"18","Government incl. Research Councils (GovERD)",2005,0.17
-"19","Gross Expenditure on Research and Development (GERD)",2005,1.24
-"20","Higher Education (HERD)",2005,0.61
-"21","Business Enterprise (BERD)",2006,0.4
-"22","Government incl. Research Councils (GovERD)",2006,0.15
-"23","Gross Expenditure on Research and Development (GERD)",2006,1.2
-"24","Higher Education (HERD)",2006,0.65
-"25","Business Enterprise (BERD)",2007,0.45
-"26","Government incl. Research Councils (GovERD)",2007,0.17
-"27","Gross Expenditure on Research and Development (GERD)",2007,1.24
-"28","Higher Education (HERD)",2007,0.63
-"29","Business Enterprise (BERD)",2008,0.45
-"30","Government incl. Research Councils (GovERD)",2008,0.14
-"31","Gross Expenditure on Research and Development (GERD)",2008,1.28
-"32","Higher Education (HERD)",2008,0.69
-"33","Business Enterprise (BERD)",2009,0.51
-"34","Government incl. Research Councils (GovERD)",2009,0.15
-"35","Gross Expenditure on Research and Development (GERD)",2009,1.39
-"36","Higher Education (HERD)",2009,0.73
-"37","Business Enterprise (BERD)",2010,0.5
-"38","Government incl. Research Councils (GovERD)",2010,0.14
-"39","Gross Expenditure on Research and Development (GERD)",2010,1.37
-"40","Higher Education (HERD)",2010,0.73
-"41","Business Enterprise (BERD)",2011,0.54
-"42","Government incl. Research Councils (GovERD)",2011,0.13
-"43","Gross Expenditure on Research and Development (GERD)",2011,1.4
-"44","Higher Education (HERD)",2011,0.71
-"45","Private Non-Profit (PNP)",2011,0.01
-"46","Business Enterprise (BERD)",2012,0.53
-"47","Government incl. Research Councils (GovERD)",2012,0.11
-"48","Gross Expenditure on Research and Development (GERD)",2012,1.35
-"49","Higher Education (HERD)",2012,0.7
-"50","Private Non-Profit (PNP)",2012,0.01
-"51","Business Enterprise (BERD)",2013,0.58
-"52","Government incl. Research Councils (GovERD)",2013,0.11
-"53","Gross Expenditure on Research and Development (GERD)",2013,1.43
-"54","Higher Education (HERD)",2013,0.72
-"55","Private Non-Profit (PNP)",2013,0.02
-"56","Business Enterprise (BERD)",2014,0.66
-"57","Government incl. Research Councils (GovERD)",2014,0.11
-"58","Gross Expenditure on Research and Development (GERD)",2014,1.48
-"59","Higher Education (HERD)",2014,0.69
-"60","Private Non-Profit (PNP)",2014,0.03
-"61","Business Enterprise (BERD)",2015,0.65
-"62","Government incl. Research Councils (GovERD)",2015,0.11
-"63","Gross Expenditure on Research and Development (GERD)",2015,1.49
-"64","Higher Education (HERD)",2015,0.72
-"65","Private Non-Profit (PNP)",2015,0.02
-"66","Business Enterprise (BERD)",2016,0.7
-"67","Government incl. Research Councils (GovERD)",2016,0.11
-"68","Gross Expenditure on Research and Development (GERD)",2016,1.5
-"69","Higher Education (HERD)",2016,0.68
-"70","Private Non-Profit (PNP)",2016,0.02
-"71","Business Enterprise (BERD)",2017,0.8
-"72","Government incl. Research Councils (GovERD)",2017,0.12
-"73","Gross Expenditure on Research and Development (GERD)",2017,1.62
-"74","Higher Education (HERD)",2017,0.68
-"75","Private Non-Profit (PNP)",2017,0.02
-"76","Business Enterprise (BERD)",2018,0.83
-"77","Government incl. Research Councils (GovERD)",2018,0.12
-"78","Gross Expenditure on Research and Development (GERD)",2018,1.66
-"79","Higher Education (HERD)",2018,0.69
-"80","Private Non-Profit (PNP)",2018,0.03
-"81","Business Enterprise (BERD)",2019,0.84
-"82","Government incl. Research Councils (GovERD)",2019,0.11
-"83","Gross Expenditure on Research and Development (GERD)",2019,1.66
-"84","Higher Education (HERD)",2019,0.69
-"85","Private Non-Profit (PNP)",2019,0.03
+"Performer","Year","Value"
+"Business Enterprise (BERD)",2001,0.6
+"Government incl. Research Councils (GovERD)",2001,0.16
+"Gross Expenditure on Research and Development (GERD)",2001,1.33
+"Higher Education (HERD)",2001,0.58
+"Business Enterprise (BERD)",2002,0.56
+"Government incl. Research Councils (GovERD)",2002,0.16
+"Gross Expenditure on Research and Development (GERD)",2002,1.36
+"Higher Education (HERD)",2002,0.64
+"Business Enterprise (BERD)",2003,0.46
+"Government incl. Research Councils (GovERD)",2003,0.17
+"Gross Expenditure on Research and Development (GERD)",2003,1.25
+"Higher Education (HERD)",2003,0.62
+"Business Enterprise (BERD)",2004,0.42
+"Government incl. Research Councils (GovERD)",2004,0.17
+"Gross Expenditure on Research and Development (GERD)",2004,1.2
+"Higher Education (HERD)",2004,0.6
+"Business Enterprise (BERD)",2005,0.47
+"Government incl. Research Councils (GovERD)",2005,0.17
+"Gross Expenditure on Research and Development (GERD)",2005,1.24
+"Higher Education (HERD)",2005,0.61
+"Business Enterprise (BERD)",2006,0.4
+"Government incl. Research Councils (GovERD)",2006,0.15
+"Gross Expenditure on Research and Development (GERD)",2006,1.2
+"Higher Education (HERD)",2006,0.65
+"Business Enterprise (BERD)",2007,0.45
+"Government incl. Research Councils (GovERD)",2007,0.17
+"Gross Expenditure on Research and Development (GERD)",2007,1.24
+"Higher Education (HERD)",2007,0.63
+"Business Enterprise (BERD)",2008,0.45
+"Government incl. Research Councils (GovERD)",2008,0.14
+"Gross Expenditure on Research and Development (GERD)",2008,1.28
+"Higher Education (HERD)",2008,0.69
+"Business Enterprise (BERD)",2009,0.51
+"Government incl. Research Councils (GovERD)",2009,0.15
+"Gross Expenditure on Research and Development (GERD)",2009,1.39
+"Higher Education (HERD)",2009,0.73
+"Business Enterprise (BERD)",2010,0.5
+"Government incl. Research Councils (GovERD)",2010,0.14
+"Gross Expenditure on Research and Development (GERD)",2010,1.37
+"Higher Education (HERD)",2010,0.73
+"Business Enterprise (BERD)",2011,0.54
+"Government incl. Research Councils (GovERD)",2011,0.13
+"Gross Expenditure on Research and Development (GERD)",2011,1.4
+"Higher Education (HERD)",2011,0.71
+"Private Non-Profit (PNP)",2011,0.01
+"Business Enterprise (BERD)",2012,0.53
+"Government incl. Research Councils (GovERD)",2012,0.11
+"Gross Expenditure on Research and Development (GERD)",2012,1.35
+"Higher Education (HERD)",2012,0.7
+"Private Non-Profit (PNP)",2012,0.01
+"Business Enterprise (BERD)",2013,0.58
+"Government incl. Research Councils (GovERD)",2013,0.11
+"Gross Expenditure on Research and Development (GERD)",2013,1.43
+"Higher Education (HERD)",2013,0.72
+"Private Non-Profit (PNP)",2013,0.02
+"Business Enterprise (BERD)",2014,0.66
+"Government incl. Research Councils (GovERD)",2014,0.11
+"Gross Expenditure on Research and Development (GERD)",2014,1.48
+"Higher Education (HERD)",2014,0.69
+"Private Non-Profit (PNP)",2014,0.03
+"Business Enterprise (BERD)",2015,0.65
+"Government incl. Research Councils (GovERD)",2015,0.11
+"Gross Expenditure on Research and Development (GERD)",2015,1.49
+"Higher Education (HERD)",2015,0.72
+"Private Non-Profit (PNP)",2015,0.02
+"Business Enterprise (BERD)",2016,0.7
+"Government incl. Research Councils (GovERD)",2016,0.11
+"Gross Expenditure on Research and Development (GERD)",2016,1.5
+"Higher Education (HERD)",2016,0.68
+"Private Non-Profit (PNP)",2016,0.02
+"Business Enterprise (BERD)",2017,0.8
+"Government incl. Research Councils (GovERD)",2017,0.12
+"Gross Expenditure on Research and Development (GERD)",2017,1.62
+"Higher Education (HERD)",2017,0.68
+"Private Non-Profit (PNP)",2017,0.02
+"Business Enterprise (BERD)",2018,0.83
+"Government incl. Research Councils (GovERD)",2018,0.12
+"Gross Expenditure on Research and Development (GERD)",2018,1.66
+"Higher Education (HERD)",2018,0.69
+"Private Non-Profit (PNP)",2018,0.03
+"Business Enterprise (BERD)",2019,0.84
+"Government incl. Research Councils (GovERD)",2019,0.11
+"Gross Expenditure on Research and Development (GERD)",2019,1.66
+"Higher Education (HERD)",2019,0.69
+"Private Non-Profit (PNP)",2019,0.03
