@@ -1,73 +1,73 @@
-"","Destination","Year","Value"
-"1","Rest of UK (RUK)","2002",28840
-"2","International: Total","2002",20575
-"3","International: EU","2002",11515
-"4","International: Non-EU","2002",9060
-"5","Rest of UK (RUK)","2003",31010
-"6","International: Total","2003",19650
-"7","International: EU","2003",10710
-"8","International: Non-EU","2003",8935
-"9","Rest of UK (RUK)","2004",36655
-"10","International: Total","2004",19130
-"11","International: EU","2004",9815
-"12","International: Non-EU","2004",9315
-"13","Rest of UK (RUK)","2005",34230
-"14","International: Total","2005",18695
-"15","International: EU","2005",9080
-"16","International: Non-EU","2005",9610
-"17","Rest of UK (RUK)","2006",36515
-"18","International: Total","2006",19610
-"19","International: EU","2006",9610
-"20","International: Non-EU","2006",9995
-"21","Rest of UK (RUK)","2007",41830
-"22","International: Total","2007",20715
-"23","International: EU","2007",9910
-"24","International: Non-EU","2007",10805
-"25","Rest of UK (RUK)","2008",42540
-"26","International: Total","2008",22605
-"27","International: EU","2008",11145
-"28","International: Non-EU","2008",11460
-"29","Rest of UK (RUK)","2009",42990
-"30","International: Total","2009",23020
-"31","International: EU","2009",10960
-"32","International: Non-EU","2009",12060
-"33","Rest of UK (RUK)","2010",45145
-"34","International: Total","2010",24515
-"35","International: EU","2010",10960
-"36","International: Non-EU","2010",13545
-"37","Rest of UK (RUK)","2011",45335
-"38","International: Total","2011",27755
-"39","International: EU","2011",13365
-"40","International: Non-EU","2011",14385
-"41","Rest of UK (RUK)","2012",46010
-"42","International: Total","2012",28445
-"43","International: EU","2012",12770
-"44","International: Non-EU","2012",15665
-"45","Rest of UK (RUK)","2013",47520
-"46","International: Total","2013",30080
-"47","International: EU","2013",13360
-"48","International: Non-EU","2013",16725
-"49","Rest of UK (RUK)","2014",47590
-"50","International: Total","2014",29325
-"51","International: EU","2014",12395
-"52","International: Non-EU","2014",16925
-"53","Rest of UK (RUK)","2015",50340
-"54","International: Total","2015",30390
-"55","International: EU","2015",13275
-"56","International: Non-EU","2015",17115
-"57","Rest of UK (RUK)","2016",46755
-"58","International: Total","2016",31170
-"59","International: EU","2016",13525
-"60","International: Non-EU","2016",17515
-"61","Rest of UK (RUK)","2017",50495
-"62","International: Total","2017",32935
-"63","International: EU","2017",15525
-"64","International: Non-EU","2017",17410
-"65","Rest of UK (RUK)","2018",49575
-"66","International: Total","2018",33905
-"67","International: EU","2018",15975
-"68","International: Non-EU","2018",17925
-"69","Rest of UK (RUK)","2019",52040
-"70","International: Total","2019",35055
-"71","International: EU","2019",16395
-"72","International: Non-EU","2019",18660
+"Destination","Year","Value"
+"Rest of UK (RUK)",2002,28840
+"International: Total",2002,20575
+"International: EU",2002,11515
+"International: Non-EU",2002,9060
+"Rest of UK (RUK)",2003,31010
+"International: Total",2003,19650
+"International: EU",2003,10710
+"International: Non-EU",2003,8935
+"Rest of UK (RUK)",2004,36655
+"International: Total",2004,19130
+"International: EU",2004,9815
+"International: Non-EU",2004,9315
+"Rest of UK (RUK)",2005,34230
+"International: Total",2005,18695
+"International: EU",2005,9080
+"International: Non-EU",2005,9610
+"Rest of UK (RUK)",2006,36515
+"International: Total",2006,19610
+"International: EU",2006,9610
+"International: Non-EU",2006,9995
+"Rest of UK (RUK)",2007,41830
+"International: Total",2007,20715
+"International: EU",2007,9910
+"International: Non-EU",2007,10805
+"Rest of UK (RUK)",2008,42540
+"International: Total",2008,22605
+"International: EU",2008,11145
+"International: Non-EU",2008,11460
+"Rest of UK (RUK)",2009,42990
+"International: Total",2009,23020
+"International: EU",2009,10960
+"International: Non-EU",2009,12060
+"Rest of UK (RUK)",2010,45145
+"International: Total",2010,24515
+"International: EU",2010,10960
+"International: Non-EU",2010,13545
+"Rest of UK (RUK)",2011,45335
+"International: Total",2011,27755
+"International: EU",2011,13365
+"International: Non-EU",2011,14385
+"Rest of UK (RUK)",2012,46010
+"International: Total",2012,28445
+"International: EU",2012,12770
+"International: Non-EU",2012,15665
+"Rest of UK (RUK)",2013,47520
+"International: Total",2013,30080
+"International: EU",2013,13360
+"International: Non-EU",2013,16725
+"Rest of UK (RUK)",2014,47590
+"International: Total",2014,29325
+"International: EU",2014,12395
+"International: Non-EU",2014,16925
+"Rest of UK (RUK)",2015,50340
+"International: Total",2015,30390
+"International: EU",2015,13275
+"International: Non-EU",2015,17115
+"Rest of UK (RUK)",2016,46755
+"International: Total",2016,31170
+"International: EU",2016,13525
+"International: Non-EU",2016,17515
+"Rest of UK (RUK)",2017,50495
+"International: Total",2017,32935
+"International: EU",2017,15525
+"International: Non-EU",2017,17410
+"Rest of UK (RUK)",2018,49575
+"International: Total",2018,33905
+"International: EU",2018,15975
+"International: Non-EU",2018,17925
+"Rest of UK (RUK)",2019,52040
+"International: Total",2019,35055
+"International: EU",2019,16395
+"International: Non-EU",2019,18660
