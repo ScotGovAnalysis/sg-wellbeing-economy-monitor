@@ -1,210 +1,210 @@
-"","Sector","Year","Value"
-"1","Agriculture, Forestry and Fishing",2010,40
-"2","Agriculture, Forestry and Fishing",2011,40
-"3","Agriculture, Forestry and Fishing",2012,40
-"4","Agriculture, Forestry and Fishing",2013,40
-"5","Agriculture, Forestry and Fishing",2014,40
-"6","Agriculture, Forestry and Fishing",2015,39
-"7","Agriculture, Forestry and Fishing",2016,39
-"8","Agriculture, Forestry and Fishing",2017,38
-"9","Agriculture, Forestry and Fishing",2018,39
-"10","Agriculture, Forestry and Fishing",2019,39
-"11","Agriculture, Forestry and Fishing",2020,38
-"12","Mining and Quarrying",2010,1
-"13","Mining and Quarrying",2011,1
-"14","Mining and Quarrying",2012,1
-"15","Mining and Quarrying",2013,1
-"16","Mining and Quarrying",2014,1
-"17","Mining and Quarrying",2015,1
-"18","Mining and Quarrying",2016,1
-"19","Mining and Quarrying",2017,1
-"20","Mining and Quarrying",2018,1
-"21","Mining and Quarrying",2019,1
-"22","Mining and Quarrying",2020,1
-"23","Manufacturing",2010,20
-"24","Manufacturing",2011,19
-"25","Manufacturing",2012,19
-"26","Manufacturing",2013,19
-"27","Manufacturing",2014,19
-"28","Manufacturing",2015,20
-"29","Manufacturing",2016,20
-"30","Manufacturing",2017,21
-"31","Manufacturing",2018,21
-"32","Manufacturing",2019,21
-"33","Manufacturing",2020,21
-"34","Electricity, gas, steam and air conditioning supply",2010,0
-"35","Electricity, gas, steam and air conditioning supply",2011,0
-"36","Electricity, gas, steam and air conditioning supply",2012,0
-"37","Electricity, gas, steam and air conditioning supply",2013,1
-"38","Electricity, gas, steam and air conditioning supply",2014,1
-"39","Electricity, gas, steam and air conditioning supply",2015,1
-"40","Electricity, gas, steam and air conditioning supply",2016,1
-"41","Electricity, gas, steam and air conditioning supply",2017,1
-"42","Electricity, gas, steam and air conditioning supply",2018,2
-"43","Electricity, gas, steam and air conditioning supply",2019,2
-"44","Electricity, gas, steam and air conditioning supply",2020,2
-"45","Water supply; Sewerage, waste management and remediation activities",2010,1
-"46","Water supply; Sewerage, waste management and remediation activities",2011,1
-"47","Water supply; Sewerage, waste management and remediation activities",2012,1
-"48","Water supply; Sewerage, waste management and remediation activities",2013,1
-"49","Water supply; Sewerage, waste management and remediation activities",2014,1
-"50","Water supply; Sewerage, waste management and remediation activities",2015,1
-"51","Water supply; Sewerage, waste management and remediation activities",2016,1
-"52","Water supply; Sewerage, waste management and remediation activities",2017,1
-"53","Water supply; Sewerage, waste management and remediation activities",2018,1
-"54","Water supply; Sewerage, waste management and remediation activities",2019,1
-"55","Water supply; Sewerage, waste management and remediation activities",2020,1
-"56","Construction",2010,44
-"57","Construction",2011,42
-"58","Construction",2012,42
-"59","Construction",2013,41
-"60","Construction",2014,41
-"61","Construction",2015,42
-"62","Construction",2016,43
-"63","Construction",2017,44
-"64","Construction",2018,45
-"65","Construction",2019,46
-"66","Construction",2020,46
-"67","Wholesale and retail trade; Repair of motor vehicles and motorcycles",2010,59
-"68","Wholesale and retail trade; Repair of motor vehicles and motorcycles",2011,58
-"69","Wholesale and retail trade; Repair of motor vehicles and motorcycles",2012,58
-"70","Wholesale and retail trade; Repair of motor vehicles and motorcycles",2013,56
-"71","Wholesale and retail trade; Repair of motor vehicles and motorcycles",2014,56
-"72","Wholesale and retail trade; Repair of motor vehicles and motorcycles",2015,55
-"73","Wholesale and retail trade; Repair of motor vehicles and motorcycles",2016,54
-"74","Wholesale and retail trade; Repair of motor vehicles and motorcycles",2017,54
-"75","Wholesale and retail trade; Repair of motor vehicles and motorcycles",2018,53
-"76","Wholesale and retail trade; Repair of motor vehicles and motorcycles",2019,53
-"77","Wholesale and retail trade; Repair of motor vehicles and motorcycles",2020,53
-"78","Transportation and storage",2010,12
-"79","Transportation and storage",2011,12
-"80","Transportation and storage",2012,11
-"81","Transportation and storage",2013,11
-"82","Transportation and storage",2014,11
-"83","Transportation and storage",2015,12
-"84","Transportation and storage",2016,12
-"85","Transportation and storage",2017,13
-"86","Transportation and storage",2018,13
-"87","Transportation and storage",2019,13
-"88","Transportation and storage",2020,14
-"89","Accommodation and food service activities",2010,30
-"90","Accommodation and food service activities",2011,29
-"91","Accommodation and food service activities",2012,30
-"92","Accommodation and food service activities",2013,29
-"93","Accommodation and food service activities",2014,30
-"94","Accommodation and food service activities",2015,30
-"95","Accommodation and food service activities",2016,30
-"96","Accommodation and food service activities",2017,30
-"97","Accommodation and food service activities",2018,30
-"98","Accommodation and food service activities",2019,31
-"99","Accommodation and food service activities",2020,32
-"100","Information and communication",2010,16
-"101","Information and communication",2011,16
-"102","Information and communication",2012,18
-"103","Information and communication",2013,18
-"104","Information and communication",2014,19
-"105","Information and communication",2015,21
-"106","Information and communication",2016,22
-"107","Information and communication",2017,23
-"108","Information and communication",2018,23
-"109","Information and communication",2019,24
-"110","Information and communication",2020,24
-"111","Financial and insurance activities",2010,4
-"112","Financial and insurance activities",2011,4
-"113","Financial and insurance activities",2012,4
-"114","Financial and insurance activities",2013,4
-"115","Financial and insurance activities",2014,4
-"116","Financial and insurance activities",2015,5
-"117","Financial and insurance activities",2016,5
-"118","Financial and insurance activities",2017,5
-"119","Financial and insurance activities",2018,5
-"120","Financial and insurance activities",2019,5
-"121","Financial and insurance activities",2020,5
-"122","Real estate activities",2010,11
-"123","Real estate activities",2011,10
-"124","Real estate activities",2012,11
-"125","Real estate activities",2013,11
-"126","Real estate activities",2014,12
-"127","Real estate activities",2015,12
-"128","Real estate activities",2016,12
-"129","Real estate activities",2017,12
-"130","Real estate activities",2018,12
-"131","Real estate activities",2019,13
-"132","Real estate activities",2020,13
-"133","Professional, scientific and technical activities",2010,52
-"134","Professional, scientific and technical activities",2011,54
-"135","Professional, scientific and technical activities",2012,59
-"136","Professional, scientific and technical activities",2013,63
-"137","Professional, scientific and technical activities",2014,68
-"138","Professional, scientific and technical activities",2015,72
-"139","Professional, scientific and technical activities",2016,73
-"140","Professional, scientific and technical activities",2017,73
-"141","Professional, scientific and technical activities",2018,70
-"142","Professional, scientific and technical activities",2019,70
-"143","Professional, scientific and technical activities",2020,69
-"144","Administrative and support service activities",2010,23
-"145","Administrative and support service activities",2011,22
-"146","Administrative and support service activities",2012,23
-"147","Administrative and support service activities",2013,22
-"148","Administrative and support service activities",2014,25
-"149","Administrative and support service activities",2015,26
-"150","Administrative and support service activities",2016,27
-"151","Administrative and support service activities",2017,28
-"152","Administrative and support service activities",2018,28
-"153","Administrative and support service activities",2019,29
-"154","Administrative and support service activities",2020,30
-"155","Education",2010,4
-"156","Education",2011,4
-"157","Education",2012,4
-"158","Education",2013,4
-"159","Education",2014,4
-"160","Education",2015,4
-"161","Education",2016,4
-"162","Education",2017,4
-"163","Education",2018,4
-"164","Education",2019,4
-"165","Education",2020,4
-"166","Human health and social work activities",2010,13
-"167","Human health and social work activities",2011,14
-"168","Human health and social work activities",2012,14
-"169","Human health and social work activities",2013,14
-"170","Human health and social work activities",2014,15
-"171","Human health and social work activities",2015,15
-"172","Human health and social work activities",2016,15
-"173","Human health and social work activities",2017,15
-"174","Human health and social work activities",2018,15
-"175","Human health and social work activities",2019,15
-"176","Human health and social work activities",2020,15
-"177","Arts, entertainment and recreation",2010,9
-"178","Arts, entertainment and recreation",2011,9
-"179","Arts, entertainment and recreation",2012,9
-"180","Arts, entertainment and recreation",2013,9
-"181","Arts, entertainment and recreation",2014,9
-"182","Arts, entertainment and recreation",2015,9
-"183","Arts, entertainment and recreation",2016,9
-"184","Arts, entertainment and recreation",2017,9
-"185","Arts, entertainment and recreation",2018,9
-"186","Arts, entertainment and recreation",2019,9
-"187","Arts, entertainment and recreation",2020,9
-"188","Other service activities",2010,20
-"189","Other service activities",2011,19
-"190","Other service activities",2012,20
-"191","Other service activities",2013,19
-"192","Other service activities",2014,19
-"193","Other service activities",2015,19
-"194","Other service activities",2016,19
-"195","Other service activities",2017,19
-"196","Other service activities",2018,19
-"197","Other service activities",2019,19
-"198","Other service activities",2020,19
-"199","All",2010,357
-"200","All",2011,352
-"201","All",2012,363
-"202","All",2013,362
-"203","All",2014,375
-"204","All",2015,382
-"205","All",2016,388
-"206","All",2017,391
-"207","All",2018,390
-"208","All",2019,394
-"209","All",2020,395
+"Sector","Year","Value"
+"Agriculture, Forestry and Fishing",2010,40
+"Agriculture, Forestry and Fishing",2011,40
+"Agriculture, Forestry and Fishing",2012,40
+"Agriculture, Forestry and Fishing",2013,40
+"Agriculture, Forestry and Fishing",2014,40
+"Agriculture, Forestry and Fishing",2015,39
+"Agriculture, Forestry and Fishing",2016,39
+"Agriculture, Forestry and Fishing",2017,38
+"Agriculture, Forestry and Fishing",2018,39
+"Agriculture, Forestry and Fishing",2019,39
+"Agriculture, Forestry and Fishing",2020,38
+"Mining and Quarrying",2010,1
+"Mining and Quarrying",2011,1
+"Mining and Quarrying",2012,1
+"Mining and Quarrying",2013,1
+"Mining and Quarrying",2014,1
+"Mining and Quarrying",2015,1
+"Mining and Quarrying",2016,1
+"Mining and Quarrying",2017,1
+"Mining and Quarrying",2018,1
+"Mining and Quarrying",2019,1
+"Mining and Quarrying",2020,1
+"Manufacturing",2010,20
+"Manufacturing",2011,19
+"Manufacturing",2012,19
+"Manufacturing",2013,19
+"Manufacturing",2014,19
+"Manufacturing",2015,20
+"Manufacturing",2016,20
+"Manufacturing",2017,21
+"Manufacturing",2018,21
+"Manufacturing",2019,21
+"Manufacturing",2020,21
+"Electricity, gas, steam and air conditioning supply",2010,0
+"Electricity, gas, steam and air conditioning supply",2011,0
+"Electricity, gas, steam and air conditioning supply",2012,0
+"Electricity, gas, steam and air conditioning supply",2013,1
+"Electricity, gas, steam and air conditioning supply",2014,1
+"Electricity, gas, steam and air conditioning supply",2015,1
+"Electricity, gas, steam and air conditioning supply",2016,1
+"Electricity, gas, steam and air conditioning supply",2017,1
+"Electricity, gas, steam and air conditioning supply",2018,2
+"Electricity, gas, steam and air conditioning supply",2019,2
+"Electricity, gas, steam and air conditioning supply",2020,2
+"Water supply; Sewerage, waste management and remediation activities",2010,1
+"Water supply; Sewerage, waste management and remediation activities",2011,1
+"Water supply; Sewerage, waste management and remediation activities",2012,1
+"Water supply; Sewerage, waste management and remediation activities",2013,1
+"Water supply; Sewerage, waste management and remediation activities",2014,1
+"Water supply; Sewerage, waste management and remediation activities",2015,1
+"Water supply; Sewerage, waste management and remediation activities",2016,1
+"Water supply; Sewerage, waste management and remediation activities",2017,1
+"Water supply; Sewerage, waste management and remediation activities",2018,1
+"Water supply; Sewerage, waste management and remediation activities",2019,1
+"Water supply; Sewerage, waste management and remediation activities",2020,1
+"Construction",2010,44
+"Construction",2011,42
+"Construction",2012,42
+"Construction",2013,41
+"Construction",2014,41
+"Construction",2015,42
+"Construction",2016,43
+"Construction",2017,44
+"Construction",2018,45
+"Construction",2019,46
+"Construction",2020,46
+"Wholesale and retail trade; Repair of motor vehicles and motorcycles",2010,59
+"Wholesale and retail trade; Repair of motor vehicles and motorcycles",2011,58
+"Wholesale and retail trade; Repair of motor vehicles and motorcycles",2012,58
+"Wholesale and retail trade; Repair of motor vehicles and motorcycles",2013,56
+"Wholesale and retail trade; Repair of motor vehicles and motorcycles",2014,56
+"Wholesale and retail trade; Repair of motor vehicles and motorcycles",2015,55
+"Wholesale and retail trade; Repair of motor vehicles and motorcycles",2016,54
+"Wholesale and retail trade; Repair of motor vehicles and motorcycles",2017,54
+"Wholesale and retail trade; Repair of motor vehicles and motorcycles",2018,53
+"Wholesale and retail trade; Repair of motor vehicles and motorcycles",2019,53
+"Wholesale and retail trade; Repair of motor vehicles and motorcycles",2020,53
+"Transportation and storage",2010,12
+"Transportation and storage",2011,12
+"Transportation and storage",2012,11
+"Transportation and storage",2013,11
+"Transportation and storage",2014,11
+"Transportation and storage",2015,12
+"Transportation and storage",2016,12
+"Transportation and storage",2017,13
+"Transportation and storage",2018,13
+"Transportation and storage",2019,13
+"Transportation and storage",2020,14
+"Accommodation and food service activities",2010,30
+"Accommodation and food service activities",2011,29
+"Accommodation and food service activities",2012,30
+"Accommodation and food service activities",2013,29
+"Accommodation and food service activities",2014,30
+"Accommodation and food service activities",2015,30
+"Accommodation and food service activities",2016,30
+"Accommodation and food service activities",2017,30
+"Accommodation and food service activities",2018,30
+"Accommodation and food service activities",2019,31
+"Accommodation and food service activities",2020,32
+"Information and communication",2010,16
+"Information and communication",2011,16
+"Information and communication",2012,18
+"Information and communication",2013,18
+"Information and communication",2014,19
+"Information and communication",2015,21
+"Information and communication",2016,22
+"Information and communication",2017,23
+"Information and communication",2018,23
+"Information and communication",2019,24
+"Information and communication",2020,24
+"Financial and insurance activities",2010,4
+"Financial and insurance activities",2011,4
+"Financial and insurance activities",2012,4
+"Financial and insurance activities",2013,4
+"Financial and insurance activities",2014,4
+"Financial and insurance activities",2015,5
+"Financial and insurance activities",2016,5
+"Financial and insurance activities",2017,5
+"Financial and insurance activities",2018,5
+"Financial and insurance activities",2019,5
+"Financial and insurance activities",2020,5
+"Real estate activities",2010,11
+"Real estate activities",2011,10
+"Real estate activities",2012,11
+"Real estate activities",2013,11
+"Real estate activities",2014,12
+"Real estate activities",2015,12
+"Real estate activities",2016,12
+"Real estate activities",2017,12
+"Real estate activities",2018,12
+"Real estate activities",2019,13
+"Real estate activities",2020,13
+"Professional, scientific and technical activities",2010,52
+"Professional, scientific and technical activities",2011,54
+"Professional, scientific and technical activities",2012,59
+"Professional, scientific and technical activities",2013,63
+"Professional, scientific and technical activities",2014,68
+"Professional, scientific and technical activities",2015,72
+"Professional, scientific and technical activities",2016,73
+"Professional, scientific and technical activities",2017,73
+"Professional, scientific and technical activities",2018,70
+"Professional, scientific and technical activities",2019,70
+"Professional, scientific and technical activities",2020,69
+"Administrative and support service activities",2010,23
+"Administrative and support service activities",2011,22
+"Administrative and support service activities",2012,23
+"Administrative and support service activities",2013,22
+"Administrative and support service activities",2014,25
+"Administrative and support service activities",2015,26
+"Administrative and support service activities",2016,27
+"Administrative and support service activities",2017,28
+"Administrative and support service activities",2018,28
+"Administrative and support service activities",2019,29
+"Administrative and support service activities",2020,30
+"Education",2010,4
+"Education",2011,4
+"Education",2012,4
+"Education",2013,4
+"Education",2014,4
+"Education",2015,4
+"Education",2016,4
+"Education",2017,4
+"Education",2018,4
+"Education",2019,4
+"Education",2020,4
+"Human health and social work activities",2010,13
+"Human health and social work activities",2011,14
+"Human health and social work activities",2012,14
+"Human health and social work activities",2013,14
+"Human health and social work activities",2014,15
+"Human health and social work activities",2015,15
+"Human health and social work activities",2016,15
+"Human health and social work activities",2017,15
+"Human health and social work activities",2018,15
+"Human health and social work activities",2019,15
+"Human health and social work activities",2020,15
+"Arts, entertainment and recreation",2010,9
+"Arts, entertainment and recreation",2011,9
+"Arts, entertainment and recreation",2012,9
+"Arts, entertainment and recreation",2013,9
+"Arts, entertainment and recreation",2014,9
+"Arts, entertainment and recreation",2015,9
+"Arts, entertainment and recreation",2016,9
+"Arts, entertainment and recreation",2017,9
+"Arts, entertainment and recreation",2018,9
+"Arts, entertainment and recreation",2019,9
+"Arts, entertainment and recreation",2020,9
+"Other service activities",2010,20
+"Other service activities",2011,19
+"Other service activities",2012,20
+"Other service activities",2013,19
+"Other service activities",2014,19
+"Other service activities",2015,19
+"Other service activities",2016,19
+"Other service activities",2017,19
+"Other service activities",2018,19
+"Other service activities",2019,19
+"Other service activities",2020,19
+"All",2010,357
+"All",2011,352
+"All",2012,363
+"All",2013,362
+"All",2014,375
+"All",2015,382
+"All",2016,388
+"All",2017,391
+"All",2018,390
+"All",2019,394
+"All",2020,395
