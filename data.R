@@ -499,7 +499,7 @@ text_nbusiness_sector_sco <- subset(nbusiness_sector_sco, nbusiness_sector_sco$Y
 text_year_nbusiness_sector_sco <- text_nbusiness_sector_sco$Year
 text_all_nbusiness_sector_sco <- text_nbusiness_sector_sco[,c('All')]
 text_nbusiness_region_sco <- subset(nbusiness_region_sco, nbusiness_region_sco$Year == max(nbusiness_sector_sco$Year))
-text_foreign_nbusiness_region_sco <- text_nbusiness_region_sco[, c('All foreign-owned')]
+text_foreign_nbusiness_region_sco <- text_nbusiness_region_sco[, c('Abroad')]
 text_hbusiness_percent_sco <- subset(hbusiness_percent_sco, hbusiness_percent_sco$Year == max(nbusiness_sector_sco$Year))
 text_hbusiness_percent_sco <- text_hbusiness_percent_sco$Value
 
