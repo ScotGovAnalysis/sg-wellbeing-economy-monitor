@@ -1,628 +1,628 @@
-"","NAME","Year","migration"
-"1","Clackmannanshire",2002,68
-"2","Clackmannanshire",2003,100
-"3","Clackmannanshire",2004,551
-"4","Clackmannanshire",2005,572
-"5","Clackmannanshire",2006,297
-"6","Clackmannanshire",2007,741
-"7","Clackmannanshire",2008,397
-"8","Clackmannanshire",2009,39
-"9","Clackmannanshire",2010,-75
-"10","Clackmannanshire",2011,-8
-"11","Clackmannanshire",2012,-256
-"12","Clackmannanshire",2013,-59
-"13","Clackmannanshire",2014,-82
-"14","Clackmannanshire",2015,142
-"15","Clackmannanshire",2016,12
-"16","Clackmannanshire",2017,121
-"17","Clackmannanshire",2018,-31
-"18","Clackmannanshire",2019,152
-"19","Clackmannanshire",2020,104
-"20","Dumfries and Galloway",2002,267
-"21","Dumfries and Galloway",2003,528
-"22","Dumfries and Galloway",2004,1183
-"23","Dumfries and Galloway",2005,1191
-"24","Dumfries and Galloway",2006,469
-"25","Dumfries and Galloway",2007,712
-"26","Dumfries and Galloway",2008,810
-"27","Dumfries and Galloway",2009,304
-"28","Dumfries and Galloway",2010,119
-"29","Dumfries and Galloway",2011,377
-"30","Dumfries and Galloway",2012,-128
-"31","Dumfries and Galloway",2013,-6
-"32","Dumfries and Galloway",2014,334
-"33","Dumfries and Galloway",2015,330
-"34","Dumfries and Galloway",2016,394
-"35","Dumfries and Galloway",2017,322
-"36","Dumfries and Galloway",2018,383
-"37","Dumfries and Galloway",2019,728
-"38","Dumfries and Galloway",2020,335
-"39","East Ayrshire",2002,-147
-"40","East Ayrshire",2003,28
-"41","East Ayrshire",2004,367
-"42","East Ayrshire",2005,36
-"43","East Ayrshire",2006,91
-"44","East Ayrshire",2007,325
-"45","East Ayrshire",2008,549
-"46","East Ayrshire",2009,383
-"47","East Ayrshire",2010,30
-"48","East Ayrshire",2011,30
-"49","East Ayrshire",2012,-76
-"50","East Ayrshire",2013,-120
-"51","East Ayrshire",2014,-90
-"52","East Ayrshire",2015,62
-"53","East Ayrshire",2016,151
-"54","East Ayrshire",2017,18
-"55","East Ayrshire",2018,230
-"56","East Ayrshire",2019,432
-"57","East Ayrshire",2020,47
-"58","East Lothian",2002,845
-"59","East Lothian",2003,639
-"60","East Lothian",2004,430
-"61","East Lothian",2005,497
-"62","East Lothian",2006,925
-"63","East Lothian",2007,1559
-"64","East Lothian",2008,1635
-"65","East Lothian",2009,705
-"66","East Lothian",2010,595
-"67","East Lothian",2011,445
-"68","East Lothian",2012,787
-"69","East Lothian",2013,521
-"70","East Lothian",2014,712
-"71","East Lothian",2015,961
-"72","East Lothian",2016,960
-"73","East Lothian",2017,800
-"74","East Lothian",2018,1151
-"75","East Lothian",2019,1273
-"76","East Lothian",2020,972
-"77","East Renfrewshire",2002,449
-"78","East Renfrewshire",2003,-83
-"79","East Renfrewshire",2004,-97
-"80","East Renfrewshire",2005,-17
-"81","East Renfrewshire",2006,-213
-"82","East Renfrewshire",2007,45
-"83","East Renfrewshire",2008,-72
-"84","East Renfrewshire",2009,72
-"85","East Renfrewshire",2010,369
-"86","East Renfrewshire",2011,270
-"87","East Renfrewshire",2012,189
-"88","East Renfrewshire",2013,539
-"89","East Renfrewshire",2014,890
-"90","East Renfrewshire",2015,627
-"91","East Renfrewshire",2016,819
-"92","East Renfrewshire",2017,958
-"93","East Renfrewshire",2018,521
-"94","East Renfrewshire",2019,371
-"95","East Renfrewshire",2020,732
-"96","Na h-Eileanan Siar",2002,-56
-"97","Na h-Eileanan Siar",2003,84
-"98","Na h-Eileanan Siar",2004,246
-"99","Na h-Eileanan Siar",2005,274
-"100","Na h-Eileanan Siar",2006,129
-"101","Na h-Eileanan Siar",2007,73
-"102","Na h-Eileanan Siar",2008,23
-"103","Na h-Eileanan Siar",2009,71
-"104","Na h-Eileanan Siar",2010,169
-"105","Na h-Eileanan Siar",2011,23
-"106","Na h-Eileanan Siar",2012,13
-"107","Na h-Eileanan Siar",2013,-19
-"108","Na h-Eileanan Siar",2014,-88
-"109","Na h-Eileanan Siar",2015,-5
-"110","Na h-Eileanan Siar",2016,-67
-"111","Na h-Eileanan Siar",2017,155
-"112","Na h-Eileanan Siar",2018,19
-"113","Na h-Eileanan Siar",2019,50
-"114","Na h-Eileanan Siar",2020,-39
-"115","Falkirk",2002,844
-"116","Falkirk",2003,911
-"117","Falkirk",2004,1510
-"118","Falkirk",2005,1642
-"119","Falkirk",2006,941
-"120","Falkirk",2007,935
-"121","Falkirk",2008,663
-"122","Falkirk",2009,565
-"123","Falkirk",2010,458
-"124","Falkirk",2011,1021
-"125","Falkirk",2012,356
-"126","Falkirk",2013,375
-"127","Falkirk",2014,415
-"128","Falkirk",2015,734
-"129","Falkirk",2016,940
-"130","Falkirk",2017,901
-"131","Falkirk",2018,428
-"132","Falkirk",2019,730
-"133","Falkirk",2020,228
-"134","Highland",2002,714
-"135","Highland",2003,1658
-"136","Highland",2004,2850
-"137","Highland",2005,2862
-"138","Highland",2006,2054
-"139","Highland",2007,2677
-"140","Highland",2008,2111
-"141","Highland",2009,990
-"142","Highland",2010,990
-"143","Highland",2011,898
-"144","Highland",2012,118
-"145","Highland",2013,93
-"146","Highland",2014,239
-"147","Highland",2015,1115
-"148","Highland",2016,1196
-"149","Highland",2017,813
-"150","Highland",2018,968
-"151","Highland",2019,980
-"152","Highland",2020,394
-"153","Inverclyde",2002,-196
-"154","Inverclyde",2003,-396
-"155","Inverclyde",2004,-599
-"156","Inverclyde",2005,-130
-"157","Inverclyde",2006,-353
-"158","Inverclyde",2007,-318
-"159","Inverclyde",2008,-203
-"160","Inverclyde",2009,-359
-"161","Inverclyde",2010,-226
-"162","Inverclyde",2011,-289
-"163","Inverclyde",2012,-305
-"164","Inverclyde",2013,-160
-"165","Inverclyde",2014,-270
-"166","Inverclyde",2015,-136
-"167","Inverclyde",2016,-56
-"168","Inverclyde",2017,10
-"169","Inverclyde",2018,-178
-"170","Inverclyde",2019,82
-"171","Inverclyde",2020,-96
-"172","Midlothian",2002,-159
-"173","Midlothian",2003,-580
-"174","Midlothian",2004,-263
-"175","Midlothian",2005,-321
-"176","Midlothian",2006,-261
-"177","Midlothian",2007,109
-"178","Midlothian",2008,427
-"179","Midlothian",2009,467
-"180","Midlothian",2010,237
-"181","Midlothian",2011,522
-"182","Midlothian",2012,559
-"183","Midlothian",2013,576
-"184","Midlothian",2014,1020
-"185","Midlothian",2015,987
-"186","Midlothian",2016,1008
-"187","Midlothian",2017,1271
-"188","Midlothian",2018,1087
-"189","Midlothian",2019,940
-"190","Midlothian",2020,628
-"191","Moray",2002,28
-"192","Moray",2003,540
-"193","Moray",2004,980
-"194","Moray",2005,693
-"195","Moray",2006,458
-"196","Moray",2007,525
-"197","Moray",2008,330
-"198","Moray",2009,404
-"199","Moray",2010,-9
-"200","Moray",2011,-162
-"201","Moray",2012,327
-"202","Moray",2013,596
-"203","Moray",2014,467
-"204","Moray",2015,410
-"205","Moray",2016,553
-"206","Moray",2017,3
-"207","Moray",2018,51
-"208","Moray",2019,298
-"209","Moray",2020,20
-"210","North Ayrshire",2002,28
-"211","North Ayrshire",2003,367
-"212","North Ayrshire",2004,206
-"213","North Ayrshire",2005,95
-"214","North Ayrshire",2006,-21
-"215","North Ayrshire",2007,428
-"216","North Ayrshire",2008,333
-"217","North Ayrshire",2009,-117
-"218","North Ayrshire",2010,-165
-"219","North Ayrshire",2011,136
-"220","North Ayrshire",2012,-401
-"221","North Ayrshire",2013,-308
-"222","North Ayrshire",2014,-137
-"223","North Ayrshire",2015,60
-"224","North Ayrshire",2016,65
-"225","North Ayrshire",2017,352
-"226","North Ayrshire",2018,54
-"227","North Ayrshire",2019,94
-"228","North Ayrshire",2020,142
-"229","Orkney Islands",2002,58
-"230","Orkney Islands",2003,142
-"231","Orkney Islands",2004,261
-"232","Orkney Islands",2005,135
-"233","Orkney Islands",2006,200
-"234","Orkney Islands",2007,143
-"235","Orkney Islands",2008,95
-"236","Orkney Islands",2009,88
-"237","Orkney Islands",2010,163
-"238","Orkney Islands",2011,99
-"239","Orkney Islands",2012,106
-"240","Orkney Islands",2013,80
-"241","Orkney Islands",2014,67
-"242","Orkney Islands",2015,100
-"243","Orkney Islands",2016,223
-"244","Orkney Islands",2017,204
-"245","Orkney Islands",2018,253
-"246","Orkney Islands",2019,145
-"247","Orkney Islands",2020,167
-"248","Scottish Borders",2002,846
-"249","Scottish Borders",2003,1213
-"250","Scottish Borders",2004,1385
-"251","Scottish Borders",2005,1003
-"252","Scottish Borders",2006,835
-"253","Scottish Borders",2007,1492
-"254","Scottish Borders",2008,1302
-"255","Scottish Borders",2009,421
-"256","Scottish Borders",2010,286
-"257","Scottish Borders",2011,488
-"258","Scottish Borders",2012,45
-"259","Scottish Borders",2013,308
-"260","Scottish Borders",2014,280
-"261","Scottish Borders",2015,435
-"262","Scottish Borders",2016,690
-"263","Scottish Borders",2017,818
-"264","Scottish Borders",2018,682
-"265","Scottish Borders",2019,586
-"266","Scottish Borders",2020,270
-"267","Shetland Islands",2002,-17
-"268","Shetland Islands",2003,-118
-"269","Shetland Islands",2004,72
-"270","Shetland Islands",2005,88
-"271","Shetland Islands",2006,-112
-"272","Shetland Islands",2007,46
-"273","Shetland Islands",2008,26
-"274","Shetland Islands",2009,203
-"275","Shetland Islands",2010,155
-"276","Shetland Islands",2011,59
-"277","Shetland Islands",2012,-68
-"278","Shetland Islands",2013,-89
-"279","Shetland Islands",2014,-5
-"280","Shetland Islands",2015,-36
-"281","Shetland Islands",2016,-15
-"282","Shetland Islands",2017,-133
-"283","Shetland Islands",2018,-75
-"284","Shetland Islands",2019,-88
-"285","Shetland Islands",2020,-31
-"286","South Ayrshire",2002,19
-"287","South Ayrshire",2003,290
-"288","South Ayrshire",2004,684
-"289","South Ayrshire",2005,425
-"290","South Ayrshire",2006,366
-"291","South Ayrshire",2007,578
-"292","South Ayrshire",2008,400
-"293","South Ayrshire",2009,173
-"294","South Ayrshire",2010,443
-"295","South Ayrshire",2011,596
-"296","South Ayrshire",2012,357
-"297","South Ayrshire",2013,405
-"298","South Ayrshire",2014,103
-"299","South Ayrshire",2015,311
-"300","South Ayrshire",2016,546
-"301","South Ayrshire",2017,690
-"302","South Ayrshire",2018,495
-"303","South Ayrshire",2019,563
-"304","South Ayrshire",2020,354
-"305","South Lanarkshire",2002,545
-"306","South Lanarkshire",2003,797
-"307","South Lanarkshire",2004,2127
-"308","South Lanarkshire",2005,1079
-"309","South Lanarkshire",2006,1334
-"310","South Lanarkshire",2007,1651
-"311","South Lanarkshire",2008,735
-"312","South Lanarkshire",2009,640
-"313","South Lanarkshire",2010,808
-"314","South Lanarkshire",2011,587
-"315","South Lanarkshire",2012,408
-"316","South Lanarkshire",2013,579
-"317","South Lanarkshire",2014,511
-"318","South Lanarkshire",2015,1034
-"319","South Lanarkshire",2016,1097
-"320","South Lanarkshire",2017,1278
-"321","South Lanarkshire",2018,1299
-"322","South Lanarkshire",2019,1836
-"323","South Lanarkshire",2020,1174
-"324","Stirling",2002,722
-"325","Stirling",2003,675
-"326","Stirling",2004,-10
-"327","Stirling",2005,658
-"328","Stirling",2006,701
-"329","Stirling",2007,477
-"330","Stirling",2008,244
-"331","Stirling",2009,310
-"332","Stirling",2010,1006
-"333","Stirling",2011,1021
-"334","Stirling",2012,774
-"335","Stirling",2013,253
-"336","Stirling",2014,467
-"337","Stirling",2015,1412
-"338","Stirling",2016,1012
-"339","Stirling",2017,335
-"340","Stirling",2018,505
-"341","Stirling",2019,82
-"342","Stirling",2020,131
-"343","Aberdeen City",2002,-826
-"344","Aberdeen City",2003,-1155
-"345","Aberdeen City",2004,-1191
-"346","Aberdeen City",2005,1110
-"347","Aberdeen City",2006,1143
-"348","Aberdeen City",2007,2953
-"349","Aberdeen City",2008,1646
-"350","Aberdeen City",2009,2974
-"351","Aberdeen City",2010,2754
-"352","Aberdeen City",2011,3078
-"353","Aberdeen City",2012,1847
-"354","Aberdeen City",2013,1664
-"355","Aberdeen City",2014,1412
-"356","Aberdeen City",2015,1085
-"357","Aberdeen City",2016,-969
-"358","Aberdeen City",2017,-1416
-"359","Aberdeen City",2018,-1318
-"360","Aberdeen City",2019,810
-"361","Aberdeen City",2020,502
-"362","Aberdeenshire",2002,1695
-"363","Aberdeenshire",2003,2120
-"364","Aberdeenshire",2004,3230
-"365","Aberdeenshire",2005,2780
-"366","Aberdeenshire",2006,3067
-"367","Aberdeenshire",2007,2683
-"368","Aberdeenshire",2008,1881
-"369","Aberdeenshire",2009,1507
-"370","Aberdeenshire",2010,1693
-"371","Aberdeenshire",2011,1384
-"372","Aberdeenshire",2012,1386
-"373","Aberdeenshire",2013,1664
-"374","Aberdeenshire",2014,2041
-"375","Aberdeenshire",2015,986
-"376","Aberdeenshire",2016,-354
-"377","Aberdeenshire",2017,-688
-"378","Aberdeenshire",2018,-600
-"379","Aberdeenshire",2019,-383
-"380","Aberdeenshire",2020,-127
-"381","Argyll and Bute",2002,93
-"382","Argyll and Bute",2003,435
-"383","Argyll and Bute",2004,926
-"384","Argyll and Bute",2005,437
-"385","Argyll and Bute",2006,200
-"386","Argyll and Bute",2007,378
-"387","Argyll and Bute",2008,-39
-"388","Argyll and Bute",2009,-27
-"389","Argyll and Bute",2010,291
-"390","Argyll and Bute",2011,304
-"391","Argyll and Bute",2012,-233
-"392","Argyll and Bute",2013,-23
-"393","Argyll and Bute",2014,-275
-"394","Argyll and Bute",2015,-233
-"395","Argyll and Bute",2016,234
-"396","Argyll and Bute",2017,137
-"397","Argyll and Bute",2018,-81
-"398","Argyll and Bute",2019,-66
-"399","Argyll and Bute",2020,-93
-"400","City of Edinburgh",2002,879
-"401","City of Edinburgh",2003,-390
-"402","City of Edinburgh",2004,2234
-"403","City of Edinburgh",2005,5317
-"404","City of Edinburgh",2006,3412
-"405","City of Edinburgh",2007,4919
-"406","City of Edinburgh",2008,3356
-"407","City of Edinburgh",2009,5861
-"408","City of Edinburgh",2010,8069
-"409","City of Edinburgh",2011,8044
-"410","City of Edinburgh",2012,3966
-"411","City of Edinburgh",2013,2998
-"412","City of Edinburgh",2014,3296
-"413","City of Edinburgh",2015,6261
-"414","City of Edinburgh",2016,7659
-"415","City of Edinburgh",2017,5088
-"416","City of Edinburgh",2018,4621
-"417","City of Edinburgh",2019,5906
-"418","City of Edinburgh",2020,2890
-"419","Renfrewshire",2002,-658
-"420","Renfrewshire",2003,-740
-"421","Renfrewshire",2004,-268
-"422","Renfrewshire",2005,-286
-"423","Renfrewshire",2006,-344
-"424","Renfrewshire",2007,269
-"425","Renfrewshire",2008,398
-"426","Renfrewshire",2009,156
-"427","Renfrewshire",2010,443
-"428","Renfrewshire",2011,589
-"429","Renfrewshire",2012,-395
-"430","Renfrewshire",2013,-343
-"431","Renfrewshire",2014,372
-"432","Renfrewshire",2015,591
-"433","Renfrewshire",2016,1614
-"434","Renfrewshire",2017,1162
-"435","Renfrewshire",2018,1341
-"436","Renfrewshire",2019,1517
-"437","Renfrewshire",2020,846
-"438","West Dunbartonshire",2002,-109
-"439","West Dunbartonshire",2003,-395
-"440","West Dunbartonshire",2004,-374
-"441","West Dunbartonshire",2005,-332
-"442","West Dunbartonshire",2006,-108
-"443","West Dunbartonshire",2007,-32
-"444","West Dunbartonshire",2008,-205
-"445","West Dunbartonshire",2009,-56
-"446","West Dunbartonshire",2010,-291
-"447","West Dunbartonshire",2011,-173
-"448","West Dunbartonshire",2012,-280
-"449","West Dunbartonshire",2013,-424
-"450","West Dunbartonshire",2014,-98
-"451","West Dunbartonshire",2015,79
-"452","West Dunbartonshire",2016,288
-"453","West Dunbartonshire",2017,-96
-"454","West Dunbartonshire",2018,-212
-"455","West Dunbartonshire",2019,-61
-"456","West Dunbartonshire",2020,-205
-"457","West Lothian",2002,869
-"458","West Lothian",2003,876
-"459","West Lothian",2004,1214
-"460","West Lothian",2005,844
-"461","West Lothian",2006,1319
-"462","West Lothian",2007,1464
-"463","West Lothian",2008,996
-"464","West Lothian",2009,233
-"465","West Lothian",2010,203
-"466","West Lothian",2011,219
-"467","West Lothian",2012,154
-"468","West Lothian",2013,-387
-"469","West Lothian",2014,444
-"470","West Lothian",2015,890
-"471","West Lothian",2016,1127
-"472","West Lothian",2017,786
-"473","West Lothian",2018,581
-"474","West Lothian",2019,706
-"475","West Lothian",2020,886
-"476","Angus",2002,342
-"477","Angus",2003,329
-"478","Angus",2004,1342
-"479","Angus",2005,1073
-"480","Angus",2006,954
-"481","Angus",2007,756
-"482","Angus",2008,653
-"483","Angus",2009,148
-"484","Angus",2010,355
-"485","Angus",2011,115
-"486","Angus",2012,258
-"487","Angus",2013,113
-"488","Angus",2014,645
-"489","Angus",2015,537
-"490","Angus",2016,68
-"491","Angus",2017,144
-"492","Angus",2018,198
-"493","Angus",2019,493
-"494","Angus",2020,277
-"495","Dundee City",2002,-759
-"496","Dundee City",2003,6
-"497","Dundee City",2004,-740
-"498","Dundee City",2005,572
-"499","Dundee City",2006,-109
-"500","Dundee City",2007,265
-"501","Dundee City",2008,608
-"502","Dundee City",2009,919
-"503","Dundee City",2010,981
-"504","Dundee City",2011,1427
-"505","Dundee City",2012,492
-"506","Dundee City",2013,309
-"507","Dundee City",2014,-12
-"508","Dundee City",2015,209
-"509","Dundee City",2016,177
-"510","Dundee City",2017,588
-"511","Dundee City",2018,352
-"512","Dundee City",2019,824
-"513","Dundee City",2020,-82
-"514","East Dunbartonshire",2002,-783
-"515","East Dunbartonshire",2003,-331
-"516","East Dunbartonshire",2004,-457
-"517","East Dunbartonshire",2005,-482
-"518","East Dunbartonshire",2006,-449
-"519","East Dunbartonshire",2007,-289
-"520","East Dunbartonshire",2008,-180
-"521","East Dunbartonshire",2009,-79
-"522","East Dunbartonshire",2010,-71
-"523","East Dunbartonshire",2011,-105
-"524","East Dunbartonshire",2012,260
-"525","East Dunbartonshire",2013,92
-"526","East Dunbartonshire",2014,909
-"527","East Dunbartonshire",2015,549
-"528","East Dunbartonshire",2016,706
-"529","East Dunbartonshire",2017,688
-"530","East Dunbartonshire",2018,370
-"531","East Dunbartonshire",2019,424
-"532","East Dunbartonshire",2020,608
-"533","Fife",2002,1636
-"534","Fife",2003,684
-"535","Fife",2004,2348
-"536","Fife",2005,2657
-"537","Fife",2006,1560
-"538","Fife",2007,1893
-"539","Fife",2008,1627
-"540","Fife",2009,1550
-"541","Fife",2010,1806
-"542","Fife",2011,2076
-"543","Fife",2012,623
-"544","Fife",2013,304
-"545","Fife",2014,650
-"546","Fife",2015,1228
-"547","Fife",2016,1608
-"548","Fife",2017,1524
-"549","Fife",2018,1244
-"550","Fife",2019,2303
-"551","Fife",2020,1435
-"552","Perth and Kinross",2002,1031
-"553","Perth and Kinross",2003,1582
-"554","Perth and Kinross",2004,1665
-"555","Perth and Kinross",2005,2063
-"556","Perth and Kinross",2006,2023
-"557","Perth and Kinross",2007,2440
-"558","Perth and Kinross",2008,2400
-"559","Perth and Kinross",2009,1800
-"560","Perth and Kinross",2010,1861
-"561","Perth and Kinross",2011,1826
-"562","Perth and Kinross",2012,980
-"563","Perth and Kinross",2013,377
-"564","Perth and Kinross",2014,1407
-"565","Perth and Kinross",2015,1263
-"566","Perth and Kinross",2016,1062
-"567","Perth and Kinross",2017,898
-"568","Perth and Kinross",2018,657
-"569","Perth and Kinross",2019,1033
-"570","Perth and Kinross",2020,717
-"571","Glasgow City",2002,-2161
-"572","Glasgow City",2003,-4334
-"573","Glasgow City",2004,-3418
-"574","Glasgow City",2005,-1558
-"575","Glasgow City",2006,-1988
-"576","Glasgow City",2007,2303
-"577","Glasgow City",2008,2929
-"578","Glasgow City",2009,3989
-"579","Glasgow City",2010,3050
-"580","Glasgow City",2011,5370
-"581","Glasgow City",2012,1146
-"582","Glasgow City",2013,439
-"583","Glasgow City",2014,2047
-"584","Glasgow City",2015,5840
-"585","Glasgow City",2016,7963
-"586","Glasgow City",2017,5390
-"587","Glasgow City",2018,5356
-"588","Glasgow City",2019,6267
-"589","Glasgow City",2020,3260
-"590","North Lanarkshire",2002,189
-"591","North Lanarkshire",2003,161
-"592","North Lanarkshire",2004,228
-"593","North Lanarkshire",2005,330
-"594","North Lanarkshire",2006,302
-"595","North Lanarkshire",2007,849
-"596","North Lanarkshire",2008,534
-"597","North Lanarkshire",2009,88
-"598","North Lanarkshire",2010,-422
-"599","North Lanarkshire",2011,-58
-"600","North Lanarkshire",2012,-271
-"601","North Lanarkshire",2013,-385
-"602","North Lanarkshire",2014,-86
-"603","North Lanarkshire",2015,140
-"604","North Lanarkshire",2016,982
-"605","North Lanarkshire",2017,734
-"606","North Lanarkshire",2018,549
-"607","North Lanarkshire",2019,1219
-"608","North Lanarkshire",2020,436
-"609",NA,2002,6296
-"610",NA,2003,5643
-"611",NA,2004,18622
-"612",NA,2005,25307
-"613",NA,2006,18822
-"614",NA,2007,33049
-"615",NA,2008,26409
-"616",NA,2009,24422
-"617",NA,2010,26075
-"618",NA,2011,30209
-"619",NA,2012,12738
-"620",NA,2013,9962
-"621",NA,2014,17585
-"622",NA,2015,27968
-"623",NA,2016,31693
-"624",NA,2017,23855
-"625",NA,2018,20900
-"626",NA,2019,30246
-"627",NA,2020,16882
+"NAME","Year","migration"
+"Clackmannanshire",2002,68
+"Clackmannanshire",2003,100
+"Clackmannanshire",2004,551
+"Clackmannanshire",2005,572
+"Clackmannanshire",2006,297
+"Clackmannanshire",2007,741
+"Clackmannanshire",2008,397
+"Clackmannanshire",2009,39
+"Clackmannanshire",2010,-75
+"Clackmannanshire",2011,-8
+"Clackmannanshire",2012,-256
+"Clackmannanshire",2013,-59
+"Clackmannanshire",2014,-82
+"Clackmannanshire",2015,142
+"Clackmannanshire",2016,12
+"Clackmannanshire",2017,121
+"Clackmannanshire",2018,-31
+"Clackmannanshire",2019,152
+"Clackmannanshire",2020,104
+"Dumfries and Galloway",2002,267
+"Dumfries and Galloway",2003,528
+"Dumfries and Galloway",2004,1183
+"Dumfries and Galloway",2005,1191
+"Dumfries and Galloway",2006,469
+"Dumfries and Galloway",2007,712
+"Dumfries and Galloway",2008,810
+"Dumfries and Galloway",2009,304
+"Dumfries and Galloway",2010,119
+"Dumfries and Galloway",2011,377
+"Dumfries and Galloway",2012,-128
+"Dumfries and Galloway",2013,-6
+"Dumfries and Galloway",2014,334
+"Dumfries and Galloway",2015,330
+"Dumfries and Galloway",2016,394
+"Dumfries and Galloway",2017,322
+"Dumfries and Galloway",2018,383
+"Dumfries and Galloway",2019,728
+"Dumfries and Galloway",2020,335
+"East Ayrshire",2002,-147
+"East Ayrshire",2003,28
+"East Ayrshire",2004,367
+"East Ayrshire",2005,36
+"East Ayrshire",2006,91
+"East Ayrshire",2007,325
+"East Ayrshire",2008,549
+"East Ayrshire",2009,383
+"East Ayrshire",2010,30
+"East Ayrshire",2011,30
+"East Ayrshire",2012,-76
+"East Ayrshire",2013,-120
+"East Ayrshire",2014,-90
+"East Ayrshire",2015,62
+"East Ayrshire",2016,151
+"East Ayrshire",2017,18
+"East Ayrshire",2018,230
+"East Ayrshire",2019,432
+"East Ayrshire",2020,47
+"East Lothian",2002,845
+"East Lothian",2003,639
+"East Lothian",2004,430
+"East Lothian",2005,497
+"East Lothian",2006,925
+"East Lothian",2007,1559
+"East Lothian",2008,1635
+"East Lothian",2009,705
+"East Lothian",2010,595
+"East Lothian",2011,445
+"East Lothian",2012,787
+"East Lothian",2013,521
+"East Lothian",2014,712
+"East Lothian",2015,961
+"East Lothian",2016,960
+"East Lothian",2017,800
+"East Lothian",2018,1151
+"East Lothian",2019,1273
+"East Lothian",2020,972
+"East Renfrewshire",2002,449
+"East Renfrewshire",2003,-83
+"East Renfrewshire",2004,-97
+"East Renfrewshire",2005,-17
+"East Renfrewshire",2006,-213
+"East Renfrewshire",2007,45
+"East Renfrewshire",2008,-72
+"East Renfrewshire",2009,72
+"East Renfrewshire",2010,369
+"East Renfrewshire",2011,270
+"East Renfrewshire",2012,189
+"East Renfrewshire",2013,539
+"East Renfrewshire",2014,890
+"East Renfrewshire",2015,627
+"East Renfrewshire",2016,819
+"East Renfrewshire",2017,958
+"East Renfrewshire",2018,521
+"East Renfrewshire",2019,371
+"East Renfrewshire",2020,732
+"Na h-Eileanan Siar",2002,-56
+"Na h-Eileanan Siar",2003,84
+"Na h-Eileanan Siar",2004,246
+"Na h-Eileanan Siar",2005,274
+"Na h-Eileanan Siar",2006,129
+"Na h-Eileanan Siar",2007,73
+"Na h-Eileanan Siar",2008,23
+"Na h-Eileanan Siar",2009,71
+"Na h-Eileanan Siar",2010,169
+"Na h-Eileanan Siar",2011,23
+"Na h-Eileanan Siar",2012,13
+"Na h-Eileanan Siar",2013,-19
+"Na h-Eileanan Siar",2014,-88
+"Na h-Eileanan Siar",2015,-5
+"Na h-Eileanan Siar",2016,-67
+"Na h-Eileanan Siar",2017,155
+"Na h-Eileanan Siar",2018,19
+"Na h-Eileanan Siar",2019,50
+"Na h-Eileanan Siar",2020,-39
+"Falkirk",2002,844
+"Falkirk",2003,911
+"Falkirk",2004,1510
+"Falkirk",2005,1642
+"Falkirk",2006,941
+"Falkirk",2007,935
+"Falkirk",2008,663
+"Falkirk",2009,565
+"Falkirk",2010,458
+"Falkirk",2011,1021
+"Falkirk",2012,356
+"Falkirk",2013,375
+"Falkirk",2014,415
+"Falkirk",2015,734
+"Falkirk",2016,940
+"Falkirk",2017,901
+"Falkirk",2018,428
+"Falkirk",2019,730
+"Falkirk",2020,228
+"Highland",2002,714
+"Highland",2003,1658
+"Highland",2004,2850
+"Highland",2005,2862
+"Highland",2006,2054
+"Highland",2007,2677
+"Highland",2008,2111
+"Highland",2009,990
+"Highland",2010,990
+"Highland",2011,898
+"Highland",2012,118
+"Highland",2013,93
+"Highland",2014,239
+"Highland",2015,1115
+"Highland",2016,1196
+"Highland",2017,813
+"Highland",2018,968
+"Highland",2019,980
+"Highland",2020,394
+"Inverclyde",2002,-196
+"Inverclyde",2003,-396
+"Inverclyde",2004,-599
+"Inverclyde",2005,-130
+"Inverclyde",2006,-353
+"Inverclyde",2007,-318
+"Inverclyde",2008,-203
+"Inverclyde",2009,-359
+"Inverclyde",2010,-226
+"Inverclyde",2011,-289
+"Inverclyde",2012,-305
+"Inverclyde",2013,-160
+"Inverclyde",2014,-270
+"Inverclyde",2015,-136
+"Inverclyde",2016,-56
+"Inverclyde",2017,10
+"Inverclyde",2018,-178
+"Inverclyde",2019,82
+"Inverclyde",2020,-96
+"Midlothian",2002,-159
+"Midlothian",2003,-580
+"Midlothian",2004,-263
+"Midlothian",2005,-321
+"Midlothian",2006,-261
+"Midlothian",2007,109
+"Midlothian",2008,427
+"Midlothian",2009,467
+"Midlothian",2010,237
+"Midlothian",2011,522
+"Midlothian",2012,559
+"Midlothian",2013,576
+"Midlothian",2014,1020
+"Midlothian",2015,987
+"Midlothian",2016,1008
+"Midlothian",2017,1271
+"Midlothian",2018,1087
+"Midlothian",2019,940
+"Midlothian",2020,628
+"Moray",2002,28
+"Moray",2003,540
+"Moray",2004,980
+"Moray",2005,693
+"Moray",2006,458
+"Moray",2007,525
+"Moray",2008,330
+"Moray",2009,404
+"Moray",2010,-9
+"Moray",2011,-162
+"Moray",2012,327
+"Moray",2013,596
+"Moray",2014,467
+"Moray",2015,410
+"Moray",2016,553
+"Moray",2017,3
+"Moray",2018,51
+"Moray",2019,298
+"Moray",2020,20
+"North Ayrshire",2002,28
+"North Ayrshire",2003,367
+"North Ayrshire",2004,206
+"North Ayrshire",2005,95
+"North Ayrshire",2006,-21
+"North Ayrshire",2007,428
+"North Ayrshire",2008,333
+"North Ayrshire",2009,-117
+"North Ayrshire",2010,-165
+"North Ayrshire",2011,136
+"North Ayrshire",2012,-401
+"North Ayrshire",2013,-308
+"North Ayrshire",2014,-137
+"North Ayrshire",2015,60
+"North Ayrshire",2016,65
+"North Ayrshire",2017,352
+"North Ayrshire",2018,54
+"North Ayrshire",2019,94
+"North Ayrshire",2020,142
+"Orkney Islands",2002,58
+"Orkney Islands",2003,142
+"Orkney Islands",2004,261
+"Orkney Islands",2005,135
+"Orkney Islands",2006,200
+"Orkney Islands",2007,143
+"Orkney Islands",2008,95
+"Orkney Islands",2009,88
+"Orkney Islands",2010,163
+"Orkney Islands",2011,99
+"Orkney Islands",2012,106
+"Orkney Islands",2013,80
+"Orkney Islands",2014,67
+"Orkney Islands",2015,100
+"Orkney Islands",2016,223
+"Orkney Islands",2017,204
+"Orkney Islands",2018,253
+"Orkney Islands",2019,145
+"Orkney Islands",2020,167
+"Scottish Borders",2002,846
+"Scottish Borders",2003,1213
+"Scottish Borders",2004,1385
+"Scottish Borders",2005,1003
+"Scottish Borders",2006,835
+"Scottish Borders",2007,1492
+"Scottish Borders",2008,1302
+"Scottish Borders",2009,421
+"Scottish Borders",2010,286
+"Scottish Borders",2011,488
+"Scottish Borders",2012,45
+"Scottish Borders",2013,308
+"Scottish Borders",2014,280
+"Scottish Borders",2015,435
+"Scottish Borders",2016,690
+"Scottish Borders",2017,818
+"Scottish Borders",2018,682
+"Scottish Borders",2019,586
+"Scottish Borders",2020,270
+"Shetland Islands",2002,-17
+"Shetland Islands",2003,-118
+"Shetland Islands",2004,72
+"Shetland Islands",2005,88
+"Shetland Islands",2006,-112
+"Shetland Islands",2007,46
+"Shetland Islands",2008,26
+"Shetland Islands",2009,203
+"Shetland Islands",2010,155
+"Shetland Islands",2011,59
+"Shetland Islands",2012,-68
+"Shetland Islands",2013,-89
+"Shetland Islands",2014,-5
+"Shetland Islands",2015,-36
+"Shetland Islands",2016,-15
+"Shetland Islands",2017,-133
+"Shetland Islands",2018,-75
+"Shetland Islands",2019,-88
+"Shetland Islands",2020,-31
+"South Ayrshire",2002,19
+"South Ayrshire",2003,290
+"South Ayrshire",2004,684
+"South Ayrshire",2005,425
+"South Ayrshire",2006,366
+"South Ayrshire",2007,578
+"South Ayrshire",2008,400
+"South Ayrshire",2009,173
+"South Ayrshire",2010,443
+"South Ayrshire",2011,596
+"South Ayrshire",2012,357
+"South Ayrshire",2013,405
+"South Ayrshire",2014,103
+"South Ayrshire",2015,311
+"South Ayrshire",2016,546
+"South Ayrshire",2017,690
+"South Ayrshire",2018,495
+"South Ayrshire",2019,563
+"South Ayrshire",2020,354
+"South Lanarkshire",2002,545
+"South Lanarkshire",2003,797
+"South Lanarkshire",2004,2127
+"South Lanarkshire",2005,1079
+"South Lanarkshire",2006,1334
+"South Lanarkshire",2007,1651
+"South Lanarkshire",2008,735
+"South Lanarkshire",2009,640
+"South Lanarkshire",2010,808
+"South Lanarkshire",2011,587
+"South Lanarkshire",2012,408
+"South Lanarkshire",2013,579
+"South Lanarkshire",2014,511
+"South Lanarkshire",2015,1034
+"South Lanarkshire",2016,1097
+"South Lanarkshire",2017,1278
+"South Lanarkshire",2018,1299
+"South Lanarkshire",2019,1836
+"South Lanarkshire",2020,1174
+"Stirling",2002,722
+"Stirling",2003,675
+"Stirling",2004,-10
+"Stirling",2005,658
+"Stirling",2006,701
+"Stirling",2007,477
+"Stirling",2008,244
+"Stirling",2009,310
+"Stirling",2010,1006
+"Stirling",2011,1021
+"Stirling",2012,774
+"Stirling",2013,253
+"Stirling",2014,467
+"Stirling",2015,1412
+"Stirling",2016,1012
+"Stirling",2017,335
+"Stirling",2018,505
+"Stirling",2019,82
+"Stirling",2020,131
+"Aberdeen City",2002,-826
+"Aberdeen City",2003,-1155
+"Aberdeen City",2004,-1191
+"Aberdeen City",2005,1110
+"Aberdeen City",2006,1143
+"Aberdeen City",2007,2953
+"Aberdeen City",2008,1646
+"Aberdeen City",2009,2974
+"Aberdeen City",2010,2754
+"Aberdeen City",2011,3078
+"Aberdeen City",2012,1847
+"Aberdeen City",2013,1664
+"Aberdeen City",2014,1412
+"Aberdeen City",2015,1085
+"Aberdeen City",2016,-969
+"Aberdeen City",2017,-1416
+"Aberdeen City",2018,-1318
+"Aberdeen City",2019,810
+"Aberdeen City",2020,502
+"Aberdeenshire",2002,1695
+"Aberdeenshire",2003,2120
+"Aberdeenshire",2004,3230
+"Aberdeenshire",2005,2780
+"Aberdeenshire",2006,3067
+"Aberdeenshire",2007,2683
+"Aberdeenshire",2008,1881
+"Aberdeenshire",2009,1507
+"Aberdeenshire",2010,1693
+"Aberdeenshire",2011,1384
+"Aberdeenshire",2012,1386
+"Aberdeenshire",2013,1664
+"Aberdeenshire",2014,2041
+"Aberdeenshire",2015,986
+"Aberdeenshire",2016,-354
+"Aberdeenshire",2017,-688
+"Aberdeenshire",2018,-600
+"Aberdeenshire",2019,-383
+"Aberdeenshire",2020,-127
+"Argyll and Bute",2002,93
+"Argyll and Bute",2003,435
+"Argyll and Bute",2004,926
+"Argyll and Bute",2005,437
+"Argyll and Bute",2006,200
+"Argyll and Bute",2007,378
+"Argyll and Bute",2008,-39
+"Argyll and Bute",2009,-27
+"Argyll and Bute",2010,291
+"Argyll and Bute",2011,304
+"Argyll and Bute",2012,-233
+"Argyll and Bute",2013,-23
+"Argyll and Bute",2014,-275
+"Argyll and Bute",2015,-233
+"Argyll and Bute",2016,234
+"Argyll and Bute",2017,137
+"Argyll and Bute",2018,-81
+"Argyll and Bute",2019,-66
+"Argyll and Bute",2020,-93
+"City of Edinburgh",2002,879
+"City of Edinburgh",2003,-390
+"City of Edinburgh",2004,2234
+"City of Edinburgh",2005,5317
+"City of Edinburgh",2006,3412
+"City of Edinburgh",2007,4919
+"City of Edinburgh",2008,3356
+"City of Edinburgh",2009,5861
+"City of Edinburgh",2010,8069
+"City of Edinburgh",2011,8044
+"City of Edinburgh",2012,3966
+"City of Edinburgh",2013,2998
+"City of Edinburgh",2014,3296
+"City of Edinburgh",2015,6261
+"City of Edinburgh",2016,7659
+"City of Edinburgh",2017,5088
+"City of Edinburgh",2018,4621
+"City of Edinburgh",2019,5906
+"City of Edinburgh",2020,2890
+"Renfrewshire",2002,-658
+"Renfrewshire",2003,-740
+"Renfrewshire",2004,-268
+"Renfrewshire",2005,-286
+"Renfrewshire",2006,-344
+"Renfrewshire",2007,269
+"Renfrewshire",2008,398
+"Renfrewshire",2009,156
+"Renfrewshire",2010,443
+"Renfrewshire",2011,589
+"Renfrewshire",2012,-395
+"Renfrewshire",2013,-343
+"Renfrewshire",2014,372
+"Renfrewshire",2015,591
+"Renfrewshire",2016,1614
+"Renfrewshire",2017,1162
+"Renfrewshire",2018,1341
+"Renfrewshire",2019,1517
+"Renfrewshire",2020,846
+"West Dunbartonshire",2002,-109
+"West Dunbartonshire",2003,-395
+"West Dunbartonshire",2004,-374
+"West Dunbartonshire",2005,-332
+"West Dunbartonshire",2006,-108
+"West Dunbartonshire",2007,-32
+"West Dunbartonshire",2008,-205
+"West Dunbartonshire",2009,-56
+"West Dunbartonshire",2010,-291
+"West Dunbartonshire",2011,-173
+"West Dunbartonshire",2012,-280
+"West Dunbartonshire",2013,-424
+"West Dunbartonshire",2014,-98
+"West Dunbartonshire",2015,79
+"West Dunbartonshire",2016,288
+"West Dunbartonshire",2017,-96
+"West Dunbartonshire",2018,-212
+"West Dunbartonshire",2019,-61
+"West Dunbartonshire",2020,-205
+"West Lothian",2002,869
+"West Lothian",2003,876
+"West Lothian",2004,1214
+"West Lothian",2005,844
+"West Lothian",2006,1319
+"West Lothian",2007,1464
+"West Lothian",2008,996
+"West Lothian",2009,233
+"West Lothian",2010,203
+"West Lothian",2011,219
+"West Lothian",2012,154
+"West Lothian",2013,-387
+"West Lothian",2014,444
+"West Lothian",2015,890
+"West Lothian",2016,1127
+"West Lothian",2017,786
+"West Lothian",2018,581
+"West Lothian",2019,706
+"West Lothian",2020,886
+"Angus",2002,342
+"Angus",2003,329
+"Angus",2004,1342
+"Angus",2005,1073
+"Angus",2006,954
+"Angus",2007,756
+"Angus",2008,653
+"Angus",2009,148
+"Angus",2010,355
+"Angus",2011,115
+"Angus",2012,258
+"Angus",2013,113
+"Angus",2014,645
+"Angus",2015,537
+"Angus",2016,68
+"Angus",2017,144
+"Angus",2018,198
+"Angus",2019,493
+"Angus",2020,277
+"Dundee City",2002,-759
+"Dundee City",2003,6
+"Dundee City",2004,-740
+"Dundee City",2005,572
+"Dundee City",2006,-109
+"Dundee City",2007,265
+"Dundee City",2008,608
+"Dundee City",2009,919
+"Dundee City",2010,981
+"Dundee City",2011,1427
+"Dundee City",2012,492
+"Dundee City",2013,309
+"Dundee City",2014,-12
+"Dundee City",2015,209
+"Dundee City",2016,177
+"Dundee City",2017,588
+"Dundee City",2018,352
+"Dundee City",2019,824
+"Dundee City",2020,-82
+"East Dunbartonshire",2002,-783
+"East Dunbartonshire",2003,-331
+"East Dunbartonshire",2004,-457
+"East Dunbartonshire",2005,-482
+"East Dunbartonshire",2006,-449
+"East Dunbartonshire",2007,-289
+"East Dunbartonshire",2008,-180
+"East Dunbartonshire",2009,-79
+"East Dunbartonshire",2010,-71
+"East Dunbartonshire",2011,-105
+"East Dunbartonshire",2012,260
+"East Dunbartonshire",2013,92
+"East Dunbartonshire",2014,909
+"East Dunbartonshire",2015,549
+"East Dunbartonshire",2016,706
+"East Dunbartonshire",2017,688
+"East Dunbartonshire",2018,370
+"East Dunbartonshire",2019,424
+"East Dunbartonshire",2020,608
+"Fife",2002,1636
+"Fife",2003,684
+"Fife",2004,2348
+"Fife",2005,2657
+"Fife",2006,1560
+"Fife",2007,1893
+"Fife",2008,1627
+"Fife",2009,1550
+"Fife",2010,1806
+"Fife",2011,2076
+"Fife",2012,623
+"Fife",2013,304
+"Fife",2014,650
+"Fife",2015,1228
+"Fife",2016,1608
+"Fife",2017,1524
+"Fife",2018,1244
+"Fife",2019,2303
+"Fife",2020,1435
+"Perth and Kinross",2002,1031
+"Perth and Kinross",2003,1582
+"Perth and Kinross",2004,1665
+"Perth and Kinross",2005,2063
+"Perth and Kinross",2006,2023
+"Perth and Kinross",2007,2440
+"Perth and Kinross",2008,2400
+"Perth and Kinross",2009,1800
+"Perth and Kinross",2010,1861
+"Perth and Kinross",2011,1826
+"Perth and Kinross",2012,980
+"Perth and Kinross",2013,377
+"Perth and Kinross",2014,1407
+"Perth and Kinross",2015,1263
+"Perth and Kinross",2016,1062
+"Perth and Kinross",2017,898
+"Perth and Kinross",2018,657
+"Perth and Kinross",2019,1033
+"Perth and Kinross",2020,717
+"Glasgow City",2002,-2161
+"Glasgow City",2003,-4334
+"Glasgow City",2004,-3418
+"Glasgow City",2005,-1558
+"Glasgow City",2006,-1988
+"Glasgow City",2007,2303
+"Glasgow City",2008,2929
+"Glasgow City",2009,3989
+"Glasgow City",2010,3050
+"Glasgow City",2011,5370
+"Glasgow City",2012,1146
+"Glasgow City",2013,439
+"Glasgow City",2014,2047
+"Glasgow City",2015,5840
+"Glasgow City",2016,7963
+"Glasgow City",2017,5390
+"Glasgow City",2018,5356
+"Glasgow City",2019,6267
+"Glasgow City",2020,3260
+"North Lanarkshire",2002,189
+"North Lanarkshire",2003,161
+"North Lanarkshire",2004,228
+"North Lanarkshire",2005,330
+"North Lanarkshire",2006,302
+"North Lanarkshire",2007,849
+"North Lanarkshire",2008,534
+"North Lanarkshire",2009,88
+"North Lanarkshire",2010,-422
+"North Lanarkshire",2011,-58
+"North Lanarkshire",2012,-271
+"North Lanarkshire",2013,-385
+"North Lanarkshire",2014,-86
+"North Lanarkshire",2015,140
+"North Lanarkshire",2016,982
+"North Lanarkshire",2017,734
+"North Lanarkshire",2018,549
+"North Lanarkshire",2019,1219
+"North Lanarkshire",2020,436
+NA,2002,6296
+NA,2003,5643
+NA,2004,18622
+NA,2005,25307
+NA,2006,18822
+NA,2007,33049
+NA,2008,26409
+NA,2009,24422
+NA,2010,26075
+NA,2011,30209
+NA,2012,12738
+NA,2013,9962
+NA,2014,17585
+NA,2015,27968
+NA,2016,31693
+NA,2017,23855
+NA,2018,20900
+NA,2019,30246
+NA,2020,16882
