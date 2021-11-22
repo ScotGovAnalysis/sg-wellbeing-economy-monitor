@@ -1,56 +1,56 @@
-"","Year","Region","Value"
-"1",2010,"Abroad",5
-"2",2011,"Abroad",5
-"3",2012,"Abroad",5
-"4",2013,"Abroad",5
-"5",2014,"Abroad",5
-"6",2015,"Abroad",5
-"7",2016,"Abroad",5
-"8",2017,"Abroad",5
-"9",2018,"Abroad",6
-"10",2019,"Abroad",6
-"11",2020,"Abroad",7
-"12",2010,"Total UK",352
-"13",2011,"Total UK",348
-"14",2012,"Total UK",358
-"15",2013,"Total UK",358
-"16",2014,"Total UK",370
-"17",2015,"Total UK",377
-"18",2016,"Total UK",382
-"19",2017,"Total UK",386
-"20",2018,"Total UK",384
-"21",2019,"Total UK",387
-"22",2020,"Total UK",388
-"23",2010,"UK - RUK based",6
-"24",2011,"UK - RUK based",6
-"25",2012,"UK - RUK based",6
-"26",2013,"UK - RUK based",6
-"27",2014,"UK - RUK based",6
-"28",2015,"UK - RUK based",6
-"29",2016,"UK - RUK based",6
-"30",2017,"UK - RUK based",6
-"31",2018,"UK - RUK based",6
-"32",2019,"UK - RUK based",6
-"33",2020,"UK - RUK based",6
-"34",2010,"UK - Scotland based",346
-"35",2011,"UK - Scotland based",341
-"36",2012,"UK - Scotland based",352
-"37",2013,"UK - Scotland based",351
-"38",2014,"UK - Scotland based",364
-"39",2015,"UK - Scotland based",371
-"40",2016,"UK - Scotland based",376
-"41",2017,"UK - Scotland based",380
-"42",2018,"UK - Scotland based",378
-"43",2019,"UK - Scotland based",381
-"44",2020,"UK - Scotland based",382
-"45",2010,"All",357
-"46",2011,"All",352
-"47",2012,"All",363
-"48",2013,"All",362
-"49",2014,"All",375
-"50",2015,"All",382
-"51",2016,"All",388
-"52",2017,"All",391
-"53",2018,"All",390
-"54",2019,"All",394
-"55",2020,"All",395
+"Year","Region","Value"
+2010,"Abroad",5
+2011,"Abroad",5
+2012,"Abroad",5
+2013,"Abroad",5
+2014,"Abroad",5
+2015,"Abroad",5
+2016,"Abroad",5
+2017,"Abroad",5
+2018,"Abroad",6
+2019,"Abroad",6
+2020,"Abroad",7
+2010,"Total UK",352
+2011,"Total UK",348
+2012,"Total UK",358
+2013,"Total UK",358
+2014,"Total UK",370
+2015,"Total UK",377
+2016,"Total UK",382
+2017,"Total UK",386
+2018,"Total UK",384
+2019,"Total UK",387
+2020,"Total UK",388
+2010,"UK - RUK based",6
+2011,"UK - RUK based",6
+2012,"UK - RUK based",6
+2013,"UK - RUK based",6
+2014,"UK - RUK based",6
+2015,"UK - RUK based",6
+2016,"UK - RUK based",6
+2017,"UK - RUK based",6
+2018,"UK - RUK based",6
+2019,"UK - RUK based",6
+2020,"UK - RUK based",6
+2010,"UK - Scotland based",346
+2011,"UK - Scotland based",341
+2012,"UK - Scotland based",352
+2013,"UK - Scotland based",351
+2014,"UK - Scotland based",364
+2015,"UK - Scotland based",371
+2016,"UK - Scotland based",376
+2017,"UK - Scotland based",380
+2018,"UK - Scotland based",378
+2019,"UK - Scotland based",381
+2020,"UK - Scotland based",382
+2010,"All",357
+2011,"All",352
+2012,"All",363
+2013,"All",362
+2014,"All",375
+2015,"All",382
+2016,"All",388
+2017,"All",391
+2018,"All",390
+2019,"All",394
+2020,"All",395
