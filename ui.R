@@ -1855,9 +1855,42 @@ shinyUI(fluidPage(
                                                      )
                                               )
                                      )
-                            )
-                          )
-                 ),
+                            ),
+                            
+                            tabPanel("Marine and terrestrial species", 
+                                    fluidRow(width = 12,
+                                            column(width=3, 
+                                                    wellPanel(
+                                                                             checkboxGroupInput(
+                                                                               inputId = "mandtspecies_sco_input",
+                                                                               label = "",
+                                                                               choiceNames = names(mandtspecies_sco_wide),
+                                                                               choiceValues = c(seq(1:length(names(mandtspecies_sco_wide)))),
+                                                                               selected = positions_selected_indices_mandtspecies_sco
+                                                                             )
+                                                                           )
+                                                                    ),      
+                                                                    column(width=9, 
+                                                                           fluidRow(
+                                                                             p(tags$b(paste("Figure 4. Marine and Terrestrial Species Indices ", "(", as.character(start_year_mandtspecies_sco), " - ", as.character(end_year_mandtspecies_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                                             withSpinner(dygraphOutput("mandtspecies_sco_graph"), type = 5),
+                                                                             align = "center"
+                                                                           ),
+                                                                           fluidRow(
+                                                                             textOutput("legendDivID_mandtspecies_sco"),
+                                                                             p("Source: "), 
+                                                                             a("National Performance Framework", href = "https:statistics.gov.scot/data/national-performance-framework"),
+                                                                             collapsible = FALSE,
+                                                                             width = 12,
+                                                                             style="margin-bottom: 100px;"
+                                                                           )
+                                                                    )
+                                                           )
+                                                  )
+                                     )
+                            ),                 
+                            
+                        
                  # REGIONAL ####
                  tabPanel("Regional",
                   p("No regional data available at this time")

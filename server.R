@@ -2124,6 +2124,27 @@ shinyServer(
         dyCrosshair(direction = "vertical")
     })
     
+    # Dygraph for mandtspecies_sco
+    output$mandtspecies_sco_graph <- renderDygraph({
+      dygraph(
+        mandtspecies_sco_wide[,c(1, as.numeric(input$mandtspecies_sco_input))]
+      ) %>%
+        dyGroup(names(mandtspecies_sco_wide)[c(1, as.numeric(input$mandtspecies_sco_input))], strokeWidth = 2) %>%
+        dyRangeSelector() %>%
+        dyAxis("x", label = "Year", rangePad = 5) %>%
+        dyAxis("y", label = "Index value") %>%
+        dyHighlight(
+          highlightCircleSize = 3,
+          highlightSeriesBackgroundAlpha = 0.2,
+          hideOnMouseOut = FALSE,
+          highlightSeriesOpts = list(strokeWidth = 6)
+        ) %>%
+        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
+        dyLegend(labelsDiv = "legendDivID_mandtspecies_sco", labelsSeparateLines = TRUE) %>%
+        dyUnzoom() %>%
+        dyCrosshair(direction = "vertical")
+    })
+    
     # EQUALITIES DASHBOARD ###########################################################################################################################
     # gpaygap_eq_overview_int_lineplot
     output$gpaygap_eq_overview_int_lineplot <- renderPlot({

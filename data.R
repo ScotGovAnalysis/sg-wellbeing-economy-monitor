@@ -186,6 +186,7 @@ greenandbluespace_sco <- read.csv("./www/scotland/greenandbluespace_sco.csv", ch
 cfootprint_sco <- read.csv("./www/scotland/cfootprint_sco.csv", check.names=FALSE)
 naturalf_sco <- read.csv("./www/scotland/naturalf_sco.csv", check.names=FALSE)
 gasemissions_sco <- read.csv("./www/scotland/gasemissions_sco.csv", check.names=FALSE)
+mandtspecies_sco <- read.csv("./www/scotland/mandtspecies_sco.csv", check.names = FALSE)
 airpollutant_sco <- read.csv("./www/scotland/airpollutant_sco.csv", check.names=FALSE)
 
 # LOADING DATA - REGIONAL ####
@@ -1174,6 +1175,16 @@ end_year_airpollutant_sco <- max(airpollutant_sco$Year)
 # gasemissions_sco
 start_year_gasemissions_sco <- min(gasemissions_sco$Year)
 end_year_gasemissions_sco <- max(gasemissions_sco$Year)
+
+# mandtspecies_sco
+mandtspecies_sco_long <- mandtspecies_sco %>% 
+  gather("Year", "Value", 2:ncol(mandtspecies_sco))
+mandtspecies_sco_wide <- mandtspecies_sco_long %>% 
+  spread("Indicator", "Value")
+mandtspecies_sco_wide$Year <- as.integer(mandtspecies_sco_wide$Year)
+positions_selected_indices_mandtspecies_sco <- which(names(mandtspecies_sco_wide) %in% c('Marine abundance', 'Terrestrial abundance', 'Terrestrial occupancy'))
+start_year_mandtspecies_sco <- min(mandtspecies_sco_long$Year)
+end_year_mandtspecies_sco <- max(mandtspecies_sco_long$Year)
 
 # ggemissions2_int
 ggemissions2_int_long <- ggemissions2_int %>% 
