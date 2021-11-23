@@ -1521,7 +1521,7 @@ shinyUI(fluidPage(
                                      fluidRow(width = 12,
                                               column(width=12, 
                                                      fluidRow(
-                                                       p(tags$b(paste("Figure 3. The proportions of people living in private households with an equivalised income of less than 60% of the UK median after housing costs: ", "(", as.character(start_year_rphousingc_sco), " - ", as.character(end_year_rphousingc_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       p(tags$b(paste("Figure 3. Proportion of people living in private households with an equivalised income of less than 60% of UK median after housing costs (three-year rolling average): ", "(", as.character(start_year_rphousingc_sco), " - ", as.character(end_year_rphousingc_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                        withSpinner(dygraphOutput("rphousingc_sco_graph"), type = 5),
                                                        align = "center"
                                                      ),
