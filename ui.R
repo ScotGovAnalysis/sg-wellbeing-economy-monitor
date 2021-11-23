@@ -1560,7 +1560,26 @@ shinyUI(fluidPage(
                                                      )
                                               )
                                      )
-                            )
+                            ),
+                            tabPanel("Social capital",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 6. Social Capital Index (2013 base year) - measure of social networks, community cohesion, social particpation, trust and empowerment: ", "(", as.character(start_year_scapital_sco), " - ", as.character(end_year_scapital_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("scapital_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_scapital_sco"),
+                                                       p("Source: "), 
+                                                       a("National Performance Framework", href = "https://statistics.gov.scot/data/national-performance-framework"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            )     
                           )
                  ),
                  # REGIONAL ####

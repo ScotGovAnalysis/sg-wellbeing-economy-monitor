@@ -177,6 +177,7 @@ rphousingc_sco <- read.csv("./www/scotland/rphousingc_sco.csv", check.names=FALS
 hlifeexp_male_sco <- read.csv("./www/scotland/hlifeexp_male_sco.csv", check.names=FALSE)
 hlifeexp_female_sco <- read.csv("./www/scotland/hlifeexp_female_sco.csv", check.names=FALSE)
 mwellbeing_sco <- read.csv("./www/scotland/mwellbeing_sco.csv", check.names=FALSE)
+scapital_sco <- read.csv("./www/scotland/scapital_sco.csv", check.names = FALSE)
 
 
 greenandbluespace_sco <- read.csv("./www/scotland/greenandbluespace_sco.csv", check.names=FALSE)
@@ -1020,6 +1021,10 @@ end_year_rphousingc_sco <- max(rphousingc_sco$Year)
 # mwellbeing_sco
 start_year_mwellbeing_sco <- min(mwellbeing_sco$Year)
 end_year_mwellbeing_sco <- max(mwellbeing_sco$Year)
+
+# scapital_sco
+start_year_scapital_sco <- min(scapital_sco$Year)
+end_year_scapital_sco <- max(scapital_sco$Year)
 
 
 # rank_lifeexpall

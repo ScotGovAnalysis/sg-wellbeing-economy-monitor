@@ -1774,7 +1774,27 @@ shinyServer(
         dyCrosshair(direction = "vertical")
     })
     
-    # Leaflet map for hlifeexp_male_reg
+    # Dygraph for scapital_sco
+    output$scapital_sco_graph <- renderDygraph({
+      dygraph(
+        scapital_sco
+      ) %>%
+        dyRangeSelector() %>%
+        dyAxis("x", label = "Year", rangePad = 5) %>%
+        dyAxis("y", label = "Social Capital Index") %>%
+        dyHighlight(
+          highlightCircleSize = 3,
+          highlightSeriesBackgroundAlpha = 0.2,
+          hideOnMouseOut = FALSE,
+          highlightSeriesOpts = list(strokeWidth = 6)
+        ) %>%
+        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
+        dyLegend(labelsDiv = "legendDivID_scapital_sco", labelsSeparateLines = TRUE) %>%
+        dyUnzoom() %>%
+        dyCrosshair(direction = "vertical")
+    })
+    
+       # Leaflet map for hlifeexp_male_reg
     output$hlifeexp_male_reg_map_caption <- renderText({
       paste("Map 4. Healthy life expectancy (male) ", as.character(input$hlifeexp_male_reg_input), sep="")
     })
