@@ -663,12 +663,12 @@ shinyUI(fluidPage(
                  # REGIONAL ####
                    tabPanel("Regional",
                             navlistPanel(widths=c(3,9),
-                                         tabPanel("Growth",
+                                         tabPanel("Productivity",
                                                   fluidRow(width = 12,
                                                     column(width=12,
-                                                           tags$b(textOutput("growth_reg_map_caption")),
-                                                           sliderInput("growth_reg_input", label = "", min = start_year_growth_reg , max = end_year_growth_reg, value = end_year_growth_reg, width = "50%", sep = "", step = 1),
-                                                      withSpinner(leafletOutput("growth_reg_map"), type = 5),
+                                                           tags$b(textOutput("GVA_reg_map_caption")),
+                                                           sliderInput("GVA_reg_input", label = "", min = start_year_GVA_reg , max = end_year_GVA_reg, value = end_year_GVA_reg, width = "50%", sep = "", step = 1),
+                                                      withSpinner(leafletOutput("GVA_reg_map"), type = 5),
                                                       p("Source: "), 
                                                       a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
                                                     )

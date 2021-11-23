@@ -193,7 +193,7 @@ airpollutant_sco <- read.csv("./www/scotland/airpollutant_sco.csv", check.names=
 
 # LOADING DATA - REGIONAL ####
 nbusiness_reg <- read.csv("./www/regional/nbusiness_reg.csv", check.names=FALSE)
-growth_reg <- read.csv("./www/regional/growth_reg.csv", check.names=FALSE)
+GVA_reg <- read.csv("./www/regional/GVA_reg.csv", check.names=FALSE)
 exporting_reg <- read.csv("./www/regional/exporting_reg.csv", check.names=FALSE)
 rd_reg <- read.csv("./www/regional/rd_reg.csv", check.names=FALSE)
 depratio_reg <- read.csv("./www/regional/depratio_reg.csv", check.names=FALSE)
@@ -361,9 +361,9 @@ end_year_ncai_sco <- max(ncai_sco$Year)
 # map data
 mapex <- readOGR(dsn="./www/regional/fwlibrariesandshapefile", layer="Scotland1")
 
-# growth_reg
-start_year_growth_reg <- min(growth_reg$Year)
-end_year_growth_reg <- max(growth_reg$Year)
+# GVA_reg
+start_year_GVA_reg <- min(GVA_reg$Year)
+end_year_GVA_reg <- max(GVA_reg$Year)
 
 # exporting_reg
 start_year_exporting_reg <- min(exporting_reg$Year)

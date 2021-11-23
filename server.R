@@ -659,29 +659,29 @@ shinyServer(
     })
     
     
-        # Leaflet map for growth_reg
-    output$growth_reg_map_caption <- renderText({
-      paste("Map 1. GVA per Head across Scottish council areas in ", as.character(input$growth_reg_input), " (£ per Head)", sep="")
+        # Leaflet map for GVA_reg
+    output$GVA_reg_map_caption <- renderText({
+      paste("Map 1. GVA per Head across Scottish council areas in ", as.character(input$GVA_reg_input), " (£ per Head)", sep="")
     })
-    growth_reg_map_data <- reactive({
-      growth_reg_one <- growth_reg[ which(growth_reg$Year == input$growth_reg_input), ]
-      growth_reg_one <- growth_reg_one[ ,c(1,3)]
-      merged <- merge(mapex@data, growth_reg_one, by = intersect(names(mapex@data), names(growth_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
+    GVA_reg_map_data <- reactive({
+      GVA_reg_one <- GVA_reg[ which(GVA_reg$Year == input$GVA_reg_input), ]
+      GVA_reg_one <- GVA_reg_one[ ,c(1,3)]
+      merged <- merge(mapex@data, GVA_reg_one, by = intersect(names(mapex@data), names(GVA_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
       mapex@data <- merged[match(mapex@data$NAME, merged$NAME),]
-      choropleth_growth_reg <- colorBin(palette=brewer.pal(n=9, name="RdYlGn"), mapex@data$Growth, bins = 9)
-      list_return <- list(mapex = mapex, choropleth_growth_reg = choropleth_growth_reg)
+      choropleth_GVA_reg <- colorBin(palette=brewer.pal(n=9, name="BuGn"), mapex@data$Value, bins = 9)
+      list_return <- list(mapex = mapex, choropleth_GVA_reg = choropleth_GVA_reg)
       return(list_return)
     })
-    output$growth_reg_map <- renderLeaflet({
-      mapex <- growth_reg_map_data()$mapex
-      choropleth_growth_reg <- growth_reg_map_data()$choropleth_growth_reg
+    output$GVA_reg_map <- renderLeaflet({
+      mapex <- GVA_reg_map_data()$mapex
+      choropleth_GVA_reg <- GVA_reg_map_data()$choropleth_GVA_reg
       leaflet(mapex) %>%
         setView(zoom = 6, lat = 57, lng= -4) %>%
         addProviderTiles("Esri.WorldGrayCanvas") %>%
-        addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_growth_reg(mapex$Growth), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " £", as.character(mapex$Growth), " per Head", sep = ""),
+        addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_GVA_reg(mapex$Value), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " £", as.character(mapex$Growth), " per Head", sep = ""),
                     highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
         ) %>%
-        addLegend("bottomright", pal = choropleth_growth_reg, values = mapex$Growth, title = paste("GVA per Head", " (£)", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
+        addLegend("bottomright", pal = choropleth_GVA_reg, values = mapex$Value, title = paste("GVA per Head", " (£)", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
      })
     # Leaflet map for exporting_reg
     output$exporting_reg_map_caption <- renderText({
