@@ -738,7 +738,7 @@ shinyServer(
   
     # POPULATION #####################################################################################################################################
     # POPULATION OVERVIEW
-    # Horizontal bar - departio
+    # Horizontal bar - depratio
     output$depratio_bar <- renderUI({
       if (rank_depratio_quantile >= 0.75) {
         column(width = 2,
@@ -830,7 +830,7 @@ shinyServer(
       ) %>%
         dyRangeSelector() %>%
         dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "Ratio = (ppl aged 0 to 15 and 65+)/(ppl aged 16 to 64)") %>%
+        dyAxis("y", label = "% of working age population") %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,
@@ -936,7 +936,7 @@ shinyServer(
       depratio_reg_one <- depratio_reg_one[ ,c(1,3)]
       merged <- merge(mapex@data, depratio_reg_one, by = intersect(names(mapex@data), names(depratio_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
       mapex@data <- merged[match(mapex@data$NAME, merged$NAME),]
-      choropleth_depratio_reg <- colorBin(palette=brewer.pal(n=9, name="RdYlGn"), mapex@data$depratio, bins = 9)
+      choropleth_depratio_reg <- colorBin(palette=brewer.pal(n=9, name="YlOrRd"), mapex@data$depratio, bins = 9)
       list_return <- list(mapex = mapex, choropleth_depratio_reg = choropleth_depratio_reg)
       return(list_return)
     })
@@ -1567,7 +1567,7 @@ shinyServer(
       lwage_reg_one <- lwage_reg_one[ ,c(1,3)]
       merged <- merge(mapex@data, lwage_reg_one, by = intersect(names(mapex@data), names(lwage_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
       mapex@data <- merged[match(mapex@data$NAME, merged$NAME),]
-      choropleth_lwage_reg <- colorBin(palette=brewer.pal(n=9, name="RdYlGn"), mapex@data$lwage, bins = 9)
+      choropleth_lwage_reg <- colorBin(palette=brewer.pal(n=9, name="YlOrRd"), mapex@data$lwage, bins = 9)
       list_return <- list(mapex = mapex, choropleth_lwage_reg = choropleth_lwage_reg)
       return(list_return)
     })
@@ -1580,7 +1580,7 @@ shinyServer(
         addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_lwage_reg(mapex$lwage), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " ", as.character(mapex$lwage), " %", sep = ""),
                     highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
         ) %>%
-        addLegend("bottomright", pal = choropleth_lwage_reg, values = mapex$lwage, title = paste("Economic Activity", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
+        addLegend("bottomright", pal = choropleth_lwage_reg, values = mapex$lwage, title = paste("% earning below living wage", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
     })
     # Leaflet map for gpaygap_reg
     output$gpaygap_reg_map_caption <- renderText({
@@ -1591,7 +1591,7 @@ shinyServer(
       gpaygap_reg_one <- gpaygap_reg_one[ ,c(1,3)]
       merged <- merge(mapex@data, gpaygap_reg_one, by = intersect(names(mapex@data), names(gpaygap_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
       mapex@data <- merged[match(mapex@data$NAME, merged$NAME),]
-      choropleth_gpaygap_reg <- colorBin(palette=brewer.pal(n=9, name="RdYlGn"), mapex@data$gpaygap, bins = 9)
+      choropleth_gpaygap_reg <- colorBin(palette=brewer.pal(n=9, name="PuOr"), mapex@data$gpaygap, bins = 9)
       list_return <- list(mapex = mapex, choropleth_gpaygap_reg = choropleth_gpaygap_reg)
       return(list_return)
     })
