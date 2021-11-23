@@ -159,6 +159,8 @@ nbusiness_employees_sco <- read.csv("./www/scotland/nbusiness_employees_sco.csv"
 hbusiness_percent_sco <- read.csv("./www/scotland/hbusiness_percent_sco.csv", check.names=FALSE)
 ibusiness_sco <- read.csv("./www/scotland/ibusiness_sco.csv", check.names=FALSE)
 rd_overview_sco <- read.csv("./www/scotland/rd_overview_sco.csv", check.names=FALSE)
+ncai_sco <- read.csv("./www/scotland/ncai_sco.csv", check.names = FALSE)
+
 depratio_sco <- read.csv("./www/scotland/depratio_sco.csv", check.names=FALSE)
 migration_in_overseas_age_sco <- read.csv("./www/scotland/migration_in_overseas_age_sco.csv", check.names=FALSE)
 migration_in_overseas_sex_sco <- read.csv("./www/scotland/migration_in_overseas_sex_sco.csv", check.names=FALSE)
@@ -351,6 +353,10 @@ ibusiness_sco$Year <- as.numeric(levels(ibusiness_sco$Year))[ibusiness_sco$Year]
 positions_selected_activities_ibusiness_sco <- which(names(ibusiness_sco) %in% c('Innovation active'))
 start_year_ibusiness_sco <- min(ibusiness_sco$Year)
 end_year_ibusiness_sco <- max(ibusiness_sco$Year)
+
+# ncai_sco
+start_year_ncai_sco <- min(ncai_sco$Year)
+end_year_ncai_sco <- max(ncai_sco$Year)
 
 # map data
 mapex <- readOGR(dsn="./www/regional/fwlibrariesandshapefile", layer="Scotland1")

@@ -637,7 +637,29 @@ shinyServer(
         dyUnzoom() %>%
         dyCrosshair(direction = "vertical")
     })
-    # Leaflet map for growth_reg
+
+    # Dygraph for ncai_sco
+    output$ncai_sco_graph <- renderDygraph({
+      dygraph(
+        ncai_sco
+      ) %>%
+        dyRangeSelector() %>%
+        dyAxis("x", label = "Year", rangePad = 5) %>%
+        dyAxis("y", label = "Index value") %>%
+        dyHighlight(
+          highlightCircleSize = 3,
+          highlightSeriesBackgroundAlpha = 0.2,
+          hideOnMouseOut = FALSE,
+          highlightSeriesOpts = list(strokeWidth = 6)
+        ) %>%
+        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
+        dyLegend(labelsDiv = "legendDivID_ncai_sco", labelsSeparateLines = TRUE) %>%
+        dyUnzoom() %>%
+        dyCrosshair(direction = "vertical")
+    })
+    
+    
+        # Leaflet map for growth_reg
     output$growth_reg_map_caption <- renderText({
       paste("Map 1. GVA per Head across Scottish council areas in ", as.character(input$growth_reg_input), " (£ per Head)", sep="")
     })
@@ -929,7 +951,7 @@ shinyServer(
     
     # Leaflet map for depratio_reg
     output$depratio_reg_map_caption <- renderText({
-      paste("Map 1. Dependency ratio from population estimates and projections across Scottish council areas in ", as.character(input$depratio_reg_input), sep="")
+      paste("Map 1. Dependency ratio from population estimates in ", as.character(input$depratio_reg_input), sep="")
     })
     depratio_reg_map_data <- reactive({
       depratio_reg_one <- depratio_reg[ which(depratio_reg$Year == input$depratio_reg_input), ]

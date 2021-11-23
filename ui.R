@@ -636,7 +636,28 @@ shinyUI(fluidPage(
                                                        )
                                                 )
                                        )
+                              ),
+                              
+                              tabPanel("Natural Capital Asset Index",
+                                       fluidRow(width = 12,
+                                                column(width=12, 
+                                                       fluidRow(
+                                                         p(tags$b(paste("Figure 13. Natural Capital Asset Index ", "(", as.character(start_year_ncai_sco), " - ", as.character(end_year_ncai_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("ncai_sco_graph"), type = 5),
+                                                         align = "center"
+                                                       ),
+                                                       fluidRow(
+                                                         textOutput("legendDivID_ncai_sco"),
+                                                         p("Source: "), 
+                                                         a("Natural Capital Asset Index 2021", href = "https://www.nature.scot"),
+                                                         collapsible = FALSE,
+                                                         width = 12,
+                                                         style="margin-bottom: 100px;"
+                                                       )
+                                                )
+                                       )
                               )
+                              
                             )
                    ),
                  # REGIONAL ####
