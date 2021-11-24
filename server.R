@@ -1757,7 +1757,28 @@ shinyServer(
         dyUnzoom() %>%
         dyCrosshair(direction = "vertical")
     })
-        # ggplot barplot for hlifeexp_male_overview_int
+ 
+    # Dygraph for pratio_sco
+    output$pratio_sco_graph <- renderDygraph({
+      dygraph(
+        pratio_sco
+      ) %>%
+        dyRangeSelector() %>%
+        dyAxis("x", label = "Year (last year of 3-year average)", rangePad = 5) %>%
+        dyAxis("y", label = "Ratio") %>%
+        dyHighlight(
+          highlightCircleSize = 3,
+          highlightSeriesBackgroundAlpha = 0.2,
+          hideOnMouseOut = FALSE,
+          highlightSeriesOpts = list(strokeWidth = 6)
+        ) %>%
+        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
+        dyLegend(labelsDiv = "legendDivID_pratio_sco", labelsSeparateLines = TRUE) %>%
+        dyUnzoom() %>%
+        dyCrosshair(direction = "vertical")
+    })
+    
+           # ggplot barplot for hlifeexp_male_overview_int
     output$hlifeexp_male_overview_sco_barplot <- renderPlot({
       hlifeexp_male_overview_sco <- hlifeexp_male_sco %>%
         mutate(Age = (Age),

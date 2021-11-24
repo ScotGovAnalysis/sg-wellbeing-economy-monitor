@@ -1576,6 +1576,26 @@ shinyUI(fluidPage(
                                               )
                                      )
                             ),
+                            tabPanel("Income inequality",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 3. Palma ratio of income inequality (total household income of top 10% of population divided by that of bottom 40%) expressed as a percentage (three-year rolling average): ", "(", as.character(start_year_pratio_sco), " - ", as.character(end_year_pratio_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("pratio_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_pratio_sco"),
+                                                       p("Source: "), 
+                                                       a("Scottish Government", href = "https://statistics.gov.scot/data/national-performance-framework"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            
                             
                             tabPanel("Healthy life expectancy",
                                      p(tags$b(paste("Figure 1. Healthy life expectancy for males (2018)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
