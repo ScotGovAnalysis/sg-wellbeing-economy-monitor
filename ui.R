@@ -1687,7 +1687,21 @@ shinyUI(fluidPage(
                                                                 a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
                                                          )
                                                 )
-                                       )
+                                       ),
+                                       tabPanel("Child poverty",
+          
+                                                fluidRow(width = 12, style="padding-top: 20px;"),
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("cpoverty_reg_map_caption")),
+                                                                sliderInput("cpoverty_reg_input", label = "", min = start_year_cpoverty_reg , max = end_year_cpoverty_reg, value = end_year_cpoverty_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("cpoverty_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                         )
+                                                )
+                                       ) 
+                                       
                           )
                  )
                )

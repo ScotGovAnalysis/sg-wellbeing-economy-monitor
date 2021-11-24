@@ -1924,6 +1924,31 @@ shinyServer(
         addLegend("bottomright", pal = choropleth_hlifeexp_female_reg, values = mapex$hlifeexp_female, title = paste("Healthy life expectancy (female)", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
     })
     
+    # Leaflet map for cpoverty_reg
+    output$cpoverty_reg_map_caption <- renderText({
+      paste("Map 5. Child poverty (% in low income families after housing costs) ", as.character(input$cpoverty_reg_input), sep="")
+    })
+    cpoverty_reg_map_data <- reactive({
+      cpoverty_reg_one <- cpoverty_reg[ which(cpoverty_reg$Year == input$cpoverty_reg_input), ]
+      cpoverty_reg_one <- cpoverty_reg_one[ ,c(1,3)]
+      merged <- merge(mapex@data, cpoverty_reg_one, by = intersect(names(mapex@data), names(cpoverty_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
+      mapex@data <- merged[match(mapex@data$NAME, merged$NAME),]
+      choropleth_cpoverty_reg <- colorBin(palette=brewer.pal(n=9, name="YlOrRd"), mapex@data$Value, bins = 9)
+      list_return <- list(mapex = mapex, choropleth_cpoverty_reg = choropleth_cpoverty_reg)
+      return(list_return)
+    })
+    output$cpoverty_reg_map <- renderLeaflet({
+      mapex <- cpoverty_reg_map_data()$mapex
+      choropleth_cpoverty_reg <- cpoverty_reg_map_data()$choropleth_cpoverty_reg
+      leaflet(mapex) %>%
+        setView(zoom = 6, lat = 57, lng= -4) %>%
+        addProviderTiles("Esri.WorldGrayCanvas") %>%
+        addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_cpoverty_reg(mapex$Value), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " ", as.character(mapex$Value), "%", sep = ""),
+                    highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
+        ) %>%
+        addLegend("bottomright", pal = choropleth_cpoverty_reg, values = mapex$Value, title = paste("Child poverty", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
+    })
+    
     # PLACE ##########################################################################################################################################
     # Horizontal bar - broadband
     output$broadband_bar <- renderUI({
@@ -1975,7 +2000,7 @@ shinyServer(
         dyGroup(names(broadband_int_wide)[c(1, as.numeric(input$broadband_int_input))], strokeWidth = 2) %>%
         dyRangeSelector() %>%
         dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "Percantage") %>%
+        dyAxis("y", label = "Percentage") %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,
