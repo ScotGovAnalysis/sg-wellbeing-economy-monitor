@@ -1538,18 +1538,18 @@ shinyUI(fluidPage(
                  # SCOTLAND ####
                  tabPanel("Scotland",
                           navlistPanel(widths=c(3,9),
-                            tabPanel("Relative poverty after housing costs",
+                            tabPanel("Poverty",
                                      fluidRow(width = 12,
                                               column(width=12, 
                                                      fluidRow(
-                                                       p(tags$b(paste("Figure 3. Proportion of people living in private households with an equivalised income of less than 60% of UK median after housing costs (three-year rolling average): ", "(", as.character(start_year_rphousingc_sco), " - ", as.character(end_year_rphousingc_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       p(tags$b(paste("Figure 3. Proportion of people who are in relative poverty (below 60% of UK median income after housing costs (three-year rolling average): ", "(", as.character(start_year_rphousingc_sco), " - ", as.character(end_year_rphousingc_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                        withSpinner(dygraphOutput("rphousingc_sco_graph"), type = 5),
                                                        align = "center"
                                                      ),
                                                      fluidRow(
                                                        textOutput("legendDivID_rphousingc_sco"),
                                                        p("Source: "), 
-                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       a("Scottish Government analysis of the Family Resources Survey, Households Below Average Incomes dataset", href = "https://statistics.gov.scot/data/search"),
                                                        collapsible = FALSE,
                                                        width = 12,
                                                        style="margin-bottom: 100px;"
@@ -1557,6 +1557,26 @@ shinyUI(fluidPage(
                                               )
                                      )
                             ),
+                            tabPanel("Child poverty",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 3. Proportion of children who are in relative poverty (below 60% of UK median income after housing costs (three-year rolling average): ", "(", as.character(start_year_cpoverty_sco), " - ", as.character(end_year_cpoverty_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("cpoverty_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_cpoverty_sco"),
+                                                       p("Source: "), 
+                                                       a("Scottish Government analysis of the Family Resources Survey, Households Below Average Incomes dataset", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            
                             tabPanel("Healthy life expectancy",
                                      p(tags$b(paste("Figure 1. Healthy life expectancy for males (2018)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                      plotOutput("hlifeexp_male_overview_sco_barplot"),

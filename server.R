@@ -1738,7 +1738,26 @@ shinyServer(
         dyCrosshair(direction = "vertical")
     })
     
-    # ggplot barplot for hlifeexp_male_overview_int
+    # Dygraph for cpoverty_sco
+    output$cpoverty_sco_graph <- renderDygraph({
+      dygraph(
+        cpoverty_sco
+      ) %>%
+        dyRangeSelector() %>%
+        dyAxis("x", label = "Year (last year of 3-year average", rangePad = 5) %>%
+        dyAxis("y", label = "Percentage of children") %>%
+        dyHighlight(
+          highlightCircleSize = 3,
+          highlightSeriesBackgroundAlpha = 0.2,
+          hideOnMouseOut = FALSE,
+          highlightSeriesOpts = list(strokeWidth = 6)
+        ) %>%
+        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
+        dyLegend(labelsDiv = "legendDivID_cpoverty_sco", labelsSeparateLines = TRUE) %>%
+        dyUnzoom() %>%
+        dyCrosshair(direction = "vertical")
+    })
+        # ggplot barplot for hlifeexp_male_overview_int
     output$hlifeexp_male_overview_sco_barplot <- renderPlot({
       hlifeexp_male_overview_sco <- hlifeexp_male_sco %>%
         mutate(Age = (Age),

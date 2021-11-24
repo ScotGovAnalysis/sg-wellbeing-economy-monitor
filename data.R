@@ -176,6 +176,7 @@ youngpplpart_sco <- read.csv("./www/scotland/youngpplpart_sco.csv", check.names=
 skillshortage_sco <- read.csv("./www/scotland/skillshortage_sco.csv", check.names=FALSE)
 
 rphousingc_sco <- read.csv("./www/scotland/rphousingc_sco.csv", check.names=FALSE)
+cpoverty_sco <- read.csv("./www/scotland/cpoverty_sco.csv", check.names=FALSE)
 hlifeexp_male_sco <- read.csv("./www/scotland/hlifeexp_male_sco.csv", check.names=FALSE)
 hlifeexp_female_sco <- read.csv("./www/scotland/hlifeexp_female_sco.csv", check.names=FALSE)
 mwellbeing_sco <- read.csv("./www/scotland/mwellbeing_sco.csv", check.names=FALSE)
@@ -1024,6 +1025,10 @@ end_year_hlifeexp_female_reg <- max(hlifeexp_female_reg$Year)
 # rphousingc_sco
 start_year_rphousingc_sco <- min(rphousingc_sco$Year)
 end_year_rphousingc_sco <- max(rphousingc_sco$Year)
+
+# cpoverty_sco
+start_year_cpoverty_sco <- min(cpoverty_sco$Year)
+end_year_cpoverty_sco <- max(cpoverty_sco$Year)
 
 # mwellbeing_sco
 start_year_mwellbeing_sco <- min(mwellbeing_sco$Year)
