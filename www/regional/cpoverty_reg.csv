@@ -1,34 +1,199 @@
-,2015,2016,2017,2018,2019,2020
-Aberdeen City,18.70,19.50,21.30,22.30,21.10,21.30
-Aberdeenshire,15.60,16.60,17.40,17.60,15.70,16.70
-Angus,21.10,21.90,23.60,24.10,23.30,24.00
-Argyll and Bute,20.70,22.20,22.70,23.90,22.50,23.30
-City of Edinburgh,18.60,18.80,20.70,21.30,18.90,20.30
-Clackmannanshire,24.20,25.50,26.00,27.30,26.10,27.30
-Dumfries and Galloway,23.30,25.30,24.80,26.40,25.00,26.70
-Dundee City,23.80,25.00,26.40,27.00,26.20,26.80
-East Ayrshire,24.40,26.10,25.80,26.60,26.80,27.30
-East Dunbartonshire,15.20,15.90,16.90,16.60,14.80,16.30
-East Lothian,21.90,22.50,23.40,24.70,22.70,24.50
-East Renfrewshire,15.00,15.60,15.50,15.50,14.60,15.80
-Falkirk,22.70,23.20,23.50,24.30,23.80,24.80
-Fife,23.60,25.00,25.00,26.00,25.50,26.40
-Glasgow City,27.10,29.50,29.60,30.90,31.00,32.20
-Highland,21.40,22.80,22.80,23.30,22.60,23.60
-Inverclyde,20.90,23.00,22.10,23.30,23.30,23.80
-Midlothian,21.80,21.10,23.40,23.80,22.50,23.90
-Moray,20.80,22.00,23.10,23.20,21.90,23.40
-Na h-Eileanan Siar,17.50,20.60,20.80,19.60,18.70,20.70
-North Ayrshire,24.80,26.50,26.20,27.40,27.10,27.90
-North Lanarkshire,23.90,25.50,25.20,26.30,25.50,26.50
-Orkney Islands,20.30,20.70,21.90,22.40,21.20,22.70
-Perth and Kinross,19.90,21.20,21.40,22.40,21.10,22.60
-Renfrewshire,19.30,20.40,21.30,22.80,21.90,23.10
-Scottish Borders,20.90,22.50,23.20,23.90,22.50,24.20
-Shetland Islands,13.30,15.20,16.00,17.10,14.40,15.80
-South Ayrshire,22.70,23.50,24.20,24.60,24.60,24.80
-South Lanarkshire,21.50,22.40,22.50,23.50,22.50,23.10
-Stirling,19.60,20.00,20.10,21.20,20.20,21.30
-West Dunbartonshire,23.40,24.50,25.10,26.90,26.30,26.80
-West Lothian,21.30,22.10,23.00,23.80,22.90,24.60
-Scotland,21.60,22.80,23.40,24.20,23.20,24.30
+"NAME","Year","Value"
+"Aberdeen City","2015",18.7
+"Aberdeenshire","2015",15.6
+"Angus","2015",21.1
+"Argyll and Bute","2015",20.7
+"City of Edinburgh","2015",18.6
+"Clackmannanshire","2015",24.2
+"Dumfries and Galloway","2015",23.3
+"Dundee City","2015",23.8
+"East Ayrshire","2015",24.4
+"East Dunbartonshire","2015",15.2
+"East Lothian","2015",21.9
+"East Renfrewshire","2015",15
+"Falkirk","2015",22.7
+"Fife","2015",23.6
+"Glasgow City","2015",27.1
+"Highland","2015",21.4
+"Inverclyde","2015",20.9
+"Midlothian","2015",21.8
+"Moray","2015",20.8
+"Na h-Eileanan Siar","2015",17.5
+"North Ayrshire","2015",24.8
+"North Lanarkshire","2015",23.9
+"Orkney Islands","2015",20.3
+"Perth and Kinross","2015",19.9
+"Renfrewshire","2015",19.3
+"Scottish Borders","2015",20.9
+"Shetland Islands","2015",13.3
+"South Ayrshire","2015",22.7
+"South Lanarkshire","2015",21.5
+"Stirling","2015",19.6
+"West Dunbartonshire","2015",23.4
+"West Lothian","2015",21.3
+"Scotland","2015",21.6
+"Aberdeen City","2016",19.5
+"Aberdeenshire","2016",16.6
+"Angus","2016",21.9
+"Argyll and Bute","2016",22.2
+"City of Edinburgh","2016",18.8
+"Clackmannanshire","2016",25.5
+"Dumfries and Galloway","2016",25.3
+"Dundee City","2016",25
+"East Ayrshire","2016",26.1
+"East Dunbartonshire","2016",15.9
+"East Lothian","2016",22.5
+"East Renfrewshire","2016",15.6
+"Falkirk","2016",23.2
+"Fife","2016",25
+"Glasgow City","2016",29.5
+"Highland","2016",22.8
+"Inverclyde","2016",23
+"Midlothian","2016",21.1
+"Moray","2016",22
+"Na h-Eileanan Siar","2016",20.6
+"North Ayrshire","2016",26.5
+"North Lanarkshire","2016",25.5
+"Orkney Islands","2016",20.7
+"Perth and Kinross","2016",21.2
+"Renfrewshire","2016",20.4
+"Scottish Borders","2016",22.5
+"Shetland Islands","2016",15.2
+"South Ayrshire","2016",23.5
+"South Lanarkshire","2016",22.4
+"Stirling","2016",20
+"West Dunbartonshire","2016",24.5
+"West Lothian","2016",22.1
+"Scotland","2016",22.8
+"Aberdeen City","2017",21.3
+"Aberdeenshire","2017",17.4
+"Angus","2017",23.6
+"Argyll and Bute","2017",22.7
+"City of Edinburgh","2017",20.7
+"Clackmannanshire","2017",26
+"Dumfries and Galloway","2017",24.8
+"Dundee City","2017",26.4
+"East Ayrshire","2017",25.8
+"East Dunbartonshire","2017",16.9
+"East Lothian","2017",23.4
+"East Renfrewshire","2017",15.5
+"Falkirk","2017",23.5
+"Fife","2017",25
+"Glasgow City","2017",29.6
+"Highland","2017",22.8
+"Inverclyde","2017",22.1
+"Midlothian","2017",23.4
+"Moray","2017",23.1
+"Na h-Eileanan Siar","2017",20.8
+"North Ayrshire","2017",26.2
+"North Lanarkshire","2017",25.2
+"Orkney Islands","2017",21.9
+"Perth and Kinross","2017",21.4
+"Renfrewshire","2017",21.3
+"Scottish Borders","2017",23.2
+"Shetland Islands","2017",16
+"South Ayrshire","2017",24.2
+"South Lanarkshire","2017",22.5
+"Stirling","2017",20.1
+"West Dunbartonshire","2017",25.1
+"West Lothian","2017",23
+"Scotland","2017",23.4
+"Aberdeen City","2018",22.3
+"Aberdeenshire","2018",17.6
+"Angus","2018",24.1
+"Argyll and Bute","2018",23.9
+"City of Edinburgh","2018",21.3
+"Clackmannanshire","2018",27.3
+"Dumfries and Galloway","2018",26.4
+"Dundee City","2018",27
+"East Ayrshire","2018",26.6
+"East Dunbartonshire","2018",16.6
+"East Lothian","2018",24.7
+"East Renfrewshire","2018",15.5
+"Falkirk","2018",24.3
+"Fife","2018",26
+"Glasgow City","2018",30.9
+"Highland","2018",23.3
+"Inverclyde","2018",23.3
+"Midlothian","2018",23.8
+"Moray","2018",23.2
+"Na h-Eileanan Siar","2018",19.6
+"North Ayrshire","2018",27.4
+"North Lanarkshire","2018",26.3
+"Orkney Islands","2018",22.4
+"Perth and Kinross","2018",22.4
+"Renfrewshire","2018",22.8
+"Scottish Borders","2018",23.9
+"Shetland Islands","2018",17.1
+"South Ayrshire","2018",24.6
+"South Lanarkshire","2018",23.5
+"Stirling","2018",21.2
+"West Dunbartonshire","2018",26.9
+"West Lothian","2018",23.8
+"Scotland","2018",24.2
+"Aberdeen City","2019",21.1
+"Aberdeenshire","2019",15.7
+"Angus","2019",23.3
+"Argyll and Bute","2019",22.5
+"City of Edinburgh","2019",18.9
+"Clackmannanshire","2019",26.1
+"Dumfries and Galloway","2019",25
+"Dundee City","2019",26.2
+"East Ayrshire","2019",26.8
+"East Dunbartonshire","2019",14.8
+"East Lothian","2019",22.7
+"East Renfrewshire","2019",14.6
+"Falkirk","2019",23.8
+"Fife","2019",25.5
+"Glasgow City","2019",31
+"Highland","2019",22.6
+"Inverclyde","2019",23.3
+"Midlothian","2019",22.5
+"Moray","2019",21.9
+"Na h-Eileanan Siar","2019",18.7
+"North Ayrshire","2019",27.1
+"North Lanarkshire","2019",25.5
+"Orkney Islands","2019",21.2
+"Perth and Kinross","2019",21.1
+"Renfrewshire","2019",21.9
+"Scottish Borders","2019",22.5
+"Shetland Islands","2019",14.4
+"South Ayrshire","2019",24.6
+"South Lanarkshire","2019",22.5
+"Stirling","2019",20.2
+"West Dunbartonshire","2019",26.3
+"West Lothian","2019",22.9
+"Scotland","2019",23.2
+"Aberdeen City","2020",21.3
+"Aberdeenshire","2020",16.7
+"Angus","2020",24
+"Argyll and Bute","2020",23.3
+"City of Edinburgh","2020",20.3
+"Clackmannanshire","2020",27.3
+"Dumfries and Galloway","2020",26.7
+"Dundee City","2020",26.8
+"East Ayrshire","2020",27.3
+"East Dunbartonshire","2020",16.3
+"East Lothian","2020",24.5
+"East Renfrewshire","2020",15.8
+"Falkirk","2020",24.8
+"Fife","2020",26.4
+"Glasgow City","2020",32.2
+"Highland","2020",23.6
+"Inverclyde","2020",23.8
+"Midlothian","2020",23.9
+"Moray","2020",23.4
+"Na h-Eileanan Siar","2020",20.7
+"North Ayrshire","2020",27.9
+"North Lanarkshire","2020",26.5
+"Orkney Islands","2020",22.7
+"Perth and Kinross","2020",22.6
+"Renfrewshire","2020",23.1
+"Scottish Borders","2020",24.2
+"Shetland Islands","2020",15.8
+"South Ayrshire","2020",24.8
+"South Lanarkshire","2020",23.1
+"Stirling","2020",21.3
+"West Dunbartonshire","2020",26.8
+"West Lothian","2020",24.6
+"Scotland","2020",24.3
