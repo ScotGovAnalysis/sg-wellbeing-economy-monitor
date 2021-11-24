@@ -174,6 +174,7 @@ evoice_sco <- read.csv("./www/scotland/evoice_sco.csv", check.names=FALSE)
 wplearning_sco <- read.csv("./www/scotland/wplearning_sco.csv", check.names=FALSE)
 youngpplpart_sco <- read.csv("./www/scotland/youngpplpart_sco.csv", check.names=FALSE)
 skillshortage_sco <- read.csv("./www/scotland/skillshortage_sco.csv", check.names=FALSE)
+worklessness_sco <- read.csv("./www/scotland/worklessness_sco.csv", check.names=FALSE)
 
 rphousingc_sco <- read.csv("./www/scotland/rphousingc_sco.csv", check.names=FALSE)
 cpoverty_sco <- read.csv("./www/scotland/cpoverty_sco.csv", check.names=FALSE)
@@ -911,6 +912,10 @@ end_year_youngpplpart_sco <- max(youngpplpart_sco$Year)
 # skillshortage_sco
 start_year_skillshortage_sco <- min(skillshortage_sco$Year)
 end_year_skillshortage_sco <- max(skillshortage_sco$Year)
+
+# worklessness_sco
+start_year_worklessness_sco <- min(worklessness_sco$Year)
+end_year_worklessness_sco <- max(worklessness_sco$Year)
 
 # eactivity_reg
 start_year_eactivity_reg <- min(eactivity_reg$Year)

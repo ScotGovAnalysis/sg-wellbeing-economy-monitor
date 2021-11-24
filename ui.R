@@ -1420,7 +1420,28 @@ shinyUI(fluidPage(
                                                      )
                                               )
                                      )
+                            ),
+                            tabPanel("Proportion of households classed as workless",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 8. Proportion of households in Scotland classed as workless: ", "(", as.character(start_year_worklessness_sco), " - ", as.character(end_year_worklessness_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("worklessness_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_worklessness_sco"),
+                                                       p("Source: "), 
+                                                       a("X", href = "x"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
                             )
+                            
+                            
                           )
                  ),
                  # REGIONAL ####

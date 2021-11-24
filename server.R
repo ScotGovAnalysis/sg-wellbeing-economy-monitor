@@ -1551,6 +1551,25 @@ shinyServer(
         dyCrosshair(direction = "vertical")
     })
     
+    # Dygraph for worklessness_sco
+    output$worklessness_sco_graph <- renderDygraph({
+      dygraph(
+        worklessness_sco
+      ) %>%
+        dyRangeSelector() %>%
+        dyAxis("x", label = "Year", rangePad = 5) %>%
+        dyAxis("y", label = "%") %>%
+        dyHighlight(
+          highlightCircleSize = 3,
+          highlightSeriesBackgroundAlpha = 0.2,
+          hideOnMouseOut = FALSE,
+          highlightSeriesOpts = list(strokeWidth = 6)
+        ) %>%
+        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
+        dyLegend(labelsDiv = "legendDivID_worklessness_sco", labelsSeparateLines = TRUE) %>%
+        dyUnzoom() %>%
+        dyCrosshair(direction = "vertical")
+    })
     
     
     
