@@ -1744,7 +1744,7 @@ shinyServer(
         cpoverty_sco
       ) %>%
         dyRangeSelector() %>%
-        dyAxis("x", label = "Year (last year of 3-year average", rangePad = 5) %>%
+        dyAxis("x", label = "Year (last year of 3-year average)", rangePad = 5) %>%
         dyAxis("y", label = "Percentage of children") %>%
         dyHighlight(
           highlightCircleSize = 3,
