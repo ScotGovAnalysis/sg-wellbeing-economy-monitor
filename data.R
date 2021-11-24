@@ -230,7 +230,7 @@ orientation_eq <- read.csv("./www/equalities/orientation_eq.csv", check.names=FA
 growth_int_long <- growth_int %>% 
   gather("Year", "Value", 2:ncol(growth_int))
 growth_int_wide <- growth_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 growth_int_wide$Year <- as.integer(growth_int_wide$Year)
 positions_selected_countries_growth_int <- which(names(growth_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'UK', 'Scotland'))
 start_year_growth_int <- min(growth_int_long$Year)
@@ -240,7 +240,7 @@ end_year_growth_int <- max(growth_int_long$Year)
 productivity_int_long <- productivity_int %>% 
   gather("Year", "Value", 2:ncol(productivity_int))
 productivity_int_wide <- productivity_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 productivity_int_wide$Year <- as.integer(productivity_int_wide$Year)
 positions_selected_countries_productivity_int <- which(names(productivity_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK'))
 start_year_productivity_int <- min(productivity_int_long$Year)
@@ -250,7 +250,7 @@ end_year_productivity_int <- max(productivity_int_long$Year)
 exporting_int_long <- exporting_int %>% 
   gather("Year", "Value", 2:ncol(exporting_int))
 exporting_int_wide <- exporting_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 exporting_int_wide$Year <- as.integer(exporting_int_wide$Year)
 positions_selected_countries_exporting_int <- which(names(exporting_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK'))
 start_year_exporting_int <- min(exporting_int_long$Year)
@@ -260,7 +260,7 @@ end_year_exporting_int <- max(exporting_int_long$Year)
 rd_int_long <- rd_int %>% 
   gather("Year", "Value", 2:ncol(rd_int))
 rd_int_wide <- rd_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 rd_int_wide$Year <- as.integer(rd_int_wide$Year)
 positions_selected_countries_rd_int <- which(names(rd_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK'))
 start_year_rd_int <- min(rd_int_long$Year)
@@ -270,7 +270,7 @@ end_year_rd_int <- max(rd_int_long$Year)
 entrepreneurialism_int_long <- entrepreneurialism_int %>% 
   gather("Year", "Value", 2:ncol(entrepreneurialism_int))
 entrepreneurialism_int_wide <- entrepreneurialism_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 entrepreneurialism_int_wide$Year <- as.integer(entrepreneurialism_int_wide$Year)
 positions_selected_countries_entrepreneurialism_int <- which(names(entrepreneurialism_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'United Kingdom'))
 start_year_entrepreneurialism_int <- min(entrepreneurialism_int_long$Year)
@@ -279,7 +279,7 @@ end_year_entrepreneurialism_int <- max(entrepreneurialism_int_long$Year)
 # growth_sco
 growth_sco_long <- growth_sco
 growth_sco_wide <- growth_sco_long %>% 
-  spread("Sector", "Value", 2:3)
+  spread("Sector", "Value")
 growth_sco_wide$Year <- as.integer(growth_sco_wide$Year)
 positions_selected_sectors_growth_sco <- which(names(growth_sco_wide) %in% c('Total'))
 start_year_growth_sco <- min(growth_sco_long$Year)
@@ -590,7 +590,7 @@ rank_entrepreneurialism <- rank_entrepreneurialism$Rank
 depratio_int_long <- depratio_int %>% 
   gather("Year", "Value", 2:ncol(depratio_int))
 depratio_int_wide <- depratio_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 depratio_int_wide$Year <- as.integer(depratio_int_wide$Year)
 positions_selected_countries_depratio_int <- which(names(depratio_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
 start_year_depratio_int <- min(depratio_int_long$Year)
@@ -600,7 +600,7 @@ end_year_depratio_int <- max(depratio_int_long$Year)
 migration_int_long <- migration_int %>% 
   gather("Year", "Value", 2:ncol(migration_int))
 migration_int_wide <- migration_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 migration_int_wide$Year <- as.integer(migration_int_wide$Year)
 positions_selected_countries_migration_int <- which(names(migration_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
 start_year_migration_int <- min(migration_int_long$Year)
@@ -660,7 +660,7 @@ text_scotland_last5_depratio_int <- round(text_scotland_last5_depratio_int/5, di
 # migration_type_overseas_sco
 migration_type_overseas_sco_long <- migration_type_overseas_sco
 migration_type_overseas_sco_wide <- migration_type_overseas_sco_long %>%
-  spread("Type", "Value", 2:3)
+  spread("Type", "Value")
 migration_type_overseas_sco_wide$Year <- as.integer(migration_type_overseas_sco_wide$Year)
 positions_selected_types_migration_type_overseas_sco <- which(names(migration_type_overseas_sco_wide) %in% c('In', 'Net', 'Out'))
 start_year_migration_type_overseas_sco <- min(migration_type_overseas_sco_long$Year)
@@ -669,7 +669,7 @@ end_year_migration_type_overseas_sco <- max(migration_type_overseas_sco_long$Yea
 # migration_in_source_sco
 migration_in_source_sco_long <- migration_in_source_sco
 migration_in_source_sco_wide <- migration_in_source_sco_long %>%
-  spread("Source", "Value", 2:3)
+  spread("Source", "Value")
 migration_in_source_sco_wide$Year <- as.integer(migration_in_source_sco_wide$Year)
 positions_selected_sources_migration_in_source_sco <- which(names(migration_in_source_sco_wide) %in% c('To-from Overseas', 'To-from Rest of UK'))
 start_year_migration_in_source_sco <- min(migration_in_source_sco_long$Year)
@@ -678,7 +678,7 @@ end_year_migration_in_source_sco <- max(migration_in_source_sco_long$Year)
 # migration_in_overseas_age_sco
 migration_in_overseas_age_sco_long <- migration_in_overseas_age_sco
 migration_in_overseas_age_sco_wide <- migration_in_overseas_age_sco_long %>%
-  spread("Age", "Value", 2:3)
+  spread("Age", "Value")
 migration_in_overseas_age_sco_wide$Year <- as.integer(migration_in_overseas_age_sco_wide$Year)
 positions_selected_ages_migration_in_overseas_age_sco <- which(names(migration_in_overseas_age_sco_wide) %in% c('All'))
 start_year_migration_in_overseas_age_sco <- min(migration_in_overseas_age_sco_long$Year)
@@ -687,7 +687,7 @@ end_year_migration_in_overseas_age_sco <- max(migration_in_overseas_age_sco_long
 # migration_in_overseas_sex_sco
 migration_in_overseas_sex_sco_long <- migration_in_overseas_sex_sco
 migration_in_overseas_sex_sco_wide <- migration_in_overseas_sex_sco_long %>%
-  spread("Sex", "Value", 2:3)
+  spread("Sex", "Value")
 migration_in_overseas_sex_sco_wide$Year <- as.integer(migration_in_overseas_sex_sco_wide$Year)
 positions_selected_sexes_migration_in_overseas_sex_sco <- which(names(migration_in_overseas_sex_sco_wide) %in% c('All', 'Male', 'Female'))
 start_year_migration_in_overseas_sex_sco <- min(migration_in_overseas_sex_sco_long$Year)
@@ -710,7 +710,7 @@ end_year_working_age_reg <- max(working_age_reg$Year)
 eactivity_int_long <- eactivity_int %>% 
   gather("Year", "Value", 2:ncol(eactivity_int))
 eactivity_int_wide <- eactivity_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 eactivity_int_wide$Year <- as.integer(eactivity_int_wide$Year)
 positions_selected_countries_eactivity_int <- which(names(eactivity_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
 start_year_eactivity_int <- min(eactivity_int_long$Year)
@@ -720,7 +720,7 @@ end_year_eactivity_int <- max(eactivity_int_long$Year)
 employment_int_long <- employment_int %>% 
   gather("Year", "Value", 2:ncol(employment_int))
 employment_int_wide <- employment_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 employment_int_wide$Year <- as.integer(employment_int_wide$Year)
 positions_selected_countries_employment_int <- which(names(employment_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
 start_year_employment_int <- min(employment_int_long$Year)
@@ -730,7 +730,7 @@ end_year_employment_int <- max(employment_int_long$Year)
 unemployment_int_long <- unemployment_int %>% 
   gather("Year", "Value", 2:ncol(unemployment_int))
 unemployment_int_wide <- unemployment_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 unemployment_int_wide$Year <- as.integer(unemployment_int_wide$Year)
 positions_selected_countries_unemployment_int <- which(names(unemployment_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
 start_year_unemployment_int <- min(unemployment_int_long$Year)
@@ -740,7 +740,7 @@ end_year_unemployment_int <- max(unemployment_int_long$Year)
 genderpaygap_int_long <- genderpaygap_int %>% 
   gather("Year", "Value", 2:ncol(genderpaygap_int))
 genderpaygap_int_wide <- genderpaygap_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 genderpaygap_int_wide$Year <- as.integer(genderpaygap_int_wide$Year)
 positions_selected_countries_genderpaygap_int <- which(names(genderpaygap_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
 start_year_genderpaygap_int <- min(genderpaygap_int_long$Year)
@@ -750,7 +750,7 @@ end_year_genderpaygap_int <- max(genderpaygap_int_long$Year)
 skillsunderprimary_int_long <- skillsunderprimary_int %>% 
   gather("Year", "Value", 2:ncol(skillsunderprimary_int))
 skillsunderprimary_int_wide <- skillsunderprimary_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 skillsunderprimary_int_wide$Year <- as.integer(skillsunderprimary_int_wide$Year)
 positions_selected_countries_skillsunderprimary_int <- which(names(skillsunderprimary_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
 start_year_skillsunderprimary_int <- min(skillsunderprimary_int_long$Year)
@@ -760,7 +760,7 @@ end_year_skillsunderprimary_int <- max(skillsunderprimary_int_long$Year)
 skillstertiary_int_long <- skillstertiary_int %>% 
   gather("Year", "Value", 2:ncol(skillstertiary_int))
 skillstertiary_int_wide <- skillstertiary_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 skillstertiary_int_wide$Year <- as.integer(skillstertiary_int_wide$Year)
 positions_selected_countries_skillstertiary_int <- which(names(skillstertiary_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
 start_year_skillstertiary_int <- min(skillstertiary_int_long$Year)
@@ -770,7 +770,7 @@ end_year_skillstertiary_int <- max(skillstertiary_int_long$Year)
 yunemployment_int_long <- yunemployment_int %>% 
   gather("Year", "Value", 2:ncol(yunemployment_int))
 yunemployment_int_wide <- yunemployment_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 yunemployment_int_wide$Year <- as.integer(yunemployment_int_wide$Year)
 positions_selected_countries_yunemployment_int <- which(names(yunemployment_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland', 'EU'))
 start_year_yunemployment_int <- min(yunemployment_int_long$Year)
@@ -780,7 +780,7 @@ end_year_yunemployment_int <- max(yunemployment_int_long$Year)
 evoice_int_long <- evoice_int %>% 
   gather("Year", "Value", 2:ncol(evoice_int))
 evoice_int_wide <- evoice_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 evoice_int_wide$Year <- as.integer(evoice_int_wide$Year)
 positions_selected_countries_evoice_int <- which(names(evoice_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
 start_year_evoice_int <- min(evoice_int_long$Year)
@@ -998,7 +998,7 @@ text_scotland_last5_unemployment_int <- round(text_scotland_last5_unemployment_i
 yunemployment_int_long <- yunemployment_int %>% 
   gather("Year", "Value", 2:ncol(yunemployment_int))
 yunemployment_int_wide <- yunemployment_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 yunemployment_int_wide$Year <- as.integer(yunemployment_int_wide$Year)
 positions_selected_countries_yunemployment_int <- which(names(yunemployment_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
 start_year_yunemployment_int <- min(yunemployment_int_long$Year)
@@ -1009,7 +1009,7 @@ end_year_yunemployment_int <- max(yunemployment_int_long$Year)
 lifeexpall_int_long <- lifeexpall_int %>% 
   gather("Year", "Value", 2:ncol(lifeexpall_int))
 lifeexpall_int_wide <- lifeexpall_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 lifeexpall_int_wide$Year <- as.integer(lifeexpall_int_wide$Year)
 positions_selected_countries_lifeexpall_int <- which(names(lifeexpall_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
 start_year_lifeexpall_int <- min(lifeexpall_int_long$Year)
@@ -1104,7 +1104,7 @@ text_scotland_last5_lifeexpall_int <- round(text_scotland_last5_lifeexpall_int/5
 broadband_int_long <- broadband_int %>% 
   gather("Year", "Value", 2:ncol(broadband_int))
 broadband_int_wide <- broadband_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 broadband_int_wide$Year <- as.integer(broadband_int_wide$Year)
 positions_selected_countries_broadband_int <- which(names(broadband_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
 start_year_broadband_int <- min(broadband_int_long$Year)
@@ -1132,7 +1132,7 @@ end_year_greenandbluespace_sco <- max(greenandbluespace_sco$Year)
 broadband_int_long <- broadband_int %>% 
   gather("Year", "Value", 2:ncol(broadband_int))
 broadband_int_wide <- broadband_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 broadband_int_wide$Year <- as.integer(broadband_int_wide$Year)
 positions_selected_countries_broadband_int <- which(names(broadband_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'EU', 'Scotland'))
 start_year_broadband_int <- min(broadband_int_long$Year)
@@ -1180,7 +1180,7 @@ text_eu_thisyear_broadband_int <- text_eu_thisyear_broadband_int$Value
 ggemissions_int_long <- ggemissions_int %>% 
   gather("Year", "Value", 2:ncol(ggemissions_int))
 ggemissions_int_wide <- ggemissions_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 ggemissions_int_wide$Year <- as.integer(ggemissions_int_wide$Year)
 positions_selected_countries_ggemissions_int <- which(names(ggemissions_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
 start_year_ggemissions_int <- min(ggemissions_int_long$Year)
@@ -1216,7 +1216,7 @@ end_year_mandtspecies_sco <- max(mandtspecies_sco_long$Year)
 ggemissions2_int_long <- ggemissions2_int %>% 
   gather("Year", "Value", 2:ncol(ggemissions2_int))
 ggemissions2_int_wide <- ggemissions2_int_long %>% 
-  spread("Country", "Value", 2:3)
+  spread("Country", "Value")
 ggemissions2_int_wide$Year <- as.integer(ggemissions2_int_wide$Year)
 positions_selected_countries_ggemissions2_int <- which(names(ggemissions2_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'EU', 'Scotland'))
 start_year_ggemissions2_int <- min(ggemissions2_int_long$Year)
