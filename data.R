@@ -1123,6 +1123,16 @@ positions_selected_countries_broadband_int <- which(names(broadband_int_wide) %i
 start_year_broadband_int <- min(broadband_int_long$Year)
 end_year_broadband_int <- max(broadband_int_long$Year)
 
+# atravel_sco
+atravel_sco_long <- atravel_sco
+atravel_sco_wide <- atravel_sco_long %>% 
+  spread("Mode", "Value")
+atravel_sco_wide$Year <- as.integer(atravel_sco_wide$Year)
+positions_selected_countries_atravel_sco <- which(names(atravel_sco_wide) %in% c('Walking','Bicycle'))
+start_year_atravel_sco <- min(atravel_sco_long$Year)
+end_year_atravel_sco <- max(atravel_sco_long$Year)
+
+
 # blueorgreen_reg
 start_year_blueorgreen_reg <- min(blueorgreen_reg$Year)
 end_year_blueorgreen_reg <- max(blueorgreen_reg$Year)

@@ -2083,6 +2083,27 @@ shinyServer(
         dyCrosshair(direction = "vertical")
     })
     
+    # Dygraph for atravel_sco
+    output$atravel_sco_graph <- renderDygraph({
+      dygraph(
+        atravel_sco_wide[,c(1, as.numeric(input$atravel_sco_input))]
+      ) %>%
+        dyGroup(names(atravel_sco_wide)[c(1, as.numeric(input$atravel_sco_input))], strokeWidth = 2) %>%
+        dyRangeSelector() %>%
+        dyAxis("x", label = "Year", rangePad = 5) %>%
+        dyAxis("y", label = "Percentage of journeys (<2 miles for walking, <5 miles for cycling)") %>%
+        dyHighlight(
+          highlightCircleSize = 3,
+          highlightSeriesBackgroundAlpha = 0.2,
+          hideOnMouseOut = FALSE,
+          highlightSeriesOpts = list(strokeWidth = 6)
+        ) %>%
+        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
+        dyLegend(labelsDiv = "legendDivID_atravel_sco", labelsSeparateLines = TRUE) %>%
+        dyUnzoom() %>%
+        dyCrosshair(direction = "vertical")
+    })   
+    
     # Leaflet map for blueorgreen_reg
     output$blueorgreen_reg_map_caption <- renderText({
       paste("Map 1. Proportion of adults who live within 5 min of their local green/blue space ", as.character(input$blueorgreen_reg_input), sep="")

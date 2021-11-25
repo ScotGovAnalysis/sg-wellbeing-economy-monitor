@@ -1814,6 +1814,36 @@ shinyUI(fluidPage(
                                                      )
                                               )
                                      )
+                            ),
+                            tabPanel("Active travel", 
+                                     fluidRow(width = 12,
+                                              column(width=3, 
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "atravel_sco_input",
+                                                         label = "",
+                                                         choiceNames = names(atravel_sco_wide),
+                                                         choiceValues = c(seq(1:length(names(atravel_sco_wide)))),
+                                                         selected = positions_selected_countries_atravel_sco
+                                                       )
+                                                     )
+                                              ),      
+                                              column(width=9, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 2. Share of journeys made by walking or cycling ", "(", as.character(start_year_atravel_sco), " - ", as.character(end_year_atravel_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("atravel_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_atravel_sco"),
+                                                       p("Source: "), 
+                                                       a("Scottish Household Survey analysed and published by Transport Scotland", href = "https://www.transport.gov.scot/our-approach/statistics/#42764"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
                             )
                           )
                  ),
