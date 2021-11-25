@@ -2126,9 +2126,11 @@ shinyServer(
         addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_blueorgreen_reg(mapex$blueorgreen), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " ", as.character(mapex$blueorgreen), " %", sep = ""),
                     highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
         ) %>%
-        addLegend("bottomright", pal = choropleth_blueorgreen_reg, values = mapex$blueorgreen, title = paste("% of ppl living close to green/blue space", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
+        addLegend("bottomright", pal = choropleth_blueorgreen_reg, values = mapex$blueorgreen, title = paste("%", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
     })
-    # Leaflet map for pubservsat_reg
+    
+    
+     # Leaflet map for pubservsat_reg
     output$pubservsat_reg_map_caption <- renderText({
       paste("Map 2. Percentage of the population very or fairly satisfied with the quality of public services delivered (local health services,local schools and public transport) ", as.character(input$pubservsat_reg_input), sep="")
     })
@@ -2152,6 +2154,33 @@ shinyServer(
         ) %>%
         addLegend("bottomright", pal = choropleth_pubservsat_reg, values = mapex$pubservsat, title = paste("% satisfied", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
     })
+    
+    # Leaflet map for airqual_reg
+    output$airqual_reg_map_caption <- renderText({
+      paste("Map 1. Daily Air Quality Index ", as.character(input$airqual_reg_input), sep="")
+    })
+    airqual_reg_map_data <- reactive({
+      airqual_reg_one <- airqual_reg[ which(airqual_reg$Year == input$airqual_reg_input), ]
+      airqual_reg_one <- airqual_reg_one[ ,c(1,3)]
+      merged <- merge(mapex@data, airqual_reg_one, by = intersect(names(mapex@data), names(airqual_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
+      mapex@data <- merged[match(mapex@data$`LA Name`, merged$`LA Name`),]
+      choropleth_airqual_reg <- colorBin(palette=brewer.pal(n=9, name="RdYlGn"), mapex@data$DAQI, bins = 9)
+      list_return <- list(mapex = mapex, choropleth_airqual_reg = choropleth_airqual_reg)
+      return(list_return)
+    })
+    output$airqual_reg_map <- renderLeaflet({
+      mapex <- airqual_reg_map_data()$mapex
+      choropleth_airqual_reg <- airqual_reg_map_data()$choropleth_airqual_reg
+      leaflet(mapex) %>%
+        setView(zoom = 6, lat = 57, lng= -4) %>%
+        addProviderTiles("Esri.WorldGrayCanvas") %>%
+        addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_airqual_reg(mapex$DAQI), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " ", as.character(mapex$DAQI), " %", sep = ""),
+                    highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
+        ) %>%
+        addLegend("bottomright", pal = choropleth_airqual_reg, values = mapex$DAQI, title = paste("Daily Air Quality Index", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
+    })
+    
+    
     # Leaflet map for broadband_reg
     output$broadband_reg_map_caption <- renderText({
       paste("Map 3. Proportion of residential and non-residential addresses where superfast broadband is not available (as a Percentage) ", as.character(input$broadband_reg_input), sep="")

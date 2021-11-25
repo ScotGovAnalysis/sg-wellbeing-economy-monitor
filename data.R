@@ -215,8 +215,10 @@ wplearning_reg <- read.csv("./www/regional/wplearning_reg.csv", check.names=FALS
 worklessness_reg <- read.csv("./www/regional/worklessness_reg.csv", check.names=FALSE)
 
 blueorgreen_reg <- read.csv("./www/regional/blueorgreen_reg.csv", check.names=FALSE)
+airqual_reg <- read.csv("./www/regional/airqual_reg.csv", check.names=FALSE)
 pubservsat_reg <- read.csv("./www/regional/pubservsat_reg.csv", check.names=FALSE)
 broadband_reg <- read.csv("./www/regional/broadband_reg.csv", check.names=FALSE)
+
 # LOADING DATA - EQUALITIES DASHBOARD ####
 gpaygap_eq <- read.csv("./www/equalities/gpaygap_eq.csv", check.names=FALSE)
 dempgap_eq <- read.csv("./www/equalities/dempgap_eq.csv", check.names=FALSE)
@@ -1137,6 +1139,12 @@ end_year_atravel_sco <- max(atravel_sco_long$Year)
 # blueorgreen_reg
 start_year_blueorgreen_reg <- min(blueorgreen_reg$Year)
 end_year_blueorgreen_reg <- max(blueorgreen_reg$Year)
+
+
+# airqual_reg
+start_year_airqual_reg <- min(airqual_reg$Date)
+end_year_airqual_reg <- max(airqual_reg$Date)
+
 
 # pubservsat_reg 
 start_year_pubservsat_reg  <- min(pubservsat_reg $Year)

@@ -1857,10 +1857,22 @@ shinyUI(fluidPage(
                                                                 sliderInput("blueorgreen_reg_input", label = "", min = start_year_blueorgreen_reg , max = end_year_blueorgreen_reg, value = end_year_blueorgreen_reg, width = "50%", sep = "", step = 1),
                                                                 withSpinner(leafletOutput("blueorgreen_reg_map"), type = 5),
                                                                 p("Source: "), 
-                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                                a("Scottish Household Survey", href = "https://scotland.shinyapps.io/sg-scottish-household-survey-data-explorer/")
                                                          )
                                                 )
                                        ),
+                                       
+                                       #                       tabPanel("Air quality", 
+                                       #        fluidRow(width = 12,
+                                       #                  column(width=12,
+                                       #                        tags$b(textOutput("airqual_reg_map_caption")),
+                                       #                         sliderInput("airqual_reg_input", label = "", min = start_year_airqual_reg , max = end_year_airqual_reg, value = end_year_airqual_reg, width = "50%", sep = "", step = 1),
+                                       #                         withSpinner(leafletOutput("airqual_reg_map"), type = 5),
+                                       #                         p("Source: "), 
+                                       #                         a("Air Quality in Scotland", href = "https://www.scottishairquality.scot")
+                                       #                  )
+                                       #         )
+                                       #),
                                        tabPanel("Quality of public services",
                                                 fluidRow(width = 12,
                                                          column(width=12,
