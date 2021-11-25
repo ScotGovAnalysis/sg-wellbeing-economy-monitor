@@ -1421,7 +1421,7 @@ shinyUI(fluidPage(
                                               )
                                      )
                             ),
-                            tabPanel("Proportion of households classed as workless",
+                            tabPanel("Worklessness",
                                      fluidRow(width = 12,
                                               column(width=12, 
                                                      fluidRow(
@@ -1480,7 +1480,7 @@ shinyUI(fluidPage(
                                                          )
                                                 )
                                        ),
-                                       tabPanel("Work place learning",
+                                       tabPanel("Workplace learning",
                                                 fluidRow(width = 12,
                                                          column(width=12,
                                                                 tags$b(textOutput("wplearning_reg_map_caption")),
@@ -1490,8 +1490,20 @@ shinyUI(fluidPage(
                                                                 a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
                                                          )
                                                 )
+                                       ),
+                                       tabPanel("Worklessness",
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("worklessness_reg_map_caption")),
+                                                                sliderInput("worklessness_reg_input", label = "", min = start_year_worklessness_reg , max = end_year_worklessness_reg, value = end_year_worklessness_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("worklessness_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("NOMIS", href = "https://www.nomisweb.co.uk")
+                                                         )
+                                                )
                                        )
                           )
+                                  
                  )
                )
              ),

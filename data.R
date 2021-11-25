@@ -211,6 +211,8 @@ cpoverty_reg <- read.csv("./www/regional/cpoverty_reg.csv", check.names=FALSE)
 noquals_reg <- read.csv("./www/regional/noquals_reg.csv", check.names=FALSE)
 
 wplearning_reg <- read.csv("./www/regional/wplearning_reg.csv", check.names=FALSE)
+worklessness_reg <- read.csv("./www/regional/worklessness_reg.csv", check.names=FALSE)
+
 blueorgreen_reg <- read.csv("./www/regional/blueorgreen_reg.csv", check.names=FALSE)
 pubservsat_reg <- read.csv("./www/regional/pubservsat_reg.csv", check.names=FALSE)
 broadband_reg <- read.csv("./www/regional/broadband_reg.csv", check.names=FALSE)
@@ -935,6 +937,10 @@ end_year_gpaygap_reg <- max(gpaygap_reg$Year)
 # wplearning_reg
 start_year_wplearning_reg <- min(wplearning_reg$Year)
 end_year_wplearning_reg <- max(wplearning_reg$Year)
+
+# worklessness_reg
+start_year_worklessness_reg <- min(worklessness_reg$Year)
+end_year_worklessness_reg <- max(worklessness_reg$Year)
 
 # text for eactivity_overview_int
 text_scotland_thisyear_eactivity_int <- subset(eactivity_int_long, eactivity_int_long$Country == "Scotland")

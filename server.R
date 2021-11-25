@@ -1669,7 +1669,32 @@ shinyServer(
         addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_wplearning_reg(mapex$wplearning), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " ", as.character(mapex$wplearning), " %", sep = ""),
                     highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
         ) %>%
-        addLegend("bottomright", pal = choropleth_wplearning_reg, values = mapex$wplearning, title = paste("% who Received Job Related Training", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
+        addLegend("bottomright", pal = choropleth_wplearning_reg, values = mapex$wplearning, title = paste("%", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
+    })
+    
+    # Leaflet map for worklessness_reg
+    output$worklessness_reg_map_caption <- renderText({
+      paste("Map 5. Proportion of households classified as workless ", as.character(input$worklessness_reg_input), sep="")
+    })
+    worklessness_reg_map_data <- reactive({
+      worklessness_reg_one <- worklessness_reg[ which(worklessness_reg$Year == input$worklessness_reg_input), ]
+      worklessness_reg_one <- worklessness_reg_one[ ,c(1,3)]
+      merged <- merge(mapex@data, worklessness_reg_one, by = intersect(names(mapex@data), names(worklessness_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
+      mapex@data <- merged[match(mapex@data$NAME, merged$NAME),]
+      choropleth_worklessness_reg <- colorBin(palette=brewer.pal(n=9, name="YlOrRd"), mapex@data$Value, bins = 9)
+      list_return <- list(mapex = mapex, choropleth_worklessness_reg = choropleth_worklessness_reg)
+      return(list_return)
+    })
+    output$worklessness_reg_map <- renderLeaflet({
+      mapex <- worklessness_reg_map_data()$mapex
+      choropleth_worklessness_reg <- worklessness_reg_map_data()$choropleth_worklessness_reg
+      leaflet(mapex) %>%
+        setView(zoom = 6, lat = 57, lng= -4) %>%
+        addProviderTiles("Esri.WorldGrayCanvas") %>%
+        addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_worklessness_reg(mapex$Value), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " ", as.character(mapex$Value), " %", sep = ""),
+                    highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
+        ) %>%
+        addLegend("bottomright", pal = choropleth_worklessness_reg, values = mapex$Value, title = paste("%", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
     })
     
     # PEOPLE #########################################################################################################################################
