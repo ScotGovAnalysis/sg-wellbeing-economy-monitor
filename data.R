@@ -183,7 +183,7 @@ hlifeexp_male_sco <- read.csv("./www/scotland/hlifeexp_male_sco.csv", check.name
 hlifeexp_female_sco <- read.csv("./www/scotland/hlifeexp_female_sco.csv", check.names=FALSE)
 mwellbeing_sco <- read.csv("./www/scotland/mwellbeing_sco.csv", check.names=FALSE)
 scapital_sco <- read.csv("./www/scotland/scapital_sco.csv", check.names = FALSE)
-
+atravel_sco <- read.csv("./www/scotland/atravel_sco.csv", check.names = FALSE)
 
 greenandbluespace_sco <- read.csv("./www/scotland/greenandbluespace_sco.csv", check.names=FALSE)
 
