@@ -1951,11 +1951,31 @@ shinyUI(fluidPage(
                  # SCOTLAND ####
                  tabPanel("Scotland",
                           navlistPanel(widths=c(3,9),
-                            tabPanel("Carbon footprint", 
+                                       tabPanel("Greenhouse gas emissions",
+                                                fluidRow(width = 12,
+                                                         column(width=12, 
+                                                                fluidRow(
+                                                                  p(tags$b(paste("Figure 1. Scotland's greenhouse gas emissions: ", "(", as.character(start_year_gasemissions_sco), " - ", as.character(end_year_gasemissions_sco), ") ", " (Mt Co2Equiv)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                                  withSpinner(dygraphOutput("gasemissions_sco_graph"), type = 5),
+                                                                  align = "center"
+                                                                ),
+                                                                fluidRow(
+                                                                  textOutput("legendDivID_gasemissions_sco"),
+                                                                  p("Source: "), 
+                                                                  a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                                  collapsible = FALSE,
+                                                                  width = 12,
+                                                                  style="margin-bottom: 100px;"
+                                                                )
+                                                         )
+                                                )
+                                       ),
+                                       
+                                       tabPanel("Carbon footprint", 
                                      fluidRow(width = 12,
                                               column(width=12, 
                                                      fluidRow(
-                                                       p(tags$b(paste("Figure 1. Greenhouse gas emissions associated with the consumption by Scottish residents on goods and services and by private heating and motoring: ", "(", as.character(start_year_cfootprint_sco), " - ", as.character(end_year_cfootprint_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       p(tags$b(paste("Figure 2. Greenhouse gas emissions associated with the consumption by Scottish residents on goods and services and by private heating and motoring: ", "(", as.character(start_year_cfootprint_sco), " - ", as.character(end_year_cfootprint_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                        withSpinner(dygraphOutput("cfootprint_sco_graph"), type = 5),
                                                        align = "center"
                                                      ),
@@ -1970,11 +1990,63 @@ shinyUI(fluidPage(
                                               )
                                      )
                             ),
+                            
+                            tabPanel("Air pollutant emissions", 
+                                     fluidRow(width = 12,
+                                              column(width=3, 
+                                                     wellPanel(
+                                                       checkboxGroupInput(
+                                                         inputId = "airpollutant_sco_input",
+                                                         label = "",
+                                                         choiceNames = names(airpollutant_sco_wide),
+                                                         choiceValues = c(seq(1:length(names(airpollutant_sco_wide)))),
+                                                         selected = positions_selected_indices_airpollutant_sco
+                                                       )
+                                                     )
+                                              ),      
+                                              column(width=9, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 3. Air pollutant emissions by type ", "(", as.character(start_year_airpollutant_sco), " - ", as.character(end_year_airpollutant_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("airpollutant_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_airpollutant_sco"),
+                                                       p("Source: "), 
+                                                       a("Air Pollutant Inventories for England, Scotland, Wales and Northern Ireland", href = "https://naei.beis.gov.uk/reports/reports?report_id=1010"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ), 
+                            
+                            
+                            tabPanel("Material footprint", 
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 4. Total Domestic Material Consumption (tonnes per capita) ", "(", as.character(start_year_mfootprint_sco), " - ", as.character(end_year_mfootprint_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("mfootprint_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_mfootprint_sco"),
+                                                       p("Source: "), 
+                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
                             tabPanel("Natural Capital",
                                      fluidRow(width = 12,
                                               column(width=12, 
                                                      fluidRow(
-                                                       p(tags$b(paste("Figure 2. Percent of natural features, on protected nature sites, in favourable condition: ", "(", as.character(start_year_naturalf_sco), " - ", as.character(end_year_naturalf_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       p(tags$b(paste("Figure 5. Percent of natural features, on protected nature sites, in favourable condition: ", "(", as.character(start_year_naturalf_sco), " - ", as.character(end_year_naturalf_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                        withSpinner(dygraphOutput("naturalf_sco_graph"), type = 5),
                                                        align = "center"
                                                      ),
@@ -1989,25 +2061,9 @@ shinyUI(fluidPage(
                                               )
                                      )
                             ),
-                            tabPanel("Greenhouse gas emissions",
-                                     fluidRow(width = 12,
-                                              column(width=12, 
-                                                     fluidRow(
-                                                       p(tags$b(paste("Figure 3. Scotland's greenhouse gas emissions: ", "(", as.character(start_year_gasemissions_sco), " - ", as.character(end_year_gasemissions_sco), ") ", " (Mt Co2Equiv)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
-                                                       withSpinner(dygraphOutput("gasemissions_sco_graph"), type = 5),
-                                                       align = "center"
-                                                     ),
-                                                     fluidRow(
-                                                       textOutput("legendDivID_gasemissions_sco"),
-                                                       p("Source: "), 
-                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
-                                                       collapsible = FALSE,
-                                                       width = 12,
-                                                       style="margin-bottom: 100px;"
-                                                     )
-                                              )
-                                     )
-                            ),
+                            
+                            
+                            
                             
                             tabPanel("Marine and terrestrial species", 
                                     fluidRow(width = 12,
@@ -2024,7 +2080,7 @@ shinyUI(fluidPage(
                                                                     ),      
                                                                     column(width=9, 
                                                                            fluidRow(
-                                                                             p(tags$b(paste("Figure 4. Marine and Terrestrial Species Indices ", "(", as.character(start_year_mandtspecies_sco), " - ", as.character(end_year_mandtspecies_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                                             p(tags$b(paste("Figure 6. Marine and Terrestrial Species Indices ", "(", as.character(start_year_mandtspecies_sco), " - ", as.character(end_year_mandtspecies_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                                              withSpinner(dygraphOutput("mandtspecies_sco_graph"), type = 5),
                                                                              align = "center"
                                                                            ),
@@ -2045,8 +2101,10 @@ shinyUI(fluidPage(
                         
                  # REGIONAL ####
                  tabPanel("Regional",
-                  p("No regional data available at this time")
-                 )
+                          navlistPanel(widths=c(3,9),
+                                       tabPanel("Habitat connectivity - data not yet available")
+                                       )
+               )
                )
              ),        
              # EQUALITIES DASHBOARD #################################################################################################################

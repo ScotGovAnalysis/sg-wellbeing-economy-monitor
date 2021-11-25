@@ -2261,6 +2261,28 @@ shinyServer(
         dyCrosshair(direction = "vertical")
     })
     
+    # Dygraph for mfootprint_sco
+    output$mfootprint_sco_graph <- renderDygraph({
+      dygraph(
+        mfootprint_sco
+      ) %>%
+        dyRangeSelector() %>%
+        dyAxis("x", label = "Year", rangePad = 5) %>%
+        dyAxis("y", label = "Tons per capita") %>%
+        dyHighlight(
+          highlightCircleSize = 3,
+          highlightSeriesBackgroundAlpha = 0.2,
+          hideOnMouseOut = FALSE,
+          highlightSeriesOpts = list(strokeWidth = 6)
+        ) %>%
+        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
+        dyLegend(labelsDiv = "legendDivID_mfootprint_sco", labelsSeparateLines = TRUE) %>%
+        dyUnzoom() %>%
+        dyCrosshair(direction = "vertical")
+    })
+    
+    
+    
     # Dygraph for naturalf_sco
     output$naturalf_sco_graph <- renderDygraph({
       dygraph(
@@ -2300,6 +2322,28 @@ shinyServer(
         dyUnzoom() %>%
         dyCrosshair(direction = "vertical")
     })
+    
+    # Dygraph for airpollutant_sco
+    output$airpollutant_sco_graph <- renderDygraph({
+      dygraph(
+        airpollutant_sco_wide[,c(1, as.numeric(input$airpollutant_sco_input))]
+      ) %>%
+        dyGroup(names(airpollutant_sco_wide)[c(1, as.numeric(input$airpollutant_sco_input))], strokeWidth = 2) %>%
+        dyRangeSelector() %>%
+        dyAxis("x", label = "Year", rangePad = 5) %>%
+        dyAxis("y", label = "Air pollutant emissions (Kt)") %>%
+        dyHighlight(
+          highlightCircleSize = 3,
+          highlightSeriesBackgroundAlpha = 0.2,
+          hideOnMouseOut = FALSE,
+          highlightSeriesOpts = list(strokeWidth = 6)
+        ) %>%
+        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
+        dyLegend(labelsDiv = "legendDivID_airpollutant_sco", labelsSeparateLines = TRUE) %>%
+        dyUnzoom() %>%
+        dyCrosshair(direction = "vertical")
+    })
+    
     
     # Dygraph for mandtspecies_sco
     output$mandtspecies_sco_graph <- renderDygraph({

@@ -189,6 +189,7 @@ greenandbluespace_sco <- read.csv("./www/scotland/greenandbluespace_sco.csv", ch
 
 
 cfootprint_sco <- read.csv("./www/scotland/cfootprint_sco.csv", check.names=FALSE)
+mfootprint_sco <- read.csv("./www/scotland/mfootprint_sco.csv", check.names=FALSE)
 naturalf_sco <- read.csv("./www/scotland/naturalf_sco.csv", check.names=FALSE)
 gasemissions_sco <- read.csv("./www/scotland/gasemissions_sco.csv", check.names=FALSE)
 mandtspecies_sco <- read.csv("./www/scotland/mandtspecies_sco.csv", check.names = FALSE)
@@ -1213,11 +1214,20 @@ end_year_ggemissions_int <- max(ggemissions_int_long$Year)
 start_year_cfootprint_sco <- min(cfootprint_sco$Year)
 end_year_cfootprint_sco <- max(cfootprint_sco$Year)
 
+# mfootprint_sco
+start_year_mfootprint_sco <- min(mfootprint_sco$Year)
+end_year_mfootprint_sco <- max(mfootprint_sco$Year)
+
 # naturalf_sco
 start_year_naturalf_sco <- min(naturalf_sco$Year)
 end_year_naturalf_sco <- max(naturalf_sco$Year)
 
 # airpollutant_sco
+airpollutant_sco_long <- airpollutant_sco
+airpollutant_sco_wide <- airpollutant_sco_long %>% 
+  spread("Pollutant", "Value")
+airpollutant_sco_wide$Year <- as.integer(airpollutant_sco_wide$Year)
+positions_selected_indices_airpollutant_sco <- which(names(airpollutant_sco_wide) %in% c('CO','Nox', 'PM10', 'PM2.5', 'SO2','VOC','NH3','Pb','Dioxins'))
 start_year_airpollutant_sco <- min(airpollutant_sco$Year)
 end_year_airpollutant_sco <- max(airpollutant_sco$Year)
 
