@@ -208,6 +208,8 @@ gpaygap_reg <- read.csv("./www/regional/gpaygap_reg.csv", check.names=FALSE)
 hlifeexp_male_reg <- read.csv("./www/regional/hlifeexp_male_reg.csv", check.names=FALSE)
 hlifeexp_female_reg <- read.csv("./www/regional/hlifeexp_female_reg.csv", check.names=FALSE)
 cpoverty_reg <- read.csv("./www/regional/cpoverty_reg.csv", check.names=FALSE)
+noquals_reg <- read.csv("./www/regional/noquals_reg.csv", check.names=FALSE)
+
 wplearning_reg <- read.csv("./www/regional/wplearning_reg.csv", check.names=FALSE)
 blueorgreen_reg <- read.csv("./www/regional/blueorgreen_reg.csv", check.names=FALSE)
 pubservsat_reg <- read.csv("./www/regional/pubservsat_reg.csv", check.names=FALSE)
@@ -1032,6 +1034,11 @@ end_year_hlifeexp_female_reg <- max(hlifeexp_female_reg$Year)
 # cpoverty_reg
 start_year_cpoverty_reg <- min(cpoverty_reg$Year)
 end_year_cpoverty_reg <- max(cpoverty_reg$Year)
+
+# noquals_reg
+start_year_noquals_reg <- min(noquals_reg$Year)
+end_year_noquals_reg <- max(noquals_reg$Year)
+
 
 # rphousingc_sco
 start_year_rphousingc_sco <- min(rphousingc_sco$Year)

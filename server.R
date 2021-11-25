@@ -1949,6 +1949,31 @@ shinyServer(
         addLegend("bottomright", pal = choropleth_cpoverty_reg, values = mapex$Value, title = paste("Child poverty", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
     })
     
+    # Leaflet map for noquals_reg
+    output$noquals_reg_map_caption <- renderText({
+      paste("Map 6. Proportion of population aged 16-64 with no qualifications ", as.character(input$noquals_reg_input), sep="")
+    })
+    noquals_reg_map_data <- reactive({
+      noquals_reg_one <- noquals_reg[ which(noquals_reg$Year == input$noquals_reg_input), ]
+      noquals_reg_one <- noquals_reg_one[ ,c(1,3)]
+      merged <- merge(mapex@data, noquals_reg_one, by = intersect(names(mapex@data), names(noquals_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
+      mapex@data <- merged[match(mapex@data$NAME, merged$NAME),]
+      choropleth_noquals_reg <- colorBin(palette=brewer.pal(n=9, name="YlOrRd"), mapex@data$Value, bins = 9)
+      list_return <- list(mapex = mapex, choropleth_noquals_reg = choropleth_noquals_reg)
+      return(list_return)
+    })
+    output$noquals_reg_map <- renderLeaflet({
+      mapex <- noquals_reg_map_data()$mapex
+      choropleth_noquals_reg <- noquals_reg_map_data()$choropleth_noquals_reg
+      leaflet(mapex) %>%
+        setView(zoom = 6, lat = 57, lng= -4) %>%
+        addProviderTiles("Esri.WorldGrayCanvas") %>%
+        addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_noquals_reg(mapex$Value), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " ", as.character(mapex$Value), "%", sep = ""),
+                    highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
+        ) %>%
+        addLegend("bottomright", pal = choropleth_noquals_reg, values = mapex$Value, title = paste("% No qualifications", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
+    })
+    
     # PLACE ##########################################################################################################################################
     # Horizontal bar - broadband
     output$broadband_bar <- renderUI({

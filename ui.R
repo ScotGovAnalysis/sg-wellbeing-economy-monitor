@@ -1700,7 +1700,21 @@ shinyUI(fluidPage(
                                                                 a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
                                                          )
                                                 )
-                                       ) 
+                                       ), 
+                                       
+                                       tabPanel("No qualifications",
+                                                
+                                                fluidRow(width = 12, style="padding-top: 20px;"),
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("noquals_reg_map_caption")),
+                                                                sliderInput("noquals_reg_input", label = "", min = start_year_noquals_reg , max = end_year_noquals_reg, value = end_year_noquals_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("noquals_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("NOMIS", href = "https://www.nomisweb.co.uk")
+                                                         )
+                                                )
+                                       )
                                        
                           )
                  )
