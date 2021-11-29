@@ -1853,9 +1853,9 @@ shinyUI(fluidPage(
                                        tabPanel("Access to green and blue space", 
                                                 fluidRow(width = 12,
                                                          column(width=12,
-                                                                tags$b(textOutput("blueorgreen_reg_map_caption")),
-                                                                sliderInput("blueorgreen_reg_input", label = "", min = start_year_blueorgreen_reg , max = end_year_blueorgreen_reg, value = end_year_blueorgreen_reg, width = "50%", sep = "", step = 1),
-                                                                withSpinner(leafletOutput("blueorgreen_reg_map"), type = 5),
+                                                                tags$b(textOutput("bgreen_reg_map_caption")),
+                                                                sliderInput("bgreen_reg_input", label = "", min = start_year_bgreen_reg , max = end_year_bgreen_reg, value = end_year_bgreen_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("bgreen_reg_map"), type = 5),
                                                                 p("Source: "), 
                                                                 a("Scottish Household Survey", href = "https://scotland.shinyapps.io/sg-scottish-household-survey-data-explorer/")
                                                          )
