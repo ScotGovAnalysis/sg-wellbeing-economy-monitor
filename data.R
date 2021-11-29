@@ -1030,7 +1030,13 @@ end_year_lifeexpall_int <- max(lifeexpall_int_long$Year)
 
 
 # lifeexpm_int
+# hlifeexp_male_sco
+start_year_hlifeexp_male_sco <- min(hlifeexp_male_sco$Year)
+end_year_hlifeexp_male_sco <- max(hlifeexp_male_sco$Year)
 
+# hlifeexp_female_sco
+start_year_hlifeexp_female_sco <- min(hlifeexp_female_sco$Year)
+end_year_hlifeexp_female_sco <- max(hlifeexp_female_sco$Year)
 
 # hlifeexp_male_reg
 start_year_hlifeexp_male_reg <- min(hlifeexp_male_reg$Year)
