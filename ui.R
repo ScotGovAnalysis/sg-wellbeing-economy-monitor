@@ -125,7 +125,7 @@ shinyUI(fluidPage(
                         column(width = 4,
                                h2("Productivity"),
                                plotOutput("productivity_overview_int_barplot", height = "200px"),
-                               p("Scotland's productivity was ", text_scotland_thisyear_productivity_int,"% in 2018, compared to ", text_oecd_thisyear_productivity_int,"% in the OECD. Over the past 5 years, the average productivity was ", text_scotland_last5_productivity_int ,"% in Scotland, compared to ", text_oecd_last5_productivity_int, "% in the OECD overall.")
+                               p("Scotland's productivity was ", text_scotland_thisyear_productivity_int,"% of the USA's in 2018, compared to ", text_oecd_thisyear_productivity_int,"% in the OECD. Over the past 5 years, the average productivity was ", text_scotland_last5_productivity_int ,"% in Scotland, compared to ", text_oecd_last5_productivity_int, "% in the OECD overall.")
                         ),
                         column(width = 4,
                                h2("Reputation"),
