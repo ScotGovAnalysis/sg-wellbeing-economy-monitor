@@ -214,7 +214,7 @@ noquals_reg <- read.csv("./www/regional/noquals_reg.csv", check.names=FALSE)
 wplearning_reg <- read.csv("./www/regional/wplearning_reg.csv", check.names=FALSE)
 worklessness_reg <- read.csv("./www/regional/worklessness_reg.csv", check.names=FALSE)
 
-blueorgreen_reg <- read.csv("./www/regional/blueorgreen_reg.csv", check.names=FALSE)
+bgreen_reg <- read.csv("./www/regional/bgreen_reg.csv", check.names=FALSE)
 airqual_reg <- read.csv("./www/regional/airqual_reg.csv", check.names=FALSE)
 pubservsat_reg <- read.csv("./www/regional/pubservsat_reg.csv", check.names=FALSE)
 broadband_reg <- read.csv("./www/regional/broadband_reg.csv", check.names=FALSE)
@@ -1136,9 +1136,9 @@ start_year_atravel_sco <- min(atravel_sco_long$Year)
 end_year_atravel_sco <- max(atravel_sco_long$Year)
 
 
-# blueorgreen_reg
-start_year_blueorgreen_reg <- min(blueorgreen_reg$Year)
-end_year_blueorgreen_reg <- max(blueorgreen_reg$Year)
+# bgreen_reg
+start_year_bgreen_reg <- min(bgreen_reg$Year)
+end_year_bgreen_reg <- max(bgreen_reg$Year)
 
 
 # airqual_reg
