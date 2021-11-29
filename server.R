@@ -2104,30 +2104,31 @@ shinyServer(
         dyCrosshair(direction = "vertical")
     })   
     
-    # Leaflet map for blueorgreen_reg
-    output$blueorgreen_reg_map_caption <- renderText({
-      paste("Map 1. Proportion of adults who live within 5 min of their local green/blue space ", as.character(input$blueorgreen_reg_input), sep="")
+    # Leaflet map for bgreen_reg
+    output$bgreen_reg_map_caption <- renderText({
+      paste("Map 2. Percentage of adults living within five minutes' walk of their nearest green or blue space ", as.character(input$bgreen_reg_input), sep="")
     })
-    blueorgreen_reg_map_data <- reactive({
-      blueorgreen_reg_one <- blueorgreen_reg[ which(blueorgreen_reg$Year == input$blueorgreen_reg_input), ]
-      blueorgreen_reg_one <- blueorgreen_reg_one[ ,c(1,3)]
-      merged <- merge(mapex@data, blueorgreen_reg_one, by = intersect(names(mapex@data), names(blueorgreen_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
-      mapex@data <- merged[match(mapex@data$NAME, merged$NAME),]
-      choropleth_blueorgreen_reg <- colorBin(palette=brewer.pal(n=9, name="RdYlGn"), mapex@data$blueorgreen, bins = 9)
-      list_return <- list(mapex = mapex, choropleth_blueorgreen_reg = choropleth_blueorgreen_reg)
+    bgreen_reg_map_data <- reactive({
+      bgreen_reg_one <- bgreen_reg[ which(bgreen_reg$Year == input$bgreen_reg_input), ]
+      bgreen_reg_one <- bgreen_reg_one[ ,c(1,3)]
+      merged <- merge(mapex@data, bgreen_reg_one, by = intersect(names(mapex@data), names(bgreen_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
+      mapex@data <- merged[match(mapex@data$Name, merged$Name),]
+      choropleth_bgreen_reg <- colorBin(palette=brewer.pal(n=9, name="RdYlGn"), mapex@data$blueorgreen, bins = 9)
+      list_return <- list(mapex = mapex, choropleth_bgreen_reg = choropleth_bgreen_reg)
       return(list_return)
     })
-    output$blueorgreen_reg_map <- renderLeaflet({
-      mapex <- blueorgreen_reg_map_data()$mapex
-      choropleth_blueorgreen_reg <- blueorgreen_reg_map_data()$choropleth_blueorgreen_reg
+    output$bgreen_reg_map <- renderLeaflet({
+      mapex <- bgreen_reg_map_data()$mapex
+      choropleth_bgreen_reg <- bgreen_reg_map_data()$choropleth_bgreen_reg
       leaflet(mapex) %>%
         setView(zoom = 6, lat = 57, lng= -4) %>%
         addProviderTiles("Esri.WorldGrayCanvas") %>%
-        addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_blueorgreen_reg(mapex$blueorgreen), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " ", as.character(mapex$blueorgreen), " %", sep = ""),
+        addPolygons(stroke=FALSE, layerId = ~mapex$Name, fillColor = ~choropleth_bgreen_reg(mapex$blueorgreen), fillOpacity=1, popup = ~paste(as.character(mapex$Name), " ", as.character(mapex$blueorgreen), " %", sep = ""),
                     highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
         ) %>%
-        addLegend("bottomright", pal = choropleth_blueorgreen_reg, values = mapex$blueorgreen, title = paste("%", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
+        addLegend("bottomright", pal = choropleth_bgreen_reg, values = mapex$blueorgreen, title = paste("%", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
     })
+    
     
     
      # Leaflet map for pubservsat_reg
@@ -2157,14 +2158,14 @@ shinyServer(
     
     # Leaflet map for airqual_reg
     output$airqual_reg_map_caption <- renderText({
-      paste("Map 1. Daily Air Quality Index ", as.character(input$airqual_reg_input), sep="")
+      paste("Map 2. Daily Air Quality Index ", as.character(input$airqual_reg_input), sep="")
     })
     airqual_reg_map_data <- reactive({
-      airqual_reg_one <- airqual_reg[ which(airqual_reg$Year == input$airqual_reg_input), ]
+      airqual_reg_one <- airqual_reg[ which(as.Date(airqual_reg$Date) == input$airqual_reg_input), ]
       airqual_reg_one <- airqual_reg_one[ ,c(1,3)]
       merged <- merge(mapex@data, airqual_reg_one, by = intersect(names(mapex@data), names(airqual_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
       mapex@data <- merged[match(mapex@data$`LA Name`, merged$`LA Name`),]
-      choropleth_airqual_reg <- colorBin(palette=brewer.pal(n=9, name="RdYlGn"), mapex@data$DAQI, bins = 9)
+      choropleth_airqual_reg <- colorBin(palette=brewer.pal(n=3, name="YlOrRd"), mapex@data$DAQI, bins = 3)
       list_return <- list(mapex = mapex, choropleth_airqual_reg = choropleth_airqual_reg)
       return(list_return)
     })
@@ -2174,7 +2175,7 @@ shinyServer(
       leaflet(mapex) %>%
         setView(zoom = 6, lat = 57, lng= -4) %>%
         addProviderTiles("Esri.WorldGrayCanvas") %>%
-        addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_airqual_reg(mapex$DAQI), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " ", as.character(mapex$DAQI), " %", sep = ""),
+        addPolygons(stroke=FALSE, layerId = ~mapex$`LA Name`, fillColor = ~choropleth_airqual_reg(mapex$DAQI), fillOpacity=1, popup = ~paste(as.character(mapex$`LA Name`), " ", as.character(mapex$DAQI), " ", sep = ""),
                     highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
         ) %>%
         addLegend("bottomright", pal = choropleth_airqual_reg, values = mapex$DAQI, title = paste("Daily Air Quality Index", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
