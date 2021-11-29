@@ -352,14 +352,14 @@ shinyUI(fluidPage(
                                        fluidRow(width = 12,
                                                 column(width=12, 
                                                        fluidRow(
-                                                         p(tags$b(paste("Figure 2. Scotland's productivity: ", "(", as.character(start_year_productivity_sco), " - ", as.character(end_year_productivity_sco), ") ", " (output per hour)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         p(tags$b(paste("Figure 2. Real output per hour: ", "(", as.character(start_year_productivity_sco), " - ", as.character(end_year_productivity_sco), ") ", " (Index (2007=100))", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                          withSpinner(dygraphOutput("productivity_sco_graph"), type = 5),
                                                          align = "center"
                                                        ),
                                                        fluidRow(
                                                          textOutput("legendDivID_productivity_sco"),
                                                          p("Source: "), 
-                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         a("Scottish Government", href = "https://www.gov.scot/publications/labour-productivity-statistics-2019-q4"),
                                                          collapsible = FALSE,
                                                          width = 12,
                                                          style="margin-bottom: 100px;"
@@ -1862,17 +1862,17 @@ shinyUI(fluidPage(
                                                 )
                                        ),
                                        
-                                       #                       tabPanel("Air quality", 
-                                       #        fluidRow(width = 12,
-                                       #                  column(width=12,
-                                       #                        tags$b(textOutput("airqual_reg_map_caption")),
-                                       #                         sliderInput("airqual_reg_input", label = "", min = start_year_airqual_reg , max = end_year_airqual_reg, value = end_year_airqual_reg, width = "50%", sep = "", step = 1),
-                                       #                         withSpinner(leafletOutput("airqual_reg_map"), type = 5),
-                                       #                         p("Source: "), 
-                                       #                         a("Air Quality in Scotland", href = "https://www.scottishairquality.scot")
-                                       #                  )
-                                       #         )
-                                       #),
+                                                              tabPanel("Air quality", 
+                                               fluidRow(width = 12,
+                                                         column(width=12,
+                                                               tags$b(textOutput("airqual_reg_map_caption")),
+                                                                sliderInput("airqual_reg_input", label = "", min = as.Date(start_year_airqual_reg) , max = as.Date(end_year_airqual_reg), value = as.Date(end_year_airqual_reg), width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("airqual_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("Air Quality in Scotland", href = "https://www.scottishairquality.scot")
+                                                         )
+                                                )
+                                       ),
                                        tabPanel("Quality of public services",
                                                 fluidRow(width = 12,
                                                          column(width=12,
