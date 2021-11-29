@@ -232,14 +232,13 @@ shinyServer(
     # ggplot lineplot for reputation_overview_sco
     output$reputation_overview_sco_lineplot <- renderPlot({
       ggplot(reputation_overview_sco) +
-        geom_line(stat="identity", aes(x=reputation_overview_sco$Value, y=reputation_overview_sco$Year), color ="#00BFC4", show.legend = FALSE, size=1.5) +
-        coord_flip(clip = "off", expand = TRUE) +
-        labs(x = "NBI Index", y = "") +
+        geom_line(stat="identity", aes(x=Year, y=Value), color ="#00BFC4", show.legend = FALSE, size=1.5) +
+        labs(y = "NBI Index", x = "") +
         theme_minimal() +
         ggtitle("Anholt GfK-Roper Nation Brands Index (NBI)") +
         scale_color_jama() +
-        geom_point(aes(x=reputation_overview_sco$Value, y=reputation_overview_sco$Year), color = "#F8766D", show.legend = FALSE, size=4) +
-        geom_text(aes(x=reputation_overview_sco$Value, y=reputation_overview_sco$Year, label=reputation_overview_sco$Value), position=position_dodge(width=0.9), size = 4, vjust=-1)
+        geom_point(aes(y=Value, x=Year), color = "#F8766D", show.legend = FALSE, size=4) +
+        geom_text(aes(y=Value, x=Year, label=Value), position=position_dodge(width=0.9), size = 4, vjust=2)
     })
     
     # ggplot barplot for rd_overview_int
