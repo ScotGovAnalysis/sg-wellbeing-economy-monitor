@@ -1630,11 +1630,44 @@ shinyUI(fluidPage(
                             ),
                             
                             
-                            tabPanel("Healthy life expectancy",
-                                     p(tags$b(paste("Figure 1. Healthy life expectancy for males (2018)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
-                                     plotOutput("hlifeexp_male_overview_sco_barplot"),
-                                     p(tags$b(paste("Figure 2. Healthy life expectancy for females (2018)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
-                                     plotOutput("hlifeexp_female_overview_sco_barplot")
+                            tabPanel("Healthy life expectancy - female",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 1. Healthy life expectancy (female): ", "(", as.character(start_year_hlifeexp_female_sco), " - ", as.character(end_year_hlifeexp_female_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("hlifeexp_female_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_hlifeexp_female_sco"),
+                                                       p("Source: "), 
+                                                       a("National Performance Framework", href = "https://statistics.gov.scot/data/national-performance-framework"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
+                            
+                            tabPanel("Healthy life expectancy - male",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 1. Healthy life expectancy (male): ", "(", as.character(start_year_hlifeexp_male_sco), " - ", as.character(end_year_hlifeexp_male_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("hlifeexp_male_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_hlifeexp_male_sco"),
+                                                       p("Source: "), 
+                                                       a("National Performance Framework", href = "https://statistics.gov.scot/data/national-performance-framework"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
                             ),
                             tabPanel("Mental wellbeing",
                                      fluidRow(width = 12,

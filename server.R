@@ -1865,8 +1865,8 @@ shinyServer(
         hlifeexp_female_sco
       ) %>%
         dyRangeSelector() %>%
-        dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "Healthy life expectancy at birth") %>%
+        dyAxis("x", label = "Year marking end of 3-year average",  rangePad = 5) %>%
+        dyAxis("y", label = "Healthy life expectancy at birth",valueRange = c(55,70) ) %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,
@@ -1884,8 +1884,8 @@ shinyServer(
         hlifeexp_male_sco
       ) %>%
         dyRangeSelector() %>%
-        dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "Healthy life expectancy at birth") %>%
+        dyAxis("x", label = "Year marking end of 3-year average", rangePad = 5) %>%
+        dyAxis("y", label = "Healthy life expectancy at birth",  valueRange = c(55,70)) %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,
