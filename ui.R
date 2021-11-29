@@ -670,21 +670,21 @@ shinyUI(fluidPage(
                                                            sliderInput("GVA_reg_input", label = "", min = start_year_GVA_reg , max = end_year_GVA_reg, value = end_year_GVA_reg, width = "50%", sep = "", step = 1),
                                                       withSpinner(leafletOutput("GVA_reg_map"), type = 5),
                                                       p("Source: "), 
-                                                      a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                      a("Office for National Statistics", href = "https://www.ons.gov.uk/economy/grossvalueaddedgva/datasets/regionalgrossvalueaddedbalancedbylocalauthorityintheuk")
                                                     )
                                                   )
                                          ),
-                                         tabPanel("Exporting",
-                                                  fluidRow(width = 12,
-                                                           column(width=12,
-                                                                  tags$b(textOutput("exporting_reg_map_caption")),
-                                                                  sliderInput("exporting_reg_input", label = "", min = start_year_exporting_reg , max = end_year_exporting_reg, value = end_year_exporting_reg, width = "50%", sep = "", step = 1),
-                                                                  withSpinner(leafletOutput("exporting_reg_map"), type = 5),
-                                                                  p("Source: "), 
-                                                                  a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
-                                                           )
-                                                  )
-                                         ),
+                                        # tabPanel("Exporting",
+                                        #          fluidRow(width = 12,
+                                         #                  column(width=12,
+                                         #                         tags$b(textOutput("exporting_reg_map_caption")),
+                                         #                         sliderInput("exporting_reg_input", label = "", min = start_year_exporting_reg , max = end_year_exporting_reg, value = end_year_exporting_reg, width = "50%", sep = "", step = 1),
+                                         #                         withSpinner(leafletOutput("exporting_reg_map"), type = 5),
+                                         #                         p("Source: "), 
+                                         #                         a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                         #                  )
+                                          #        )
+                                        # ),
                                          tabPanel("R&D",
                                                   fluidRow(width = 12,
                                                            column(width=12,
@@ -692,7 +692,7 @@ shinyUI(fluidPage(
                                                                   sliderInput("rd_reg_input", label = "", min = start_year_rd_reg , max = end_year_rd_reg, value = end_year_rd_reg, width = "50%", sep = "", step = 1),
                                                                   withSpinner(leafletOutput("rd_reg_map"), type = 5),
                                                                   p("Source: "), 
-                                                                  a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                                  a("National Statistics publication for Scotland", href = "https://www.gov.scot/publications/business-enterprise-research-and-development-2019/")
                                                            )
                                                   )
                                          ),
@@ -964,7 +964,7 @@ shinyUI(fluidPage(
                                                                 sliderInput("migration_reg_input", label = "", min = start_year_migration_reg , max = end_year_migration_reg, value = end_year_migration_reg, width = "50%", sep = "", step = 1),
                                                                 withSpinner(leafletOutput("migration_reg_map"), type = 5),
                                                                 p("Source: "), 
-                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                                a("Open Data Platform", href = "https://statistics.gov.scot/slice?dataset=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fnet-migration&http%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23refPeriod=http%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F2020&http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fdimension%2Fage=http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fconcept%2Fage%2Fall&http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fdimension%2Fsex=http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fconcept%2Fsex%2Fall")
                                                          )
                                                 )
                                        ),
@@ -975,7 +975,7 @@ shinyUI(fluidPage(
                                                                 sliderInput("working_age_reg_input", label = "", min = start_year_working_age_reg , max = end_year_working_age_reg, value = end_year_working_age_reg, width = "50%", sep = "", step = 1),
                                                                 withSpinner(leafletOutput("working_age_reg_map"), type = 5),
                                                                 p("Source: "), 
-                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                                a("Open Data Platform", href = "https://statistics.gov.scot/slice?dataset=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fpopulation-projections-2018-based&http%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23refPeriod=http%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F2043&http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fdimension%2Fage=http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fconcept%2Fage%2Fworking-age-16-64&http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fdimension%2Fsex=http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fconcept%2Fsex%2Fall")
                                                          )
                                                 )
                                        )
@@ -1465,7 +1465,7 @@ shinyUI(fluidPage(
                                                                 sliderInput("lwage_reg_input", label = "", min = start_year_lwage_reg , max = end_year_lwage_reg, value = end_year_lwage_reg, width = "50%", sep = "", step = 1),
                                                                 withSpinner(leafletOutput("lwage_reg_map"), type = 5),
                                                                 p("Source: "), 
-                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                                a("Open Data Platform", href = "https://statistics.gov.scot/slice?dataset=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fliving-wage&http%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23measureType=http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fmeasure-properties%2Fpercent&http%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23refPeriod=http%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F2020&http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fdimension%2Fgender=http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fconcept%2Fgender%2Fall")
                                                          )
                                                 )
                                        ),
@@ -1476,7 +1476,7 @@ shinyUI(fluidPage(
                                                                 sliderInput("gpaygap_reg_input", label = "", min = start_year_gpaygap_reg , max = end_year_gpaygap_reg, value = end_year_gpaygap_reg, width = "50%", sep = "", step = 1),
                                                                 withSpinner(leafletOutput("gpaygap_reg_map"), type = 5),
                                                                 p("Source: "), 
-                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                                a("Open Data Platform", href = "https://statistics.gov.scot/slice?dataset=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fearnings-paygap&http%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23refPeriod=http%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F2020&http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fdimension%2FworkingPattern=http%3A%2F%2Fstatistics.gov.scot%2Fdef%2Fconcept%2Fworking-pattern%2Ffull-time")
                                                          )
                                                 )
                                        ),
@@ -1487,7 +1487,7 @@ shinyUI(fluidPage(
                                                                 sliderInput("wplearning_reg_input", label = "", min = start_year_wplearning_reg , max = end_year_wplearning_reg, value = end_year_wplearning_reg, width = "50%", sep = "", step = 1),
                                                                 withSpinner(leafletOutput("wplearning_reg_map"), type = 5),
                                                                 p("Source: "), 
-                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                                a("Scotland's Labour Market - People, Places and Regions: Annual Population Survey", href = "https://www.gov.scot/publications/scotlands-labour-market-people-places-and-regions-background-tables-and-charts/")
                                                          )
                                                 )
                                        ),
@@ -1719,7 +1719,7 @@ shinyUI(fluidPage(
                                                                 sliderInput("hlifeexp_male_reg_input", label = "", min = start_year_hlifeexp_male_reg , max = end_year_hlifeexp_male_reg, value = end_year_hlifeexp_male_reg, width = "50%", sep = "", step = 1),
                                                                 withSpinner(leafletOutput("hlifeexp_male_reg_map"), type = 5),
                                                                 p("Source: "), 
-                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                                a("National Records of Scotland", href = "https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/life-expectancy/healthy-life-expectancy-in-scotland/2017-2019")
                                                          )
                                                 ),
                                                 fluidRow(width = 12, style="padding-top: 20px;"),
@@ -1729,7 +1729,7 @@ shinyUI(fluidPage(
                                                                 sliderInput("hlifeexp_female_reg_input", label = "", min = start_year_hlifeexp_female_reg , max = end_year_hlifeexp_female_reg, value = end_year_hlifeexp_female_reg, width = "50%", sep = "", step = 1),
                                                                 withSpinner(leafletOutput("hlifeexp_female_reg_map"), type = 5),
                                                                 p("Source: "), 
-                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                                a("National Records of Scotland", href = "https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/life-expectancy/healthy-life-expectancy-in-scotland/2017-2019")
                                                          )
                                                 )
                                        ),
@@ -1742,7 +1742,7 @@ shinyUI(fluidPage(
                                                                 sliderInput("cpoverty_reg_input", label = "", min = start_year_cpoverty_reg , max = end_year_cpoverty_reg, value = end_year_cpoverty_reg, width = "50%", sep = "", step = 1),
                                                                 withSpinner(leafletOutput("cpoverty_reg_map"), type = 5),
                                                                 p("Source: "), 
-                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                                a("Department for Work and Pensions", href = "https://www.gov.uk/government/statistics/children-in-low-income-families-local-area-statistics-2014-to-2020")
                                                          )
                                                 )
                                        ), 
@@ -1913,7 +1913,7 @@ shinyUI(fluidPage(
                                                                 sliderInput("pubservsat_reg_input", label = "", min = start_year_pubservsat_reg , max = end_year_pubservsat_reg, value = end_year_pubservsat_reg, width = "50%", sep = "", step = 1),
                                                                 withSpinner(leafletOutput("pubservsat_reg_map"), type = 5),
                                                                 p("Source: "), 
-                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                                a("Local Service Satisfaction - Scottish Surveys Core Questions", href = "https://statistics.gov.scot/resource?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Flocal-service-satisfaction-sscq")
                                                          )
                                                 )
                                        ),
@@ -1924,7 +1924,7 @@ shinyUI(fluidPage(
                                                                 sliderInput("broadband_reg_input", label = "", min = start_year_broadband_reg , max = end_year_broadband_reg, value = end_year_broadband_reg, width = "50%", sep = "", step = 1),
                                                                 withSpinner(leafletOutput("broadband_reg_map"), type = 5),
                                                                 p("Source: "), 
-                                                                a("SCRIG", href = "https://scotland.shinyapps.io/sg-scrig-dashboard/")
+                                                                a("OFCOM", href = "Fixed coverage local and unitary authority data' at https://www.ofcom.org.uk/research-and-data/multi-sector-research/infrastructure-research/connected-nations-2020/data-downloads ")
                                                          )
                                                 )
                                        )
