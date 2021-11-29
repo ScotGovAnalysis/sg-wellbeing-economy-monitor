@@ -1822,7 +1822,7 @@ shinyServer(
         dyCrosshair(direction = "vertical")
     })
     
-           # ggplot barplot for hlifeexp_male_overview_int
+             # ggplot barplot for hlifeexp_male_overview_int
     output$hlifeexp_male_overview_sco_barplot <- renderPlot({
       hlifeexp_male_overview_sco <- hlifeexp_male_sco %>%
         mutate(Age = (Age),
@@ -1859,6 +1859,45 @@ shinyServer(
         geom_text(aes(x=Age, y=Value, label=Value),
                   vjust=0.3, size=4, hjust=1.1, col="white")
     })
+        # Dygraph for hlifeexp_female_sco
+    output$hlifeexp_female_sco_graph <- renderDygraph({
+      dygraph(
+        hlifeexp_female_sco
+      ) %>%
+        dyRangeSelector() %>%
+        dyAxis("x", label = "Year", rangePad = 5) %>%
+        dyAxis("y", label = "Healthy life expectancy at birth") %>%
+        dyHighlight(
+          highlightCircleSize = 3,
+          highlightSeriesBackgroundAlpha = 0.2,
+          hideOnMouseOut = FALSE,
+          highlightSeriesOpts = list(strokeWidth = 6)
+        ) %>%
+        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
+        dyLegend(labelsDiv = "legendDivID_hlifeexp_female_sco", labelsSeparateLines = TRUE) %>%
+        dyUnzoom() %>%
+        dyCrosshair(direction = "vertical")
+    })
+            # Dygraph for hlifeexp_male_sco
+    output$hlifeexp_male_sco_graph <- renderDygraph({
+      dygraph(
+        hlifeexp_male_sco
+      ) %>%
+        dyRangeSelector() %>%
+        dyAxis("x", label = "Year", rangePad = 5) %>%
+        dyAxis("y", label = "Healthy life expectancy at birth") %>%
+        dyHighlight(
+          highlightCircleSize = 3,
+          highlightSeriesBackgroundAlpha = 0.2,
+          hideOnMouseOut = FALSE,
+          highlightSeriesOpts = list(strokeWidth = 6)
+        ) %>%
+        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
+        dyLegend(labelsDiv = "legendDivID_hlifeexp_male_sco", labelsSeparateLines = TRUE) %>%
+        dyUnzoom() %>%
+        dyCrosshair(direction = "vertical")
+    })
+    
     
     # Dygraph for mwellbeing_sco
     output$mwellbeing_sco_graph <- renderDygraph({
