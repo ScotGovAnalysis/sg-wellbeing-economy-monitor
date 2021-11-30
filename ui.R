@@ -137,7 +137,7 @@ shinyUI(fluidPage(
                         column(width = 4,
                                h2("Exporting"),
                                plotOutput("exporting_overview_int_barplot", height = "200px"),
-                               p("Scotland's exporting as % of GDP was ", text_scotland_thisyear_exporting_int,"% in 2018, compared to ", text_oecd_thisyear_exporting_int,"% in the OECD. Over the past 5 years, the average exporting as % of GDP was ", text_scotland_last5_exporting_int ,"% in Scotland, compared to ", text_oecd_last5_exporting_int, "% in the OECD overall."),
+                               p("Scotland's exporting* as % of GDP was ", text_scotland_thisyear_exporting_int,"% in 2020, compared to ", text_oecd_thisyear_exporting_int,"% in the OECD. Over the past 5 years, the average exporting as % of GDP was ", text_scotland_last5_exporting_int ,"% in Scotland, compared to ", text_oecd_last5_exporting_int, "% in the OECD overall."),
                                p("*(International & RUK)")
                         ),
                         column(width = 4,
