@@ -829,33 +829,33 @@ shinyUI(fluidPage(
                             ),
                             tabPanel("Migration",
                                      fluidRow(width = 12,
-                                              column(width=3,
-                                                     wellPanel(
-                                                       checkboxGroupInput(
-                                                         inputId = "migration_type_overseas_sco_input",
-                                                         label = "",
-                                                         choiceNames = names(migration_type_overseas_sco_wide),
-                                                         choiceValues = c(seq(1:length(names(migration_type_overseas_sco_wide)))),
-                                                         selected = positions_selected_types_migration_type_overseas_sco
-                                                       )
-                                                     )
-                                              ),
-                                              column(width=9,
-                                                     fluidRow(
-                                                       p(tags$b(paste("Figure 1. Overseas migration to and from Scotland ", "(", as.character(start_year_migration_type_overseas_sco), " - ", as.character(end_year_migration_type_overseas_sco), ") ", "(absolute values)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
-                                                       withSpinner(dygraphOutput("migration_type_overseas_sco_graph"), type = 5),
-                                                       align = "center"
-                                                     ),
-                                                     fluidRow(
-                                                       textOutput("legendDivID_migration_type_overseas_sco"),
-                                                       p("Source: "), 
-                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
-                                                       collapsible = FALSE,
-                                                       width = 12,
-                                                       style="margin-bottom: 100px;"
-                                                     )
-                                              )
-                                     ),
+                                             # column(width=3,
+                                             #        wellPanel(
+                                             #          checkboxGroupInput(
+                                             #            inputId = "migration_type_overseas_sco_input",
+                                             #            label = "",
+                                             #            choiceNames = names(migration_type_overseas_sco_wide),
+                                             #           choiceValues = c(seq(1:length(names(migration_type_overseas_sco_wide)))),
+                                             #            selected = positions_selected_types_migration_type_overseas_sco
+                                              #         )
+                                               #      )
+                                              #),
+                                             # column(width=9,
+                                             #        fluidRow(
+                                             #          p(tags$b(paste("Figure 1. Overseas migration to and from Scotland ", "(", as.character(start_year_migration_type_overseas_sco), " - ", as.character(end_year_migration_type_overseas_sco), ") ", "(absolute values)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                             #          withSpinner(dygraphOutput("migration_type_overseas_sco_graph"), type = 5),
+                                             #          align = "center"
+                                             #        ),
+                                             #        fluidRow(
+                                             #          textOutput("legendDivID_migration_type_overseas_sco"),
+                                             #          p("Source: "), 
+                                             #          a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                             #          collapsible = FALSE,
+                                             #          width = 12,
+                                             #          style="margin-bottom: 100px;"
+                                             #       )
+                                             # )
+                                    # ),
                                      fluidRow(width = 12,
                                               column(width=3,
                                                      wellPanel(
@@ -870,7 +870,7 @@ shinyUI(fluidPage(
                                               ),
                                               column(width=9,
                                                      fluidRow(
-                                                       p(tags$b(paste("Figure 2. Migration to and from Scotland - Overseas vs Rest of the UK ", "(", as.character(start_year_migration_in_source_sco), " - ", as.character(end_year_migration_in_source_sco), ") ", "(absolute values)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       p(tags$b(paste("Figure 1. Migration to and from Scotland - Overseas vs Rest of the UK ", "(", as.character(start_year_migration_in_source_sco), " - ", as.character(end_year_migration_in_source_sco), ") ", "(absolute values)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                        withSpinner(dygraphOutput("migration_in_source_sco_graph"), type = 5),
                                                        align = "center"
                                                      ),
@@ -883,63 +883,63 @@ shinyUI(fluidPage(
                                                        style="margin-bottom: 100px;"
                                                      )
                                               )
-                                     ),
-                                     fluidRow(width = 12,
-                                              column(width=3,
-                                                     wellPanel(
-                                                       checkboxGroupInput(
-                                                         inputId = "migration_in_overseas_age_sco_input",
-                                                         label = "",
-                                                         choiceNames = names(migration_in_overseas_age_sco_wide),
-                                                         choiceValues = c(seq(1:length(names(migration_in_overseas_age_sco_wide)))),
-                                                         selected = positions_selected_ages_migration_in_overseas_age_sco
-                                                       )
-                                                     )
-                                              ),
-                                              column(width=9,
-                                                     fluidRow(
-                                                       p(tags$b(paste("Figure 3. Age distribution of migration to Scotland from Overseas ", "(", as.character(start_year_migration_in_overseas_age_sco), " - ", as.character(end_year_migration_in_overseas_age_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
-                                                       withSpinner(dygraphOutput("migration_in_overseas_age_sco_graph"), type = 5),
-                                                       align = "center"
-                                                     ),
-                                                     fluidRow(
-                                                       textOutput("legendDivID_migration_in_overseas_age_sco"),
-                                                       p("Source: "), 
-                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
-                                                       collapsible = FALSE,
-                                                       width = 12,
-                                                       style="margin-bottom: 100px;"
-                                                     )
-                                              )
-                                     ),
-                                     fluidRow(width = 12,
-                                              column(width=3,
-                                                     wellPanel(
-                                                       checkboxGroupInput(
-                                                         inputId = "migration_in_overseas_sex_sco_input",
-                                                         label = "",
-                                                         choiceNames = names(migration_in_overseas_sex_sco_wide),
-                                                         choiceValues = c(seq(1:length(names(migration_in_overseas_sex_sco_wide)))),
-                                                         selected = positions_selected_sexes_migration_in_overseas_sex_sco
-                                                       )
-                                                     )
-                                              ),
-                                              column(width=9,
-                                                     fluidRow(
-                                                       p(tags$b(paste("Figure 4. Migration to Scotland from Overseas by Age ", "(", as.character(start_year_migration_in_overseas_sex_sco), " - ", as.character(end_year_migration_in_overseas_sex_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
-                                                       withSpinner(dygraphOutput("migration_in_overseas_sex_sco_graph"), type = 5),
-                                                       align = "center"
-                                                     ),
-                                                     fluidRow(
-                                                       textOutput("legendDivID_migration_in_overseas_sex_sco"),
-                                                       p("Source: "), 
-                                                       a("ODP", href = "https://statistics.gov.scot/data/search"),
-                                                       collapsible = FALSE,
-                                                       width = 12,
-                                                       style="margin-bottom: 100px;"
-                                                     )
-                                              )
                                      )
+                              #       fluidRow(width = 12,
+                               #               column(width=3,
+                                #                     wellPanel(
+                                 #                      checkboxGroupInput(
+                                  #                       inputId = "migration_in_overseas_age_sco_input",
+                                   #                      label = "",
+                                    #                     choiceNames = names(migration_in_overseas_age_sco_wide),
+                                     #                    choiceValues = c(seq(1:length(names(migration_in_overseas_age_sco_wide)))),
+                                      #                   selected = positions_selected_ages_migration_in_overseas_age_sco
+                                       #                )
+                                        #             )
+                                         #     ),
+                                          #    column(width=9,
+                                           #          fluidRow(
+                                            #           p(tags$b(paste("Figure 3. Age distribution of migration to Scotland from Overseas ", "(", as.character(start_year_migration_in_overseas_age_sco), " - ", as.character(end_year_migration_in_overseas_age_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                             #          withSpinner(dygraphOutput("migration_in_overseas_age_sco_graph"), type = 5),
+                                              #         align = "center"
+                                               #      ),
+                                                #     fluidRow(
+                                                 #      textOutput("legendDivID_migration_in_overseas_age_sco"),
+                                                  #     p("Source: "), 
+                                                   #    a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                    #   collapsible = FALSE,
+                                                     #  width = 12,
+                                                      # style="margin-bottom: 100px;"
+                                   #                  )
+                                   #           )
+                                   #  ),
+                                   #  fluidRow(width = 12,
+                                   #           column(width=3,
+                                   #                  wellPanel(
+                                   #                    checkboxGroupInput(
+                                   #                      inputId = "migration_in_overseas_sex_sco_input",
+                                   #                      label = "",
+                                   #                      choiceNames = names(migration_in_overseas_sex_sco_wide),
+                                   #                      choiceValues = c(seq(1:length(names(migration_in_overseas_sex_sco_wide)))),
+                                   #                      selected = positions_selected_sexes_migration_in_overseas_sex_sco
+                                    #                   )
+                                     #                )
+                                      #        ),
+                                       #       column(width=9,
+                                        #             fluidRow(
+                                        #               p(tags$b(paste("Figure 4. Migration to Scotland from Overseas by Age ", "(", as.character(start_year_migration_in_overseas_sex_sco), " - ", as.character(end_year_migration_in_overseas_sex_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                        #               withSpinner(dygraphOutput("migration_in_overseas_sex_sco_graph"), type = 5),
+                                        #               align = "center"
+                                        #             ),
+                                        #             fluidRow(
+                                        #               textOutput("legendDivID_migration_in_overseas_sex_sco"),
+                                        #               p("Source: "), 
+                                        #               a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                        #               collapsible = FALSE,
+                                        #               width = 12,
+                                        #               style="margin-bottom: 100px;"
+                                        #             )
+                                        #      )
+                                    # )
                             )
                           )
                  ),
