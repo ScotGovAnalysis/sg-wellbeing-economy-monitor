@@ -2,8 +2,8 @@
 St <- 2000     # Starting year
 Yr <- 2018     # Current year
 
-current_year <- 2018
-comparison_countries <- c('Scotland', 'Scotland (international and RUK)', 'Scotland (international)', 'Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'New Zealand', 'Iceland', 'UK', 'OECD - Total', 'OECD members')
+current_year <- 2019
+comparison_countries <- c('Scotland', 'Scotland (international and rUK)', 'Scotland (international)', 'Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'New Zealand', 'Iceland', 'UK', 'OECD - Total', 'OECD members')
 comparison_countries_eu <- c('Scotland', 'Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Iceland', 'UK', 'EU')
 
 # libraries ####
@@ -416,14 +416,14 @@ text_scotland_last5_growth_int <- sum(text_scotland_last5_growth_int[1,-1])
 text_scotland_last5_growth_int <- round(text_scotland_last5_growth_int/5, digits = 2)
 
 # exporting_overview_int
-exporting_overview_int <- subset(exporting_int_long, exporting_int_long$Country %in% comparison_countries)
+exporting_overview_int <- subset(exporting_int_long, exporting_int_long$Country %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway','OECD members','Scotland (international and rUK)'))
 exporting_overview_int <- subset(exporting_overview_int, exporting_overview_int$Year == max(exporting_overview_int$Year))
 exporting_overview_int <- exporting_overview_int[,c(1,3)]
 exporting_overview_int <- exporting_overview_int[order(exporting_overview_int$Value, decreasing = FALSE),]
 exporting_overview_int$Country <- factor(exporting_overview_int$Country, levels = exporting_overview_int$Country)
 
 # text for exporting_overview_int
-text_scotland_thisyear_exporting_int <- subset(exporting_int_long, exporting_int_long$Country == "Scotland (international and RUK)")
+text_scotland_thisyear_exporting_int <- subset(exporting_int_long, exporting_int_long$Country == "Scotland (international and rUK)")
 text_scotland_thisyear_exporting_int <- subset(text_scotland_thisyear_exporting_int, text_scotland_thisyear_exporting_int$Year == max(exporting_int_long$Year))
 text_scotland_thisyear_exporting_int <- text_scotland_thisyear_exporting_int$Value
 text_oecd_thisyear_exporting_int <- subset(exporting_int_long, exporting_int_long$Country == "OECD members")
@@ -435,7 +435,7 @@ end_text_oecd_last5 <- start_text_oecd_last5-5
 text_oecd_last5_exporting_int <- text_oecd_last5_exporting_int[,seq(end_text_oecd_last5:start_text_oecd_last5)]
 text_oecd_last5_exporting_int <- sum(text_oecd_last5_exporting_int[1,-1])
 text_oecd_last5_exporting_int <- round(text_oecd_last5_exporting_int/5, digits = 2)
-text_scotland_last5_exporting_int <- subset(exporting_int, exporting_int$Country == "Scotland (international and RUK)")
+text_scotland_last5_exporting_int <- subset(exporting_int, exporting_int$Country == "Scotland (international and rUK)")
 start_text_scotland_last5 <- as.numeric(max(exporting_int_long$Year))
 end_text_scotland_last5 <- start_text_scotland_last5-5
 text_scotland_last5_exporting_int <- text_scotland_last5_exporting_int[,seq(end_text_scotland_last5:start_text_scotland_last5)]
@@ -560,7 +560,7 @@ rank_exporting <- rank_exporting[order(rank_exporting$Value, decreasing = TRUE),
 rank_exporting$Rank <- order(rank_exporting$Value, decreasing = TRUE)
 rank_exporting_quantiles <- rank_exporting$Rank
 rank_exporting$Quantile <- ecdf(rank_exporting_quantiles)(rank_exporting_quantiles)
-rank_exporting <- subset(rank_exporting, rank_exporting$Country == "Scotland (international and RUK)")
+rank_exporting <- subset(rank_exporting, rank_exporting$Country == "Scotland (international and rUK)")
 rank_exporting_quantile <- rank_exporting$Quantile
 rank_exporting <- rank_exporting$Rank
 
