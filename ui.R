@@ -939,7 +939,7 @@ shinyUI(fluidPage(
                                         #               style="margin-bottom: 100px;"
                                         #             )
                                         #      )
-                                    # )
+                                    )
                             )
                           )
                  ),
@@ -2193,8 +2193,8 @@ shinyUI(fluidPage(
                         column(width = 4,
                                h2("Religion"),
                                plotOutput("religion_eq_overview_int_barplot", height = "200px"),
-                               p("Source: Poverty and Income Inequality in Scotland 2015-18"),
-                               p("In 2018, 41% of Muslims were in poverty.")
+                               p("Source: Poverty and Income Inequality in Scotland 2017-20"),
+                               p("On average, in the period 2015-20 52% of Muslim adults were in relative poverty (below 60% UK median income after housing costs).")
                         )
                ),
                fluidRow(width = 12,
@@ -2202,7 +2202,7 @@ shinyUI(fluidPage(
                                h2("Sexual orientation"),
                                plotOutput("orientation_eq_overview_int_barplot", height = "200px"),
                                p("Source: Scottish Household Survey 2018"),
-                               p("In 2018, 25% of Gay/Lesbian/Bisexual individuals experienced discrimination as compared with 8% for Straight individuals."),
+                               p("In 2019, 22% of Gay/Lesbian/Bisexual individuals experienced discrimination as compared with 7% for Straight individuals."),
                         ),
                         column(width = 4,
                         ),
