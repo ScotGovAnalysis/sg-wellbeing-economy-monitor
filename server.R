@@ -198,9 +198,9 @@ shinyServer(
       exporting_overview_int2 <- exporting_overview_int %>%
         mutate(Country = (Country),
                Value = as.numeric(Value),
-               fill_type = ifelse(exporting_overview_int$Country == "Scotland (international and RUK)","blue","grey"))
+               fill_type = ifelse(exporting_overview_int$Country == "Scotland (international and rUK)","blue","grey"))
       ggplot(exporting_overview_int2, aes(x=Country, y=Value)) +
-        geom_col(fill=factor(exporting_overview_int2$fill_type), show.legend = FALSE, width=0.9) +
+        geom_col(fill=c("grey","grey","grey","grey","grey","blue","grey"), show.legend = FALSE, width=0.9) +
         coord_flip(clip="off", expand=TRUE) +
         labs(x="", y="%") +
         theme_minimal() +
@@ -211,7 +211,27 @@ shinyServer(
         geom_text(aes(x=Country, y=Value, label=Value),
                   vjust=0.3, size=4, hjust=1.1, col="white")
     })
-    # ggplot barplot for productivity_overview
+    # ggplot barplot for exporting_overview
+  #  output$exporting_overview_int_barplot <- renderPlot({
+   #   exporting_overview_int2 <- exporting_overview_int %>%
+    #    mutate(Country = (Country),
+     #          Value = as.numeric(Value),
+      #         fill_type = ifelse(exporting_overview_int$Country == "Scotland (international and rUK)","blue","grey"))
+    #  ggplot(exporting_overview_int2, aes(x=Country, y=Value)) +
+     #   geom_col(fill=factor(exporting_overview_int2$fill_type), show.legend = FALSE, width=0.9) +
+      #  coord_flip(clip="off", expand=TRUE) +
+       # labs(x="", y="%") +
+        #theme_minimal() +
+        #theme(
+         # axis.text.x=element_blank()
+        #) +
+      #  ggtitle("Exports as % of GDP") +
+       # geom_text(aes(x=Country, y=Value, label=Value),
+        #          vjust=0.3, size=4, hjust=1.1, col="white")
+  #  })
+    
+    
+     # ggplot barplot for productivity_overview
     output$productivity_overview_int_barplot <- renderPlot({
       productivity_overview_int2 <- productivity_overview_int %>%
         mutate(Country = (Country),
