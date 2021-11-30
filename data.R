@@ -399,6 +399,9 @@ growth_overview_int$Country <- factor(growth_overview_int$Country, levels = grow
 text_scotland_thisyear_growth_int <- subset(growth_int_long, growth_int_long$Country == "Scotland")
 text_scotland_thisyear_growth_int <- subset(text_scotland_thisyear_growth_int, text_scotland_thisyear_growth_int$Year == max(growth_int_long$Year))
 text_scotland_thisyear_growth_int <- text_scotland_thisyear_growth_int$Value
+text_oecd_thisyear_growth_int <- subset(growth_int_long, growth_int_long$Country == "OECD members")
+text_oecd_thisyear_growth_int <- subset(text_oecd_thisyear_growth_int, text_oecd_thisyear_growth_int$Year == max(growth_int_long$Year))
+text_oecd_thisyear_growth_int <- text_oecd_thisyear_growth_int$Value
 text_oecd_last5_growth_int <- subset(growth_int, growth_int$Country == "OECD - Total")
 start_text_oecd_last5 <- as.numeric(max(growth_int_long$Year))
 end_text_oecd_last5 <- start_text_oecd_last5-5
