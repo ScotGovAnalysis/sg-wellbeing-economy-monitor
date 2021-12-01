@@ -1,0 +1,523 @@
+Year,Sector,Value
+2002,Accommodation and Food Services (Section I),655
+2003,Accommodation and Food Services (Section I),940
+2004,Accommodation and Food Services (Section I),1105
+2005,Accommodation and Food Services (Section I),1030
+2006,Accommodation and Food Services (Section I),1175
+2007,Accommodation and Food Services (Section I),1120
+2008,Accommodation and Food Services (Section I),1095
+2009,Accommodation and Food Services (Section I),1125
+2010,Accommodation and Food Services (Section I),1220
+2011,Accommodation and Food Services (Section I),1235
+2012,Accommodation and Food Services (Section I),1265
+2013,Accommodation and Food Services (Section I),1085
+2014,Accommodation and Food Services (Section I),1235
+2015,Accommodation and Food Services (Section I),1030
+2016,Accommodation and Food Services (Section I),955
+2017,Accommodation and Food Services (Section I),915
+2018,Accommodation and Food Services (Section I),1080
+2019,Accommodation and Food Services (Section I),1170
+2002,Administrative and Support Services (Section N),1485
+2003,Administrative and Support Services (Section N),1875
+2004,Administrative and Support Services (Section N),1870
+2005,Administrative and Support Services (Section N),2295
+2006,Administrative and Support Services (Section N),2185
+2007,Administrative and Support Services (Section N),2940
+2008,Administrative and Support Services (Section N),2895
+2009,Administrative and Support Services (Section N),3005
+2010,Administrative and Support Services (Section N),2435
+2011,Administrative and Support Services (Section N),2100
+2012,Administrative and Support Services (Section N),3065
+2013,Administrative and Support Services (Section N),3935
+2014,Administrative and Support Services (Section N),4385
+2015,Administrative and Support Services (Section N),3560
+2016,Administrative and Support Services (Section N),3485
+2017,Administrative and Support Services (Section N),3095
+2018,Administrative and Support Services (Section N),2940
+2019,Administrative and Support Services (Section N),2920
+2002,"Agriculture, Forestry and Fishing (Section A)",695
+2003,"Agriculture, Forestry and Fishing (Section A)",570
+2004,"Agriculture, Forestry and Fishing (Section A)",670
+2005,"Agriculture, Forestry and Fishing (Section A)",715
+2006,"Agriculture, Forestry and Fishing (Section A)",720
+2007,"Agriculture, Forestry and Fishing (Section A)",755
+2008,"Agriculture, Forestry and Fishing (Section A)",815
+2009,"Agriculture, Forestry and Fishing (Section A)",990
+2010,"Agriculture, Forestry and Fishing (Section A)",965
+2011,"Agriculture, Forestry and Fishing (Section A)",1005
+2012,"Agriculture, Forestry and Fishing (Section A)",1050
+2013,"Agriculture, Forestry and Fishing (Section A)",950
+2014,"Agriculture, Forestry and Fishing (Section A)",1080
+2015,"Agriculture, Forestry and Fishing (Section A)",970
+2016,"Agriculture, Forestry and Fishing (Section A)",1095
+2017,"Agriculture, Forestry and Fishing (Section A)",1355
+2018,"Agriculture, Forestry and Fishing (Section A)",1500
+2019,"Agriculture, Forestry and Fishing (Section A)",1790
+2002,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1305
+2003,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1080
+2004,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1045
+2005,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1200
+2006,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1405
+2007,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1580
+2008,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1685
+2009,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1625
+2010,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1485
+2011,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1490
+2012,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1525
+2013,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1510
+2014,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1395
+2015,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1900
+2016,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1845
+2017,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1605
+2018,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1580
+2019,"Basic Metals and Fabricated Metal Products, Except Machinery (Section CH)",1445
+2002,Basic Pharmaceuticals and Their Products (Section CF),450
+2003,Basic Pharmaceuticals and Their Products (Section CF),580
+2004,Basic Pharmaceuticals and Their Products (Section CF),480
+2005,Basic Pharmaceuticals and Their Products (Section CF),475
+2006,Basic Pharmaceuticals and Their Products (Section CF),425
+2007,Basic Pharmaceuticals and Their Products (Section CF),560
+2008,Basic Pharmaceuticals and Their Products (Section CF),675
+2009,Basic Pharmaceuticals and Their Products (Section CF),530
+2010,Basic Pharmaceuticals and Their Products (Section CF),605
+2011,Basic Pharmaceuticals and Their Products (Section CF),590
+2012,Basic Pharmaceuticals and Their Products (Section CF),480
+2013,Basic Pharmaceuticals and Their Products (Section CF),445
+2014,Basic Pharmaceuticals and Their Products (Section CF),540
+2015,Basic Pharmaceuticals and Their Products (Section CF),585
+2016,Basic Pharmaceuticals and Their Products (Section CF),485
+2017,Basic Pharmaceuticals and Their Products (Section CF),535
+2018,Basic Pharmaceuticals and Their Products (Section CF),570
+2019,Basic Pharmaceuticals and Their Products (Section CF),505
+2002,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",2620
+2003,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",2760
+2004,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",2715
+2005,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",2660
+2006,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",2735
+2007,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",3975
+2008,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",4775
+2009,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",4235
+2010,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",4865
+2011,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",5260
+2012,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",4520
+2013,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",4415
+2014,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",3315
+2015,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",3835
+2016,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",3995
+2017,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",5395
+2018,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",5810
+2019,"Coke, Refined Petroleum Products, Chemicals and Chemical Products (Section CD,CE)",5395
+2002,"Computer, Electronic and Optical Products (Section CI)",6625
+2003,"Computer, Electronic and Optical Products (Section CI)",5385
+2004,"Computer, Electronic and Optical Products (Section CI)",4235
+2005,"Computer, Electronic and Optical Products (Section CI)",2970
+2006,"Computer, Electronic and Optical Products (Section CI)",2635
+2007,"Computer, Electronic and Optical Products (Section CI)",2305
+2008,"Computer, Electronic and Optical Products (Section CI)",2225
+2009,"Computer, Electronic and Optical Products (Section CI)",2125
+2010,"Computer, Electronic and Optical Products (Section CI)",2015
+2011,"Computer, Electronic and Optical Products (Section CI)",2025
+2012,"Computer, Electronic and Optical Products (Section CI)",2070
+2013,"Computer, Electronic and Optical Products (Section CI)",2175
+2014,"Computer, Electronic and Optical Products (Section CI)",1845
+2015,"Computer, Electronic and Optical Products (Section CI)",1905
+2016,"Computer, Electronic and Optical Products (Section CI)",2160
+2017,"Computer, Electronic and Optical Products (Section CI)",2590
+2018,"Computer, Electronic and Optical Products (Section CI)",2645
+2019,"Computer, Electronic and Optical Products (Section CI)",2545
+2002,Construction (Section F),1850
+2003,Construction (Section F),2145
+2004,Construction (Section F),2450
+2005,Construction (Section F),1880
+2006,Construction (Section F),1915
+2007,Construction (Section F),2070
+2008,Construction (Section F),2405
+2009,Construction (Section F),1775
+2010,Construction (Section F),1595
+2011,Construction (Section F),1570
+2012,Construction (Section F),1690
+2013,Construction (Section F),1945
+2014,Construction (Section F),1745
+2015,Construction (Section F),1600
+2016,Construction (Section F),2035
+2017,Construction (Section F),1940
+2018,Construction (Section F),1835
+2019,Construction (Section F),1860
+2002,Education (Section P),450
+2003,Education (Section P),445
+2004,Education (Section P),490
+2005,Education (Section P),510
+2006,Education (Section P),555
+2007,Education (Section P),620
+2008,Education (Section P),740
+2009,Education (Section P),780
+2010,Education (Section P),880
+2011,Education (Section P),990
+2012,Education (Section P),1050
+2013,Education (Section P),1060
+2014,Education (Section P),1175
+2015,Education (Section P),1265
+2016,Education (Section P),1300
+2017,Education (Section P),1305
+2018,Education (Section P),1390
+2019,Education (Section P),1530
+2002,Electrical Equipment (Section CJ),965
+2003,Electrical Equipment (Section CJ),790
+2004,Electrical Equipment (Section CJ),720
+2005,Electrical Equipment (Section CJ),640
+2006,Electrical Equipment (Section CJ),645
+2007,Electrical Equipment (Section CJ),540
+2008,Electrical Equipment (Section CJ),550
+2009,Electrical Equipment (Section CJ),635
+2010,Electrical Equipment (Section CJ),530
+2011,Electrical Equipment (Section CJ),555
+2012,Electrical Equipment (Section CJ),480
+2013,Electrical Equipment (Section CJ),540
+2014,Electrical Equipment (Section CJ),605
+2015,Electrical Equipment (Section CJ),495
+2016,Electrical Equipment (Section CJ),455
+2017,Electrical Equipment (Section CJ),360
+2018,Electrical Equipment (Section CJ),360
+2019,Electrical Equipment (Section CJ),460
+2002,Financial and Insurance (Section K),5245
+2003,Financial and Insurance (Section K),6400
+2004,Financial and Insurance (Section K),9085
+2005,Financial and Insurance (Section K),7775
+2006,Financial and Insurance (Section K),9540
+2007,Financial and Insurance (Section K),11725
+2008,Financial and Insurance (Section K),11570
+2009,Financial and Insurance (Section K),10640
+2010,Financial and Insurance (Section K),11425
+2011,Financial and Insurance (Section K),10115
+2012,Financial and Insurance (Section K),8955
+2013,Financial and Insurance (Section K),8930
+2014,Financial and Insurance (Section K),8965
+2015,Financial and Insurance (Section K),9650
+2016,Financial and Insurance (Section K),9560
+2017,Financial and Insurance (Section K),12510
+2018,Financial and Insurance (Section K),11605
+2019,Financial and Insurance (Section K),11485
+2002,"Food Products, Beverages and Tobacco Products (Section CA)",5620
+2003,"Food Products, Beverages and Tobacco Products (Section CA)",5640
+2004,"Food Products, Beverages and Tobacco Products (Section CA)",5570
+2005,"Food Products, Beverages and Tobacco Products (Section CA)",6025
+2006,"Food Products, Beverages and Tobacco Products (Section CA)",6105
+2007,"Food Products, Beverages and Tobacco Products (Section CA)",6495
+2008,"Food Products, Beverages and Tobacco Products (Section CA)",6735
+2009,"Food Products, Beverages and Tobacco Products (Section CA)",7180
+2010,"Food Products, Beverages and Tobacco Products (Section CA)",8250
+2011,"Food Products, Beverages and Tobacco Products (Section CA)",9120
+2012,"Food Products, Beverages and Tobacco Products (Section CA)",9450
+2013,"Food Products, Beverages and Tobacco Products (Section CA)",9645
+2014,"Food Products, Beverages and Tobacco Products (Section CA)",9065
+2015,"Food Products, Beverages and Tobacco Products (Section CA)",9080
+2016,"Food Products, Beverages and Tobacco Products (Section CA)",9090
+2017,"Food Products, Beverages and Tobacco Products (Section CA)",9560
+2018,"Food Products, Beverages and Tobacco Products (Section CA)",9985
+2019,"Food Products, Beverages and Tobacco Products (Section CA)",10030
+2002,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",880
+2003,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",800
+2004,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",805
+2005,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",870
+2006,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",895
+2007,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",940
+2008,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",1035
+2009,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",1175
+2010,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",1130
+2011,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",1215
+2012,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",1370
+2013,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",1385
+2014,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",1515
+2015,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",1790
+2016,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",1685
+2017,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",1280
+2018,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",1485
+2019,"Furniture, Other Manufacturing; Repair and Installation of Machinery and Equipment (Section CM)",1595
+2002,Information and Communication (Section J),1385
+2003,Information and Communication (Section J),1335
+2004,Information and Communication (Section J),1775
+2005,Information and Communication (Section J),1770
+2006,Information and Communication (Section J),1930
+2007,Information and Communication (Section J),1735
+2008,Information and Communication (Section J),1850
+2009,Information and Communication (Section J),1795
+2010,Information and Communication (Section J),1830
+2011,Information and Communication (Section J),1805
+2012,Information and Communication (Section J),1985
+2013,Information and Communication (Section J),2245
+2014,Information and Communication (Section J),2475
+2015,Information and Communication (Section J),2800
+2016,Information and Communication (Section J),2835
+2017,Information and Communication (Section J),3950
+2018,Information and Communication (Section J),3810
+2019,Information and Communication (Section J),4635
+2002,Machinery and Equipment N.E.C. (Section CK),1145
+2003,Machinery and Equipment N.E.C. (Section CK),1280
+2004,Machinery and Equipment N.E.C. (Section CK),1145
+2005,Machinery and Equipment N.E.C. (Section CK),1185
+2006,Machinery and Equipment N.E.C. (Section CK),1155
+2007,Machinery and Equipment N.E.C. (Section CK),1320
+2008,Machinery and Equipment N.E.C. (Section CK),1500
+2009,Machinery and Equipment N.E.C. (Section CK),1490
+2010,Machinery and Equipment N.E.C. (Section CK),1480
+2011,Machinery and Equipment N.E.C. (Section CK),1435
+2012,Machinery and Equipment N.E.C. (Section CK),1675
+2013,Machinery and Equipment N.E.C. (Section CK),1840
+2014,Machinery and Equipment N.E.C. (Section CK),1925
+2015,Machinery and Equipment N.E.C. (Section CK),1880
+2016,Machinery and Equipment N.E.C. (Section CK),1825
+2017,Machinery and Equipment N.E.C. (Section CK),1585
+2018,Machinery and Equipment N.E.C. (Section CK),1750
+2019,Machinery and Equipment N.E.C. (Section CK),1820
+2002,Mining & Quarrying (Section B),1350
+2003,Mining & Quarrying (Section B),1185
+2004,Mining & Quarrying (Section B),1305
+2005,Mining & Quarrying (Section B),1485
+2006,Mining & Quarrying (Section B),1475
+2007,Mining & Quarrying (Section B),1900
+2008,Mining & Quarrying (Section B),2055
+2009,Mining & Quarrying (Section B),2810
+2010,Mining & Quarrying (Section B),4180
+2011,Mining & Quarrying (Section B),4445
+2012,Mining & Quarrying (Section B),4305
+2013,Mining & Quarrying (Section B),4205
+2014,Mining & Quarrying (Section B),4825
+2015,Mining & Quarrying (Section B),5195
+2016,Mining & Quarrying (Section B),4430
+2017,Mining & Quarrying (Section B),3905
+2018,Mining & Quarrying (Section B),3700
+2019,Mining & Quarrying (Section B),3675
+2002,Other Services (Section (Q-U),290
+2003,Other Services (Section (Q-U),380
+2004,Other Services (Section (Q-U),360
+2005,Other Services (Section (Q-U),330
+2006,Other Services (Section (Q-U),300
+2007,Other Services (Section (Q-U),375
+2008,Other Services (Section (Q-U),325
+2009,Other Services (Section (Q-U),365
+2010,Other Services (Section (Q-U),200
+2011,Other Services (Section (Q-U),195
+2012,Other Services (Section (Q-U),355
+2013,Other Services (Section (Q-U),335
+2014,Other Services (Section (Q-U),280
+2015,Other Services (Section (Q-U),235
+2016,Other Services (Section (Q-U),340
+2017,Other Services (Section (Q-U),445
+2018,Other Services (Section (Q-U),585
+2019,Other Services (Section (Q-U),660
+2002,"Professional, Scientific & Technical (Section M)",2835
+2003,"Professional, Scientific & Technical (Section M)",2420
+2004,"Professional, Scientific & Technical (Section M)",2520
+2005,"Professional, Scientific & Technical (Section M)",2725
+2006,"Professional, Scientific & Technical (Section M)",2905
+2007,"Professional, Scientific & Technical (Section M)",3680
+2008,"Professional, Scientific & Technical (Section M)",4005
+2009,"Professional, Scientific & Technical (Section M)",4580
+2010,"Professional, Scientific & Technical (Section M)",5490
+2011,"Professional, Scientific & Technical (Section M)",5915
+2012,"Professional, Scientific & Technical (Section M)",6680
+2013,"Professional, Scientific & Technical (Section M)",7240
+2014,"Professional, Scientific & Technical (Section M)",7655
+2015,"Professional, Scientific & Technical (Section M)",8645
+2016,"Professional, Scientific & Technical (Section M)",7965
+2017,"Professional, Scientific & Technical (Section M)",7980
+2018,"Professional, Scientific & Technical (Section M)",7210
+2019,"Professional, Scientific & Technical (Section M)",7885
+2002,Real Estate Activities (Section L),175
+2003,Real Estate Activities (Section L),190
+2004,Real Estate Activities (Section L),235
+2005,Real Estate Activities (Section L),405
+2006,Real Estate Activities (Section L),465
+2007,Real Estate Activities (Section L),240
+2008,Real Estate Activities (Section L),240
+2009,Real Estate Activities (Section L),360
+2010,Real Estate Activities (Section L),285
+2011,Real Estate Activities (Section L),380
+2012,Real Estate Activities (Section L),370
+2013,Real Estate Activities (Section L),610
+2014,Real Estate Activities (Section L),380
+2015,Real Estate Activities (Section L),285
+2016,Real Estate Activities (Section L),245
+2017,Real Estate Activities (Section L),255
+2018,Real Estate Activities (Section L),305
+2019,Real Estate Activities (Section L),320
+2002,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",910
+2003,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",970
+2004,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1015
+2005,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1015
+2006,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1025
+2007,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1055
+2008,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1030
+2009,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1010
+2010,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1060
+2011,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1205
+2012,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1240
+2013,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1315
+2014,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1335
+2015,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1205
+2016,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1285
+2017,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1300
+2018,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1355
+2019,"Rubber, Plastic and Other Non-Metallic Mineral Products (Section CG)",1400
+2002,"Textiles, Wearing Apparel and Leather (Section CB)",820
+2003,"Textiles, Wearing Apparel and Leather (Section CB)",785
+2004,"Textiles, Wearing Apparel and Leather (Section CB)",760
+2005,"Textiles, Wearing Apparel and Leather (Section CB)",730
+2006,"Textiles, Wearing Apparel and Leather (Section CB)",720
+2007,"Textiles, Wearing Apparel and Leather (Section CB)",625
+2008,"Textiles, Wearing Apparel and Leather (Section CB)",630
+2009,"Textiles, Wearing Apparel and Leather (Section CB)",550
+2010,"Textiles, Wearing Apparel and Leather (Section CB)",545
+2011,"Textiles, Wearing Apparel and Leather (Section CB)",600
+2012,"Textiles, Wearing Apparel and Leather (Section CB)",645
+2013,"Textiles, Wearing Apparel and Leather (Section CB)",630
+2014,"Textiles, Wearing Apparel and Leather (Section CB)",640
+2015,"Textiles, Wearing Apparel and Leather (Section CB)",650
+2016,"Textiles, Wearing Apparel and Leather (Section CB)",615
+2017,"Textiles, Wearing Apparel and Leather (Section CB)",600
+2018,"Textiles, Wearing Apparel and Leather (Section CB)",665
+2019,"Textiles, Wearing Apparel and Leather (Section CB)",680
+2002,Total,49415
+2003,Total,50660
+2004,Total,55785
+2005,Total,52925
+2006,Total,56125
+2007,Total,62545
+2008,Total,65140
+2009,Total,66010
+2010,Total,69660
+2011,Total,73090
+2012,Total,74455
+2013,Total,77605
+2014,Total,76915
+2015,Total,80730
+2016,Total,77925
+2017,Total,83430
+2018,Total,83485
+2019,Total,87095
+2002,Total Manufacturing,24015
+2003,Total Manufacturing,22760
+2004,Total Manufacturing,21665
+2005,Total Manufacturing,21065
+2006,Total Manufacturing,21100
+2007,Total Manufacturing,23070
+2008,Total Manufacturing,24545
+2009,Total Manufacturing,24295
+2010,Total Manufacturing,25875
+2011,Total Manufacturing,27125
+2012,Total Manufacturing,27270
+2013,Total Manufacturing,27665
+2014,Total Manufacturing,26015
+2015,Total Manufacturing,27215
+2016,Total Manufacturing,27095
+2017,Total Manufacturing,28550
+2018,Total Manufacturing,29845
+2019,Total Manufacturing,29400
+2002,Total Services,20035
+2003,Total Services,22245
+2004,Total Services,27775
+2005,Total Services,26245
+2006,Total Services,28995
+2007,Total Services,32990
+2008,Total Services,33160
+2009,Total Services,32395
+2010,Total Services,33535
+2011,Total Services,33675
+2012,Total Services,34785
+2013,Total Services,36635
+2014,Total Services,38370
+2015,Total Services,39555
+2016,Total Services,38690
+2017,Total Services,42340
+2018,Total Services,40865
+2019,Total Services,42775
+2002,Transport Equipment (Section CL),1350
+2003,Transport Equipment (Section CL),1445
+2004,Transport Equipment (Section CL),1750
+2005,Transport Equipment (Section CL),1860
+2006,Transport Equipment (Section CL),2000
+2007,Transport Equipment (Section CL),2385
+2008,Transport Equipment (Section CL),2425
+2009,Transport Equipment (Section CL),2425
+2010,Transport Equipment (Section CL),2515
+2011,Transport Equipment (Section CL),2320
+2012,Transport Equipment (Section CL),2530
+2013,Transport Equipment (Section CL),2475
+2014,Transport Equipment (Section CL),2610
+2015,Transport Equipment (Section CL),2570
+2016,Transport Equipment (Section CL),2435
+2017,Transport Equipment (Section CL),2700
+2018,Transport Equipment (Section CL),2450
+2019,Transport Equipment (Section CL),2250
+2002,Transportation and Storage (Section H),2185
+2003,Transportation and Storage (Section H),2535
+2004,Transportation and Storage (Section H),2475
+2005,Transportation and Storage (Section H),2140
+2006,Transportation and Storage (Section H),2550
+2007,Transportation and Storage (Section H),2455
+2008,Transportation and Storage (Section H),2875
+2009,Transportation and Storage (Section H),2705
+2010,Transportation and Storage (Section H),2745
+2011,Transportation and Storage (Section H),3160
+2012,Transportation and Storage (Section H),3245
+2013,Transportation and Storage (Section H),3275
+2014,Transportation and Storage (Section H),3255
+2015,Transportation and Storage (Section H),3335
+2016,Transportation and Storage (Section H),3405
+2017,Transportation and Storage (Section H),3320
+2018,Transportation and Storage (Section H),3600
+2019,Transportation and Storage (Section H),3750
+2002,"Utilities (Section D,E)",1465
+2003,"Utilities (Section D,E)",1750
+2004,"Utilities (Section D,E)",1925
+2005,"Utilities (Section D,E)",1535
+2006,"Utilities (Section D,E)",1910
+2007,"Utilities (Section D,E)",1760
+2008,"Utilities (Section D,E)",2160
+2009,"Utilities (Section D,E)",3750
+2010,"Utilities (Section D,E)",3515
+2011,"Utilities (Section D,E)",5275
+2012,"Utilities (Section D,E)",5350
+2013,"Utilities (Section D,E)",6205
+2014,"Utilities (Section D,E)",4885
+2015,"Utilities (Section D,E)",6195
+2016,"Utilities (Section D,E)",4585
+2017,"Utilities (Section D,E)",5340
+2018,"Utilities (Section D,E)",5745
+2019,"Utilities (Section D,E)",7590
+2002,"Wholesale, Retail and Repairs (Section G)",5325
+2003,"Wholesale, Retail and Repairs (Section G)",5715
+2004,"Wholesale, Retail and Repairs (Section G)",7855
+2005,"Wholesale, Retail and Repairs (Section G)",7260
+2006,"Wholesale, Retail and Repairs (Section G)",7395
+2007,"Wholesale, Retail and Repairs (Section G)",8095
+2008,"Wholesale, Retail and Repairs (Section G)",7565
+2009,"Wholesale, Retail and Repairs (Section G)",7040
+2010,"Wholesale, Retail and Repairs (Section G)",7015
+2011,"Wholesale, Retail and Repairs (Section G)",7775
+2012,"Wholesale, Retail and Repairs (Section G)",7820
+2013,"Wholesale, Retail and Repairs (Section G)",7915
+2014,"Wholesale, Retail and Repairs (Section G)",8570
+2015,"Wholesale, Retail and Repairs (Section G)",8750
+2016,"Wholesale, Retail and Repairs (Section G)",8605
+2017,"Wholesale, Retail and Repairs (Section G)",8565
+2018,"Wholesale, Retail and Repairs (Section G)",8335
+2019,"Wholesale, Retail and Repairs (Section G)",8425
+2002,"Wood and Paper Products, and Printing (Section CC)",1330
+2003,"Wood and Paper Products, and Printing (Section CC)",1245
+2004,"Wood and Paper Products, and Printing (Section CC)",1425
+2005,"Wood and Paper Products, and Printing (Section CC)",1440
+2006,"Wood and Paper Products, and Printing (Section CC)",1355
+2007,"Wood and Paper Products, and Printing (Section CC)",1290
+2008,"Wood and Paper Products, and Printing (Section CC)",1275
+2009,"Wood and Paper Products, and Printing (Section CC)",1310
+2010,"Wood and Paper Products, and Printing (Section CC)",1395
+2011,"Wood and Paper Products, and Printing (Section CC)",1310
+2012,"Wood and Paper Products, and Printing (Section CC)",1290
+2013,"Wood and Paper Products, and Printing (Section CC)",1290
+2014,"Wood and Paper Products, and Printing (Section CC)",1230
+2015,"Wood and Paper Products, and Printing (Section CC)",1325
+2016,"Wood and Paper Products, and Printing (Section CC)",1215
+2017,"Wood and Paper Products, and Printing (Section CC)",1040
+2018,"Wood and Paper Products, and Printing (Section CC)",1195
+2019,"Wood and Paper Products, and Printing (Section CC)",1280
