@@ -395,26 +395,27 @@ shinyUI(fluidPage(
                                                        )
                                                 )
                                        ),
+            
                                        fluidRow(width = 12,
                                                 column(width=3, 
                                                        wellPanel(
                                                          checkboxGroupInput(
-                                                           inputId = "exporting_sector_sco_input",
+                                                           inputId = "exporting_sector_sco1_input",
                                                            label = "",
-                                                           choiceNames = names(exporting_sector_sco),
-                                                           choiceValues = c(seq(1:length(names(exporting_sector_sco)))),
-                                                           selected = positions_selected_countries_exporting_sector_sco
+                                                           choiceNames = names(exporting_sector_sco1_wide),
+                                                           choiceValues = c(seq(1:length(names(exporting_sector_sco1_wide)))),
+                                                           selected = positions_selected_indices_exporting_sector_sco1
                                                          )
                                                        )
                                                 ),      
                                                 column(width=9, 
                                                        fluidRow(
-                                                         p(tags$b(paste("Figure 4. Scotland's Exports by Industry ", "(", as.character(start_year_exporting_sector_sco), " - ", as.character(end_year_exporting_sector_sco), ") ", "(£ million)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
-                                                         withSpinner(dygraphOutput("exporting_sector_sco_graph"), type = 5),
+                                                         p(tags$b(paste("Figure 3. Scotland's exports by industry ", "(", as.character(start_year_exporting_sector_sco1), " - ", as.character(end_year_exporting_sector_sco1), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         withSpinner(dygraphOutput("exporting_sector_sco1_graph"), type = 5),
                                                          align = "center"
                                                        ),
                                                        fluidRow(
-                                                         textOutput("legendDivID_exporting_sector_sco"),
+                                                         textOutput("legendDivID_exporting_sector_sco1"),
                                                          p("Source: "), 
                                                          a("ODP", href = "https://statistics.gov.scot/data/search"),
                                                          collapsible = FALSE,
@@ -423,7 +424,8 @@ shinyUI(fluidPage(
                                                        )
                                                 )
                                        )
-                              ),
+                              ), 
+                              
                               tabPanel("R&D",
                                        fluidRow(width = 12,
                                                 column(width=3, 
