@@ -1781,7 +1781,7 @@ shinyUI(fluidPage(
                         column(width = 4,
                                h2("Broadband"),
                                plotOutput("broadband_overview_int_barplot", height = "200px"),
-                               p("Scotland's broadband access was ", text_scotland_thisyear_broadband_int," (% of total households) in 2019, compared to ", text_eu_thisyear_broadband_int," (% of total households) in the 28 EU countries.")
+                               p("Scotland's broadband access was ", text_scotland_thisyear_broadband_int," (% of households) in 2019, compared to ", text_eu_thisyear_broadband_int," (% of total households) in the 28 EU countries.")
                         ),
                         column(width = 4,
                         ),
@@ -1809,7 +1809,7 @@ shinyUI(fluidPage(
                                               ),      
                                               column(width=9, 
                                                      fluidRow(
-                                                       p(tags$b(paste("Figure 1. Share of households with internet broadband access (in % of total households) ", "(", as.character(start_year_broadband_int), " - ", as.character(end_year_broadband_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       p(tags$b(paste("Figure 1. Share of households with broadband internet access (% of total households) ", "(", as.character(start_year_broadband_int), " - ", as.character(end_year_broadband_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                        withSpinner(dygraphOutput("broadband_int_graph"), type = 5),
                                                        align = "center"
                                                      ),
