@@ -728,7 +728,7 @@ shinyUI(fluidPage(
                         column(width = 4,
                                h2("Dependency ratio"),
                                plotOutput("depratio_overview_int_barplot", height = "200px"),
-                               p("Scotland's dependency ratio was ", text_scotland_thisyear_depratio_int,"% in 2018, compared to ", text_oecd_thisyear_depratio_int,"% in the OECD. Over the past 5 years, the average dependency ratio was ", text_scotland_last5_depratio_int ,"% in Scotland, compared to ", text_oecd_last5_depratio_int, "% in the OECD overall.")
+                               p("Scotland's dependency ratio was ", text_scotland_thisyear_depratio_int,"% in 2020, compared to ", text_oecd_thisyear_depratio_int,"% in the OECD. Over the past 5 years, the average dependency ratio was ", text_scotland_last5_depratio_int ,"% in Scotland, compared to ", text_oecd_last5_depratio_int, "% in the OECD overall.")
                                
                         ),
                         column(width = 4,

@@ -834,12 +834,12 @@ shinyServer(
       ggplot(depratio_overview_int2, aes(x=Country, y=Value)) +
         geom_col(fill=factor(depratio_overview_int2$fill_type), show.legend = FALSE, width=0.9) +
         coord_flip(clip="off", expand=TRUE) +
-        labs(x="", y="%") +
+        labs(x="", y="% of working-age population") +
         theme_minimal() +
         theme(
           axis.text.x=element_blank()
         ) +
-        ggtitle("Age dependency ratio (% of working-age population)") +
+        ggtitle("Age dependency ratio") +
         geom_text(aes(x=Country, y=Value, label=Value),
                   vjust=0.3, size=4, hjust=1.1, col="white")
     })
