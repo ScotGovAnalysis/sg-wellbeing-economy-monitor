@@ -1178,7 +1178,7 @@ shinyUI(fluidPage(
                                               ),      
                                               column(width=9, 
                                                      fluidRow(
-                                                       p(tags$b(paste("Figure 5. Population aged 25-64 by educational attainment level: Less than primary, primary and lower secondary education (levels 0-2) ", "(", as.character(start_year_skillsunderprimary_int), " - ", as.character(end_year_skillsunderprimary_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       p(tags$b(paste("Figure 5. Population aged 25-64 with ess than primary, primary and lower secondary education (levels 0-2) ", "(", as.character(start_year_skillsunderprimary_int), " - ", as.character(end_year_skillsunderprimary_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                        withSpinner(dygraphOutput("skillsunderprimary_int_graph"), type = 5),
                                                        align = "center"
                                                      ),

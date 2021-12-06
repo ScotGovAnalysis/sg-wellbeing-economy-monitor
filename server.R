@@ -1222,7 +1222,7 @@ shinyServer(
         theme(
           axis.text.x=element_blank()
         ) +
-        ggtitle("Attaintment level of qualifications less than primary, primary and lower secondary education") +
+        ggtitle("Attainment level of less than primary, primary and lower secondary education") +
         geom_text(aes(x=Country, y=Value, label=Value),
                   vjust=0.3, size=4, hjust=1.1, col="white")
     })
@@ -1358,7 +1358,7 @@ shinyServer(
         dyGroup(names(skillsunderprimary_int_wide)[c(1, as.numeric(input$skillsunderprimary_int_input))], strokeWidth = 2) %>%
         dyRangeSelector() %>%
         dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "Percantage") %>%
+        dyAxis("y", label = "Percentage") %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,
