@@ -523,6 +523,27 @@ shinyServer(
         dyCrosshair(direction = "vertical")
     })
     
+    # Dygraph for airpollutant_sco
+    output$exporting_sector_sco1_graph <- renderDygraph({
+      dygraph(
+        exporting_sector_sco1_wide[,c(1, as.numeric(input$exporting_sector_sco1_input))]
+      ) %>%
+        dyGroup(names(exporting_sector_sco1_wide)[c(1, as.numeric(input$exporting_sector_sco1_input))], strokeWidth = 2) %>%
+        dyRangeSelector() %>%
+        dyAxis("x", label = "Year", rangePad = 5) %>%
+        dyAxis("y", label = "Air pollutant emissions (Kt)") %>%
+        dyHighlight(
+          highlightCircleSize = 3,
+          highlightSeriesBackgroundAlpha = 0.2,
+          hideOnMouseOut = FALSE,
+          highlightSeriesOpts = list(strokeWidth = 6)
+        ) %>%
+        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
+        dyLegend(labelsDiv = "legendDivID_exporting_sector_sco1", labelsSeparateLines = TRUE) %>%
+        dyUnzoom() %>%
+        dyCrosshair(direction = "vertical")
+    })
+    
     # Dygraph for rd_sco
     output$rd_sco_graph <- renderDygraph({
       dygraph(
@@ -778,7 +799,7 @@ shinyServer(
     
     # Leaflet map for nbusiness_reg
     output$nbusiness_reg_map_caption <- renderText({
-      paste("Map 4. The Number of Businesses across Scottish council areas in ", as.character(input$nbusiness_reg_input), sep="")
+      paste("Map 4. Number of registered private sector businesses per 10,000 adult residents across Scottish council areas in ", as.character(input$nbusiness_reg_input), sep="")
     })
     nbusiness_reg_map_data <- reactive({
       nbusiness_reg_one <- nbusiness_reg[ which(nbusiness_reg$Year == input$nbusiness_reg_input), ]
