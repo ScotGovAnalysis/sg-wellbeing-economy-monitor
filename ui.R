@@ -404,13 +404,13 @@ shinyUI(fluidPage(
                                                            label = "",
                                                            choiceNames = names(exporting_sector_sco),
                                                            choiceValues = c(seq(1:length(names(exporting_sector_sco)))),
-                                                           selected = positions_selected_exporting_sector_sco
+                                                           selected = positions_selected_countries_exporting_sector_sco
                                                          )
                                                        )
                                                 ),      
                                                 column(width=9, 
                                                        fluidRow(
-                                                         p(tags$b(paste("Figure 4. Scotland's Exports by Sector ", "(", as.character(start_year_exporting_sector_sco), " - ", as.character(end_year_exporting_sector_sco), ") ", "(£ million)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         p(tags$b(paste("Figure 4. Scotland's Exports by Industry ", "(", as.character(start_year_exporting_sector_sco), " - ", as.character(end_year_exporting_sector_sco), ") ", "(£ million)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                          withSpinner(dygraphOutput("exporting_sector_sco_graph"), type = 5),
                                                          align = "center"
                                                        ),
