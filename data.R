@@ -150,6 +150,7 @@ productivity_sco <- read.csv("./www/scotland/productivity_sco.csv", check.names=
 exporting_sco <- read.csv("./www/scotland/exporting_sco.csv", check.names=FALSE)
 exporting_destination_sco <- read.csv("./www/scotland/exporting_destination_sco.csv", check.names=FALSE)
 exporting_sector_sco <- read.csv("./www/scotland/exporting_sector_sco.csv", check.names=FALSE)
+exporting_sector_sco1 <- read.csv("./www/scotland/exporting_sector_sco1.csv", check.names=FALSE)
 rd_sco <- read.csv("./www/scotland/rd_sco.csv", check.names=FALSE)
 entrepreneurialism_sco <- read.csv("./www/scotland/entrepreneurialism_sco.csv", check.names=FALSE)
 reputation_sco <- read.csv("./www/scotland/reputation_sco.csv", check.names=FALSE)
@@ -321,6 +322,17 @@ exporting_sector_sco_wide$Year <- as.integer(exporting_sector_sco_wide$Year)
 positions_selected_countries_exporting_sector_sco <- which(names(exporting_sector_sco_wide) %in% c('Total Manufacturing', 'Total Services','Total'))
 start_year_exporting_sector_sco <- min(exporting_sector_sco_long$Year)
 end_year_exporting_sector_sco <- max(exporting_sector_sco_long$Year)
+
+# exporting_sector_sco1
+exporting_sector_sco1_long <- exporting_sector_sco1
+exporting_sector_sco1_wide <- exporting_sector_sco1_long %>% 
+  spread("Sector", "Value")
+exporting_sector_sco1_wide$Year <- as.integer(exporting_sector_sco1_wide$Year)
+positions_selected_indices_exporting_sector_sco1 <- which(names(exporting_sector_sco1_wide) %in% c('Total Manufacturing', 'Total Services', 'Total'))
+start_year_exporting_sector_sco1 <- min(exporting_sector_sco1$Year)
+end_year_exporting_sector_sco1 <- max(exporting_sector_sco1$Year)
+
+
 
 # rd_sco
 rd_sco <- as.data.frame.matrix(xtabs(Value ~ Year + Performer, rd_sco))
