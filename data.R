@@ -351,7 +351,7 @@ end_year_nbusiness_sector_sco <- max(nbusiness_sector_sco$Year)
 nbusiness_region_sco <- as.data.frame.matrix(xtabs(Value ~ Year + Region, nbusiness_region_sco))
 nbusiness_region_sco <- cbind(Year = rownames(nbusiness_region_sco), nbusiness_region_sco)
 nbusiness_region_sco$Year <- as.numeric(levels(nbusiness_region_sco$Year))[nbusiness_region_sco$Year]
-positions_selected_regions_nbusiness_region_sco <- which(names(nbusiness_region_sco) %in% c('All foreign-owned'))
+positions_selected_regions_nbusiness_region_sco <- which(names(nbusiness_region_sco) %in% c('Abroad'))
 start_year_nbusiness_region_sco <- min(nbusiness_region_sco$Year)
 end_year_nbusiness_region_sco <- max(nbusiness_region_sco$Year)
 
