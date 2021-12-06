@@ -150,9 +150,8 @@ shinyUI(fluidPage(
                         column(width = 4,
                                h2("Business"),
                                p("In", text_year_entrepreneurialism_sco, ", in Scotland, ", text_value_entrepreneurialism_sco, "% of people were actively trying to start a business, or owned/managed a business which is less than 3.5 years old."),
-                               p("In", text_year_nbusiness_sector_sco, ", there were ", format(text_all_nbusiness_sector_sco, big.mark=","), " businesses in Scotland.", "Of them: "),
-                               p("◼", format(text_foreign_nbusiness_region_sco, big.mark=","), " were foreign-owned"),
-                               p("◼", text_hbusiness_percent_sco, "% represented high-growth businesses")
+                               p("In 2020, there were 179,460 registered businesses in Scotland.", "Of them, 3,010 were foreign-owned"),
+                              
                         )
                ),
                # DETAILS ####
