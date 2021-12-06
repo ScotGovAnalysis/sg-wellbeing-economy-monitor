@@ -2272,7 +2272,7 @@ shinyServer(
       broadband_reg_one <- broadband_reg_one[ ,c(1,3)]
       merged <- merge(mapex@data, broadband_reg_one, by = intersect(names(mapex@data), names(broadband_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
       mapex@data <- merged[match(mapex@data$NAME, merged$NAME),]
-      choropleth_broadband_reg <- colorBin(palette=brewer.pal(n=9, name="RdYlGn"), mapex@data$broadband, bins = 9)
+      choropleth_broadband_reg <- colorBin(palette=brewer.pal(n=9, name="YlOrRd"), mapex@data$broadband, bins = 9)
       list_return <- list(mapex = mapex, choropleth_broadband_reg = choropleth_broadband_reg)
       return(list_return)
     })
