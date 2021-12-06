@@ -143,7 +143,7 @@ shinyUI(fluidPage(
                         column(width = 4,
                                h2("R&D"),
                                plotOutput("rd_overview_int_barplot", height = "200px"),
-                               p("Scotland's expenditure on R&D as % of GDP was ", text_scotland_thisyear_rd_int,"% in 2017, compared to ", text_oecd_thisyear_rd_int,"% in the OECD. Over the past 5 years, the average expenditure on R&D as % of GDP was ", text_scotland_last5_rd_int ,"% in Scotland, compared to ", text_oecd_last5_rd_int, "% in the OECD overall.")
+                               p("Scotland's expenditure on R&D as % of GDP was ", text_scotland_thisyear_rd_int,"% in 2019, compared to ", text_oecd_thisyear_rd_int,"% in the OECD. Over the past 5 years, the average expenditure on R&D as % of GDP was ", text_scotland_last5_rd_int ,"% in Scotland, compared to ", text_oecd_last5_rd_int, "% in the OECD overall.")
                                # Pie chart
                                # plotOutput("rd_overview_sco_pieplot", height = "170px")
                         ),
