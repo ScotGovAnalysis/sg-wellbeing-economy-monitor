@@ -480,14 +480,36 @@ shinyServer(
         dyCrosshair(direction = "vertical")
     })
     # Dygraph for exporting_sector_sco
+  #  output$exporting_sector_sco_graph <- renderDygraph({
+   #   dygraph(
+    #    exporting_sector_sco[,c(1, as.numeric(input$exporting_sector_sco_input))]
+     # ) %>%
+      #  dyGroup(names(exporting_sector_sco)[c(1, as.numeric(input$exporting_sector_sco_input))], strokeWidth = 2) %>%
+       # dyRangeSelector() %>%
+        #dyAxis("x", label = "Year", rangePad = 5) %>%
+      #  dyAxis("y", label = "£ million") %>%
+      #  dyHighlight(
+      #    highlightCircleSize = 3,
+      #    highlightSeriesBackgroundAlpha = 0.2,
+      #    hideOnMouseOut = FALSE,
+      #    highlightSeriesOpts = list(strokeWidth = 6)
+      #  ) %>%
+      #  dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
+      #  dyLegend(labelsDiv = "legendDivID_exporting_sector_sco", labelsSeparateLines = TRUE) %>%
+      #  dyUnzoom() %>%
+      #  dyCrosshair(direction = "vertical")
+#    })
+    
+    #Dygraph for exporting_sector_sco
     output$exporting_sector_sco_graph <- renderDygraph({
       dygraph(
-        exporting_sector_sco[,c(1, as.numeric(input$exporting_sector_sco_input))]
+        exporting_sector_sco_wide[,c(1, 2)]
+       # exporting_sector_sco_wide[,c(1, as.numeric(input$exporting_sector_sco_input))]
       ) %>%
-        dyGroup(names(exporting_sector_sco)[c(1, as.numeric(input$exporting_sector_sco_input))], strokeWidth = 2) %>%
+        dyGroup(names(exporting_sector_sco_wide)[c(1, as.numeric(input$exporting_sector_sco_input))], strokeWidth = 2) %>%
         dyRangeSelector() %>%
         dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "£ million") %>%
+        dyAxis("y", label = "% of working-age population") %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,
@@ -499,6 +521,7 @@ shinyServer(
         dyUnzoom() %>%
         dyCrosshair(direction = "vertical")
     })
+    
     # Dygraph for rd_sco
     output$rd_sco_graph <- renderDygraph({
       dygraph(
