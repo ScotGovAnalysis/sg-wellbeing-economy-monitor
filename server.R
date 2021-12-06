@@ -207,7 +207,8 @@ shinyServer(
         theme(
           axis.text.x=element_blank()
         ) +
-        ggtitle("Exports as % of GDP") +
+  
+        ggtitle(str_wrap("Exports (% of GDP)", width = 8)) +
         geom_text(aes(x=Country, y=Value, label=Value),
                   vjust=0.3, size=4, hjust=1.1, col="white")
     })
@@ -2193,7 +2194,7 @@ shinyServer(
       bgreen_reg_one <- bgreen_reg[ which(bgreen_reg$Year == input$bgreen_reg_input), ]
       bgreen_reg_one <- bgreen_reg_one[ ,c(1,3)]
       merged <- merge(mapex@data, bgreen_reg_one, by = intersect(names(mapex@data), names(bgreen_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
-      mapex@data <- merged[match(mapex@data$Name, merged$Name),]
+      mapex@data <- merged[match(mapex@data$NAME, merged$Name),]
       choropleth_bgreen_reg <- colorBin(palette=brewer.pal(n=9, name="RdYlGn"), mapex@data$blueorgreen, bins = 9)
       list_return <- list(mapex = mapex, choropleth_bgreen_reg = choropleth_bgreen_reg)
       return(list_return)
@@ -2243,10 +2244,10 @@ shinyServer(
     })
     airqual_reg_map_data <- reactive({
       airqual_reg_one <- airqual_reg[ which(as.Date(airqual_reg$Date) == input$airqual_reg_input), ]
-      airqual_reg_one <- airqual_reg_one[ ,c(1,3)]
+      airqual_reg_one <- airqual_reg_one[ ,c(2,3)]
       merged <- merge(mapex@data, airqual_reg_one, by = intersect(names(mapex@data), names(airqual_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
-      mapex@data <- merged[match(mapex@data$`LA Name`, merged$`LA Name`),]
-      choropleth_airqual_reg <- colorBin(palette=brewer.pal(n=3, name="YlOrRd"), mapex@data$DAQI, bins = 3)
+      mapex@data <- merged[match(mapex@data$NAME, merged$`LA Name`),]
+      choropleth_airqual_reg <- colorBin(palette=brewer.pal(n=3, name="RdYlGn"), mapex@data$DAQI, bins = 3)
       list_return <- list(mapex = mapex, choropleth_airqual_reg = choropleth_airqual_reg)
       return(list_return)
     })
