@@ -1781,7 +1781,7 @@ shinyUI(fluidPage(
                         column(width = 4,
                                h2("Broadband"),
                                plotOutput("broadband_overview_int_barplot", height = "200px"),
-                               p("Scotland's broadband access was ", text_scotland_thisyear_broadband_int," (% of households) in 2019, compared to ", text_eu_thisyear_broadband_int," (% of total households) in the 28 EU countries.")
+                               p("Scotland's broadband access was ", text_scotland_thisyear_broadband_int," (% of households) in 2019, compared to ", text_eu_thisyear_broadband_int," (% of households) in the 28 EU countries.")
                         ),
                         column(width = 4,
                         ),
