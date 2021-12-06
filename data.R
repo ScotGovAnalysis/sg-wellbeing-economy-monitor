@@ -305,12 +305,22 @@ start_year_exporting_destination_sco <- min(exporting_destination_sco$Year)
 end_year_exporting_destination_sco <- max(exporting_destination_sco$Year)
 
 # exporting_sector_sco
-exporting_sector_sco <- as.data.frame.matrix(xtabs(Value ~ Year + Sector, exporting_sector_sco))
-exporting_sector_sco <- cbind(Year = rownames(exporting_sector_sco), exporting_sector_sco)
-exporting_sector_sco$Year <- as.numeric(levels(exporting_sector_sco$Year))[exporting_sector_sco$Year]
-positions_selected_exporting_sector_sco <- which(names(exporting_sector_sco) %in% c('Total Manufacturing', 'Total Services', 'Agriculture, Forestry and Fishing'))
-start_year_exporting_sector_sco <- min(exporting_sector_sco$Year)
-end_year_exporting_sector_sco <- max(exporting_sector_sco$Year)
+#exporting_sector_sco <- as.data.frame.matrix(xtabs(Value ~ Year + Sector, exporting_sector_sco))
+#exporting_sector_sco <- cbind(Year = rownames(exporting_sector_sco), exporting_sector_sco)
+#exporting_sector_sco$Year <- as.numeric(levels(exporting_sector_sco$Year))[exporting_sector_sco$Year]
+#positions_selected_exporting_sector_sco <- which(names(exporting_sector_sco) %in% c('Total Manufacturing', 'Total Services', 'Agriculture, Forestry and Fishing'))
+#start_year_exporting_sector_sco <- min(exporting_sector_sco$Year)
+#end_year_exporting_sector_sco <- max(exporting_sector_sco$Year)
+
+exporting_sector_sco_long <- exporting_sector_sco %>% 
+  gather("Year", "Value", 2:ncol(exporting_sector_sco))
+exporting_sector_sco_long$Value <- as.numeric(exporting_sector_sco_long$Value) 
+exporting_sector_sco_wide <- exporting_sector_sco_long %>% 
+  spread("Sector", "Value")
+exporting_sector_sco_wide$Year <- as.integer(exporting_sector_sco_wide$Year)
+positions_selected_countries_exporting_sector_sco <- which(names(exporting_sector_sco_wide) %in% c('Total Manufacturing', 'Total Services','Total'))
+start_year_exporting_sector_sco <- min(exporting_sector_sco_long$Year)
+end_year_exporting_sector_sco <- max(exporting_sector_sco_long$Year)
 
 # rd_sco
 rd_sco <- as.data.frame.matrix(xtabs(Value ~ Year + Performer, rd_sco))
