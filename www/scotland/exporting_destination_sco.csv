@@ -1,73 +1,73 @@
-"Destination","Year","Value"
-"Rest of UK (RUK)",2002,28840
-"International: Total",2002,20575
-"International: EU",2002,11515
-"International: Non-EU",2002,9060
-"Rest of UK (RUK)",2003,31010
-"International: Total",2003,19650
-"International: EU",2003,10710
-"International: Non-EU",2003,8935
-"Rest of UK (RUK)",2004,36655
-"International: Total",2004,19130
-"International: EU",2004,9815
-"International: Non-EU",2004,9315
-"Rest of UK (RUK)",2005,34230
-"International: Total",2005,18695
-"International: EU",2005,9080
-"International: Non-EU",2005,9610
-"Rest of UK (RUK)",2006,36515
-"International: Total",2006,19610
-"International: EU",2006,9610
-"International: Non-EU",2006,9995
-"Rest of UK (RUK)",2007,41830
-"International: Total",2007,20715
-"International: EU",2007,9910
-"International: Non-EU",2007,10805
-"Rest of UK (RUK)",2008,42540
-"International: Total",2008,22605
-"International: EU",2008,11145
-"International: Non-EU",2008,11460
-"Rest of UK (RUK)",2009,42990
-"International: Total",2009,23020
-"International: EU",2009,10960
-"International: Non-EU",2009,12060
-"Rest of UK (RUK)",2010,45145
-"International: Total",2010,24515
-"International: EU",2010,10960
-"International: Non-EU",2010,13545
-"Rest of UK (RUK)",2011,45335
-"International: Total",2011,27755
-"International: EU",2011,13365
-"International: Non-EU",2011,14385
-"Rest of UK (RUK)",2012,46010
-"International: Total",2012,28445
-"International: EU",2012,12770
-"International: Non-EU",2012,15665
-"Rest of UK (RUK)",2013,47520
-"International: Total",2013,30080
-"International: EU",2013,13360
-"International: Non-EU",2013,16725
-"Rest of UK (RUK)",2014,47590
-"International: Total",2014,29325
-"International: EU",2014,12395
-"International: Non-EU",2014,16925
-"Rest of UK (RUK)",2015,50340
-"International: Total",2015,30390
-"International: EU",2015,13275
-"International: Non-EU",2015,17115
-"Rest of UK (RUK)",2016,46755
-"International: Total",2016,31170
-"International: EU",2016,13525
-"International: Non-EU",2016,17515
-"Rest of UK (RUK)",2017,50495
-"International: Total",2017,32935
-"International: EU",2017,15525
-"International: Non-EU",2017,17410
-"Rest of UK (RUK)",2018,49575
-"International: Total",2018,33905
-"International: EU",2018,15975
-"International: Non-EU",2018,17925
-"Rest of UK (RUK)",2019,52040
-"International: Total",2019,35055
-"International: EU",2019,16395
-"International: Non-EU",2019,18660
+"Year","Destination","Value"
+2002,"Rest of UK (RUK)",28840
+2002,"International: Total",20575
+2002,"International: EU",11515
+2002,"International: Non-EU",9060
+2003,"Rest of UK (RUK)",31010
+2003,"International: Total",19650
+2003,"International: EU",10710
+2003,"International: Non-EU",8935
+2004,"Rest of UK (RUK)",36655
+2004,"International: Total",19130
+2004,"International: EU",9815
+2004,"International: Non-EU",9315
+2005,"Rest of UK (RUK)",34230
+2005,"International: Total",18695
+2005,"International: EU",9080
+2005,"International: Non-EU",9610
+2006,"Rest of UK (RUK)",36515
+2006,"International: Total",19610
+2006,"International: EU",9610
+2006,"International: Non-EU",9995
+2007,"Rest of UK (RUK)",41830
+2007,"International: Total",20715
+2007,"International: EU",9910
+2007,"International: Non-EU",10805
+2008,"Rest of UK (RUK)",42540
+2008,"International: Total",22605
+2008,"International: EU",11145
+2008,"International: Non-EU",11460
+2009,"Rest of UK (RUK)",42990
+2009,"International: Total",23020
+2009,"International: EU",10960
+2009,"International: Non-EU",12060
+2010,"Rest of UK (RUK)",45145
+2010,"International: Total",24515
+2010,"International: EU",10960
+2010,"International: Non-EU",13545
+2011,"Rest of UK (RUK)",45335
+2011,"International: Total",27755
+2011,"International: EU",13365
+2011,"International: Non-EU",14385
+2012,"Rest of UK (RUK)",46010
+2012,"International: Total",28445
+2012,"International: EU",12770
+2012,"International: Non-EU",15665
+2013,"Rest of UK (RUK)",47520
+2013,"International: Total",30080
+2013,"International: EU",13360
+2013,"International: Non-EU",16725
+2014,"Rest of UK (RUK)",47590
+2014,"International: Total",29325
+2014,"International: EU",12395
+2014,"International: Non-EU",16925
+2015,"Rest of UK (RUK)",50340
+2015,"International: Total",30390
+2015,"International: EU",13275
+2015,"International: Non-EU",17115
+2016,"Rest of UK (RUK)",46755
+2016,"International: Total",31170
+2016,"International: EU",13525
+2016,"International: Non-EU",17515
+2017,"Rest of UK (RUK)",50495
+2017,"International: Total",32935
+2017,"International: EU",15525
+2017,"International: Non-EU",17410
+2018,"Rest of UK (RUK)",49575
+2018,"International: Total",33905
+2018,"International: EU",15975
+2018,"International: Non-EU",17925
+2019,"Rest of UK (RUK)",52040
+2019,"International: Total",35055
+2019,"International: EU",16395
+2019,"International: Non-EU",18660
