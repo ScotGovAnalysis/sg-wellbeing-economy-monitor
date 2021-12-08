@@ -549,12 +549,12 @@ shinyServer(
     # Dygraph for rd_sco
     output$rd_sco_graph <- renderDygraph({
       dygraph(
-        rd_sco[,c(1, as.numeric(input$rd_sco_input))]
+        rd_sco_wide[,c(1, as.numeric(input$rd_sco_input))]
       ) %>%
-        dyGroup(names(rd_sco)[c(1, as.numeric(input$rd_sco_input))], strokeWidth = 2) %>%
+        dyGroup(names(rd_sco_wide)[c(1, as.numeric(input$rd_sco_input))], strokeWidth = 2) %>%
         dyRangeSelector() %>%
         dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "GDP Growth Rate") %>%
+        dyAxis("y", label = "% of GDP") %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,
@@ -566,6 +566,7 @@ shinyServer(
         dyUnzoom() %>%
         dyCrosshair(direction = "vertical")
     })
+    
     # Dygraph for entrepreneurialism_sco
     output$entrepreneurialism_sco_graph <- renderDygraph({
       dygraph(

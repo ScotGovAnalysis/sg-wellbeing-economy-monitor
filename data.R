@@ -338,10 +338,11 @@ end_year_exporting_sector_sco1 <- max(exporting_sector_sco1$Year)
 
 
 # rd_sco
-rd_sco <- as.data.frame.matrix(xtabs(Value ~ Year + Performer, rd_sco))
-rd_sco <- cbind(Year = rownames(rd_sco), rd_sco)
-rd_sco$Year <- as.numeric(levels(rd_sco$Year))[rd_sco$Year]
-positions_selected_performers_rd_sco <- which(names(rd_sco) %in% c('Business Enterprise', 'Government incl. Research Councils', 'Gross Expenditure on Research and Development', 'Higher Education', 'Private Non-Profit'))
+rd_sco_long <- rd_sco
+rd_sco_wide <- rd_sco_long %>% 
+  spread("Performer", "Value")
+rd_sco_wide$Year <- as.integer(rd_sco_wide$Year)
+positions_selected_indices_rd_sco <- which(names(rd_sco_wide) %in% c('Business Enterprise (BERD)', 'Government incl. Research Councils (GovERD)','Gross Expenditure on Research and Development (GERD)','Higher Education (HERD)'))
 start_year_rd_sco <- min(rd_sco$Year)
 end_year_rd_sco <- max(rd_sco$Year)
 

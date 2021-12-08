@@ -433,9 +433,9 @@ shinyUI(fluidPage(
                                                          checkboxGroupInput(
                                                            inputId = "rd_sco_input",
                                                            label = "",
-                                                           choiceNames = names(rd_sco),
-                                                           choiceValues = c(seq(1:length(names(rd_sco)))),
-                                                           selected = positions_selected_performers_rd_sco
+                                                           choiceNames = names(rd_sco_wide),
+                                                           choiceValues = c(seq(1:length(names(rd_sco_wide)))),
+                                                           selected = positions_selected_indices_rd_sco
                                                          )
                                                        )
                                                 ),      
@@ -448,7 +448,7 @@ shinyUI(fluidPage(
                                                        fluidRow(
                                                          textOutput("legendDivID_rd_sco"),
                                                          p("Source: "), 
-                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         a("Open Data Platform", href = "https://statistics.gov.scot/data/gross-expenditure-on-research-and-development"),
                                                          collapsible = FALSE,
                                                          width = 12,
                                                          style="margin-bottom: 100px;"
