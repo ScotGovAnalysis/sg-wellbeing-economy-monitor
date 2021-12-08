@@ -2436,6 +2436,27 @@ shinyServer(
         dyCrosshair(direction = "vertical")
     })
     
+    
+    # Dygraph for naturalcapaccs_sco
+    output$naturalcapaccs_sco_graph <- renderDygraph({
+      dygraph(
+        naturalcapaccs_sco
+      ) %>%
+        dyRangeSelector() %>%
+        dyAxis("x", label = "Year", rangePad = 5) %>%
+        dyAxis("y", label = "£m (2019 prices)") %>%
+        dyHighlight(
+          highlightCircleSize = 3,
+          highlightSeriesBackgroundAlpha = 0.2,
+          hideOnMouseOut = FALSE,
+          highlightSeriesOpts = list(strokeWidth = 6)
+        ) %>%
+        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 0) %>%
+        dyLegend(labelsDiv = "legendDivID_naturalcapaccs_sco", labelsSeparateLines = TRUE) %>%
+        dyUnzoom() %>%
+        dyCrosshair(direction = "vertical")
+    })
+    
     # Dygraph for gasemissions_sco
     output$gasemissions_sco_graph <- renderDygraph({
       dygraph(
@@ -2443,7 +2464,7 @@ shinyServer(
       ) %>%
         dyRangeSelector() %>%
         dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "Kt Co2Equiv") %>%
+        dyAxis("y", label = "Mt Co2Equiv") %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,

@@ -192,6 +192,7 @@ greenandbluespace_sco <- read.csv("./www/scotland/greenandbluespace_sco.csv", ch
 cfootprint_sco <- read.csv("./www/scotland/cfootprint_sco.csv", check.names=FALSE)
 mfootprint_sco <- read.csv("./www/scotland/mfootprint_sco.csv", check.names=FALSE)
 naturalf_sco <- read.csv("./www/scotland/naturalf_sco.csv", check.names=FALSE)
+naturalcapaccs_sco <- read.csv("./www/scotland/naturalcapaccs_sco.csv", check.names=FALSE)
 gasemissions_sco <- read.csv("./www/scotland/gasemissions_sco.csv", check.names=FALSE)
 mandtspecies_sco <- read.csv("./www/scotland/mandtspecies_sco.csv", check.names = FALSE)
 airpollutant_sco <- read.csv("./www/scotland/airpollutant_sco.csv", check.names=FALSE)
@@ -1257,6 +1258,11 @@ end_year_mfootprint_sco <- max(mfootprint_sco$Year)
 # naturalf_sco
 start_year_naturalf_sco <- min(naturalf_sco$Year)
 end_year_naturalf_sco <- max(naturalf_sco$Year)
+
+# naturalcapaccs_sco
+start_year_naturalcapaccs_sco <- min(naturalcapaccs_sco$Year)
+end_year_naturalcapaccs_sco <- max(naturalcapaccs_sco$Year)
+
 
 # airpollutant_sco
 airpollutant_sco_long <- airpollutant_sco

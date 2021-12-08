@@ -2107,7 +2107,25 @@ shinyUI(fluidPage(
                                               )
                                      )
                             ),
-                            
+                            tabPanel("Natural Capital Accounts",
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 5. Scottish Natural Capital Accounts 2021: Annual Flows Monetary Value: ", "(", as.character(start_year_naturalcapaccs_sco), " - ", as.character(end_year_naturalcapaccs_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("naturalcapaccs_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_naturalcapaccs_sco"),
+                                                       p("Source: "), 
+                                                       a("Scottish Natural Capital Accounts 2021", href = "https://www.gov.scot/publications/scottish-natural-capital-accounts-2021"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
                             
                             
                             
