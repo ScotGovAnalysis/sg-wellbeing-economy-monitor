@@ -461,14 +461,14 @@ shinyServer(
         dyCrosshair(direction = "vertical")
     })
     # Dygraph for exporting_destination_sco
-    output$exporting_destination_sco_graph <- renderDygraph({
+   output$exporting_destination_sco_graph <- renderDygraph({
       dygraph(
-        exporting_destination_sco[,c(1, as.numeric(input$exporting_destination_sco_input))]
+        exporting_destination_sco_wide[,c(1, as.numeric(input$exporting_destination_sco_input))]
       ) %>%
-        dyGroup(names(exporting_destination_sco)[c(1, as.numeric(input$exporting_destination_sco_input))], strokeWidth = 2) %>%
+        dyGroup(names(exporting_destination_sco_wide)[c(1, as.numeric(input$exporting_destination_sco_input))], strokeWidth = 2) %>%
         dyRangeSelector() %>%
         dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "£ million") %>%
+        dyAxis("y", label = "£m") %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,
@@ -480,6 +480,8 @@ shinyServer(
         dyUnzoom() %>%
         dyCrosshair(direction = "vertical")
     })
+    
+     
     # Dygraph for exporting_sector_sco
   #  output$exporting_sector_sco_graph <- renderDygraph({
    #   dygraph(
@@ -523,7 +525,7 @@ shinyServer(
         dyCrosshair(direction = "vertical")
     })
     
-    # Dygraph for airpollutant_sco
+    # Dygraph for exporting_sector_sco1
     output$exporting_sector_sco1_graph <- renderDygraph({
       dygraph(
         exporting_sector_sco1_wide[,c(1, as.numeric(input$exporting_sector_sco1_input))]
@@ -531,7 +533,7 @@ shinyServer(
         dyGroup(names(exporting_sector_sco1_wide)[c(1, as.numeric(input$exporting_sector_sco1_input))], strokeWidth = 2) %>%
         dyRangeSelector() %>%
         dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "Air pollutant emissions (Kt)") %>%
+        dyAxis("y", label = "£m") %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,
@@ -2259,31 +2261,6 @@ shinyServer(
         addLegend("bottomright", pal = choropleth_pubservsat_reg, values = mapex$pubservsat, title = paste("% satisfied", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
     })
     
-    # Leaflet map for airqual_reg
-    output$airqual_reg_map_caption <- renderText({
-      paste("Map 2. Daily Air Quality Index ", as.character(input$airqual_reg_input), sep="")
-    })
-    airqual_reg_map_data <- reactive({
-      airqual_reg_one <- airqual_reg[ which(as.Date(airqual_reg$Date) == input$airqual_reg_input), ]
-      airqual_reg_one <- airqual_reg_one[ ,c(2,3)]
-      merged <- merge(mapex@data, airqual_reg_one, by = intersect(names(mapex@data), names(airqual_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
-      mapex@data <- merged[match(mapex@data$NAME, merged$`LA Name`),]
-      choropleth_airqual_reg <- colorBin(palette=brewer.pal(n=3, name="RdYlGn"), mapex@data$DAQI, bins = 3)
-      list_return <- list(mapex = mapex, choropleth_airqual_reg = choropleth_airqual_reg)
-      return(list_return)
-    })
-    output$airqual_reg_map <- renderLeaflet({
-      mapex <- airqual_reg_map_data()$mapex
-      choropleth_airqual_reg <- airqual_reg_map_data()$choropleth_airqual_reg
-      leaflet(mapex) %>%
-        setView(zoom = 6, lat = 57, lng= -4) %>%
-        addProviderTiles("Esri.WorldGrayCanvas") %>%
-        addPolygons(stroke=FALSE, layerId = ~mapex$`LA Name`, fillColor = ~choropleth_airqual_reg(mapex$DAQI), fillOpacity=1, popup = ~paste(as.character(mapex$`LA Name`), " ", as.character(mapex$DAQI), " ", sep = ""),
-                    highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
-        ) %>%
-        addLegend("bottomright", pal = choropleth_airqual_reg, values = mapex$DAQI, title = paste("Daily Air Quality Index", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
-    })
-    
     
     # Leaflet map for broadband_reg
     output$broadband_reg_map_caption <- renderText({
@@ -2519,6 +2496,34 @@ shinyServer(
         dyUnzoom() %>%
         dyCrosshair(direction = "vertical")
     })
+    
+    
+    # Leaflet map for airqual_reg
+    output$airqual_reg_map_caption <- renderText({
+      paste("Map 2. Daily Air Quality Index ", as.character(input$airqual_reg_input), sep="")
+    })
+    airqual_reg_map_data <- reactive({
+      airqual_reg_one <- airqual_reg[ which(as.Date(airqual_reg$Date) == input$airqual_reg_input), ]
+      airqual_reg_one <- airqual_reg_one[ ,c(2,3)]
+      myPal<-rev(brewer.pal(n=3, "RdYlGn"))
+      merged <- merge(mapex@data, airqual_reg_one, by = intersect(names(mapex@data), names(airqual_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
+      mapex@data <- merged[match(mapex@data$NAME, merged$`LA Name`),]
+      choropleth_airqual_reg <- colorBin(palette=myPal, mapex@data$DAQI, bins = 3)
+      list_return <- list(mapex = mapex, choropleth_airqual_reg = choropleth_airqual_reg)
+      return(list_return)
+    })
+    output$airqual_reg_map <- renderLeaflet({
+      mapex <- airqual_reg_map_data()$mapex
+      choropleth_airqual_reg <- airqual_reg_map_data()$choropleth_airqual_reg
+      leaflet(mapex) %>%
+        setView(zoom = 6, lat = 57, lng= -4) %>%
+        addProviderTiles("Esri.WorldGrayCanvas") %>%
+        addPolygons(stroke=FALSE, layerId = ~mapex$`LA Name`, fillColor = ~choropleth_airqual_reg(mapex$DAQI), fillOpacity=1, popup = ~paste(as.character(mapex$`LA Name`), " ", as.character(mapex$DAQI), " ", sep = ""),
+                    highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
+        ) %>%
+        addLegend("bottomright", pal = choropleth_airqual_reg, values = mapex$DAQI, title = paste("Daily Air Quality Index", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
+    })
+    
     
     # EQUALITIES DASHBOARD ###########################################################################################################################
     # gpaygap_eq_overview_int_lineplot

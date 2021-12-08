@@ -217,9 +217,10 @@ wplearning_reg <- read.csv("./www/regional/wplearning_reg.csv", check.names=FALS
 worklessness_reg <- read.csv("./www/regional/worklessness_reg.csv", check.names=FALSE)
 
 bgreen_reg <- read.csv("./www/regional/bgreen_reg.csv", check.names=FALSE)
-airqual_reg <- read.csv("./www/regional/airqual_reg.csv", check.names=FALSE)
 pubservsat_reg <- read.csv("./www/regional/pubservsat_reg.csv", check.names=FALSE)
 broadband_reg <- read.csv("./www/regional/broadband_reg.csv", check.names=FALSE)
+
+airqual_reg <- read.csv("./www/regional/airqual_reg.csv", check.names=FALSE)
 
 # LOADING DATA - EQUALITIES DASHBOARD ####
 gpaygap_eq <- read.csv("./www/equalities/gpaygap_eq.csv", check.names=FALSE)
@@ -299,10 +300,11 @@ start_year_productivity_sco <- min(productivity_sco$Year)
 end_year_productivity_sco <- max(productivity_sco$Year)
 
 # exporting_destination_sco
-exporting_destination_sco <- as.data.frame.matrix(xtabs(Value ~ Year + Destination, exporting_destination_sco))
-exporting_destination_sco <- cbind(Year = rownames(exporting_destination_sco), exporting_destination_sco)
-exporting_destination_sco$Year <- as.numeric(levels(exporting_destination_sco$Year))[exporting_destination_sco$Year] # New way to convert year factor into numeric year
-positions_selected_exporting_destination_sco <- which(names(exporting_destination_sco) %in% c('EU', 'International', 'Non-EU', 'Rest of UK'))
+exporting_destination_sco_long <- exporting_destination_sco
+exporting_destination_sco_wide <- exporting_destination_sco_long %>% 
+  spread("Destination", "Value")
+exporting_destination_sco_wide$Year <- as.integer(exporting_destination_sco_wide$Year)
+positions_selected_indices_exporting_destination_sco <- which(names(exporting_destination_sco_wide) %in% c('Rest of UK (RUK)', 'International: Total'))
 start_year_exporting_destination_sco <- min(exporting_destination_sco$Year)
 end_year_exporting_destination_sco <- max(exporting_destination_sco$Year)
 
@@ -1170,10 +1172,6 @@ start_year_bgreen_reg <- min(bgreen_reg$Year)
 end_year_bgreen_reg <- max(bgreen_reg$Year)
 
 
-# airqual_reg
-start_year_airqual_reg <- min(airqual_reg$Date)
-end_year_airqual_reg <- max(airqual_reg$Date)
-
 
 # pubservsat_reg 
 start_year_pubservsat_reg  <- min(pubservsat_reg $Year)
@@ -1182,6 +1180,12 @@ end_year_pubservsat_reg  <- max(pubservsat_reg $Year)
 # broadband_reg
 start_year_broadband_reg <- min(broadband_reg$Year)
 end_year_broadband_reg <- max(broadband_reg$Year)
+
+
+# airqual_reg
+start_year_airqual_reg <- min(airqual_reg$Date)
+end_year_airqual_reg <- max(airqual_reg$Date)
+
 
 # greenandbluespace_sco
 start_year_greenandbluespace_sco <- min(greenandbluespace_sco$Year)

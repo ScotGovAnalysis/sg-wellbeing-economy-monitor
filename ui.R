@@ -373,9 +373,9 @@ shinyUI(fluidPage(
                                                          checkboxGroupInput(
                                                            inputId = "exporting_destination_sco_input",
                                                            label = "",
-                                                           choiceNames = names(exporting_destination_sco),
-                                                           choiceValues = c(seq(1:length(names(exporting_destination_sco)))),
-                                                           selected = positions_selected_exporting_destination_sco
+                                                           choiceNames = names(exporting_destination_sco_wide),
+                                                           choiceValues = c(seq(1:length(names(exporting_destination_sco_wide)))),
+                                                           selected = positions_selected_indices_exporting_destination_sco
                                                          )
                                                        )
                                                 ),      
@@ -1896,17 +1896,7 @@ shinyUI(fluidPage(
                                                 )
                                        ),
                                        
-                                                              tabPanel("Air quality", 
-                                               fluidRow(width = 12,
-                                                         column(width=12,
-                                                               tags$b(textOutput("airqual_reg_map_caption")),
-                                                                sliderInput("airqual_reg_input", label = "", min = as.Date(start_year_airqual_reg) , max = as.Date(end_year_airqual_reg), value = as.Date(end_year_airqual_reg), width = "50%", sep = "", step = 1),
-                                                                withSpinner(leafletOutput("airqual_reg_map"), type = 5),
-                                                                p("Source: "), 
-                                                                a("Air Quality in Scotland", href = "https://www.scottishairquality.scot")
-                                                         )
-                                                )
-                                       ),
+                                                             
                                        tabPanel("Quality of public services",
                                                 fluidRow(width = 12,
                                                          column(width=12,
@@ -2166,6 +2156,18 @@ shinyUI(fluidPage(
                  # REGIONAL ####
                  tabPanel("Regional",
                           navlistPanel(widths=c(3,9),
+                                       tabPanel("Air quality", 
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("airqual_reg_map_caption")),
+                                                                sliderInput("airqual_reg_input", label = "", min = as.Date(start_year_airqual_reg) , max = as.Date(end_year_airqual_reg), value = as.Date(end_year_airqual_reg), width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("airqual_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("Air Quality in Scotland", href = "https://www.scottishairquality.scot")
+                                                         )
+                                                )
+                                       ),
+                                       
                                        tabPanel("Habitat connectivity - data not yet available")
                                        )
                )
