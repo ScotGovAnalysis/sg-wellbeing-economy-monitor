@@ -630,9 +630,9 @@ shinyServer(
     # Dygraph for nbusiness_region_sco
     output$nbusiness_region_sco_graph <- renderDygraph({
       dygraph(
-        nbusiness_region_sco[,c(1, as.numeric(input$nbusiness_region_sco_input))]
+        nbusiness_region_sco_wide[,c(1, as.numeric(input$nbusiness_region_sco_input))]
       ) %>%
-        dyGroup(names(nbusiness_region_sco)[c(1, as.numeric(input$nbusiness_region_sco_input))], strokeWidth = 2) %>%
+        dyGroup(names(nbusiness_region_sco_wide)[c(1, as.numeric(input$nbusiness_region_sco_input))], strokeWidth = 2) %>%
         dyRangeSelector() %>%
         dyAxis("x", label = "Year", rangePad = 5) %>%
         dyAxis("y", label = "Number of businesses") %>%
@@ -643,10 +643,12 @@ shinyServer(
           highlightSeriesOpts = list(strokeWidth = 6)
         ) %>%
         dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
-        dyLegend(labelsDiv = "legendDivID_nbusiness_region_sco", labelsSeparateLines = TRUE) %>%
+        dyLegend(labelsDiv = "legendDivID_rd_sco", labelsSeparateLines = TRUE) %>%
         dyUnzoom() %>%
         dyCrosshair(direction = "vertical")
     })
+    
+    
     # Dygraph for nbusiness_employees_sco
     output$nbusiness_employees_sco_graph <- renderDygraph({
       dygraph(

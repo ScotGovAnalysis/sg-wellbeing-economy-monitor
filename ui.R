@@ -537,9 +537,9 @@ shinyUI(fluidPage(
                                                          checkboxGroupInput(
                                                            inputId = "nbusiness_region_sco_input",
                                                            label = "",
-                                                           choiceNames = names(nbusiness_region_sco),
-                                                           choiceValues = c(seq(1:length(names(nbusiness_region_sco)))),
-                                                           selected = positions_selected_regions_nbusiness_region_sco
+                                                           choiceNames = names(nbusiness_region_sco_wide),
+                                                           choiceValues = c(seq(1:length(names(nbusiness_region_sco_wide)))),
+                                                           selected = positions_selected_region_nbusiness_region_sco
                                                          )
                                                        )
                                                 ),      
