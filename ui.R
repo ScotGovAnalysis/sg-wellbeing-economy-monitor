@@ -509,9 +509,9 @@ shinyUI(fluidPage(
                                                          checkboxGroupInput(
                                                            inputId = "nbusiness_sector_sco_input",
                                                            label = "",
-                                                           choiceNames = names(nbusiness_sector_sco),
-                                                           choiceValues = c(seq(1:length(names(nbusiness_sector_sco)))),
-                                                           selected = positions_selected_sectors_nbusiness_sector_sco
+                                                           choiceNames = names(nbusiness_sector_sco_wide),
+                                                           choiceValues = c(seq(1:length(names(nbusiness_sector_sco_wide)))),
+                                                           selected = positions_selected_sector_nbusiness_sector_sco
                                                          )
                                                        )
                                                 ),      
@@ -559,34 +559,34 @@ shinyUI(fluidPage(
                                                        )
                                                 )
                                        ),
-                                       fluidRow(width = 12,
-                                                column(width=3, 
-                                                       wellPanel(
-                                                         checkboxGroupInput(
-                                                           inputId = "nbusiness_employees_sco_input",
-                                                           label = "",
-                                                           choiceNames = names(nbusiness_employees_sco),
-                                                           choiceValues = c(seq(1:length(names(nbusiness_employees_sco)))),
-                                                           selected = positions_selected_employees_nbusiness_employees_sco
-                                                         )
-                                                       )
-                                                ),      
-                                                column(width=9, 
-                                                       fluidRow(
-                                                         p(tags$b(paste("Figure 10. Total number of private sector enterprises (registered for VAT and/or PAYE) in Scotland per 10,000 adults by Number of Employees ", "(", as.character(start_year_nbusiness_employees_sco), " - ", as.character(end_year_nbusiness_employees_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
-                                                         withSpinner(dygraphOutput("nbusiness_employees_sco_graph"), type = 5),
-                                                         align = "center"
-                                                       ),
-                                                       fluidRow(
-                                                         textOutput("legendDivID_nbusiness_employees_sco"),
-                                                         p("Source: "), 
-                                                         a("Businesses in Scotland:2020", href = "https://www.gov.scot/publications/businesses-in-scotland-2020/"),
-                                                         collapsible = FALSE,
-                                                         width = 12,
-                                                         style="margin-bottom: 100px;"
-                                                       )
-                                                )
-                                       )
+                                      # fluidRow(width = 12,
+                                      #          column(width=3, 
+                                      #                 wellPanel(
+                                      #                   checkboxGroupInput(
+                                      #                     inputId = "nbusiness_employees_sco_input",
+                                      #                     label = "",
+                                      #                     choiceNames = names(nbusiness_employees_sco),
+                                      #                     choiceValues = c(seq(1:length(names(nbusiness_employees_sco)))),
+                                      #                     selected = positions_selected_employees_nbusiness_employees_sco
+                                      #                   )
+                                      #                 )
+                                      #          ),      
+                                      #          column(width=9, 
+                                      #                 fluidRow(
+                                      #                   p(tags$b(paste("Figure 10. Total number of private sector enterprises (registered for VAT and/or PAYE) in Scotland per 10,000 adults by Number of Employees ", "(", as.character(start_year_nbusiness_employees_sco), " - ", as.character(end_year_nbusiness_employees_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                      #                   withSpinner(dygraphOutput("nbusiness_employees_sco_graph"), type = 5),
+                                      #                   align = "center"
+                                      #                 ),
+                                      #                 fluidRow(
+                                      #                   textOutput("legendDivID_nbusiness_employees_sco"),
+                                      #                   p("Source: "), 
+                                      #                   a("Businesses in Scotland:2020", href = "https://www.gov.scot/publications/businesses-in-scotland-2020/"),
+                                      #                   collapsible = FALSE,
+                                      #                   width = 12,
+                                      #                   style="margin-bottom: 100px;"
+                                      #                 )
+                                      #          )
+                                      # )
 
                               ),
                               tabPanel("High growth businesses",

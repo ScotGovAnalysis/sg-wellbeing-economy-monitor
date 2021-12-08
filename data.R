@@ -356,10 +356,11 @@ start_year_reputation_sco <- min(reputation_sco$Year)
 end_year_reputation_sco <- max(reputation_sco$Year)
 
 # nbusiness_sector_sco
-nbusiness_sector_sco <- as.data.frame.matrix(xtabs(Value ~ Year + Sector, nbusiness_sector_sco))
-nbusiness_sector_sco <- cbind(Year = rownames(nbusiness_sector_sco), nbusiness_sector_sco)
-nbusiness_sector_sco$Year <- as.numeric(levels(nbusiness_sector_sco$Year))[nbusiness_sector_sco$Year]
-positions_selected_sectors_nbusiness_sector_sco <- which(names(nbusiness_sector_sco) %in% c('All'))
+nbusiness_sector_sco_long <- nbusiness_sector_sco
+nbusiness_sector_sco_wide <- nbusiness_sector_sco_long %>% 
+  spread("Sector", "Value")
+nbusiness_sector_sco_wide$Year <- as.integer(nbusiness_sector_sco_wide$Year)
+positions_selected_sector_nbusiness_sector_sco <- which(names(nbusiness_sector_sco_wide) %in% c('All'))
 start_year_nbusiness_sector_sco <- min(nbusiness_sector_sco$Year)
 end_year_nbusiness_sector_sco <- max(nbusiness_sector_sco$Year)
 
@@ -542,7 +543,7 @@ text_year_entrepreneurialism_sco <- text_entrepreneurialism_sco$Year
 text_value_entrepreneurialism_sco <- text_entrepreneurialism_sco$Value
 text_nbusiness_sector_sco <- subset(nbusiness_sector_sco, nbusiness_sector_sco$Year == max(nbusiness_sector_sco$Year))
 text_year_nbusiness_sector_sco <- text_nbusiness_sector_sco$Year
-text_all_nbusiness_sector_sco <- text_nbusiness_sector_sco[,c('All')]
+#text_all_nbusiness_sector_sco <- text_nbusiness_sector_sco[,c('All')]
 text_nbusiness_region_sco <- subset(nbusiness_region_sco, nbusiness_region_sco$Year == max(nbusiness_sector_sco$Year))
 text_foreign_nbusiness_region_sco <- text_nbusiness_region_sco[, c('Abroad')]
 text_hbusiness_percent_sco <- subset(hbusiness_percent_sco, hbusiness_percent_sco$Year == max(nbusiness_sector_sco$Year))
