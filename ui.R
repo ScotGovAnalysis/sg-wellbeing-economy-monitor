@@ -2259,7 +2259,7 @@ shinyUI(fluidPage(
         ),
         # FOOTER - EXTERNAL LINKS
         column(width = 3,
-               icon("external-link", lib = "font-awesome"),
+               icon("external-link-alt", lib = "font-awesome"),
                strong("EXTERNAL LINKS"),
                p(a("OECD data", href = "https://data.oecd.org/")),
                p(a("Open Data Platfrom", href = "https://statistics.gov.scot/data/search")),
