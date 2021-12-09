@@ -1,41 +1,41 @@
-"Activity","Year","Value"
-"Abandoned innovation",2012,2.3
-"Abandoned innovation",2014,3.9
-"Abandoned innovation",2016,3.5
-"Abandoned innovation",2018,1.3
-"Broader innovation active businesses",2012,43.8
-"Broader innovation active businesses",2014,51.2
-"Broader innovation active businesses",2016,45.7
-"Broader innovation active businesses",2018,33.6
-"Business engaged in an innovation related activity",2012,36.2
-"Business engaged in an innovation related activity",2014,42.5
-"Business engaged in an innovation related activity",2016,41.4
-"Business engaged in an innovation related activity",2018,28.9
-"Innovation active",2012,43.3
-"Innovation active",2014,50.4
-"Innovation active",2016,45
-"Innovation active",2018,32.2
-"Ongoing innovation",2012,12.7
-"Ongoing innovation",2014,15.5
-"Ongoing innovation",2016,14
-"Ongoing innovation",2018,6.8
-"Process innovator",2012,7.2
-"Process innovator",2014,12.5
-"Process innovator",2016,14.5
-"Process innovator",2018,10.3
-"Product AND process innovation",2012,4.3
-"Product AND process innovation",2014,9
-"Product AND process innovation",2016,7.5
-"Product AND process innovation",2018,6
-"Product AND/OR process innovation",2012,19
-"Product AND/OR process innovation",2014,23.3
-"Product AND/OR process innovation",2016,27.5
-"Product AND/OR process innovation",2018,16.6
-"Product innovator",2012,16.1
-"Product innovator",2014,19.8
-"Product innovator",2016,20.5
-"Product innovator",2018,12.3
-"Wider innovation active businesses",2012,34.5
-"Wider innovation active businesses",2014,43.2
-"Wider innovation active businesses",2016,33.3
-"Wider innovation active businesses",2018,23.3
+"Year","Activity","Value"
+2012,"Abandoned innovation",2.3
+2014,"Abandoned innovation",3.9
+2016,"Abandoned innovation",3.5
+2018,"Abandoned innovation",1.3
+2012,"Broader innovation active businesses",43.8
+2014,"Broader innovation active businesses",51.2
+2016,"Broader innovation active businesses",45.7
+2018,"Broader innovation active businesses",33.6
+2012,"Business engaged in an innovation related activity",36.2
+2014,"Business engaged in an innovation related activity",42.5
+2016,"Business engaged in an innovation related activity",41.4
+2018,"Business engaged in an innovation related activity",28.9
+2012,"Innovation active",43.3
+2014,"Innovation active",50.4
+2016,"Innovation active",45
+2018,"Innovation active",32.2
+2012,"Ongoing innovation",12.7
+2014,"Ongoing innovation",15.5
+2016,"Ongoing innovation",14
+2018,"Ongoing innovation",6.8
+2012,"Process innovator",7.2
+2014,"Process innovator",12.5
+2016,"Process innovator",14.5
+2018,"Process innovator",10.3
+2012,"Product AND process innovation",4.3
+2014,"Product AND process innovation",9
+2016,"Product AND process innovation",7.5
+2018,"Product AND process innovation",6
+2012,"Product AND/OR process innovation",19
+2014,"Product AND/OR process innovation",23.3
+2016,"Product AND/OR process innovation",27.5
+2018,"Product AND/OR process innovation",16.6
+2012,"Product innovator",16.1
+2014,"Product innovator",19.8
+2016,"Product innovator",20.5
+2018,"Product innovator",12.3
+2012,"Wider innovation active businesses",34.5
+2014,"Wider innovation active businesses",43.2
+2016,"Wider innovation active businesses",33.3
+2018,"Wider innovation active businesses",23.3
