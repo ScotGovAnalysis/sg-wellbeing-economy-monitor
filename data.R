@@ -386,10 +386,11 @@ start_year_hbusiness_percent_sco <- min(hbusiness_percent_sco$Year)
 end_year_hbusiness_percent_sco <- max(hbusiness_percent_sco$Year)
 
 # ibusiness_sco
-ibusiness_sco <- as.data.frame.matrix(xtabs(Value ~ Year + Activity, ibusiness_sco))
-ibusiness_sco <- cbind(Year = rownames(ibusiness_sco), ibusiness_sco)
-ibusiness_sco$Year <- as.numeric(levels(ibusiness_sco$Year))[ibusiness_sco$Year]
-positions_selected_activities_ibusiness_sco <- which(names(ibusiness_sco) %in% c('Innovation active'))
+ibusiness_sco_long <- ibusiness_sco
+ibusiness_sco_wide <- ibusiness_sco_long %>% 
+  spread("Activity", "Value")
+ibusiness_sco_wide$Year <- as.integer(ibusiness_sco_wide$Year)
+positions_selected_activities_ibusiness_sco <- which(names(ibusiness_sco_wide) %in% c('Product AND/OR process innovation'))
 start_year_ibusiness_sco <- min(ibusiness_sco$Year)
 end_year_ibusiness_sco <- max(ibusiness_sco$Year)
 

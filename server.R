@@ -691,12 +691,12 @@ shinyServer(
     # Dygraph for ibusiness_sco
     output$ibusiness_sco_graph <- renderDygraph({
       dygraph(
-        ibusiness_sco[,c(1, as.numeric(input$ibusiness_sco_input))]
+        ibusiness_sco_wide[,c(1, as.numeric(input$ibusiness_sco_input))]
       ) %>%
-        dyGroup(names(ibusiness_sco)[c(1, as.numeric(input$ibusiness_sco_input))], strokeWidth = 2) %>%
+        dyGroup(names(ibusiness_sco_wide)[c(1, as.numeric(input$ibusiness_sco_input))], strokeWidth = 2) %>%
         dyRangeSelector() %>%
-        dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "Percent") %>%
+        dyAxis("x", label = "Year (end year of three-year average)", rangePad = 5) %>%
+        dyAxis("y", label = "%") %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,

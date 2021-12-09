@@ -615,8 +615,8 @@ shinyUI(fluidPage(
                                                          checkboxGroupInput(
                                                            inputId = "ibusiness_sco_input",
                                                            label = "",
-                                                           choiceNames = names(ibusiness_sco),
-                                                           choiceValues = c(seq(1:length(names(ibusiness_sco)))),
+                                                           choiceNames = names(ibusiness_sco_wide),
+                                                           choiceValues = c(seq(1:length(names(ibusiness_sco_wide)))),
                                                            selected = positions_selected_activities_ibusiness_sco
                                                          )
                                                        )
@@ -630,7 +630,7 @@ shinyUI(fluidPage(
                                                        fluidRow(
                                                          textOutput("legendDivID_ibusiness_sco"),
                                                          p("Source: "), 
-                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
+                                                         a("ODP", href = "https://statistics.gov.scot/slice?dataset=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fbusiness-innovation"),
                                                          collapsible = FALSE,
                                                          width = 12,
                                                          style="margin-bottom: 100px;"
