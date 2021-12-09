@@ -2528,7 +2528,33 @@ shinyServer(
         ) %>%
         addLegend("bottomright", pal = choropleth_airqual_reg, values = mapex$DAQI, title = paste("Daily Air Quality Index", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
     })
+   
+    # Leaflet map for CO2_reg
+    output$CO2_reg_map_caption <- renderText({
+      paste("Map 2. CO2 emissions (tonnes per capita) ", as.character(input$CO2_reg_input), sep="")
+    })
+    CO2_reg_map_data <- reactive({
+      CO2_reg_one <- CO2_reg[ which(CO2_reg$Year == input$CO2_reg_input), ]
+      CO2_reg_one <- CO2_reg_one[ ,c(1,3)]
+      merged <- merge(mapex@data, CO2_reg_one, by = intersect(names(mapex@data), names(CO2_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
+      mapex@data <- merged[match(mapex@data$NAME, merged$NAME),]
+      choropleth_CO2_reg <- colorBin(palette=brewer.pal(n=9, name = "YlOrRd"), mapex@data$Value, bins = 9)
+      list_return <- list(mapex = mapex, choropleth_CO2_reg = choropleth_CO2_reg)
+      return(list_return)
+    })
+    output$CO2_reg_map <- renderLeaflet({
+      mapex <- CO2_reg_map_data()$mapex
+      choropleth_CO2_reg <- CO2_reg_map_data()$choropleth_CO2_reg
+      leaflet(mapex) %>%
+        setView(zoom = 6, lat = 57, lng= -4) %>%
+        addProviderTiles("Esri.WorldGrayCanvas") %>%
+        addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_CO2_reg(mapex$Value), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " ", as.character(mapex$Value), " ", sep = ""),
+                    highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
+        ) %>%
+        addLegend("bottomright", pal = choropleth_CO2_reg, values = mapex$Value, title = paste("Tonnes per capita", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
+    })
     
+     
     
     # EQUALITIES DASHBOARD ###########################################################################################################################
     # gpaygap_eq_overview_int_lineplot

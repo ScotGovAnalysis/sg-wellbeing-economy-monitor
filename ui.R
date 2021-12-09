@@ -2167,7 +2167,19 @@ shinyUI(fluidPage(
                                                          )
                                                 )
                                        ),
-                                       
+                                       tabPanel("CO2 emissions", 
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("CO2_reg_map_caption")),
+                                                                sliderInput("CO2_reg_input", label = "", min = start_year_CO2_reg , max = end_year_CO2_reg, value = end_year_CO2_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("CO2_reg_map"), type = 5),
+
+                                                                p("To note: These estimates of regional Scottish emissions differ from those typically shown in the Scottish greenhouse gas statistics publication which is used for monitoring progress against Scotland's statutory emissions reductions targets.  The principal reasons being: 1. These data relate to emissions of carbon dioxide only and exclude other greenhouse gases; and 2. they are presented on an end-user basis for main energy carriers."),
+                                                                p("Source: "), 
+                                                                a("UK local authority and regional carbon dioxide emissions national statistics: 2005 to 2019", href = "https://data.gov.uk/dataset/723c243d-2f1a-4d27-8b61-cdb93e5b10ff/uk-local-authority-and-regional-carbon-dioxide-emissions-national-statistics-2005-to-2019")
+                                                         )
+                                                )
+                                       ),
                                        tabPanel("Habitat connectivity - data not yet available")
                                        )
                )

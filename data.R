@@ -221,6 +221,7 @@ pubservsat_reg <- read.csv("./www/regional/pubservsat_reg.csv", check.names=FALS
 broadband_reg <- read.csv("./www/regional/broadband_reg.csv", check.names=FALSE)
 
 airqual_reg <- read.csv("./www/regional/airqual_reg.csv", check.names=FALSE)
+CO2_reg <- read.csv("./www/regional/CO2_reg.csv", check.names=FALSE)
 
 # LOADING DATA - EQUALITIES DASHBOARD ####
 gpaygap_eq <- read.csv("./www/equalities/gpaygap_eq.csv", check.names=FALSE)
@@ -400,6 +401,7 @@ end_year_ncai_sco <- max(ncai_sco$Year)
 
 # map data
 mapex <- readOGR(dsn="./www/regional/fwlibrariesandshapefile", layer="Scotland1")
+mapex$NAME[c(22)] <- "Na h-Eileanan an Siar"
 
 # GVA_reg
 start_year_GVA_reg <- min(GVA_reg$Year)
@@ -1186,10 +1188,13 @@ start_year_broadband_reg <- min(broadband_reg$Year)
 end_year_broadband_reg <- max(broadband_reg$Year)
 
 
+# CO2_reg
+start_year_CO2_reg <- min(CO2_reg$Year)
+end_year_CO2_reg <- max(CO2_reg$Year)
+
 # airqual_reg
 start_year_airqual_reg <- min(airqual_reg$Date)
 end_year_airqual_reg <- max(airqual_reg$Date)
-
 
 # greenandbluespace_sco
 start_year_greenandbluespace_sco <- min(greenandbluespace_sco$Year)
