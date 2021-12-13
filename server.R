@@ -749,7 +749,7 @@ shinyServer(
       leaflet(mapex) %>%
         setView(zoom = 6, lat = 57, lng= -4) %>%
         addProviderTiles("Esri.WorldGrayCanvas") %>%
-        addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_GVA_reg(mapex$Value), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " £", as.character(mapex$Growth), " per Head", sep = ""),
+        addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_GVA_reg(mapex$Value), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " £", as.character(mapex$Value), " per Head", sep = ""),
                     highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
         ) %>%
         addLegend("bottomright", pal = choropleth_GVA_reg, values = mapex$Value, title = paste("GVA per Head", " (£)", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
