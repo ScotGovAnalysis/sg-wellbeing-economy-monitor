@@ -401,7 +401,8 @@ end_year_ncai_sco <- max(ncai_sco$Year)
 
 # map data
 mapex <- readOGR(dsn="./www/regional/fwlibrariesandshapefile", layer="Scotland1")
-mapex$NAME[c(22)] <- "Na h-Eileanan an Siar"
+mapex$NAME[c(22)] <- "Na h-Eileanan Siar"
+mapex$FILE_NAME[c(22)] <- "NA_H-EILEANAN_SIAR"
 
 # GVA_reg
 start_year_GVA_reg <- min(GVA_reg$Year)
