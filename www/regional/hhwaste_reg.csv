@@ -1,33 +1,321 @@
-NAME,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020
-Aberdeen City,"97,184","97,230","94,117","96,130","95,241","96,123","87,786","85,540","84,643","95,919"
-Aberdeenshire,"148,052","134,708","131,809","131,389","130,249","131,863","127,632","120,519","122,830","114,951"
-Angus,"62,200","60,803","54,258","58,892","57,609","58,847","56,278","54,619","52,541","52,166"
-Argyll and Bute,"46,301","48,509","49,244","52,359","51,847","53,689","50,437","47,972","46,901","42,567"
-City of Edinburgh,"189,697","187,716","184,360","189,525","189,574","193,333","200,720","193,341","192,070","201,202"
-Clackmannanshire,"30,598","27,736","26,817","26,786","26,621","27,091","27,201","26,122","25,473","23,221"
-Dumfries and Galloway,"81,620","77,709","75,501","76,454","74,092","79,807","76,289","79,325","76,786","65,039"
-Dundee City,"68,368","70,103","61,485","63,738","67,182","67,998","64,347","60,773","65,259","63,609"
-East Ayrshire,"61,087","58,793","58,282","56,392","56,374","56,434","55,842","53,148","55,097","52,305"
-East Dunbartonshire,"58,998","55,234","51,998","52,897","54,191","55,852","56,445","51,643","52,692","54,573"
-East Lothian,"53,163","52,353","49,335","52,660","50,906","50,874","50,612","50,134","49,979","51,755"
-East Renfrewshire,"45,191","43,986","44,057","46,224","46,880","47,724","47,564","43,927","48,609","44,360"
-Falkirk,"78,177","76,111","71,950","73,620","72,329","71,783","74,651","68,571","70,032","77,069"
-Fife,"214,552","195,595","190,784","188,212","191,153","187,746","178,478","167,353","174,977","156,151"
-Glasgow City,"250,709","234,209","227,940","224,488","221,902","216,873","224,524","245,318","252,148","265,910"
-Highland,"125,454","126,183","125,679","131,228","130,780","130,959","130,190","127,880","124,689","109,109"
-Inverclyde,"33,937","33,248","29,183","28,456","28,493","29,363","27,565","28,027","27,698","29,009"
-Midlothian,"43,849","42,701","40,177","40,726","42,077","42,637","42,725","41,890","40,610","42,153"
-Moray,"52,334","49,884","47,533","50,902","50,116","51,950","51,090","47,522","47,186","41,520"
-Na h-Eileanan Siar,"16,509","14,301","12,738","13,479","14,013","14,959","14,453","14,325","13,710","13,146"
-North Ayrshire,"68,312","62,735","61,910","65,065","64,193","63,838","62,954","61,421","60,322","61,773"
-North Lanarkshire,"160,246","155,837","152,725","150,309","155,937","160,914","156,813","146,175","149,977","156,611"
-Orkney Islands,"10,255","10,233","9,923","10,568","9,371","10,349","10,798","10,221","10,428","8,481"
-Perth and Kinross,"79,918","75,014","74,267","74,949","76,187","78,730","74,789","71,815","74,293","77,535"
-Renfrewshire,"82,571","82,126","78,417","80,858","83,059","83,661","83,526","81,255","81,461","84,011"
-Scottish Borders,"53,822","52,861","51,242","49,952","49,848","51,921","53,471","52,491","52,300","50,716"
-Shetland Islands,"11,792","10,859","10,140","9,942","10,250","9,996","9,754","9,649","9,648","9,087"
-South Ayrshire,"58,481","57,627","55,423","55,477","55,653","56,485","56,772","55,814","52,639","56,376"
-South Lanarkshire,"163,214","151,923","144,734","153,492","151,656","152,535","151,740","150,470","146,941","153,658"
-Stirling,"44,024","43,190","39,923","40,555","41,929","44,271","40,774","41,925","42,504","44,505"
-West Dunbartonshire,"41,168","38,944","36,206","40,338","45,088","44,936","43,551","41,867","39,905","44,352"
-West Lothian,"74,976","72,532","70,473","73,498","73,982","75,438","71,051","74,194","77,444","86,217"
+"NAME","Year","Value"
+"Aberdeen City","2011",97184
+"Aberdeenshire","2011",148052
+"Angus","2011",62200
+"Argyll and Bute","2011",46301
+"City of Edinburgh","2011",189697
+"Clackmannanshire","2011",30598
+"Dumfries and Galloway","2011",81620
+"Dundee City","2011",68368
+"East Ayrshire","2011",61087
+"East Dunbartonshire","2011",58998
+"East Lothian","2011",53163
+"East Renfrewshire","2011",45191
+"Falkirk","2011",78177
+"Fife","2011",214552
+"Glasgow City","2011",250709
+"Highland","2011",125454
+"Inverclyde","2011",33937
+"Midlothian","2011",43849
+"Moray","2011",52334
+"Na h-Eileanan Siar","2011",16509
+"North Ayrshire","2011",68312
+"North Lanarkshire","2011",160246
+"Orkney Islands","2011",10255
+"Perth and Kinross","2011",79918
+"Renfrewshire","2011",82571
+"Scottish Borders","2011",53822
+"Shetland Islands","2011",11792
+"South Ayrshire","2011",58481
+"South Lanarkshire","2011",163214
+"Stirling","2011",44024
+"West Dunbartonshire","2011",41168
+"West Lothian","2011",74976
+"Aberdeen City","2012",97230
+"Aberdeenshire","2012",134708
+"Angus","2012",60803
+"Argyll and Bute","2012",48509
+"City of Edinburgh","2012",187716
+"Clackmannanshire","2012",27736
+"Dumfries and Galloway","2012",77709
+"Dundee City","2012",70103
+"East Ayrshire","2012",58793
+"East Dunbartonshire","2012",55234
+"East Lothian","2012",52353
+"East Renfrewshire","2012",43986
+"Falkirk","2012",76111
+"Fife","2012",195595
+"Glasgow City","2012",234209
+"Highland","2012",126183
+"Inverclyde","2012",33248
+"Midlothian","2012",42701
+"Moray","2012",49884
+"Na h-Eileanan Siar","2012",14301
+"North Ayrshire","2012",62735
+"North Lanarkshire","2012",155837
+"Orkney Islands","2012",10233
+"Perth and Kinross","2012",75014
+"Renfrewshire","2012",82126
+"Scottish Borders","2012",52861
+"Shetland Islands","2012",10859
+"South Ayrshire","2012",57627
+"South Lanarkshire","2012",151923
+"Stirling","2012",43190
+"West Dunbartonshire","2012",38944
+"West Lothian","2012",72532
+"Aberdeen City","2013",94117
+"Aberdeenshire","2013",131809
+"Angus","2013",54258
+"Argyll and Bute","2013",49244
+"City of Edinburgh","2013",184360
+"Clackmannanshire","2013",26817
+"Dumfries and Galloway","2013",75501
+"Dundee City","2013",61485
+"East Ayrshire","2013",58282
+"East Dunbartonshire","2013",51998
+"East Lothian","2013",49335
+"East Renfrewshire","2013",44057
+"Falkirk","2013",71950
+"Fife","2013",190784
+"Glasgow City","2013",227940
+"Highland","2013",125679
+"Inverclyde","2013",29183
+"Midlothian","2013",40177
+"Moray","2013",47533
+"Na h-Eileanan Siar","2013",12738
+"North Ayrshire","2013",61910
+"North Lanarkshire","2013",152725
+"Orkney Islands","2013",9923
+"Perth and Kinross","2013",74267
+"Renfrewshire","2013",78417
+"Scottish Borders","2013",51242
+"Shetland Islands","2013",10140
+"South Ayrshire","2013",55423
+"South Lanarkshire","2013",144734
+"Stirling","2013",39923
+"West Dunbartonshire","2013",36206
+"West Lothian","2013",70473
+"Aberdeen City","2014",96130
+"Aberdeenshire","2014",131389
+"Angus","2014",58892
+"Argyll and Bute","2014",52359
+"City of Edinburgh","2014",189525
+"Clackmannanshire","2014",26786
+"Dumfries and Galloway","2014",76454
+"Dundee City","2014",63738
+"East Ayrshire","2014",56392
+"East Dunbartonshire","2014",52897
+"East Lothian","2014",52660
+"East Renfrewshire","2014",46224
+"Falkirk","2014",73620
+"Fife","2014",188212
+"Glasgow City","2014",224488
+"Highland","2014",131228
+"Inverclyde","2014",28456
+"Midlothian","2014",40726
+"Moray","2014",50902
+"Na h-Eileanan Siar","2014",13479
+"North Ayrshire","2014",65065
+"North Lanarkshire","2014",150309
+"Orkney Islands","2014",10568
+"Perth and Kinross","2014",74949
+"Renfrewshire","2014",80858
+"Scottish Borders","2014",49952
+"Shetland Islands","2014",9942
+"South Ayrshire","2014",55477
+"South Lanarkshire","2014",153492
+"Stirling","2014",40555
+"West Dunbartonshire","2014",40338
+"West Lothian","2014",73498
+"Aberdeen City","2015",95241
+"Aberdeenshire","2015",130249
+"Angus","2015",57609
+"Argyll and Bute","2015",51847
+"City of Edinburgh","2015",189574
+"Clackmannanshire","2015",26621
+"Dumfries and Galloway","2015",74092
+"Dundee City","2015",67182
+"East Ayrshire","2015",56374
+"East Dunbartonshire","2015",54191
+"East Lothian","2015",50906
+"East Renfrewshire","2015",46880
+"Falkirk","2015",72329
+"Fife","2015",191153
+"Glasgow City","2015",221902
+"Highland","2015",130780
+"Inverclyde","2015",28493
+"Midlothian","2015",42077
+"Moray","2015",50116
+"Na h-Eileanan Siar","2015",14013
+"North Ayrshire","2015",64193
+"North Lanarkshire","2015",155937
+"Orkney Islands","2015",9371
+"Perth and Kinross","2015",76187
+"Renfrewshire","2015",83059
+"Scottish Borders","2015",49848
+"Shetland Islands","2015",10250
+"South Ayrshire","2015",55653
+"South Lanarkshire","2015",151656
+"Stirling","2015",41929
+"West Dunbartonshire","2015",45088
+"West Lothian","2015",73982
+"Aberdeen City","2016",96123
+"Aberdeenshire","2016",131863
+"Angus","2016",58847
+"Argyll and Bute","2016",53689
+"City of Edinburgh","2016",193333
+"Clackmannanshire","2016",27091
+"Dumfries and Galloway","2016",79807
+"Dundee City","2016",67998
+"East Ayrshire","2016",56434
+"East Dunbartonshire","2016",55852
+"East Lothian","2016",50874
+"East Renfrewshire","2016",47724
+"Falkirk","2016",71783
+"Fife","2016",187746
+"Glasgow City","2016",216873
+"Highland","2016",130959
+"Inverclyde","2016",29363
+"Midlothian","2016",42637
+"Moray","2016",51950
+"Na h-Eileanan Siar","2016",14959
+"North Ayrshire","2016",63838
+"North Lanarkshire","2016",160914
+"Orkney Islands","2016",10349
+"Perth and Kinross","2016",78730
+"Renfrewshire","2016",83661
+"Scottish Borders","2016",51921
+"Shetland Islands","2016",9996
+"South Ayrshire","2016",56485
+"South Lanarkshire","2016",152535
+"Stirling","2016",44271
+"West Dunbartonshire","2016",44936
+"West Lothian","2016",75438
+"Aberdeen City","2017",87786
+"Aberdeenshire","2017",127632
+"Angus","2017",56278
+"Argyll and Bute","2017",50437
+"City of Edinburgh","2017",200720
+"Clackmannanshire","2017",27201
+"Dumfries and Galloway","2017",76289
+"Dundee City","2017",64347
+"East Ayrshire","2017",55842
+"East Dunbartonshire","2017",56445
+"East Lothian","2017",50612
+"East Renfrewshire","2017",47564
+"Falkirk","2017",74651
+"Fife","2017",178478
+"Glasgow City","2017",224524
+"Highland","2017",130190
+"Inverclyde","2017",27565
+"Midlothian","2017",42725
+"Moray","2017",51090
+"Na h-Eileanan Siar","2017",14453
+"North Ayrshire","2017",62954
+"North Lanarkshire","2017",156813
+"Orkney Islands","2017",10798
+"Perth and Kinross","2017",74789
+"Renfrewshire","2017",83526
+"Scottish Borders","2017",53471
+"Shetland Islands","2017",9754
+"South Ayrshire","2017",56772
+"South Lanarkshire","2017",151740
+"Stirling","2017",40774
+"West Dunbartonshire","2017",43551
+"West Lothian","2017",71051
+"Aberdeen City","2018",85540
+"Aberdeenshire","2018",120519
+"Angus","2018",54619
+"Argyll and Bute","2018",47972
+"City of Edinburgh","2018",193341
+"Clackmannanshire","2018",26122
+"Dumfries and Galloway","2018",79325
+"Dundee City","2018",60773
+"East Ayrshire","2018",53148
+"East Dunbartonshire","2018",51643
+"East Lothian","2018",50134
+"East Renfrewshire","2018",43927
+"Falkirk","2018",68571
+"Fife","2018",167353
+"Glasgow City","2018",245318
+"Highland","2018",127880
+"Inverclyde","2018",28027
+"Midlothian","2018",41890
+"Moray","2018",47522
+"Na h-Eileanan Siar","2018",14325
+"North Ayrshire","2018",61421
+"North Lanarkshire","2018",146175
+"Orkney Islands","2018",10221
+"Perth and Kinross","2018",71815
+"Renfrewshire","2018",81255
+"Scottish Borders","2018",52491
+"Shetland Islands","2018",9649
+"South Ayrshire","2018",55814
+"South Lanarkshire","2018",150470
+"Stirling","2018",41925
+"West Dunbartonshire","2018",41867
+"West Lothian","2018",74194
+"Aberdeen City","2019",84643
+"Aberdeenshire","2019",122830
+"Angus","2019",52541
+"Argyll and Bute","2019",46901
+"City of Edinburgh","2019",192070
+"Clackmannanshire","2019",25473
+"Dumfries and Galloway","2019",76786
+"Dundee City","2019",65259
+"East Ayrshire","2019",55097
+"East Dunbartonshire","2019",52692
+"East Lothian","2019",49979
+"East Renfrewshire","2019",48609
+"Falkirk","2019",70032
+"Fife","2019",174977
+"Glasgow City","2019",252148
+"Highland","2019",124689
+"Inverclyde","2019",27698
+"Midlothian","2019",40610
+"Moray","2019",47186
+"Na h-Eileanan Siar","2019",13710
+"North Ayrshire","2019",60322
+"North Lanarkshire","2019",149977
+"Orkney Islands","2019",10428
+"Perth and Kinross","2019",74293
+"Renfrewshire","2019",81461
+"Scottish Borders","2019",52300
+"Shetland Islands","2019",9648
+"South Ayrshire","2019",52639
+"South Lanarkshire","2019",146941
+"Stirling","2019",42504
+"West Dunbartonshire","2019",39905
+"West Lothian","2019",77444
+"Aberdeen City","2020",95919
+"Aberdeenshire","2020",114951
+"Angus","2020",52166
+"Argyll and Bute","2020",42567
+"City of Edinburgh","2020",201202
+"Clackmannanshire","2020",23221
+"Dumfries and Galloway","2020",65039
+"Dundee City","2020",63609
+"East Ayrshire","2020",52305
+"East Dunbartonshire","2020",54573
+"East Lothian","2020",51755
+"East Renfrewshire","2020",44360
+"Falkirk","2020",77069
+"Fife","2020",156151
+"Glasgow City","2020",265910
+"Highland","2020",109109
+"Inverclyde","2020",29009
+"Midlothian","2020",42153
+"Moray","2020",41520
+"Na h-Eileanan Siar","2020",13146
+"North Ayrshire","2020",61773
+"North Lanarkshire","2020",156611
+"Orkney Islands","2020",8481
+"Perth and Kinross","2020",77535
+"Renfrewshire","2020",84011
+"Scottish Borders","2020",50716
+"Shetland Islands","2020",9087
+"South Ayrshire","2020",56376
+"South Lanarkshire","2020",153658
+"Stirling","2020",44505
+"West Dunbartonshire","2020",44352
+"West Lothian","2020",86217
