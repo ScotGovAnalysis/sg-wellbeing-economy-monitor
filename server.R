@@ -2554,7 +2554,31 @@ shinyServer(
         addLegend("bottomright", pal = choropleth_CO2_reg, values = mapex$Value, title = paste("Tonnes per capita", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
     })
     
-     
+    # Leaflet map for hhwaste_reg
+    output$hhwaste_reg_map_caption <- renderText({
+      paste("Map 3. Total household waste generated (tonnes) ", as.character(input$hhwaste_reg_input), sep="")
+    })
+    hhwaste_reg_map_data <- reactive({
+      hhwaste_reg_one <- hhwaste_reg[ which(hhwaste_reg$Year == input$hhwaste_reg_input), ]
+      hhwaste_reg_one <- hhwaste_reg_one[ ,c(1,3)]
+      merged <- merge(mapex@data, hhwaste_reg_one, by = intersect(names(mapex@data), names(hhwaste_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
+      mapex@data <- merged[match(mapex@data$NAME, merged$NAME),]
+      choropleth_hhwaste_reg <- colorBin(palette=brewer.pal(n=9, name = "YlOrRd"), mapex@data$Value, bins = 9)
+      list_return <- list(mapex = mapex, choropleth_hhwaste_reg = choropleth_hhwaste_reg)
+      return(list_return)
+    })
+    output$hhwaste_reg_map <- renderLeaflet({
+      mapex <- hhwaste_reg_map_data()$mapex
+      choropleth_hhwaste_reg <- hhwaste_reg_map_data()$choropleth_hhwaste_reg
+      leaflet(mapex) %>%
+        setView(zoom = 6, lat = 57, lng= -4) %>%
+        addProviderTiles("Esri.WorldGrayCanvas") %>%
+        addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_hhwaste_reg(mapex$Value), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " ", as.character(mapex$Value), " ", sep = ""),
+                    highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
+        ) %>%
+        addLegend("bottomright", pal = choropleth_hhwaste_reg, values = mapex$Value, title = paste("Tonnes", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
+    })
+    
     
     # EQUALITIES DASHBOARD ###########################################################################################################################
     # gpaygap_eq_overview_int_lineplot

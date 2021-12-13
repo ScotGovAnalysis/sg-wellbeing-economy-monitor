@@ -2180,6 +2180,19 @@ shinyUI(fluidPage(
                                                          )
                                                 )
                                        ),
+                                       tabPanel("Household waste", 
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("hhwaste_reg_map_caption")),
+                                                                sliderInput("hhwaste_reg_input", label = "", min = start_year_hhwaste_reg , max = end_year_hhwaste_reg, value = end_year_hhwaste_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("hhwaste_reg_map"), type = 5),
+                                                                
+                                                                
+                                                                p("Source: "), 
+                                                                a("SEPA", href = "https://informatics.sepa.org.uk/HouseholdWaste/")
+                                                         )
+                                                )
+                                       ),
                                        tabPanel("Habitat connectivity - data not yet available")
                                        )
                )

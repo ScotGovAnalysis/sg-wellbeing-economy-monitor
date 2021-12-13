@@ -222,6 +222,7 @@ broadband_reg <- read.csv("./www/regional/broadband_reg.csv", check.names=FALSE)
 
 airqual_reg <- read.csv("./www/regional/airqual_reg.csv", check.names=FALSE)
 CO2_reg <- read.csv("./www/regional/CO2_reg.csv", check.names=FALSE)
+hhwaste_reg <- read.csv("./www/regional/hhwaste_reg.csv", check.names=FALSE)
 
 # LOADING DATA - EQUALITIES DASHBOARD ####
 gpaygap_eq <- read.csv("./www/equalities/gpaygap_eq.csv", check.names=FALSE)
@@ -1192,6 +1193,10 @@ end_year_broadband_reg <- max(broadband_reg$Year)
 # CO2_reg
 start_year_CO2_reg <- min(CO2_reg$Year)
 end_year_CO2_reg <- max(CO2_reg$Year)
+
+# hhwaste_reg
+start_year_hhwaste_reg <- min(hhwaste_reg$Year)
+end_year_hhwaste_reg <- max(hhwaste_reg$Year)
 
 # airqual_reg
 start_year_airqual_reg <- min(airqual_reg$Date)
