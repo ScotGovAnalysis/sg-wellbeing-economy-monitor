@@ -187,7 +187,7 @@ scapital_sco <- read.csv("./www/scotland/scapital_sco.csv", check.names = FALSE)
 atravel_sco <- read.csv("./www/scotland/atravel_sco.csv", check.names = FALSE)
 
 greenandbluespace_sco <- read.csv("./www/scotland/greenandbluespace_sco.csv", check.names=FALSE)
-
+housing_sco <- read.csv("./www/scotland/housing_sco.csv", check.names=FALSE)
 
 cfootprint_sco <- read.csv("./www/scotland/cfootprint_sco.csv", check.names=FALSE)
 mfootprint_sco <- read.csv("./www/scotland/mfootprint_sco.csv", check.names=FALSE)
@@ -1206,7 +1206,9 @@ end_year_airqual_reg <- max(airqual_reg$Date)
 start_year_greenandbluespace_sco <- min(greenandbluespace_sco$Year)
 end_year_greenandbluespace_sco <- max(greenandbluespace_sco$Year)
 
-
+# housing_sco
+start_year_housing_sco <- min(housing_sco$Year)
+end_year_housing_sco <- max(housing_sco$Year)
 
 # broadband_int
 broadband_int_long <- broadband_int %>% 

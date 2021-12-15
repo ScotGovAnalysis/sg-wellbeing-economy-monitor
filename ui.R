@@ -1849,6 +1849,25 @@ shinyUI(fluidPage(
                                               )
                                      )
                             ),
+                            tabPanel("Housing satisfaction", 
+                                     fluidRow(width = 12,
+                                              column(width=12, 
+                                                     fluidRow(
+                                                       p(tags$b(paste("Figure 1. Percentage of households reporting that they are either 'very satisfied' or 'fairly satisfied' with their house or flat: ", "(", as.character(start_year_housing_sco), " - ", as.character(end_year_housing_sco), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       withSpinner(dygraphOutput("housing_sco_graph"), type = 5),
+                                                       align = "center"
+                                                     ),
+                                                     fluidRow(
+                                                       textOutput("legendDivID_housing_sco"),
+                                                       p("Source: "), 
+                                                       a("Scottish Household Survey", href = "https://www.gov.scot/collections/scottish-household-survey"),
+                                                       collapsible = FALSE,
+                                                       width = 12,
+                                                       style="margin-bottom: 100px;"
+                                                     )
+                                              )
+                                     )
+                            ),
                             tabPanel("Active travel", 
                                      fluidRow(width = 12,
                                               column(width=3, 
