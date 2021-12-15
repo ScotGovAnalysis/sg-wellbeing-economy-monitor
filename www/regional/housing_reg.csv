@@ -1,33 +1,257 @@
-NAME,2012,2013,2014,2015,2016,2017,2018,2019
-Aberdeen City ,43.25,46.2,44.75,44.7,47.15,45.5,46.9,44.55
-Aberdeenshire ,47.15,47.6,47.35,44.8,47.1,48.15,44.9,45.15
-Angus ,49.1,44.3,45.4,46.35,43.45,46.15,48.65,41.95
-Argyll and Bute ,45,45.55,46.35,47.5,48.25,46.1,49.25,46.45
-Clackmannanshire ,44.85,47.4,45.95,46.4,46.65,39.75,41.4,43.9
-Dumfries and Galloway ,47.6,47.7,46.15,45.65,44.7,44.7,46.95,45.25
-Dundee City ,42.35,39.45,42.5,45.2,44.8,39.6,41.9,43.9
-East Ayrshire ,45,46.15,45,45.05,42,44.3,45.75,46.25
-East Dunbartonshire ,45.7,47.5,48.15,48.35,49,49.45,46.8,47.6
-East Lothian ,47.1,48,45.3,47.85,46.25,47.95,44.7,46.75
-East Renfrewshire ,48.4,50,47.5,48.75,47.4,46.6,47,47.25
-"Edinburgh, City of ",47.1,46.7,46.15,46.4,47.55,48.2,42,42.5
-Falkirk ,47.5,46.45,45.95,46.4,46.7,47.75,44.05,47.45
-Fife ,46.3,46.65,46.25,46.2,46.1,45.8,46.95,46.8
-Glasgow City ,44.75,42.2,43.15,44,45.25,44.5,44.15,43.45
-Highland ,45.75,46.55,44.1,49.5,45.85,45.1,45.55,44.75
-Inverclyde ,45.15,45.05,45.55,44.7,45.3,47.35,45.4,44.9
-Midlothian ,45.55,44.65,48,47.8,48.95,46.3,46.8,45.7
-Moray ,45.65,46.6,48.15,48.35,46.25,47.95,46.4,48.8
-Na h-Eileanan Siar ,46.65,49.5,46.25,49.05,48.7,50,46.6,44.85
-North Ayrshire ,43.75,42.25,42.6,45.75,46.35,47.15,47.6,43.5
-North Lanarkshire ,46.65,45.45,47.3,48,46.45,45.75,45.1,45.6
-Orkney Islands ,47.55,48.05,46.1,46.6,47.15,46.65,44.9,46.25
-Perth and Kinross ,47.2,46.35,47.1,45.35,45.7,47.3,45.45,44.9
-Renfrewshire ,45.85,41.4,45.25,39.4,43.35,43.6,46.2,48.2
-Scottish Borders ,48.35,46.55,47.3,46.95,46.15,46.2,43.85,46.45
-Shetland Islands ,44.5,46.3,46.95,44.65,43.5,46.55,44.05,44.35
-South Ayrshire ,45.8,43.4,43.8,47.05,46.85,49.65,45.25,46.5
-South Lanarkshire ,44.95,44.5,47.4,45.9,46.5,48.1,45,46.75
-Stirling ,48.15,45.65,47.35,47.9,44.3,46.7,50,46.35
-West Dunbartonshire ,43.6,45.55,42.2,48.15,46.5,46.35,43.75,39.45
-South Lanarkshire ,45.8,43.85,46.8,47.9,48.3,42.85,44.6,44.9
+"NAME","Year","Value"
+"Aberdeen City",2012,86.5
+"Aberdeenshire",2012,94.3
+"Angus",2012,98.2
+"Argyll and Bute",2012,90
+"Clackmannanshire",2012,89.7
+"Dumfries and Galloway",2012,95.2
+"Dundee City",2012,84.7
+"East Ayrshire",2012,90
+"East Dunbartonshire",2012,91.4
+"East Lothian",2012,94.2
+"East Renfrewshire",2012,96.8
+"City of Edinburgh",2012,94.2
+"Falkirk",2012,95
+"Fife",2012,92.6
+"Glasgow City",2012,89.5
+"Highland",2012,91.5
+"Inverclyde",2012,90.3
+"Midlothian",2012,91.1
+"Moray",2012,91.3
+"Na h-Eileanan Siar",2012,93.3
+"North Ayrshire",2012,87.5
+"North Lanarkshire",2012,93.3
+"Orkney Islands",2012,95.1
+"Perth and Kinross",2012,94.4
+"Renfrewshire",2012,91.7
+"Scottish Borders",2012,96.7
+"Shetland Islands",2012,89
+"South Ayrshire",2012,91.6
+"South Lanarkshire",2012,89.9
+"Stirling",2012,96.3
+"West Dunbartonshire",2012,87.2
+"West Lothian",2012,91.6
+"Aberdeen City",2013,92.4
+"Aberdeenshire",2013,95.2
+"Angus",2013,88.6
+"Argyll and Bute",2013,91.1
+"Clackmannanshire",2013,94.8
+"Dumfries and Galloway",2013,95.4
+"Dundee City",2013,78.9
+"East Ayrshire",2013,92.3
+"East Dunbartonshire",2013,95
+"East Lothian",2013,96
+"East Renfrewshire",2013,100
+"City of Edinburgh",2013,93.4
+"Falkirk",2013,92.9
+"Fife",2013,93.3
+"Glasgow City",2013,84.4
+"Highland",2013,93.1
+"Inverclyde",2013,90.1
+"Midlothian",2013,89.3
+"Moray",2013,93.2
+"Na h-Eileanan Siar",2013,99
+"North Ayrshire",2013,84.5
+"North Lanarkshire",2013,90.9
+"Orkney Islands",2013,96.1
+"Perth and Kinross",2013,92.7
+"Renfrewshire",2013,82.8
+"Scottish Borders",2013,93.1
+"Shetland Islands",2013,92.6
+"South Ayrshire",2013,86.8
+"South Lanarkshire",2013,89
+"Stirling",2013,91.3
+"West Dunbartonshire",2013,91.1
+"West Lothian",2013,87.7
+"Aberdeen City",2014,89.5
+"Aberdeenshire",2014,94.7
+"Angus",2014,90.8
+"Argyll and Bute",2014,92.7
+"Clackmannanshire",2014,91.9
+"Dumfries and Galloway",2014,92.3
+"Dundee City",2014,85
+"East Ayrshire",2014,90
+"East Dunbartonshire",2014,96.3
+"East Lothian",2014,90.6
+"East Renfrewshire",2014,95
+"City of Edinburgh",2014,92.3
+"Falkirk",2014,91.9
+"Fife",2014,92.5
+"Glasgow City",2014,86.3
+"Highland",2014,88.2
+"Inverclyde",2014,91.1
+"Midlothian",2014,96
+"Moray",2014,96.3
+"Na h-Eileanan Siar",2014,92.5
+"North Ayrshire",2014,85.2
+"North Lanarkshire",2014,94.6
+"Orkney Islands",2014,92.2
+"Perth and Kinross",2014,94.2
+"Renfrewshire",2014,90.5
+"Scottish Borders",2014,94.6
+"Shetland Islands",2014,93.9
+"South Ayrshire",2014,87.6
+"South Lanarkshire",2014,94.8
+"Stirling",2014,94.7
+"West Dunbartonshire",2014,84.4
+"West Lothian",2014,93.6
+"Aberdeen City",2015,89.4
+"Aberdeenshire",2015,89.6
+"Angus",2015,92.7
+"Argyll and Bute",2015,95
+"Clackmannanshire",2015,92.8
+"Dumfries and Galloway",2015,91.3
+"Dundee City",2015,90.4
+"East Ayrshire",2015,90.1
+"East Dunbartonshire",2015,96.7
+"East Lothian",2015,95.7
+"East Renfrewshire",2015,97.5
+"City of Edinburgh",2015,92.8
+"Falkirk",2015,92.8
+"Fife",2015,92.4
+"Glasgow City",2015,88
+"Highland",2015,99
+"Inverclyde",2015,89.4
+"Midlothian",2015,95.6
+"Moray",2015,96.7
+"Na h-Eileanan Siar",2015,98.1
+"North Ayrshire",2015,91.5
+"North Lanarkshire",2015,96
+"Orkney Islands",2015,93.2
+"Perth and Kinross",2015,90.7
+"Renfrewshire",2015,78.8
+"Scottish Borders",2015,93.9
+"Shetland Islands",2015,89.3
+"South Ayrshire",2015,94.1
+"South Lanarkshire",2015,91.8
+"Stirling",2015,95.8
+"West Dunbartonshire",2015,96.3
+"West Lothian",2015,95.8
+"Aberdeen City",2016,94.3
+"Aberdeenshire",2016,94.2
+"Angus",2016,86.9
+"Argyll and Bute",2016,96.5
+"Clackmannanshire",2016,93.3
+"Dumfries and Galloway",2016,89.4
+"Dundee City",2016,89.6
+"East Ayrshire",2016,84
+"East Dunbartonshire",2016,98
+"East Lothian",2016,92.5
+"East Renfrewshire",2016,94.8
+"City of Edinburgh",2016,95.1
+"Falkirk",2016,93.4
+"Fife",2016,92.2
+"Glasgow City",2016,90.5
+"Highland",2016,91.7
+"Inverclyde",2016,90.6
+"Midlothian",2016,97.9
+"Moray",2016,92.5
+"Na h-Eileanan Siar",2016,97.4
+"North Ayrshire",2016,92.7
+"North Lanarkshire",2016,92.9
+"Orkney Islands",2016,94.3
+"Perth and Kinross",2016,91.4
+"Renfrewshire",2016,86.7
+"Scottish Borders",2016,92.3
+"Shetland Islands",2016,87
+"South Ayrshire",2016,93.7
+"South Lanarkshire",2016,93
+"Stirling",2016,88.6
+"West Dunbartonshire",2016,93
+"West Lothian",2016,96.6
+"Aberdeen City",2017,91
+"Aberdeenshire",2017,96.3
+"Angus",2017,92.3
+"Argyll and Bute",2017,92.2
+"Clackmannanshire",2017,79.5
+"Dumfries and Galloway",2017,89.4
+"Dundee City",2017,79.2
+"East Ayrshire",2017,88.6
+"East Dunbartonshire",2017,98.9
+"East Lothian",2017,95.9
+"East Renfrewshire",2017,93.2
+"City of Edinburgh",2017,96.4
+"Falkirk",2017,95.5
+"Fife",2017,91.6
+"Glasgow City",2017,89
+"Highland",2017,90.2
+"Inverclyde",2017,94.7
+"Midlothian",2017,92.6
+"Moray",2017,95.9
+"Na h-Eileanan Siar",2017,100
+"North Ayrshire",2017,94.3
+"North Lanarkshire",2017,91.5
+"Orkney Islands",2017,93.3
+"Perth and Kinross",2017,94.6
+"Renfrewshire",2017,87.2
+"Scottish Borders",2017,92.4
+"Shetland Islands",2017,93.1
+"South Ayrshire",2017,99.3
+"South Lanarkshire",2017,96.2
+"Stirling",2017,93.4
+"West Dunbartonshire",2017,92.7
+"West Lothian",2017,85.7
+"Aberdeen City",2018,93.8
+"Aberdeenshire",2018,89.8
+"Angus",2018,97.3
+"Argyll and Bute",2018,98.5
+"Clackmannanshire",2018,82.8
+"Dumfries and Galloway",2018,93.9
+"Dundee City",2018,83.8
+"East Ayrshire",2018,91.5
+"East Dunbartonshire",2018,93.6
+"East Lothian",2018,89.4
+"East Renfrewshire",2018,94
+"City of Edinburgh",2018,84
+"Falkirk",2018,88.1
+"Fife",2018,93.9
+"Glasgow City",2018,88.3
+"Highland",2018,91.1
+"Inverclyde",2018,90.8
+"Midlothian",2018,93.6
+"Moray",2018,92.8
+"Na h-Eileanan Siar",2018,93.2
+"North Ayrshire",2018,95.2
+"North Lanarkshire",2018,90.2
+"Orkney Islands",2018,89.8
+"Perth and Kinross",2018,90.9
+"Renfrewshire",2018,92.4
+"Scottish Borders",2018,87.7
+"Shetland Islands",2018,88.1
+"South Ayrshire",2018,90.5
+"South Lanarkshire",2018,90
+"Stirling",2018,100
+"West Dunbartonshire",2018,87.5
+"West Lothian",2018,89.2
+"Aberdeen City",2019,89.1
+"Aberdeenshire",2019,90.3
+"Angus",2019,83.9
+"Argyll and Bute",2019,92.9
+"Clackmannanshire",2019,87.8
+"Dumfries and Galloway",2019,90.5
+"Dundee City",2019,87.8
+"East Ayrshire",2019,92.5
+"East Dunbartonshire",2019,95.2
+"East Lothian",2019,93.5
+"East Renfrewshire",2019,94.5
+"City of Edinburgh",2019,85
+"Falkirk",2019,94.9
+"Fife",2019,93.6
+"Glasgow City",2019,86.9
+"Highland",2019,89.5
+"Inverclyde",2019,89.8
+"Midlothian",2019,91.4
+"Moray",2019,97.6
+"Na h-Eileanan Siar",2019,89.7
+"North Ayrshire",2019,87
+"North Lanarkshire",2019,91.2
+"Orkney Islands",2019,92.5
+"Perth and Kinross",2019,89.8
+"Renfrewshire",2019,96.4
+"Scottish Borders",2019,92.9
+"Shetland Islands",2019,88.7
+"South Ayrshire",2019,93
+"South Lanarkshire",2019,93.5
+"Stirling",2019,92.7
+"West Dunbartonshire",2019,78.9
+"West Lothian",2019,89.8

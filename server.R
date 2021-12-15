@@ -2259,6 +2259,30 @@ shinyServer(
         addLegend("bottomright", pal = choropleth_bgreen_reg, values = mapex$blueorgreen, title = paste("%", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
     })
     
+    # Leaflet map for housing_reg
+    output$housing_reg_map_caption <- renderText({
+      paste("Map 2. Percentage of households who report being 'very satisfied' or 'fairly satisfied' with their house or flat: ", as.character(input$housing_reg_input), sep="")
+    })
+    housing_reg_map_data <- reactive({
+      housing_reg_one <- housing_reg[ which(housing_reg$Year == input$housing_reg_input), ]
+      housing_reg_one <- housing_reg_one[ ,c(1,3)]
+      merged <- merge(mapex@data, housing_reg_one, by = intersect(names(mapex@data), names(housing_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
+      mapex@data <- merged[match(mapex@data$NAME, merged$NAME),]
+      choropleth_housing_reg <- colorBin(palette=brewer.pal(n=9, name="RdYlGn"), mapex@data$Value, bins = 9)
+      list_return <- list(mapex = mapex, choropleth_housing_reg = choropleth_housing_reg)
+      return(list_return)
+    })
+    output$housing_reg_map <- renderLeaflet({
+      mapex <- housing_reg_map_data()$mapex
+      choropleth_housing_reg <- housing_reg_map_data()$choropleth_housing_reg
+      leaflet(mapex) %>%
+        setView(zoom = 6, lat = 57, lng= -4) %>%
+        addProviderTiles("Esri.WorldGrayCanvas") %>%
+        addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_housing_reg(mapex$Value), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " ", as.character(mapex$Value), " %", sep = ""),
+                    highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
+        ) %>%
+        addLegend("bottomright", pal = choropleth_housing_reg, values = mapex$Value, title = paste("%", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
+    })
     
     
      # Leaflet map for pubservsat_reg

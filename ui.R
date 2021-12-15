@@ -1915,7 +1915,17 @@ shinyUI(fluidPage(
                                                 )
                                        ),
                                        
-                                                             
+                                       tabPanel("Housing satisfaction", 
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("housing_reg_map_caption")),
+                                                                sliderInput("housing_reg_input", label = "", min = start_year_housing_reg , max = end_year_housing_reg, value = end_year_housing_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("housing_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("Scottish Household Survey", href = "https://scotland.shinyapps.io/sg-scottish-household-survey-data-explorer/")
+                                                         )
+                                                )
+                                       ),                      
                                        tabPanel("Quality of public services",
                                                 fluidRow(width = 12,
                                                          column(width=12,

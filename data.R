@@ -217,6 +217,7 @@ wplearning_reg <- read.csv("./www/regional/wplearning_reg.csv", check.names=FALS
 worklessness_reg <- read.csv("./www/regional/worklessness_reg.csv", check.names=FALSE)
 
 bgreen_reg <- read.csv("./www/regional/bgreen_reg.csv", check.names=FALSE)
+housing_reg <- read.csv("./www/regional/housing_reg.csv", check.names=FALSE)
 pubservsat_reg <- read.csv("./www/regional/pubservsat_reg.csv", check.names=FALSE)
 broadband_reg <- read.csv("./www/regional/broadband_reg.csv", check.names=FALSE)
 
@@ -1179,7 +1180,9 @@ end_year_atravel_sco <- max(atravel_sco_long$Year)
 start_year_bgreen_reg <- min(bgreen_reg$Year)
 end_year_bgreen_reg <- max(bgreen_reg$Year)
 
-
+# housing_reg
+start_year_housing_reg <- min(housing_reg$Year)
+end_year_housing_reg <- max(housing_reg$Year)
 
 # pubservsat_reg 
 start_year_pubservsat_reg  <- min(pubservsat_reg $Year)
