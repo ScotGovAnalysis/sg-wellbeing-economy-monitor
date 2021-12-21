@@ -37,6 +37,7 @@ library(rsconnect)            # Used for shinyapp.io uploads
 library(tidyr)                # Used for data manipulation
 library(openxlsx)             # Used to read excel spreadsheets
 library(plotly)               # Used for plots
+library(stringr)              # Allows wrapping of text 
 
 # Dependencies ####
 #library(DBI)
