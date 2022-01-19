@@ -1345,7 +1345,7 @@ rank_ggemissions2 <- rank_ggemissions2$Rank
 text_scotland_thisyear_ggemissions2_int <- subset(ggemissions2_int_long, ggemissions2_int_long$Country == "Scotland")
 text_scotland_thisyear_ggemissions2_int <- subset(text_scotland_thisyear_ggemissions2_int, text_scotland_thisyear_ggemissions2_int$Year == max(ggemissions2_int_long$Year))
 text_scotland_thisyear_ggemissions2_int <- text_scotland_thisyear_ggemissions2_int$Value
-text_eu_thisyear_ggemissions2_int <- subset(ggemissions2_int_long, ggemissions2_int_long$Country == "EU")
+text_eu_thisyear_ggemissions2_int <- subset(ggemissions2_int_long, ggemissions2_int_long$Country == "OECD - Europe")
 text_eu_thisyear_ggemissions2_int <- subset(text_eu_thisyear_ggemissions2_int, text_eu_thisyear_ggemissions2_int$Year == max(ggemissions2_int_long$Year))
 text_eu_thisyear_ggemissions2_int <- text_eu_thisyear_ggemissions2_int$Value
 
