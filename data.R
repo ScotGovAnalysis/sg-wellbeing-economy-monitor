@@ -1326,6 +1326,7 @@ end_year_ggemissions2_int <- max(ggemissions2_int_long$Year)
 ggemissions2_overview_int <- subset(ggemissions2_int_long, ggemissions2_int_long$Country %in% comparison_countries_eu)
 ggemissions2_overview_int <- subset(ggemissions2_overview_int, ggemissions2_overview_int$Year == max(ggemissions2_overview_int$Year))
 ggemissions2_overview_int <- ggemissions2_overview_int[,c(1,3)]
+
 ggemissions2_overview_int <- ggemissions2_overview_int[order(ggemissions2_overview_int$Value, decreasing = FALSE),]
 ggemissions2_overview_int$Country <- factor(ggemissions2_overview_int$Country, levels = ggemissions2_overview_int$Country)
 
@@ -1345,9 +1346,11 @@ rank_ggemissions2 <- rank_ggemissions2$Rank
 text_scotland_thisyear_ggemissions2_int <- subset(ggemissions2_int_long, ggemissions2_int_long$Country == "Scotland")
 text_scotland_thisyear_ggemissions2_int <- subset(text_scotland_thisyear_ggemissions2_int, text_scotland_thisyear_ggemissions2_int$Year == max(ggemissions2_int_long$Year))
 text_scotland_thisyear_ggemissions2_int <- text_scotland_thisyear_ggemissions2_int$Value
-text_eu_thisyear_ggemissions2_int <- subset(ggemissions2_int_long, ggemissions2_int_long$Country == "OECD - Europe")
+text_scotland_thisyear_ggemissions2_int <- round(text_scotland_thisyear_ggemissions2_int,2)
+text_eu_thisyear_ggemissions2_int <- subset(ggemissions2_int_long, ggemissions2_int_long$Country == "OECD - Total")
 text_eu_thisyear_ggemissions2_int <- subset(text_eu_thisyear_ggemissions2_int, text_eu_thisyear_ggemissions2_int$Year == max(ggemissions2_int_long$Year))
 text_eu_thisyear_ggemissions2_int <- text_eu_thisyear_ggemissions2_int$Value
+text_eu_thisyear_ggemissions2_int <- round(text_eu_thisyear_ggemissions2_int,2)
 
 # EQUALITIES DASHBOARD ####
 # text figures for Gender

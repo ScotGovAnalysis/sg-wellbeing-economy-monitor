@@ -1968,7 +1968,7 @@ shinyUI(fluidPage(
                         column(width = 4,
                                h2("Greenhouse Gas Emissions"),
                                plotOutput("ggemissions2_overview_int_barplot", height = "200px"),
-                               p("Scotland's greenhouse gas emissions were ", text_scotland_thisyear_ggemissions2_int," (metric tons of CO2 equivalent per capita) in 2019, compared to ", text_eu_thisyear_ggemissions2_int," (metric tons of CO2 equivalent per capita) on average across all OECD countries.")
+                               p("Scotland's greenhouse gas emissions were ", text_scotland_thisyear_ggemissions2_int," (metric tons of CO2 equivalent per capita) in 2019, compared to ", text_eu_thisyear_ggemissions2_int," (Mt per capita) on average across all OECD countries.")
                         ),
                         column(width = 4,
                         ),
@@ -1996,7 +1996,7 @@ shinyUI(fluidPage(
                                               ),      
                                               column(width=9, 
                                                      fluidRow(
-                                                       p(tags$b(paste("Figure 1. Greenhouse gas emissions excl LULUCF (Mt of CO2 equivalent per caipta) ", "(", as.character(start_year_ggemissions_int), " - ", as.character(end_year_ggemissions_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       p(tags$b(paste("Figure 1. Greenhouse gas emissions excl LULUCF (Mt of CO2 equivalent per capita) ", "(", as.character(start_year_ggemissions_int), " - ", as.character(end_year_ggemissions_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                        withSpinner(dygraphOutput("ggemissions_int_graph"), type = 5),
                                                        align = "center"
                                                      ),
