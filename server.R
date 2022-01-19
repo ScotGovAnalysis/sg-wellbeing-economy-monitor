@@ -2369,7 +2369,7 @@ shinyServer(
       ggplot(ggemissions2_overview_int2, aes(x=Country, y=Value)) +
         geom_col(fill=factor(ggemissions2_overview_int2$fill_type), show.legend = FALSE, width=0.9) +
         coord_flip(clip="off", expand=TRUE) +
-        labs(x="", y="Tonnes of CO2 equivalent, Thousands") +
+        labs(x="", y="Mt per capita") +
         theme_minimal() +
         theme(
           axis.text.x=element_blank()
@@ -2387,7 +2387,7 @@ shinyServer(
         dyGroup(names(ggemissions_int_wide)[c(1, as.numeric(input$ggemissions_int_input))], strokeWidth = 2) %>%
         dyRangeSelector() %>%
         dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "Tonnes, Thousands") %>%
+        dyAxis("y", label = "Mt per capita") %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,
