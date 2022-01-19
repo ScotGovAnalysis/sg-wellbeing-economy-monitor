@@ -1968,7 +1968,7 @@ shinyUI(fluidPage(
                         column(width = 4,
                                h2("Greenhouse Gas Emissions"),
                                plotOutput("ggemissions2_overview_int_barplot", height = "200px"),
-                               p("Scotland's greenhouse gas emissions were ", text_scotland_thisyear_ggemissions2_int," (Tonnes CO2 per capita) in 2017, compared to ", text_eu_thisyear_ggemissions2_int," (Tonnes CO2 per capita) in the 28 EU countries.")
+                               p("Scotland's greenhouse gas emissions were ", text_scotland_thisyear_ggemissions2_int," (Thousand tonnes of CO2 equivalent) in 2019, compared to ", text_eu_thisyear_ggemissions2_int," (Thousand tonnes of CO2 equivalent) total across all OECD European countries.")
                         ),
                         column(width = 4,
                         ),
@@ -1996,7 +1996,7 @@ shinyUI(fluidPage(
                                               ),      
                                               column(width=9, 
                                                      fluidRow(
-                                                       p(tags$b(paste("Figure 1. Greenhouse gas emissions (Kilograms per capita, Thousands) ", "(", as.character(start_year_ggemissions_int), " - ", as.character(end_year_ggemissions_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       p(tags$b(paste("Figure 1. Greenhouse gas emissions excl LULUCF (Tonnes of CO2 equivalent, Thousands) ", "(", as.character(start_year_ggemissions_int), " - ", as.character(end_year_ggemissions_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                        withSpinner(dygraphOutput("ggemissions_int_graph"), type = 5),
                                                        align = "center"
                                                      ),
@@ -2020,7 +2020,7 @@ shinyUI(fluidPage(
                                                 fluidRow(width = 12,
                                                          column(width=12, 
                                                                 fluidRow(
-                                                                  p(tags$b(paste("Figure 1. Scotland's greenhouse gas emissions: ", "(", as.character(start_year_gasemissions_sco), " - ", as.character(end_year_gasemissions_sco), ") ", " (Mt Co2Equiv)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                                  p(tags$b(paste("Figure 1. Scotland's greenhouse gas emissions excl LULUCF: ", "(", as.character(start_year_gasemissions_sco), " - ", as.character(end_year_gasemissions_sco), ") ", " (Mt Co2Equiv)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                                   withSpinner(dygraphOutput("gasemissions_sco_graph"), type = 5),
                                                                   align = "center"
                                                                 ),
