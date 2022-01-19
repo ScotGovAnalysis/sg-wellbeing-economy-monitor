@@ -1893,7 +1893,7 @@ shinyServer(
         dyCrosshair(direction = "vertical")
     })
     
-             # ggplot barplot for hlifeexp_male_overview_int
+             # ggplot barplot for hlifeexp_male_overview_sco
     output$hlifeexp_male_overview_sco_barplot <- renderPlot({
       hlifeexp_male_overview_sco <- hlifeexp_male_sco %>%
         mutate(Age = (Age),
@@ -2369,12 +2369,12 @@ shinyServer(
       ggplot(ggemissions2_overview_int2, aes(x=Country, y=Value)) +
         geom_col(fill=factor(ggemissions2_overview_int2$fill_type), show.legend = FALSE, width=0.9) +
         coord_flip(clip="off", expand=TRUE) +
-        labs(x="", y="Tonnes CO2e per capita") +
+        labs(x="", y="Tonnes of CO2 equivalent, Thousands") +
         theme_minimal() +
         theme(
           axis.text.x=element_blank()
         ) +
-        ggtitle("Greenhouse Gas Emissions (Tonnes CO2e per capita)") +
+        ggtitle("Greenhouse Gas Emissions") +
         geom_text(aes(x=Country, y=Value, label=Value),
                   vjust=0.3, size=4, hjust=1.1, col="white")
     })
@@ -2387,7 +2387,7 @@ shinyServer(
         dyGroup(names(ggemissions_int_wide)[c(1, as.numeric(input$ggemissions_int_input))], strokeWidth = 2) %>%
         dyRangeSelector() %>%
         dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "Kilograms per capita, Thousands") %>%
+        dyAxis("y", label = "Tonnes, Thousands") %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,
