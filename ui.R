@@ -2136,6 +2136,7 @@ shinyUI(fluidPage(
                                                      ),
                                                      fluidRow(
                                                        textOutput("legendDivID_naturalcapaccs_sco"),
+                                                       p("Note: The monetary value of services can be affected by financial as well as physical factors."),
                                                        p("Source: "), 
                                                        a("Scottish Natural Capital Accounts 2021", href = "https://www.gov.scot/publications/scottish-natural-capital-accounts-2021"),
                                                        collapsible = FALSE,
