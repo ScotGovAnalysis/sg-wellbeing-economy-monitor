@@ -2020,7 +2020,7 @@ shinyUI(fluidPage(
                                                 fluidRow(width = 12,
                                                          column(width=12, 
                                                                 fluidRow(
-                                                                  p(tags$b(paste("Figure 1. Scotland's greenhouse gas emissions excl LULUCF: ", "(", as.character(start_year_gasemissions_sco), " - ", as.character(end_year_gasemissions_sco), ") ", " (Mt Co2Equiv)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                                  p(tags$b(paste("Figure 1. Scotland's greenhouse gas emissions excl LULUCF: ", "(", as.character(start_year_gasemissions_sco), " - ", as.character(end_year_gasemissions_sco), ") ", " (tonnes per person per year)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                                   withSpinner(dygraphOutput("gasemissions_sco_graph"), type = 5),
                                                                   align = "center"
                                                                 ),
