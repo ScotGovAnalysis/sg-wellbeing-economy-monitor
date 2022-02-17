@@ -1648,7 +1648,7 @@ shinyServer(
     
     # Leaflet map for eactivity_reg
     output$eactivity_reg_map_caption <- renderText({
-      paste("Map 1. Total economic activity rate (16-64) ", as.character(input$eactivity_reg_input), sep="")
+      paste("Map 1. Total economic activity rate (16-64)  ", as.character(input$eactivity_reg_input), sep="")
     })
     eactivity_reg_map_data <- reactive({
       eactivity_reg_one <- eactivity_reg[ which(eactivity_reg$Year == input$eactivity_reg_input), ]
@@ -1670,6 +1670,32 @@ shinyServer(
         ) %>%
         addLegend("bottomright", pal = choropleth_eactivity_reg, values = mapex$eactivity, title = paste("Economic Activity", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
     })
+    
+    # Leaflet map for unpaidhelp_reg
+    output$unpaidhelp_reg_map_caption <- renderText({
+      paste("Map 2. % who provided unpaid help to organisations or groups in the last 12 months ", as.character(input$unpaidhelp_reg_input), sep="")
+    })
+    unpaidhelp_reg_map_data <- reactive({
+      unpaidhelp_reg_one <- unpaidhelp_reg[ which(unpaidhelp_reg$Year == input$unpaidhelp_reg_input), ]
+      unpaidhelp_reg_one <- unpaidhelp_reg_one[ ,c(1,3)]
+      merged <- merge(mapex@data, unpaidhelp_reg_one, by = intersect(names(mapex@data), names(unpaidhelp_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
+      mapex@data <- merged[match(mapex@data$NAME, merged$NAME),]
+      choropleth_unpaidhelp_reg <- colorBin(palette=brewer.pal(n=9, name="RdYlGn"), mapex@data$Value, bins = 9)
+      list_return <- list(mapex = mapex, choropleth_unpaidhelp_reg = choropleth_unpaidhelp_reg)
+      return(list_return)
+    })
+    output$unpaidhelp_reg_map <- renderLeaflet({
+      mapex <- unpaidhelp_reg_map_data()$mapex
+      choropleth_unpaidhelp_reg <- unpaidhelp_reg_map_data()$choropleth_unpaidhelp_reg
+      leaflet(mapex) %>%
+        setView(zoom = 6, lat = 57, lng= -4) %>%
+        addProviderTiles("Esri.WorldGrayCanvas") %>%
+        addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_unpaidhelp_reg(mapex$Value), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " ", as.character(mapex$Value), " %", sep = ""),
+                    highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
+        ) %>%
+        addLegend("bottomright", pal = choropleth_unpaidhelp_reg, values = mapex$Value, title = paste("%", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
+    })
+    
     # Leaflet map for lwage_reg
     output$lwage_reg_map_caption <- renderText({
       paste("Map 2. Percentage of Employees Earning Below the Living Wage ", as.character(input$lwage_reg_input), sep="")

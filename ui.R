@@ -1459,6 +1459,17 @@ shinyUI(fluidPage(
                                                         )
                                                )
                                        ),
+                                       tabPanel("Volunteering with organisations or groups", 
+                                                fluidRow(width = 12,
+                                                         column(width=12,
+                                                                tags$b(textOutput("unpaidhelp_reg_map_caption")),
+                                                                sliderInput("unpaidhelp_reg_input", label = "", min = start_year_unpaidhelp_reg , max = end_year_unpaidhelp_reg, value = end_year_unpaidhelp_reg, width = "50%", sep = "", step = 1),
+                                                                withSpinner(leafletOutput("unpaidhelp_reg_map"), type = 5),
+                                                                p("Source: "), 
+                                                                a("Scottish Household Survey", href = "https://scotland.shinyapps.io/sg-scottish-household-survey-data-explorer/")
+                                                         )
+                                                )
+                                       ),
                                        tabPanel("Living wage",
                                                 fluidRow(width = 12,
                                                          column(width=12,
