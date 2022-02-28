@@ -8,6 +8,23 @@ shinyServer(
     observe_helpers()
     
     # HOME PAGE ######################################################################################################################################                         
+    
+    #####TEST####
+    
+    #user generated table
+    
+    output$table <- DT::renderDataTable(DT::datatable({
+      data <- cpovxhhwas
+      if (input$NAME != "All") {
+        data <- data[data$NAME == input$NAME,]
+      }   
+      if (input$Year != "All") {
+        data <- data[data$Year == input$Year,]
+      }
+      data
+        }))
+    
+    
     # circular_barplot_home_ggplot
     output$circular_barplot_home_ggplot <- renderPlot({
       ggplot(data) +      
