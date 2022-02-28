@@ -132,12 +132,12 @@ employment_int <- read.csv("./www/international/employment_int.csv", check.names
 unemployment_int <- read.csv("./www/international/unemployment_int.csv", check.names=FALSE)
 genderpaygap_int <- read.csv("./www/international/genderpaygap_int.csv", check.names=FALSE)
 genderpaygap2_int <- read.csv("./www/international/genderpaygap2_int.csv", check.names=FALSE)
-skillsunderprimary_int <- read.csv("./www/international/skillsunderprimary_int.csv", check.names=FALSE)
-skillstertiary_int <- read.csv("./www/international/skillstertiary_int.csv", check.names=FALSE)
 yunemployment_int <- read.csv("./www/international/yunemployment_int.csv", check.names=FALSE)
 evoice_int <- read.csv("./www/international/evoice_int.csv", check.names=FALSE)
 evoice2_int <- read.csv("./www/international/evoice2_int.csv", check.names=FALSE)
 lifeexpall_int <- read.csv("./www/international/lifeexpall_int.csv", check.names=FALSE)
+skillsunderprimary_int <- read.csv("./www/international/skillsunderprimary_int.csv", check.names=FALSE)
+skillstertiary_int <- read.csv("./www/international/skillstertiary_int.csv", check.names=FALSE)
 lifeexpf_int <- read.csv("./www/international/lifeexpf_int.csv", check.names=FALSE)
 broadband_int <- read.csv("./www/international/broadband_int.csv", check.names=FALSE)
 emissions_int <- read.csv("./www/international/emissions_int.csv", check.names=FALSE)
@@ -257,7 +257,7 @@ productivity_int_long <- productivity_int %>%
 productivity_int_wide <- productivity_int_long %>% 
   spread("Country", "Value")
 productivity_int_wide$Year <- as.integer(productivity_int_wide$Year)
-positions_selected_countries_productivity_int <- which(names(productivity_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK'))
+positions_selected_countries_productivity_int <- which(names(productivity_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'Scotland', 'United Kingdom'))
 start_year_productivity_int <- min(productivity_int_long$Year)
 end_year_productivity_int <- max(productivity_int_long$Year)
 
@@ -267,7 +267,7 @@ exporting_int_long <- exporting_int %>%
 exporting_int_wide <- exporting_int_long %>% 
   spread("Country", "Value")
 exporting_int_wide$Year <- as.integer(exporting_int_wide$Year)
-positions_selected_countries_exporting_int <- which(names(exporting_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK'))
+positions_selected_countries_exporting_int <- which(names(exporting_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'United Kingdom', 'Scotland (international and Ruk)', 'Scotland (international)'))
 start_year_exporting_int <- min(exporting_int_long$Year)
 end_year_exporting_int <- max(exporting_int_long$Year)
 
@@ -277,7 +277,7 @@ rd_int_long <- rd_int %>%
 rd_int_wide <- rd_int_long %>% 
   spread("Country", "Value")
 rd_int_wide$Year <- as.integer(rd_int_wide$Year)
-positions_selected_countries_rd_int <- which(names(rd_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK'))
+positions_selected_countries_rd_int <- which(names(rd_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'United Kingdom', 'Scotland'))
 start_year_rd_int <- min(rd_int_long$Year)
 end_year_rd_int <- max(rd_int_long$Year)
 
@@ -789,25 +789,6 @@ positions_selected_countries_genderpaygap_int <- which(names(genderpaygap_int_wi
 start_year_genderpaygap_int <- min(genderpaygap_int_long$Year)
 end_year_genderpaygap_int <- max(genderpaygap_int_long$Year)
 
-# skillsunderprimary_int
-skillsunderprimary_int_long <- skillsunderprimary_int %>% 
-  gather("Year", "Value", 2:ncol(skillsunderprimary_int))
-skillsunderprimary_int_wide <- skillsunderprimary_int_long %>% 
-  spread("Country", "Value")
-skillsunderprimary_int_wide$Year <- as.integer(skillsunderprimary_int_wide$Year)
-positions_selected_countries_skillsunderprimary_int <- which(names(skillsunderprimary_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
-start_year_skillsunderprimary_int <- min(skillsunderprimary_int_long$Year)
-end_year_skillsunderprimary_int <- max(skillsunderprimary_int_long$Year)
-
-# skillstertiary_int
-skillstertiary_int_long <- skillstertiary_int %>% 
-  gather("Year", "Value", 2:ncol(skillstertiary_int))
-skillstertiary_int_wide <- skillstertiary_int_long %>% 
-  spread("Country", "Value")
-skillstertiary_int_wide$Year <- as.integer(skillstertiary_int_wide$Year)
-positions_selected_countries_skillstertiary_int <- which(names(skillstertiary_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
-start_year_skillstertiary_int <- min(skillstertiary_int_long$Year)
-end_year_skillstertiary_int <- max(skillstertiary_int_long$Year)
 
 # yunemployment_int
 yunemployment_int_long <- yunemployment_int %>% 
@@ -898,21 +879,6 @@ genderpaygap_overview_int <- subset(genderpaygap_overview_int, genderpaygap_over
 genderpaygap_overview_int <- genderpaygap_overview_int[,c(1,3)]
 genderpaygap_overview_int <- genderpaygap_overview_int[order(genderpaygap_overview_int$Value, decreasing = FALSE),]
 genderpaygap_overview_int$Country <- factor(genderpaygap_overview_int$Country, levels = genderpaygap_overview_int$Country)
-
-# skillsunderprimary_overview_int
-skillsunderprimary_overview_int <- subset(skillsunderprimary_int_long, skillsunderprimary_int_long$Country %in% comparison_countries_eu)
-skillsunderprimary_overview_int <- subset(skillsunderprimary_overview_int, skillsunderprimary_overview_int$Year == max(skillsunderprimary_overview_int$Year))
-skillsunderprimary_overview_int <- skillsunderprimary_overview_int[,c(1,3)]
-skillsunderprimary_overview_int <- skillsunderprimary_overview_int[order(skillsunderprimary_overview_int$Value, decreasing = FALSE),]
-skillsunderprimary_overview_int$Country <- factor(skillsunderprimary_overview_int$Country, levels = skillsunderprimary_overview_int$Country)
-
-# text for skillsunderprimary_overview_int
-text_scotland_thisyear_skillsunderprimary_int <- subset(skillsunderprimary_int_long, skillsunderprimary_int_long$Country == "Scotland")
-text_scotland_thisyear_skillsunderprimary_int <- subset(text_scotland_thisyear_skillsunderprimary_int, text_scotland_thisyear_skillsunderprimary_int$Year == max(skillsunderprimary_int_long$Year))
-text_scotland_thisyear_skillsunderprimary_int <- text_scotland_thisyear_skillsunderprimary_int$Value
-text_eu_thisyear_skillsunderprimary_int <- subset(skillsunderprimary_int_long, skillsunderprimary_int_long$Country == "EU")
-text_eu_thisyear_skillsunderprimary_int <- subset(text_eu_thisyear_skillsunderprimary_int, text_eu_thisyear_skillsunderprimary_int$Year == max(skillsunderprimary_int_long$Year))
-text_eu_thisyear_skillsunderprimary_int <- text_eu_thisyear_skillsunderprimary_int$Value
 
 # yunemployment_overview_int
 yunemployment_overview_int <- subset(yunemployment_int_long, yunemployment_int_long$Country %in% comparison_countries_eu)
@@ -1065,6 +1031,45 @@ lifeexpall_int_wide$Year <- as.integer(lifeexpall_int_wide$Year)
 positions_selected_countries_lifeexpall_int <- which(names(lifeexpall_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
 start_year_lifeexpall_int <- min(lifeexpall_int_long$Year)
 end_year_lifeexpall_int <- max(lifeexpall_int_long$Year)
+
+# skillsunderprimary_overview_int
+skillsunderprimary_overview_int <- subset(skillsunderprimary_int_long, skillsunderprimary_int_long$Country %in% comparison_countries_eu)
+skillsunderprimary_overview_int <- subset(skillsunderprimary_overview_int, skillsunderprimary_overview_int$Year == max(skillsunderprimary_overview_int$Year))
+skillsunderprimary_overview_int <- skillsunderprimary_overview_int[,c(1,3)]
+skillsunderprimary_overview_int <- skillsunderprimary_overview_int[order(skillsunderprimary_overview_int$Value, decreasing = FALSE),]
+skillsunderprimary_overview_int$Country <- factor(skillsunderprimary_overview_int$Country, levels = skillsunderprimary_overview_int$Country)
+
+# text for skillsunderprimary_overview_int
+text_scotland_thisyear_skillsunderprimary_int <- subset(skillsunderprimary_int_long, skillsunderprimary_int_long$Country == "Scotland")
+text_scotland_thisyear_skillsunderprimary_int <- subset(text_scotland_thisyear_skillsunderprimary_int, text_scotland_thisyear_skillsunderprimary_int$Year == max(skillsunderprimary_int_long$Year))
+text_scotland_thisyear_skillsunderprimary_int <- text_scotland_thisyear_skillsunderprimary_int$Value
+text_eu_thisyear_skillsunderprimary_int <- subset(skillsunderprimary_int_long, skillsunderprimary_int_long$Country == "EU")
+text_eu_thisyear_skillsunderprimary_int <- subset(text_eu_thisyear_skillsunderprimary_int, text_eu_thisyear_skillsunderprimary_int$Year == max(skillsunderprimary_int_long$Year))
+text_eu_thisyear_skillsunderprimary_int <- text_eu_thisyear_skillsunderprimary_int$Value
+
+
+# skillsunderprimary_int
+skillsunderprimary_int_long <- skillsunderprimary_int %>% 
+  gather("Year", "Value", 2:ncol(skillsunderprimary_int))
+skillsunderprimary_int_wide <- skillsunderprimary_int_long %>% 
+  spread("Country", "Value")
+skillsunderprimary_int_wide$Year <- as.integer(skillsunderprimary_int_wide$Year)
+positions_selected_countries_skillsunderprimary_int <- which(names(skillsunderprimary_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
+start_year_skillsunderprimary_int <- min(skillsunderprimary_int_long$Year)
+end_year_skillsunderprimary_int <- max(skillsunderprimary_int_long$Year)
+
+# skillstertiary_int
+skillstertiary_int_long <- skillstertiary_int %>% 
+  gather("Year", "Value", 2:ncol(skillstertiary_int))
+skillstertiary_int_wide <- skillstertiary_int_long %>% 
+  spread("Country", "Value")
+skillstertiary_int_wide$Year <- as.integer(skillstertiary_int_wide$Year)
+positions_selected_countries_skillstertiary_int <- which(names(skillstertiary_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
+start_year_skillstertiary_int <- min(skillstertiary_int_long$Year)
+end_year_skillstertiary_int <- max(skillstertiary_int_long$Year)
+
+
+
 
 # lifeexpf_int
 

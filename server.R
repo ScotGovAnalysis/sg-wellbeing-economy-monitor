@@ -348,7 +348,7 @@ shinyServer(
         dyGroup(names(exporting_int_wide)[c(1, as.numeric(input$exporting_int_input))], strokeWidth = 2) %>%
         dyRangeSelector() %>%
         dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "% of USA") %>%
+        dyAxis("y", label = "% of GDP") %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,
@@ -1237,24 +1237,6 @@ shinyServer(
                   vjust=0.3, size=4, hjust=1.1, col="white")
     })
     
-    # ggplot barplot for skillsunderprimary_overview
-    output$skillsunderprimary_overview_int_barplot <- renderPlot({
-      skillsunderprimary_overview_int2 <- skillsunderprimary_overview_int %>%
-        mutate(Country = (Country),
-               Value = as.numeric(Value),
-               fill_type = ifelse(skillsunderprimary_overview_int$Country == "Scotland","blue","grey"))
-      ggplot(skillsunderprimary_overview_int2, aes(x=Country, y=Value)) +
-        geom_col(fill=factor(skillsunderprimary_overview_int2$fill_type), show.legend = FALSE, width=0.9) +
-        coord_flip(clip="off", expand=TRUE) +
-        labs(x="", y="%") +
-        theme_minimal() +
-        theme(
-          axis.text.x=element_blank()
-        ) +
-        ggtitle("Attainment level of less than primary, primary and lower secondary education") +
-        geom_text(aes(x=Country, y=Value, label=Value),
-                  vjust=0.3, size=4, hjust=1.1, col="white")
-    })
     
     # ggplot barplot for yunemployment_overview
     output$yunemployment_overview_int_barplot <- renderPlot({
@@ -1379,48 +1361,7 @@ shinyServer(
     })
     
     
-    # Dygraph for skillsunderprimary_int
-    output$skillsunderprimary_int_graph <- renderDygraph({
-      dygraph(
-        skillsunderprimary_int_wide[,c(1, as.numeric(input$skillsunderprimary_int_input))]
-      ) %>%
-        dyGroup(names(skillsunderprimary_int_wide)[c(1, as.numeric(input$skillsunderprimary_int_input))], strokeWidth = 2) %>%
-        dyRangeSelector() %>%
-        dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "Percentage") %>%
-        dyHighlight(
-          highlightCircleSize = 3,
-          highlightSeriesBackgroundAlpha = 0.2,
-          hideOnMouseOut = FALSE,
-          highlightSeriesOpts = list(strokeWidth = 6)
-        ) %>%
-        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
-        dyLegend(labelsDiv = "legendDivID_skillsunderprimary_int", labelsSeparateLines = TRUE) %>%
-        dyUnzoom() %>%
-        dyCrosshair(direction = "vertical")
-    })
-    
-    # Dygraph for skillstertiary_int
-    output$skillstertiary_int_graph <- renderDygraph({
-      dygraph(
-        skillstertiary_int_wide[,c(1, as.numeric(input$skillstertiary_int_input))]
-      ) %>%
-        dyGroup(names(skillstertiary_int_wide)[c(1, as.numeric(input$skillstertiary_int_input))], strokeWidth = 2) %>%
-        dyRangeSelector() %>%
-        dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "Percantage") %>%
-        dyHighlight(
-          highlightCircleSize = 3,
-          highlightSeriesBackgroundAlpha = 0.2,
-          hideOnMouseOut = FALSE,
-          highlightSeriesOpts = list(strokeWidth = 6)
-        ) %>%
-        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
-        dyLegend(labelsDiv = "legendDivID_skillstertiary_int", labelsSeparateLines = TRUE) %>%
-        dyUnzoom() %>%
-        dyCrosshair(direction = "vertical")
-    })
-    
+   
     # Dygraph for yunemployment_int
     output$yunemployment_int_graph <- renderDygraph({
       dygraph(
@@ -1450,7 +1391,7 @@ shinyServer(
     #     dyGroup(names(evoice_int_wide)[c(1, as.numeric(input$evoice_int_input))], strokeWidth = 2) %>%
     #     dyRangeSelector() %>%
     #     dyAxis("x", label = "Year", rangePad = 5) %>%
-    #     dyAxis("y", label = "Percantage") %>%
+    #     dyAxis("y", label = "Percentage") %>%
     #     dyHighlight(
     #       highlightCircleSize = 3,
     #       highlightSeriesBackgroundAlpha = 0.2,
@@ -1836,6 +1777,25 @@ shinyServer(
         geom_text(aes(x=Country, y=Value, label=Value),
                   vjust=0.3, size=4, hjust=1.1, col="white")
     })
+   
+    # ggplot barplot for skillsunderprimary_overview
+    output$skillsunderprimary_overview_int_barplot <- renderPlot({
+      skillsunderprimary_overview_int2 <- skillsunderprimary_overview_int %>%
+        mutate(Country = (Country),
+               Value = as.numeric(Value),
+               fill_type = ifelse(skillsunderprimary_overview_int$Country == "Scotland","blue","grey"))
+      ggplot(skillsunderprimary_overview_int2, aes(x=Country, y=Value)) +
+        geom_col(fill=factor(skillsunderprimary_overview_int2$fill_type), show.legend = FALSE, width=0.9) +
+        coord_flip(clip="off", expand=TRUE) +
+        labs(x="", y="%") +
+        theme_minimal() +
+        theme(
+          axis.text.x=element_blank()
+        ) +
+        ggtitle("Attainment level of less than primary, primary and lower secondary education") +
+        geom_text(aes(x=Country, y=Value, label=Value),
+                  vjust=0.3, size=4, hjust=1.1, col="white")
+    })
     
     
     # Dygraph for lifeexpall_int
@@ -1846,7 +1806,7 @@ shinyServer(
         dyGroup(names(lifeexpall_int_wide)[c(1, as.numeric(input$lifeexpall_int_input))], strokeWidth = 2) %>%
         dyRangeSelector() %>%
         dyAxis("x", label = "Year", rangePad = 5) %>%
-        dyAxis("y", label = "Percantage") %>%
+        dyAxis("y", label = "Percentage") %>%
         dyHighlight(
           highlightCircleSize = 3,
           highlightSeriesBackgroundAlpha = 0.2,
@@ -1858,6 +1818,49 @@ shinyServer(
         dyUnzoom() %>%
         dyCrosshair(direction = "vertical")
     })
+    
+    # Dygraph for skillsunderprimary_int
+    output$skillsunderprimary_int_graph <- renderDygraph({
+      dygraph(
+        skillsunderprimary_int_wide[,c(1, as.numeric(input$skillsunderprimary_int_input))]
+      ) %>%
+        dyGroup(names(skillsunderprimary_int_wide)[c(1, as.numeric(input$skillsunderprimary_int_input))], strokeWidth = 2) %>%
+        dyRangeSelector() %>%
+        dyAxis("x", label = "Year", rangePad = 5) %>%
+        dyAxis("y", label = "Percentage") %>%
+        dyHighlight(
+          highlightCircleSize = 3,
+          highlightSeriesBackgroundAlpha = 0.2,
+          hideOnMouseOut = FALSE,
+          highlightSeriesOpts = list(strokeWidth = 6)
+        ) %>%
+        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
+        dyLegend(labelsDiv = "legendDivID_skillsunderprimary_int", labelsSeparateLines = TRUE) %>%
+        dyUnzoom() %>%
+        dyCrosshair(direction = "vertical")
+    })
+    
+    # Dygraph for skillstertiary_int
+    output$skillstertiary_int_graph <- renderDygraph({
+      dygraph(
+        skillstertiary_int_wide[,c(1, as.numeric(input$skillstertiary_int_input))]
+      ) %>%
+        dyGroup(names(skillstertiary_int_wide)[c(1, as.numeric(input$skillstertiary_int_input))], strokeWidth = 2) %>%
+        dyRangeSelector() %>%
+        dyAxis("x", label = "Year", rangePad = 5) %>%
+        dyAxis("y", label = "Percentage") %>%
+        dyHighlight(
+          highlightCircleSize = 3,
+          highlightSeriesBackgroundAlpha = 0.2,
+          hideOnMouseOut = FALSE,
+          highlightSeriesOpts = list(strokeWidth = 6)
+        ) %>%
+        dyOptions(gridLineColor = "lightgrey", digitsAfterDecimal = 2) %>%
+        dyLegend(labelsDiv = "legendDivID_skillstertiary_int", labelsSeparateLines = TRUE) %>%
+        dyUnzoom() %>%
+        dyCrosshair(direction = "vertical")
+    })
+    
     
     # Dygraph for rphousingc_sco
     output$rphousingc_sco_graph <- renderDygraph({

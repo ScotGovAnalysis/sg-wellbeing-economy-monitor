@@ -181,8 +181,9 @@ shinyUI(fluidPage(
                                                        ),
                                                        fluidRow(
                                                          textOutput("legendDivID_growth_int"),
-                                                         p("Source: "), 
+                                                         p("Sources: "), 
                                                          a("OECD", href = "https://data.oecd.org/gdp/gross-domestic-product-gdp.htm"),
+                                                         a("ODP", href = "https://statistics.gov.scot/data/search"),
                                                          collapsible = FALSE,
                                                          width = 12,
                                                          style="margin-bottom: 100px;"
@@ -1026,11 +1027,6 @@ shinyUI(fluidPage(
                                p("Scotland's gender pay gap was 16% in 2017, compared to 13.5% in the OECD. Over the past 5 years, the average gender pay gap was 16.8% in Scotland, compared to 14% in the OECD overall.")
                         ),
                         column(width = 4,
-                               h2("Skills"),
-                               plotOutput("skillsunderprimary_overview_int_barplot", height = "200px"),
-                               p("Scotland's attainment level of skills under primary was ", text_scotland_thisyear_skillsunderprimary_int,"% in 2018, compared to ", text_eu_thisyear_skillsunderprimary_int, "% in the EU.")
-                        ),
-                        column(width = 4,
                                h2("Youth Unemployment"),
                                plotOutput("yunemployment_overview_int_barplot", height = "200px"),
                                p("Scotland's youth unemployment rate was ", text_scotland_thisyear_yunemployment_int,"% in 2018, compared to ", text_eu_thisyear_yunemployment_int,"% in the EU.")
@@ -1162,64 +1158,6 @@ shinyUI(fluidPage(
                                               #          style="margin-bottom: 100px;"
                                               #        )
                                               # )
-                                     )
-                            ),
-                            tabPanel("Skills",
-                                     fluidRow(width = 12,
-                                              column(width=3, 
-                                                     wellPanel(
-                                                       checkboxGroupInput(
-                                                         inputId = "skillsunderprimary_int_input",
-                                                         label = "",
-                                                         choiceNames = names(skillsunderprimary_int_wide),
-                                                         choiceValues = c(seq(1:length(names(skillsunderprimary_int_wide)))),
-                                                         selected = positions_selected_countries_skillsunderprimary_int
-                                                       )
-                                                     )
-                                              ),      
-                                              column(width=9, 
-                                                     fluidRow(
-                                                       p(tags$b(paste("Figure 5. Population aged 25-64 with ess than primary, primary and lower secondary education (levels 0-2) ", "(", as.character(start_year_skillsunderprimary_int), " - ", as.character(end_year_skillsunderprimary_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
-                                                       withSpinner(dygraphOutput("skillsunderprimary_int_graph"), type = 5),
-                                                       align = "center"
-                                                     ),
-                                                     fluidRow(
-                                                       textOutput("legendDivID_skillsunderprimary_int"),
-                                                       p("Source: "), 
-                                                       a("Eurostat", href = "https://ec.europa.eu/eurostat/home?"),
-                                                       collapsible = FALSE,
-                                                       width = 12,
-                                                       style="margin-bottom: 100px;"
-                                                     )
-                                              )
-                                     ),
-                                     fluidRow(width = 12,
-                                              column(width=3, 
-                                                     wellPanel(
-                                                       checkboxGroupInput(
-                                                         inputId = "skillstertiary_int_input",
-                                                         label = "",
-                                                         choiceNames = names(skillstertiary_int_wide),
-                                                         choiceValues = c(seq(1:length(names(skillstertiary_int_wide)))),
-                                                         selected = positions_selected_countries_skillstertiary_int
-                                                       )
-                                                     )
-                                              ),      
-                                              column(width=9, 
-                                                     fluidRow(
-                                                       p(tags$b(paste("Figure 6. Population aged 25-64 by educational attainment level: Tertiary education (levels 5-8) ", "(", as.character(start_year_skillstertiary_int), " - ", as.character(end_year_skillstertiary_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
-                                                       withSpinner(dygraphOutput("skillstertiary_int_graph"), type = 5),
-                                                       align = "center"
-                                                     ),
-                                                     fluidRow(
-                                                       textOutput("legendDivID_skillstertiary_int"),
-                                                       p("Source: "), 
-                                                       a("Eurostat", href = "https://ec.europa.eu/eurostat/home?"),
-                                                       collapsible = FALSE,
-                                                       width = 12,
-                                                       style="margin-bottom: 100px;"
-                                                     )
-                                              )
                                      )
                             ),
                             tabPanel("Youth unemployment",
@@ -1532,16 +1470,20 @@ shinyUI(fluidPage(
                         style="background-color: grey; color: white"
                ),
                fluidRow(width = 12,
-                        column(width = 4,
+                        column(width = 6,
                                h2("Life expectancy"),
                                plotOutput("lifeexpall_overview_int_barplot", height = "200px"),
                                p("Scotland's life expectancy was ", text_scotland_thisyear_lifeexpall_int," in 2017, compared to ", text_oecd_thisyear_lifeexpall_int," in the OECD. Over the past 5 years, the average life expectancy was ", text_scotland_last5_lifeexpall_int ," in Scotland, compared to ", text_oecd_last5_lifeexpall_int, " in the OECD overall.")
                         ),
-                        column(width = 4,
-                        ),
-                        column(width = 4,
-                        )
+                 column(width = 6,
+                      h2("Skills"),
+                      plotOutput("skillsunderprimary_overview_int_barplot", height = "200px"),
+                      p("Scotland's attainment level of skills under primary was ", text_scotland_thisyear_skillsunderprimary_int,"% in 2018, compared to ", text_eu_thisyear_skillsunderprimary_int, "% in the EU.")
+               ),       
+              
                ),
+               
+               
                # DETAILS ####
                h1("Details"),
                tabsetPanel(
@@ -1576,10 +1518,73 @@ shinyUI(fluidPage(
                                                        style="margin-bottom: 100px;"
                                                      )
                                               )
-                                     )
-                            )
-                          )
+                                     ),
+                            ),
+                                     tabPanel("Skills",
+                                              fluidRow(width = 12,
+                                                       column(width=3, 
+                                                              wellPanel(
+                                                                checkboxGroupInput(
+                                                                  inputId = "skillsunderprimary_int_input",
+                                                                  label = "",
+                                                                  choiceNames = names(skillsunderprimary_int_wide),
+                                                                  choiceValues = c(seq(1:length(names(skillsunderprimary_int_wide)))),
+                                                                  selected = positions_selected_countries_skillsunderprimary_int
+                                                                )
+                                                              )
+                                                       ),      
+                                                       column(width=9, 
+                                                              fluidRow(
+                                                                p(tags$b(paste("Figure 5. Population aged 25-64 with ess than primary, primary and lower secondary education (levels 0-2) ", "(", as.character(start_year_skillsunderprimary_int), " - ", as.character(end_year_skillsunderprimary_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                                withSpinner(dygraphOutput("skillsunderprimary_int_graph"), type = 5),
+                                                                align = "center"
+                                                              ),
+                                                              fluidRow(
+                                                                textOutput("legendDivID_skillsunderprimary_int"),
+                                                                p("Source: "), 
+                                                                a("Eurostat", href = "https://ec.europa.eu/eurostat/home?"),
+                                                                collapsible = FALSE,
+                                                                width = 12,
+                                                                style="margin-bottom: 100px;"
+                                                              )
+                                                       )
+                                              ),
+                                              fluidRow(width = 12,
+                                                       column(width=3, 
+                                                              wellPanel(
+                                                                checkboxGroupInput(
+                                                                  inputId = "skillstertiary_int_input",
+                                                                  label = "",
+                                                                  choiceNames = names(skillstertiary_int_wide),
+                                                                  choiceValues = c(seq(1:length(names(skillstertiary_int_wide)))),
+                                                                  selected = positions_selected_countries_skillstertiary_int
+                                                                )
+                                                              )
+                                                       ),      
+                                                       column(width=9, 
+                                                              fluidRow(
+                                                                p(tags$b(paste("Figure 6. Population aged 25-64 by educational attainment level: Tertiary education (levels 5-8) ", "(", as.character(start_year_skillstertiary_int), " - ", as.character(end_year_skillstertiary_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                                withSpinner(dygraphOutput("skillstertiary_int_graph"), type = 5),
+                                                                align = "center"
+                                                              ),
+                                                              fluidRow(
+                                                                textOutput("legendDivID_skillstertiary_int"),
+                                                                p("Source: "), 
+                                                                a("Eurostat", href = "https://ec.europa.eu/eurostat/home?"),
+                                                                collapsible = FALSE,
+                                                                width = 12,
+                                                                style="margin-bottom: 100px;"
+                                                              )
+                                                       )
+                                              )
+                                     ),
+                            
+                          ),
+                          
+                          
                  ),
+                                  
+                 
                  # SCOTLAND ####
                  tabPanel("Scotland",
                           navlistPanel(widths=c(3,9),
