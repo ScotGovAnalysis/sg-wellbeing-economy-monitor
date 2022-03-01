@@ -489,14 +489,14 @@ text_scotland_last5_exporting_int <- round(text_scotland_last5_exporting_int/5, 
 
 # productivity_overview_int
 productivity_overview_int <- subset(productivity_int_long, productivity_int_long$Country %in% comparison_countries)
-productivity_overview_int <- subset(productivity_overview_int, productivity_overview_int$Year == max(productivity_overview_int$Year))
+productivity_overview_int <- subset(productivity_overview_int, productivity_overview_int$Year == 2019)
 productivity_overview_int <- productivity_overview_int[,c(1,3)]
 productivity_overview_int <- productivity_overview_int[order(productivity_overview_int$Value, decreasing = FALSE),]
 productivity_overview_int$Country <- factor(productivity_overview_int$Country, levels = productivity_overview_int$Country)
 
 # text for productivity_overview_int
 text_scotland_thisyear_productivity_int <- subset(productivity_int_long, productivity_int_long$Country == "Scotland")
-text_scotland_thisyear_productivity_int <- subset(text_scotland_thisyear_productivity_int, text_scotland_thisyear_productivity_int$Year == max(productivity_int_long$Year))
+text_scotland_thisyear_productivity_int <- subset(text_scotland_thisyear_productivity_int, text_scotland_thisyear_productivity_int$Year == 2019)
 text_scotland_thisyear_productivity_int <- text_scotland_thisyear_productivity_int$Value
 text_oecd_thisyear_productivity_int <- subset(productivity_int_long, productivity_int_long$Country == "OECD - Total")
 text_oecd_thisyear_productivity_int <- subset(text_oecd_thisyear_productivity_int, text_oecd_thisyear_productivity_int$Year == max(productivity_int_long$Year))

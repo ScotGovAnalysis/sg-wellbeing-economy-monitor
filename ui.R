@@ -126,7 +126,7 @@ shinyUI(fluidPage(
                         column(width = 4,
                                h2("Productivity"),
                                plotOutput("productivity_overview_int_barplot", height = "200px"),
-                               p("Scotland's productivity was ", text_scotland_thisyear_productivity_int,"% of the USA's in 2019.  Over the previous 5 years, the average productivity was ", text_scotland_last5_productivity_int ,"% in Scotland.")
+                               p("Scotland's productivity was ", text_scotland_thisyear_productivity_int,"% of the USA's in 2019.  Over the previous 5 years, the average productivity was ", text_scotland_last5_productivity_int ,"% of USA's in Scotland.")
                         ),
                         column(width = 4,
                                h2("Reputation"),
@@ -207,14 +207,14 @@ shinyUI(fluidPage(
                                                 ),      
                                                 column(width=9, 
                                                        fluidRow(
-                                                         p(tags$b(paste("Figure 2. Estimated Productivity Levels across OECD Countries: ", "(", as.character(start_year_productivity_int), " - ", as.character(end_year_productivity_int), ") ", "(Current prices, and current PPPs, USA=100)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                         p(tags$b(paste("Figure 2. GDP per hour worked as a % USA: ", "(", as.character(start_year_productivity_int), " - ", as.character(end_year_productivity_int), ") ", "(Current prices, and current PPPs, USA=100)", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                          withSpinner(dygraphOutput("productivity_int_graph"), type = 5),
                                                          align = "center"
                                                        ),
                                                        fluidRow(
                                                          textOutput("legendDivID_productivity"),
                                                          p("Source: "), 
-                                                         a("2017 Productivity levels from OECD Statistics Portal - data extracted on 4 February 2019", href = "https://stats.oecd.org/"),
+                                                         a("OECD Statistics Portal (data extracted on 1 March 2022)", href = "https://stats.oecd.org/"),
                                                          collapsible = FALSE,
                                                          width = 12,
                                                          style="margin-bottom: 100px;"
