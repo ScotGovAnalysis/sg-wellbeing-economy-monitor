@@ -1082,12 +1082,6 @@ start_year_skillstertiary_int <- min(skillstertiary_int_long$Year)
 end_year_skillstertiary_int <- max(skillstertiary_int_long$Year)
 
 
-
-
-# lifeexpf_int
-
-
-# lifeexpm_int
 # hlifeexp_male_sco
 start_year_hlifeexp_male_sco <- min(hlifeexp_male_sco$Year)
 end_year_hlifeexp_male_sco <- max(hlifeexp_male_sco$Year)
@@ -1159,21 +1153,21 @@ lifeexpall_overview_int$Country <- factor(lifeexpall_overview_int$Country, level
 text_scotland_thisyear_lifeexpall_int <- subset(lifeexpall_int_long, lifeexpall_int_long$Country == "Scotland")
 text_scotland_thisyear_lifeexpall_int <- subset(text_scotland_thisyear_lifeexpall_int, text_scotland_thisyear_lifeexpall_int$Year == max(lifeexpall_int_long$Year))
 text_scotland_thisyear_lifeexpall_int <- text_scotland_thisyear_lifeexpall_int$Value
-text_oecd_thisyear_lifeexpall_int <- subset(lifeexpall_int_long, lifeexpall_int_long$Country == "OECD - Total")
+text_oecd_thisyear_lifeexpall_int <- subset(lifeexpall_int_long, lifeexpall_int_long$Country == "OECD members")
 text_oecd_thisyear_lifeexpall_int <- subset(text_oecd_thisyear_lifeexpall_int, text_oecd_thisyear_lifeexpall_int$Year == max(lifeexpall_int_long$Year))
 text_oecd_thisyear_lifeexpall_int <- text_oecd_thisyear_lifeexpall_int$Value
-text_oecd_last5_lifeexpall_int <- subset(lifeexpall_int, lifeexpall_int$Country == "OECD - Total")
+text_oecd_last5_lifeexpall_int <- subset(lifeexpall_int, lifeexpall_int$Country == "OECD members")
 start_text_oecd_last5 <- as.numeric(max(lifeexpall_int_long$Year))
 end_text_oecd_last5 <- start_text_oecd_last5-5
 text_oecd_last5_lifeexpall_int <- text_oecd_last5_lifeexpall_int[,seq(end_text_oecd_last5:start_text_oecd_last5)]
 text_oecd_last5_lifeexpall_int <- sum(text_oecd_last5_lifeexpall_int[1,-1])
-text_oecd_last5_lifeexpall_int <- round(text_oecd_last5_lifeexpall_int/5, digits = 2)
+text_oecd_last5_lifeexpall_int <- round(text_oecd_last5_lifeexpall_int/5, digits = 1)
 text_scotland_last5_lifeexpall_int <- subset(lifeexpall_int, lifeexpall_int$Country == "Scotland")
 start_text_scotland_last5 <- as.numeric(max(lifeexpall_int_long$Year))
 end_text_scotland_last5 <- start_text_scotland_last5-5
 text_scotland_last5_lifeexpall_int <- text_scotland_last5_lifeexpall_int[,seq(end_text_scotland_last5:start_text_scotland_last5)]
 text_scotland_last5_lifeexpall_int <- sum(text_scotland_last5_lifeexpall_int[1,-1])
-text_scotland_last5_lifeexpall_int <- round(text_scotland_last5_lifeexpall_int/5, digits = 2)
+text_scotland_last5_lifeexpall_int <- round(text_scotland_last5_lifeexpall_int/5, digits = 1)
 
 
 

@@ -1816,7 +1816,7 @@ shinyServer(
         theme(
           axis.text.x=element_blank()
         ) +
-        ggtitle("Life expectancy") +
+        ggtitle("Life expectancy at birth") +
         geom_text(aes(x=Country, y=Value, label=Value),
                   vjust=0.3, size=4, hjust=1.1, col="white")
     })

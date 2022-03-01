@@ -1485,7 +1485,7 @@ shinyUI(fluidPage(
                         column(width = 6,
                                h2("Life expectancy"),
                                plotOutput("lifeexpall_overview_int_barplot", height = "200px"),
-                               p("Scotland's life expectancy was ", text_scotland_thisyear_lifeexpall_int," in 2017, compared to ", text_oecd_thisyear_lifeexpall_int," in the OECD. Over the past 5 years, the average life expectancy was ", text_scotland_last5_lifeexpall_int ," in Scotland, compared to ", text_oecd_last5_lifeexpall_int, " in the OECD overall.")
+                               p("Scotland's life expectancy was ", text_scotland_thisyear_lifeexpall_int," in 2019, compared to ", text_oecd_thisyear_lifeexpall_int," in the OECD. Over the 5 years to 2019, the average life expectancy was ", text_scotland_last5_lifeexpall_int ," in Scotland, compared to ", text_oecd_last5_lifeexpall_int, " in the OECD overall.")
                         ),
                  column(width = 6,
                       h2("Skills"),
@@ -1517,14 +1517,14 @@ shinyUI(fluidPage(
                                               ),      
                                               column(width=9, 
                                                      fluidRow(
-                                                       p(tags$b(paste("Figure 1. Life expectancy of the total population at birth ", "(", as.character(start_year_lifeexpall_int), " - ", as.character(end_year_lifeexpall_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
+                                                       p(tags$b(paste("Figure 1. Life expectancy at birth (years)", "(", as.character(start_year_lifeexpall_int), " - ", as.character(end_year_lifeexpall_int), ") ", sep = ""), style = "text-align: center;"), style = "margin-bottom: 15px; margin-top: 10px;"),
                                                        withSpinner(dygraphOutput("lifeexpall_int_graph"), type = 5),
                                                        align = "center"
                                                      ),
                                                      fluidRow(
                                                        textOutput("legendDivID_lifeexpall_int"),
                                                        p("Source: "), 
-                                                       a("OECD", href = "https://data.oecd.org/"),
+                                                       a("World Bank", href = "https://databank.worldbank.org/home"),
                                                        collapsible = FALSE,
                                                        width = 12,
                                                        style="margin-bottom: 100px;"
