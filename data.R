@@ -815,7 +815,7 @@ evoice_int_long <- evoice_int %>%
 evoice_int_wide <- evoice_int_long %>% 
   spread("Country", "Value")
 evoice_int_wide$Year <- as.integer(evoice_int_wide$Year)
-positions_selected_countries_evoice_int <- which(names(evoice_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'UK', 'Scotland'))
+positions_selected_countries_evoice_int <- which(names(evoice_int_wide) %in% c('Denmark', 'Finland', 'Iceland', 'Sweden', 'Norway', 'Switzerland', 'New Zealand', 'Netherlands', 'Belgium', 'Ireland', 'United Kingdom', 'Scotland'))
 start_year_evoice_int <- min(evoice_int_long$Year)
 end_year_evoice_int <- max(evoice_int_long$Year)
 
