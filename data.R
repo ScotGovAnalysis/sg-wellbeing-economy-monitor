@@ -213,6 +213,7 @@ migration_reg <- read.csv("./www/regional/migration_reg.csv", check.names=FALSE)
 working_age_reg <- read.csv("./www/regional/working_age_reg.csv", check.names=FALSE)
 eactivity_reg <- read.csv("./www/regional/eactivity_reg.csv", check.names=FALSE)
 unpaidhelp_reg <- read.csv("./www/regional/unpaidhelp_reg.csv", check.names=FALSE)
+informalvol_reg <- read.csv("./www/regional/informalvol_reg.csv", check.names=FALSE)
 lwage_reg <- read.csv("./www/regional/lwage_reg.csv", check.names=FALSE)
 gpaygap_reg <- read.csv("./www/regional/gpaygap_reg.csv", check.names=FALSE)
 hlifeexp_male_reg <- read.csv("./www/regional/hlifeexp_male_reg.csv", check.names=FALSE)
@@ -942,6 +943,10 @@ end_year_eactivity_reg <- max(eactivity_reg$Year)
 # unpaidhelp_reg
 start_year_unpaidhelp_reg <- min(unpaidhelp_reg$Year)
 end_year_unpaidhelp_reg <- max(unpaidhelp_reg$Year)
+
+# informalvol_reg
+start_year_informalvol_reg <- min(informalvol_reg$Year)
+end_year_informalvol_reg <- max(informalvol_reg$Year)
 
 # lwage_reg
 start_year_lwage_reg <- min(lwage_reg$Year)

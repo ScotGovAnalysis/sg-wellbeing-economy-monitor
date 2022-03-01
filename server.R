@@ -1653,7 +1653,33 @@ shinyServer(
         ) %>%
         addLegend("bottomright", pal = choropleth_unpaidhelp_reg, values = mapex$Value, title = paste("%", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
     })
+
+    # Leaflet map for informalvol_reg
+    output$informalvol_reg_map_caption <- renderText({
+      paste("Map 2. % who were involved in any informal volunteering in the last 12 months ", as.character(input$informalvol_reg_input), sep="")
+    })
+    informalvol_reg_map_data <- reactive({
+      informalvol_reg_one <- informalvol_reg[ which(informalvol_reg$Year == input$informalvol_reg_input), ]
+      informalvol_reg_one <- informalvol_reg_one[ ,c(1,3)]
+      merged <- merge(mapex@data, informalvol_reg_one, by = intersect(names(mapex@data), names(informalvol_reg_one)), all.x = TRUE, all.y = FALSE, sort=FALSE)
+      mapex@data <- merged[match(mapex@data$NAME, merged$NAME),]
+      choropleth_informalvol_reg <- colorBin(palette=brewer.pal(n=9, name="RdYlGn"), mapex@data$Value, bins = 9)
+      list_return <- list(mapex = mapex, choropleth_informalvol_reg = choropleth_informalvol_reg)
+      return(list_return)
+    })
+    output$informalvol_reg_map <- renderLeaflet({
+      mapex <- informalvol_reg_map_data()$mapex
+      choropleth_informalvol_reg <- informalvol_reg_map_data()$choropleth_informalvol_reg
+      leaflet(mapex) %>%
+        setView(zoom = 6, lat = 57, lng= -4) %>%
+        addProviderTiles("Esri.WorldGrayCanvas") %>%
+        addPolygons(stroke=FALSE, layerId = ~mapex$NAME, fillColor = ~choropleth_informalvol_reg(mapex$Value), fillOpacity=1, popup = ~paste(as.character(mapex$NAME), " ", as.character(mapex$Value), " %", sep = ""),
+                    highlightOptions = highlightOptions(color="black", opacity = 1, fillOpacity = 0.6, fillColor = "navy")
+        ) %>%
+        addLegend("bottomright", pal = choropleth_informalvol_reg, values = mapex$Value, title = paste("%", sep=""), opacity = 1, labFormat = labelFormat(prefix = ""))
+    })
     
+        
     # Leaflet map for lwage_reg
     output$lwage_reg_map_caption <- renderText({
       paste("Map 2. Percentage of Employees Earning Below the Living Wage ", as.character(input$lwage_reg_input), sep="")
